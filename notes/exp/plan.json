@@ -1,4 +1,4 @@
-{"exp": "maia-smoke", "tc": "5+0.05", "chunk": 8,
+{"exp": "maia-smoke2", "tc": "5+0.05", "chunk": 8,
  "runs": [
   {"name": "maia1100_default", "elo": 0, "games": 8, "seed": 1, "opponent": "maia-1100"},
   {"name": "maia1500_default", "elo": 0, "games": 8, "seed": 1, "opponent": "maia-1500"},
