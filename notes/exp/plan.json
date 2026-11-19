@@ -1,0 +1,9 @@
+{"exp": "grid4", "tc": "5+0.05", "chunk": 200,
+ "runs": [
+  {"name": "e1500_brutal_fix", "elo": 1500, "games": 2000, "seed": 100, "opts": ["SmotherBrutal=true"]},
+  {"name": "e1500_default_fix", "elo": 1500, "games": 2000, "seed": 100},
+  {"name": "e2000_brutal_fix", "elo": 2000, "games": 2000, "seed": 200, "opts": ["SmotherBrutal=true"]},
+  {"name": "maia1100_brutal_fix", "elo": 0, "games": 1000, "chunk": 100, "seed": 700, "opponent": "maia-1100", "opts": ["SmotherBrutal=true"]},
+  {"name": "maia1900_brutal_fix", "elo": 0, "games": 1000, "chunk": 100, "seed": 720, "opponent": "maia-1900", "opts": ["SmotherBrutal=true"]},
+  {"name": "e3000_brutal_fix", "elo": 3000, "games": 600, "chunk": 50, "seed": 300, "opts": ["SmotherBrutal=true"]}
+ ]}
