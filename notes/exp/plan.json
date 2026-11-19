@@ -1,0 +1,7 @@
+{"exp": "grid6", "tc": "5+0.05", "chunk": 200,
+ "runs": [
+  {"name": "e1500_brutal_hand", "elo": 1500, "games": 2000, "seed": 100, "opts": ["SmotherBrutal=true"]},
+  {"name": "e1500_brutal_tc15_hand", "elo": 1500, "games": 1000, "chunk": 50, "seed": 100, "tc": "15+0.15", "opts": ["SmotherBrutal=true"]},
+  {"name": "e1500_brutal_tc15_nohand", "elo": 1500, "games": 1000, "chunk": 50, "seed": 100, "tc": "15+0.15", "opts": ["SmotherBrutal=true", "SmotherMatePercent=0"]},
+  {"name": "e3000_brutal_hand", "elo": 3000, "games": 600, "chunk": 50, "seed": 300, "opts": ["SmotherBrutal=true"]}
+ ]}
