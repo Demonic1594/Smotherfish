@@ -1,0 +1,8 @@
+{"game": 3, "fen": "r1bqkb1r/pp1ppp1p/2n3pn/2p5/2P5/2N2NP1/PP1PPP1P/R1BQKB1R w KQkq - 1 5", "ours_white": false, "hang": "Hang: lc0 stopped answering", "moves": ""}
+{"game": 1, "fen": "rnbqkbnr/pppp1ppp/8/1N6/2P1p3/5N2/PP1PPPPP/R1BQKB1R w KQkq - 4 5", "ours_white": false, "hang": "Hang: lc0 stopped answering", "moves": ""}
+{"game": 0, "fen": "rnbqkbnr/pppp1ppp/8/1N6/2P1p3/5N2/PP1PPPPP/R1BQKB1R w KQkq - 4 5", "ours_white": true, "hang": "Hang: lc0 stopped answering", "moves": ""}
+{"game": 2, "fen": "r1bqkb1r/pp1ppp1p/2n3pn/2p5/2P5/2N2NP1/PP1PPP1P/R1BQKB1R w KQkq - 1 5", "ours_white": true, "hang": "Hang: lc0 stopped answering", "moves": ""}
+{"game": 4, "fen": "r1bqk1nr/pppnbppp/4p3/3p4/2PP4/1P2P3/P4PPP/RNBQKBNR w KQkq - 1 5", "ours_white": true, "hang": "Hang: lc0 stopped answering", "moves": ""}
+{"game": 7, "fen": "rnbqkb1r/pp3ppp/4pn2/2Pp4/8/P4N2/2PPPPPP/RNBQKB1R w KQkq - 1 5", "ours_white": false, "hang": "Hang: lc0 stopped answering", "moves": ""}
+{"game": 5, "fen": "r1bqk1nr/pppnbppp/4p3/3p4/2PP4/1P2P3/P4PPP/RNBQKBNR w KQkq - 1 5", "ours_white": false, "hang": "Hang: lc0 stopped answering", "moves": ""}
+{"game": 6, "fen": "rnbqkb1r/pp3ppp/4pn2/2Pp4/8/P4N2/2PPPPPP/RNBQKB1R w KQkq - 1 5", "ours_white": true, "hang": "Hang: lc0 stopped answering", "moves": ""}
