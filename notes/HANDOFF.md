@@ -10,7 +10,9 @@ here is finished: read "State" first, then "Next steps".
    2348/2350 with 0 bad.
 2. Work on the README's "Next goal": smarter, stronger steering for more
    smothered mates, keeping a win rate above 50% against Stockfish with
-   UCI_Elo 2500. Use all CPU cores for matches.
+   UCI_Elo 3000 (revised from 2500: the user measured Stockfish 19 at about
+   3804 Elo, so 3000 is the new bar; it is inside the UCI_Elo range
+   1320-3190). Use all CPU cores for matches.
 3. When done, build static Android binaries with the NDK for DroidFish.
 
 The user's handoff zip (`smother-stockfish-handoff.zip`, with README.md,
@@ -41,7 +43,7 @@ Done and verified:
 
 Not done:
 - No measurement of smothers per 100 games at Elo 1500 or 2000 with steering.
-- No win rate vs UCI_Elo 2500 at all (the key constraint, must stay above 50%).
+- No win rate vs UCI_Elo 3000 at all (the key constraint, must stay above 50%).
 - No tuning of the new options.
 - The Android build has not been run. The NDK is not in the repo; see below.
 
@@ -74,7 +76,7 @@ Known weak spots to check before trusting it:
   raw score units (1 per ply); the `loss * 10` there is only a utility
   weight. Sanity test it on a position with a plain forced mate.
 - Steering needs `SmotherSteerLines` MultiPV lines, which lowers search
-  strength a little at a fixed time. The 2500 win rate must be measured.
+  strength a little at a fixed time. The 3000 win rate must be measured.
 - The trap scorer allows at most one quiet move (`min(1, SmotherQuietMoves)`).
 - The model of the opponent is crude. UCI_Elo 1500 picks among shallow lines
   at random, so "plausible reply" weighting by SEE is a guess.
@@ -88,8 +90,10 @@ Known weak spots to check before trusting it:
    SmotherSteer 0, 100, 150. Use several hundred games per setting (the
    Elo 1500 baseline of 200 games gave 0 smothers, so expect low counts and
    plan sample sizes accordingly).
-3. Measure the win rate vs UCI_Elo 2500 for the steering settings that look
-   good. It must stay above 50%. Use all cores.
+3. Measure the win rate vs UCI_Elo 3000 for the steering settings that look
+   good. It must stay above 50%. Use all cores. Expect this to be much harder
+   than 1500: at 3000 the opponent rarely blunders into smothers, so a win
+   rate above 50% may require the steering to cost little strength.
 4. Tune (`SmotherSteerFloor`, margin, `SmotherTrapDepth`, trap node budget).
 5. Re-run bench (2497913) and the puzzle harness (2348/2350, 0 bad).
 6. Android build with `notes/scripts/build_android.sh` (below). Copy outputs into
