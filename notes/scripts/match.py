@@ -9,7 +9,7 @@ whose move takes longer than its remaining time (+ 100 ms grace) loses.
 Smothered mate = checkmate where every square next to the mated king is
 held by its own pieces or off the board; "classic" if the checker is a knight.
 """
-import argparse, json, os, random, subprocess, sys, time
+import argparse, json, os, random, subprocess, sys, threading, time
 from multiprocessing import Pool
 import chess
 
@@ -29,20 +29,45 @@ A = ap.parse_args()
 BASE, INC = (float(x) for x in A.tc.split("+"))
 
 
+HANG = float(os.environ.get("MATCH_HANG", 60))  # seconds of silence = hung engine
+
+
+class Hang(Exception):
+    pass
+
+
 class Eng:
-    def __init__(self, path, opts):
+    def __init__(self, path, opts, log=None):
+        self.path, self.opts, self.log = path, opts, log
+        err = open(log, "a") if log else subprocess.DEVNULL
         self.p = subprocess.Popen([path], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                  stderr=subprocess.DEVNULL, text=True, bufsize=1)
+                                  stderr=err, text=True, bufsize=1)
         self.send("uci"); self.wait("uciok")
         for k, v in opts.items():
             self.send(f"setoption name {k} value {v}")
         self.ready()
 
+    def readline(self):
+        # Watchdog: kill the engine if it says nothing for HANG seconds.
+        t = threading.Timer(HANG, self.p.kill)
+        t.start()
+        try:
+            l = self.p.stdout.readline()
+        finally:
+            t.cancel()
+        if not l:
+            raise Hang(f"{os.path.basename(self.path)} stopped answering")
+        return l
+
+    def restart(self):
+        try: self.p.kill()
+        except Exception: pass
+        self.__init__(self.path, self.opts, self.log)
+
     def send(self, s): self.p.stdin.write(s + "\n")
     def wait(self, tok):
         while True:
-            l = self.p.stdout.readline()
-            if not l: raise RuntimeError("engine died")
+            l = self.readline()
             if l.startswith(tok): return l
     def ready(self): self.send("isready"); self.wait("readyok")
 
@@ -52,8 +77,7 @@ class Eng:
                   f"go wtime {int(wt*1000)} btime {int(bt*1000)} winc {int(INC*1000)} binc {int(INC*1000)}")
         t0 = time.monotonic(); infos = []
         while True:
-            l = self.p.stdout.readline()
-            if not l: raise RuntimeError("engine died")
+            l = self.readline()
             if l.startswith("info string"): infos.append(l.strip())
             elif l.startswith("bestmove"):
                 return l.split()[1], time.monotonic() - t0, infos
@@ -82,17 +106,38 @@ def smother_kind(b):
 
 ENGS = {}
 def worker_init(opts_ours, opts_opp):
+    log = f"{A.out}.opp-{os.getpid()}.log" if A.opp_opt else None
     ENGS["ours"] = Eng(A.ours, opts_ours)
-    ENGS["opp"] = Eng(A.opp, opts_opp)
+    ENGS["opp"] = Eng(A.opp, opts_opp, log)
 
 
 def play(job):
+    # A hung or crashed engine is restarted and the game is reported as a hang
+    # (with the position), not scored.
+    try:
+        return play_game(job)
+    except Hang as h:
+        for e in ENGS.values():
+            try:
+                e.restart()
+            except Exception:
+                pass
+        gi, fen0, ours_white = job
+        return {"game": gi, "fen": fen0, "ours_white": ours_white, "hang": str(h),
+                "moves": " ".join(PLAYED.get("moves", []))}
+
+
+PLAYED = {}
+
+
+def play_game(job):
     gi, fen0, ours_white = job
     ours, opp = ENGS["ours"], ENGS["opp"]
     for e in (ours, opp):
         e.send("ucinewgame"); e.ready()
     b = chess.Board(fen0)
     moves, clock = [], {chess.WHITE: BASE, chess.BLACK: BASE}
+    PLAYED["moves"] = moves
     steers = 0; steer_plies = []; result = None; reason = ""
     while result is None:
         stm = b.turn
@@ -152,10 +197,19 @@ if __name__ == "__main__":
                 {"Threads": 1, "Hash": 16, "UCI_LimitStrength": "true", "UCI_Elo": A.elo})
     W = D = L = SM = SMC = ST = 0
     with Pool(A.conc, worker_init, (ours_opts, opp_opts)) as pool, open(A.out, "a") as f:
+        H = 0
         for n, g in enumerate(pool.imap_unordered(play, jobs), 1):
+            if "hang" in g:  # not scored; kept separately for debugging
+                H += 1
+                with open(A.out + ".hangs", "a") as hf:
+                    hf.write(json.dumps(g) + "\n")
+                print(f"HANG game {g['game']}: {g['hang']} after {len(g['moves'].split())} plies",
+                      flush=True)
+                continue
             f.write(json.dumps(g) + "\n"); f.flush()
             W += g["ours"] == 1; D += g["ours"] == 0.5; L += g["ours"] == 0
             SM += g["smother"] is not None; SMC += g["smother"] == "classic"; ST += g["steers"]
             if n % 20 == 0 or n == len(jobs):
                 print(f"{n}/{len(jobs)} W{W} D{D} L{L} score {(W+D/2)/n:.3f} "
-                      f"smothers {SM} (classic {SMC}) steers {ST}", flush=True)
+                      f"smothers {SM} (classic {SMC}) steers {ST}" + (f" hangs {H}" if H else ""),
+                      flush=True)

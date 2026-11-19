@@ -84,7 +84,7 @@ jobs:
   match:
     needs: [plan, build]
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 90
     strategy:
       fail-fast: false
       max-parallel: 18
@@ -146,6 +146,11 @@ jobs:
             b=$(basename "$f" .jsonl); name=${b%-*}
             cat "$f" >> "notes/results/$exp/$name.jsonl"
           done
+          # Debugging output: unscored hung games and opponent stderr logs.
+          if ls res/*.hangs res/*.log >/dev/null 2>&1; then
+            mkdir -p "notes/results/$exp/debug"
+            cp res/*.hangs res/*.log "notes/results/$exp/debug/" 2>/dev/null || true
+          fi
           { echo '```'; python -I notes/scripts/summary.py notes/results/$exp/*.jsonl; echo '```'; } \
             | tee notes/results/$exp/SUMMARY.md >> "$GITHUB_STEP_SUMMARY"
       - name: Commit results
