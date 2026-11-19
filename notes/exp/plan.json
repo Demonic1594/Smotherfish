@@ -1,0 +1,11 @@
+{"exp": "grid2", "tc": "5+0.05", "chunk": 200,
+ "runs": [
+  {"name": "e1500_brutal_t300", "elo": 1500, "games": 2000, "seed": 100, "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=300"]},
+  {"name": "e1500_brutal_t600", "elo": 1500, "games": 2000, "seed": 100, "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=600"]},
+  {"name": "e2000_brutal_t300", "elo": 2000, "games": 2000, "seed": 200, "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=300"]},
+  {"name": "e2000_brutal_t600", "elo": 2000, "games": 2000, "seed": 200, "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=600"]},
+  {"name": "e3000_brutal_t300", "elo": 3000, "games": 600, "chunk": 50, "seed": 300, "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=300"]},
+  {"name": "e3000_brutal_t600", "elo": 3000, "games": 600, "chunk": 50, "seed": 300, "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=600"]},
+  {"name": "e1500_default_tc15", "elo": 1500, "games": 1000, "chunk": 100, "seed": 500, "tc": "15+0.15"},
+  {"name": "e1500_brutal_t300_tc15", "elo": 1500, "games": 1000, "chunk": 100, "seed": 500, "tc": "15+0.15", "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=300"]}
+ ]}
