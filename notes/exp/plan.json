@@ -1,0 +1,5 @@
+{"exp": "actions-smoke", "tc": "5+0.05", "chunk": 8,
+ "runs": [
+  {"name": "smoke_e1500", "elo": 1500, "games": 16, "seed": 1},
+  {"name": "smoke_e1500_brutal", "elo": 1500, "games": 16, "seed": 1, "opts": ["SmotherBrutal=true"]}
+ ]}
