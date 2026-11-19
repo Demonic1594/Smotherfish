@@ -1,0 +1,9 @@
+{"exp": "grid3", "tc": "5+0.05", "chunk": 200,
+ "runs": [
+  {"name": "e1500_gate_t300", "elo": 1500, "games": 2000, "seed": 100, "opts": ["SmotherBrutal=true"]},
+  {"name": "e1500_gate_t150", "elo": 1500, "games": 2000, "seed": 100, "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=150"]},
+  {"name": "e1500_gate_t600", "elo": 1500, "games": 2000, "seed": 100, "opts": ["SmotherBrutal=true", "SmotherBrutalTimePercent=600"]},
+  {"name": "e2000_gate_t300", "elo": 2000, "games": 2000, "seed": 200, "opts": ["SmotherBrutal=true"]},
+  {"name": "e1500_gate_t300_tc15", "elo": 1500, "games": 1000, "chunk": 100, "seed": 500, "tc": "15+0.15", "opts": ["SmotherBrutal=true"]},
+  {"name": "e3000_gate_t300", "elo": 3000, "games": 600, "chunk": 50, "seed": 300, "opts": ["SmotherBrutal=true"]}
+ ]}
