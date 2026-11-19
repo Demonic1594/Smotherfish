@@ -14,6 +14,14 @@ here is finished: read "State" first, then "Next steps".
    3804 Elo, so 3000 is the new bar; it is inside the UCI_Elo range
    1320-3190). Use all CPU cores for matches.
 3. When done, build static Android binaries with the NDK for DroidFish.
+4. Added later by the user: the engine should be able to smother the opponent
+   with high likelihood at any Elo, not only at the level where smothers
+   happen by themselves. Measure the smother rate (smothered mates per game
+   won, and per game overall) at several UCI_Elo settings, for example
+   1500, 2000, 2500 and 3000, and aim to raise it at each one. Set a numeric
+   target only after the first measurements exist, because nothing has been
+   measured past the 1500 baseline yet. This goal does not replace the
+   win-rate constraint against 3000 in item 2.
 
 The user's handoff zip (`smother-stockfish-handoff.zip`, with README.md,
 patch, tests/, match/) is not in the repo. Ask the user to re-upload it if
@@ -99,6 +107,10 @@ Known weak spots to check before trusting it:
 6. Android build with `notes/scripts/build_android.sh` (below). Copy outputs into
    DroidFish's `uci/`. Never name the binary `stockfish` or `*.ini`.
 7. Update the PR description with the results.
+8. For the any-Elo smother goal (request item 4): after step 2, produce a
+   table of smother rate per UCI_Elo (1500, 2000, 2500, 3000) for each
+   steering setting, with game counts. Use it to decide where the steering
+   should be strongest, and check that the 3000 win rate from step 3 holds.
 
 ## Environment notes (the container is ephemeral; rebuild all of this)
 
