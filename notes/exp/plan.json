@@ -1,0 +1,43 @@
+{
+ "exp": "grid24",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_N_ponder",
+   "elo": 1500,
+   "games": 600,
+   "seed": 2400,
+   "chunk": 25,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Near"
+   ],
+   "ponder": true
+  },
+  {
+   "name": "maia1100_N_ponder",
+   "elo": 1100,
+   "games": 300,
+   "seed": 2400,
+   "chunk": 25,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Near"
+   ],
+   "ponder": true,
+   "opponent": "maia-1100"
+  },
+  {
+   "name": "e1000_N",
+   "elo": 1320,
+   "games": 600,
+   "seed": 2400,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Near"
+   ]
+  }
+ ]
+}
