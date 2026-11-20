@@ -1,0 +1,51 @@
+{
+ "exp": "circle-hybrid",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_A",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 1450,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartialAfter=0"
+   ]
+  },
+  {
+   "name": "e1500_H80",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 1450,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartialAfter=80"
+   ]
+  },
+  {
+   "name": "e1500_H60",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 1450,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartialAfter=60"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 1450,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartialAfter=40"
+   ]
+  }
+ ]
+}
