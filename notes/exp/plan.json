@@ -1,0 +1,18 @@
+{
+ "exp": "circle-near-prefer",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_near_prefer",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 1400,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Near"
+   ]
+  }
+ ]
+}
