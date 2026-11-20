@@ -1,0 +1,9 @@
+{
+ "name": "hunt_vs_default",
+ "tc": "10+0.1",
+ "elo0": -10, "elo1": 0, "alpha": 0.05, "beta": 0.05,
+ "new_opts": ["SmotherBrutal=true", "SmotherBuildVersion=2", "SmotherPartial=true"],
+ "base_opts": [],
+ "base_ref": "smotherfish",
+ "runners": 16, "games": 400, "max_waves": 6
+}
