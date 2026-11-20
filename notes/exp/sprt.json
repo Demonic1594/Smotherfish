@@ -1,0 +1,9 @@
+{
+ "name": "hybrid40_vs_brutal",
+ "tc": "10+0.1",
+ "elo0": -5, "elo1": 0, "alpha": 0.05, "beta": 0.05,
+ "new_opts": ["SmotherBrutal=true", "SmotherPartialAfter=40"],
+ "base_opts": ["SmotherBrutal=true"],
+ "base_ref": "smotherfish",
+ "runners": 16, "games": 400, "max_waves": 6
+}
