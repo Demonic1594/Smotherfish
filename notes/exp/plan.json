@@ -1,0 +1,61 @@
+{
+ "exp": "ponder2",
+ "tc": "5+0.05",
+ "chunk": 40,
+ "runs": [
+  {
+   "name": "e1500_ponder_deeptrue",
+   "elo": 1500,
+   "games": 600,
+   "seed": 1500,
+   "chunk": 20,
+   "ponder": true,
+   "opp_think": 1,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPonderDeep=true"
+   ]
+  },
+  {
+   "name": "maia1100_ponder_deeptrue",
+   "elo": 0,
+   "games": 400,
+   "seed": 1510,
+   "chunk": 20,
+   "opponent": "maia-1100",
+   "ponder": true,
+   "opp_think": 1,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPonderDeep=true"
+   ]
+  },
+  {
+   "name": "e1500_ponder_deepfalse",
+   "elo": 1500,
+   "games": 600,
+   "seed": 1500,
+   "chunk": 20,
+   "ponder": true,
+   "opp_think": 1,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPonderDeep=false"
+   ]
+  },
+  {
+   "name": "maia1100_ponder_deepfalse",
+   "elo": 0,
+   "games": 400,
+   "seed": 1510,
+   "chunk": 20,
+   "opponent": "maia-1100",
+   "ponder": true,
+   "opp_think": 1,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPonderDeep=false"
+   ]
+  }
+ ]
+}
