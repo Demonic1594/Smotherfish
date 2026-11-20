@@ -1,0 +1,106 @@
+{
+ "exp": "grid17",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_floor600",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 1700,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=600"
+   ]
+  },
+  {
+   "name": "e2000_floor600",
+   "elo": 2000,
+   "games": 1000,
+   "seed": 1710,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=600"
+   ]
+  },
+  {
+   "name": "e2500_floor600",
+   "elo": 2500,
+   "games": 600,
+   "seed": 1720,
+   "chunk": 50,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=600"
+   ]
+  },
+  {
+   "name": "e1500_floor400",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 1700,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=400"
+   ]
+  },
+  {
+   "name": "e2000_floor400",
+   "elo": 2000,
+   "games": 1000,
+   "seed": 1710,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=400"
+   ]
+  },
+  {
+   "name": "e2500_floor400",
+   "elo": 2500,
+   "games": 600,
+   "seed": 1720,
+   "chunk": 50,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=400"
+   ]
+  },
+  {
+   "name": "e1500_floor250",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 1700,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=250"
+   ]
+  },
+  {
+   "name": "e2000_floor250",
+   "elo": 2000,
+   "games": 1000,
+   "seed": 1710,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=250"
+   ]
+  },
+  {
+   "name": "e2500_floor250",
+   "elo": 2500,
+   "games": 600,
+   "seed": 1720,
+   "chunk": 50,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildFloor=250"
+   ]
+  }
+ ]
+}
