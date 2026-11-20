@@ -1,0 +1,10 @@
+{"exp": "grid9", "tc": "5+0.05", "chunk": 50,
+ "runs": [
+  {"name": "e1500_build_m40", "elo": 1500, "games": 600, "seed": 600, "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildMoves=40"]},
+  {"name": "e1500_build_m80", "elo": 1500, "games": 600, "seed": 600, "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildMoves=80"]},
+  {"name": "e1500_build_m200", "elo": 1500, "games": 600, "seed": 600, "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildMoves=200"]},
+  {"name": "e2000_build_m80", "elo": 2000, "games": 600, "seed": 610, "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildMoves=80"]},
+  {"name": "maia1100_build_m80", "elo": 0, "games": 600, "seed": 700, "opponent": "maia-1100", "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildMoves=80"]},
+  {"name": "maia1900_build_m80", "elo": 0, "games": 600, "seed": 720, "opponent": "maia-1900", "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildMoves=80"]},
+  {"name": "e3000_build_m80", "elo": 3000, "games": 300, "seed": 300, "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildMoves=80"]}
+ ]}
