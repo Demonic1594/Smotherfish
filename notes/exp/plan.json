@@ -1,0 +1,119 @@
+{
+ "exp": "grid14",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_A",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1400,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true"
+   ]
+  },
+  {
+   "name": "e1500_V2",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1400,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildVersion=2"
+   ]
+  },
+  {
+   "name": "e1500_P",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1400,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartial=true"
+   ]
+  },
+  {
+   "name": "e1500_VP",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1400,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildVersion=2",
+    "SmotherPartial=true"
+   ]
+  },
+  {
+   "name": "maia1100_A",
+   "elo": 0,
+   "games": 1000,
+   "seed": 1410,
+   "chunk": 100,
+   "opponent": "maia-1100",
+   "opts": [
+    "SmotherBrutal=true"
+   ]
+  },
+  {
+   "name": "maia1100_VP",
+   "elo": 0,
+   "games": 1000,
+   "seed": 1410,
+   "chunk": 100,
+   "opponent": "maia-1100",
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildVersion=2",
+    "SmotherPartial=true"
+   ]
+  },
+  {
+   "name": "e3000_A",
+   "elo": 3000,
+   "games": 600,
+   "seed": 1420,
+   "chunk": 50,
+   "opts": [
+    "SmotherBrutal=true"
+   ]
+  },
+  {
+   "name": "e3000_V2",
+   "elo": 3000,
+   "games": 600,
+   "seed": 1420,
+   "chunk": 50,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildVersion=2"
+   ]
+  },
+  {
+   "name": "e3000_P",
+   "elo": 3000,
+   "games": 600,
+   "seed": 1420,
+   "chunk": 50,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartial=true"
+   ]
+  },
+  {
+   "name": "e3000_VP",
+   "elo": 3000,
+   "games": 600,
+   "seed": 1420,
+   "chunk": 50,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildVersion=2",
+    "SmotherPartial=true"
+   ]
+  }
+ ]
+}
