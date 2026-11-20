@@ -1,0 +1,9 @@
+{"exp": "grid11", "tc": "5+0.05", "chunk": 50,
+ "runs": [
+  {"name": "e3000_trig800", "elo": 3000, "games": 600, "seed": 900, "opts": ["SmotherBrutal=true"]},
+  {"name": "e3000_trig600", "elo": 3000, "games": 600, "seed": 900, "opts": ["SmotherBrutal=true", "SmotherBuildCp=600", "SmotherBuildFloor=450"]},
+  {"name": "e3000_trig400", "elo": 3000, "games": 600, "seed": 900, "opts": ["SmotherBrutal=true", "SmotherBuildCp=400", "SmotherBuildFloor=300"]},
+  {"name": "e3000_off", "elo": 3000, "games": 600, "seed": 900, "opts": ["SmotherMate=false"]},
+  {"name": "e2500_build", "elo": 2500, "games": 600, "seed": 950, "opts": ["SmotherBrutal=true"]},
+  {"name": "e1500_build_tc15", "elo": 1500, "games": 600, "seed": 960, "tc": "15+0.15", "opts": ["SmotherBrutal=true"]}
+ ]}
