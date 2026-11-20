@@ -1,0 +1,78 @@
+{
+ "exp": "grid22",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_F_keep3",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 2200,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeep=3"
+   ]
+  },
+  {
+   "name": "e1500_F_keep8",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 2200,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeep=8"
+   ]
+  },
+  {
+   "name": "e1500_F_keep12",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 2200,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeep=12"
+   ]
+  },
+  {
+   "name": "e1500_F_keep16",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 2200,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeep=16"
+   ]
+  },
+  {
+   "name": "e1500_H_keep3",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 2200,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Hybrid"
+   ]
+  },
+  {
+   "name": "e1500_H_keep8",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 2200,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Hybrid",
+    "SmotherBuildKeep=8"
+   ]
+  }
+ ]
+}
