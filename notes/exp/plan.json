@@ -1,0 +1,51 @@
+{
+ "exp": "grid16",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e2000_P",
+   "elo": 2000,
+   "games": 1000,
+   "seed": 1600,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartial=true"
+   ]
+  },
+  {
+   "name": "e2000_H80",
+   "elo": 2000,
+   "games": 1000,
+   "seed": 1600,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartialAfter=80"
+   ]
+  },
+  {
+   "name": "e2500_P",
+   "elo": 2500,
+   "games": 1000,
+   "seed": 1610,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartial=true"
+   ]
+  },
+  {
+   "name": "e2500_H80",
+   "elo": 2500,
+   "games": 1000,
+   "seed": 1610,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherPartialAfter=80"
+   ]
+  }
+ ]
+}
