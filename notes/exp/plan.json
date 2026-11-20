@@ -1,0 +1,109 @@
+{
+ "exp": "grid10",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e1500_s0_A",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 800,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=0"
+   ]
+  },
+  {
+   "name": "e1500_s3_B",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 800,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=3"
+   ]
+  },
+  {
+   "name": "e1500_s15_C",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 800,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=15"
+   ]
+  },
+  {
+   "name": "e1500_s1_pin",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 800,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=1"
+   ]
+  },
+  {
+   "name": "e1500_s2_def",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 800,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=2"
+   ]
+  },
+  {
+   "name": "e1500_s4_knight",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 800,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=4"
+   ]
+  },
+  {
+   "name": "e1500_s8_pawn",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 800,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=8"
+   ]
+  },
+  {
+   "name": "maia1100_s0_A",
+   "elo": 0,
+   "games": 600,
+   "seed": 700,
+   "opponent": "maia-1100",
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=0"
+   ]
+  },
+  {
+   "name": "maia1100_s15_C",
+   "elo": 0,
+   "games": 600,
+   "seed": 700,
+   "opponent": "maia-1100",
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=15"
+   ]
+  },
+  {
+   "name": "e3000_s15_C",
+   "elo": 3000,
+   "games": 300,
+   "seed": 300,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherBuildSurvive=15"
+   ]
+  }
+ ]
+}
