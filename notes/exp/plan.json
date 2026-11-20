@@ -1,0 +1,103 @@
+{
+ "exp": "grid19",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_A",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1900,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full"
+   ]
+  },
+  {
+   "name": "e1500_B_keep8",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1900,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeep=8"
+   ]
+  },
+  {
+   "name": "e1500_C_mat16",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1900,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e1500_D_keep8_mat16",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1900,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeep=8",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e1500_E_near8",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 1900,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeepNear=8"
+   ]
+  },
+  {
+   "name": "e2500_A",
+   "elo": 2500,
+   "games": 1000,
+   "seed": 1950,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full"
+   ]
+  },
+  {
+   "name": "e2500_D_keep8_mat16",
+   "elo": 2500,
+   "games": 1000,
+   "seed": 1950,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeep=8",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2500_E_near8",
+   "elo": 2500,
+   "games": 1000,
+   "seed": 1950,
+   "chunk": 100,
+   "opts": [
+    "SmotherBrutal=true",
+    "SmotherGoal=Full",
+    "SmotherBuildKeepNear=8"
+   ]
+  }
+ ]
+}
