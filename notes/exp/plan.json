@@ -1,0 +1,7 @@
+{"exp": "grid13", "tc": "5+0.05", "chunk": 100, "ref": "smotherfish",
+ "runs": [
+  {"name": "h2h_default", "elo": 0, "games": 4000, "seed": 1300, "opponent": "ref"},
+  {"name": "h2h_brutal", "elo": 0, "games": 2000, "seed": 1310, "opponent": "ref", "opts": ["SmotherBrutal=true"], "opp_opts": ["SmotherBrutal=true"]},
+  {"name": "e1500_brutal_next", "elo": 1500, "games": 1000, "seed": 1000, "opts": ["SmotherBrutal=true"]},
+  {"name": "e3000_brutal_next", "elo": 3000, "games": 600, "seed": 900, "chunk": 50, "opts": ["SmotherBrutal=true"]}
+ ]}
