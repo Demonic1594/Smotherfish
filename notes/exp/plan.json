@@ -1,0 +1,10 @@
+{"exp": "grid8", "tc": "5+0.05", "chunk": 50,
+ "runs": [
+  {"name": "e1500_brutal_base", "elo": 1500, "games": 600, "seed": 500, "opts": ["SmotherBrutal=true"]},
+  {"name": "e1500_build", "elo": 1500, "games": 600, "seed": 500, "opts": ["SmotherBrutal=true", "SmotherBuild=true"]},
+  {"name": "e1500_build_w16", "elo": 1500, "games": 600, "seed": 500, "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildWeight=16"]},
+  {"name": "e1500_build_m40", "elo": 1500, "games": 600, "seed": 500, "opts": ["SmotherBrutal=true", "SmotherBuild=true", "SmotherBuildMoves=40"]},
+  {"name": "e1500_build_tc15", "elo": 1500, "games": 600, "seed": 500, "tc": "15+0.15", "opts": ["SmotherBrutal=true", "SmotherBuild=true"]},
+  {"name": "maia1100_build", "elo": 0, "games": 600, "seed": 700, "opponent": "maia-1100", "opts": ["SmotherBrutal=true", "SmotherBuild=true"]},
+  {"name": "e3000_build", "elo": 3000, "games": 300, "seed": 300, "opts": ["SmotherBrutal=true", "SmotherBuild=true"]}
+ ]}
