@@ -1,0 +1,5 @@
+{"exp": "vs-upstream", "tc": "5+0.05", "chunk": 100, "ref": "master",
+ "runs": [
+  {"name": "smf11_vs_upstream_default", "elo": 0, "games": 4000, "seed": 2000, "opponent": "ref"},
+  {"name": "smf11_vs_upstream_brutal", "elo": 0, "games": 2000, "seed": 2010, "opponent": "ref", "opts": ["SmotherBrutal=true"]}
+ ]}
