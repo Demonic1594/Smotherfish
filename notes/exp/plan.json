@@ -1,0 +1,67 @@
+{
+ "exp": "grid29",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_H_after20",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 2900,
+   "chunk": 100,
+   "opts": [
+    "SmotherPartialAfter=20"
+   ]
+  },
+  {
+   "name": "e1500_H_after40",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 2900,
+   "chunk": 100,
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H_after60",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 2900,
+   "chunk": 100,
+   "opts": [
+    "SmotherPartialAfter=60"
+   ]
+  },
+  {
+   "name": "e2000_H_after20",
+   "elo": 2000,
+   "games": 1000,
+   "seed": 2900,
+   "chunk": 100,
+   "opts": [
+    "SmotherPartialAfter=20"
+   ]
+  },
+  {
+   "name": "e2000_H_after40",
+   "elo": 2000,
+   "games": 1000,
+   "seed": 2900,
+   "chunk": 100,
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e2000_H_after60",
+   "elo": 2000,
+   "games": 1000,
+   "seed": 2900,
+   "chunk": 100,
+   "opts": [
+    "SmotherPartialAfter=60"
+   ]
+  }
+ ]
+}
