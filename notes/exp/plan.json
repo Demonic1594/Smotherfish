@@ -1,0 +1,43 @@
+{
+ "exp": "grid26",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "maia3_1100_H",
+   "elo": 1100,
+   "games": 500,
+   "seed": 2600,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "maia3_1500_H",
+   "elo": 1500,
+   "games": 500,
+   "seed": 2600,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "maia3_1900_H",
+   "elo": 1900,
+   "games": 500,
+   "seed": 2600,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "maia3_2300_H",
+   "elo": 2300,
+   "games": 500,
+   "seed": 2600,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-2300"
+  }
+ ]
+}
