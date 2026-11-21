@@ -1,0 +1,15 @@
+{
+ "exp": "polltest",
+ "tc": "5+0.05",
+ "chunk": 20,
+ "runs": [
+  {
+   "name": "e1500_polltest",
+   "elo": 1500,
+   "games": 20,
+   "seed": 3600,
+   "chunk": 20,
+   "opts": []
+  }
+ ]
+}
