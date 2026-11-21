@@ -1,0 +1,34 @@
+33 games: +6 =27 -0; smothers: 0 full, 1 near
+  D      vs Bothev (3011) 120+1 https://lichess.org/game/lyRx6wyg
+  D      vs FairyTailRegimeBot (2945) 120+2 https://lichess.org/game/g5PyA0P6
+  D      vs FairyTailRegimeBot (2945) 180+1 https://lichess.org/game/lafsTB4L
+  W      vs Grindfish (2604) 120+1 https://lichess.org/game/znIKsmDq
+  D      vs HackerChessBot (3024) 120+1 https://lichess.org/game/0N4qjigP
+  D      vs LegoTechnicControlPl (2941) 180+1 https://lichess.org/game/M5Kxeruq
+  D      vs LegoTechnicControlPl (2960) 120+1 https://lichess.org/game/aY1YHxxi
+  D      vs ProsperoBot (2698) 120+1 https://lichess.org/game/ka7yqqc1
+  W mate vs RenegadeEngine (2859) 180+1 https://lichess.org/game/WY5gHrRr
+  W mate vs RubyAI (2753) 180+2 https://lichess.org/game/b4SVBHOe
+  D      vs Selimbabapro-Bot (2985) 180+2 https://lichess.org/game/U2qjUbA4
+  D      vs DevilfishAlpha (2995) 120+2 https://lichess.org/game/fym0x4Dh
+  W near vs MarlinChessBot (1607) 120+1 https://lichess.org/game/STh7D5PF
+  W mate vs MrDeepSeekGPT (2818) 180+1 https://lichess.org/game/HtDwLcI3
+  D      vs PZChessBot (2953) 180+1 https://lichess.org/game/zVzBf6ZJ
+  D      vs QuartzTheChessBot (2949) 180+2 https://lichess.org/game/Hebid5kU
+  W mate vs RubyAI (2745) 180+2 https://lichess.org/game/qstt5GUu
+  D      vs Selimbabapro-Bot (2984) 180+2 https://lichess.org/game/01oBeAQS
+  D      vs Selimbabapro-Bot (3024) 120+1 https://lichess.org/game/ZbxFK5RR
+  D      vs TikiFish (3002) 120+1 https://lichess.org/game/Eqg9WppL
+  D      vs Void_Bot (2927) 120+2 https://lichess.org/game/9nhb2IZv
+  D      vs coda_bot (3028) 120+1 https://lichess.org/game/PxnflWaD
+  D      vs coda_bot (3029) 120+1 https://lichess.org/game/kiTRoV54
+  D      vs colinbot (2967) 180+2 https://lichess.org/game/uuDGVA2e
+  D      vs little-0 (2942) 120+2 https://lichess.org/game/iL1kRkC2
+  D      vs SykoraBot (2891) 120+2 https://lichess.org/game/lW5ntZ7S
+  D      vs To299d (2855) 180+2 https://lichess.org/game/HNZYM0xv
+  D      vs TonyEngine (2968) 180+2 https://lichess.org/game/u0d0ueuE
+  D      vs abcd_engine (2988) 180+1 https://lichess.org/game/dHCIfCWg
+  D      vs coda_bot (2981) 120+2 https://lichess.org/game/4UgN6JSs
+  D      vs is_BOSS (2982) 180+1 https://lichess.org/game/MvxqRtjL
+  D      vs is_BOSS (2982) 180+2 https://lichess.org/game/OqeghYMS
+  D      vs justbot-v1 (2854) 180+2 https://lichess.org/game/PcApAskL
