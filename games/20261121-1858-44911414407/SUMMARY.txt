@@ -1,0 +1,31 @@
+30 games: +23 =7 -0; smothers: 1 full, 7 near
+  W near vs Blujay-bot (1587) 180+1 https://lichess.org/game/A8NWLirj
+  W mate vs CassidyChess-Bot (1970) 120+2 https://lichess.org/game/XOP3mogn
+  D      vs CookieBot711 (3031) 120+1 https://lichess.org/game/X23Ieln2
+  D      vs FairyTailRegimeBot (3006) 120+1 https://lichess.org/game/Gpl0sQ0E
+  W mate vs Flower-Queen (1789) 180+1 https://lichess.org/game/cRVYA4tC
+  D      vs Ghidorah_X (2870) 180+1 https://lichess.org/game/L3uyn0jk
+  D      vs PrismNNUE (2282) 180+1 https://lichess.org/game/DQTcdzmI
+  W mate vs BlowfishLite (2897) 120+1 https://lichess.org/game/ZDdodllK
+  D      vs Disrespect_Fish (2976) 180+2 https://lichess.org/game/jOEqECK0
+  W mate vs LevyMaia (1812) 120+1 https://lichess.org/game/J5dBQS50
+  W mate vs TheChessblazer (1841) 180+2 https://lichess.org/game/Gc0NKvEm
+  D      vs To299d (2876) 180+1 https://lichess.org/game/v81bOPAD
+  W FULL vs VietnameseCoffee (1768) 120+1 https://lichess.org/game/OIhmfNV9
+  W near vs bfiedler-bot (1888) 120+1 https://lichess.org/game/oBV53OWA
+  W mate vs clrsrc_lc0 (2912) 180+1 https://lichess.org/game/DV2ea2RM
+  W near vs debzero (1917) 120+1 https://lichess.org/game/21wIuBOI
+  W near vs devchessplayer-bot (2110) 120+1 https://lichess.org/game/MDVTXE5J
+  W mate vs justbot-v1 (2855) 120+2 https://lichess.org/game/UOGFhyqj
+  W mate vs rust-in-pieces (2399) 180+1 https://lichess.org/game/KK8r4ZhF
+  W mate vs rust-in-pieces (2405) 120+2 https://lichess.org/game/xvcATMpj
+  W near vs simpleEval (2028) 120+2 https://lichess.org/game/uGgATPEp
+  W mate vs uSunfish-l7 (1597) 180+1 https://lichess.org/game/KN4EsuBy
+  W near vs Stepbot_Chess (1888) 120+1 https://lichess.org/game/jC5Km5Fa
+  D      vs Tente8x (2937) 120+2 https://lichess.org/game/8QuGdHmz
+  W near vs bfiedler-bot (1815) 120+2 https://lichess.org/game/QHMjzIJR
+  W mate vs crocodile_bot (1695) 180+1 https://lichess.org/game/BlDgP6Tn
+  W mate vs grail-bot (2728) 180+1 https://lichess.org/game/FjcxTvr2
+  W mate vs lamprook (1829) 120+1 https://lichess.org/game/mLkxPDpR
+  W mate vs sunfish-nnue-engine (1751) 180+2 https://lichess.org/game/cHaO9flx
+  W mate vs uSunfish-l7 (1736) 120+1 https://lichess.org/game/oCO84KW6
