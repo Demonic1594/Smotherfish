@@ -1,0 +1,63 @@
+{
+ "exp": "grid31",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e3000_A",
+   "elo": 3000,
+   "games": 1000,
+   "seed": 3100,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e3000_steer10",
+   "elo": 3000,
+   "games": 1000,
+   "seed": 3100,
+   "chunk": 50,
+   "opts": [
+    "SmotherSteer=10"
+   ]
+  },
+  {
+   "name": "e3000_steer25",
+   "elo": 3000,
+   "games": 1000,
+   "seed": 3100,
+   "chunk": 50,
+   "opts": [
+    "SmotherSteer=25"
+   ]
+  },
+  {
+   "name": "e3190_A",
+   "elo": 3190,
+   "games": 500,
+   "seed": 3100,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e3190_steer10",
+   "elo": 3190,
+   "games": 500,
+   "seed": 3100,
+   "chunk": 50,
+   "opts": [
+    "SmotherSteer=10"
+   ]
+  },
+  {
+   "name": "e3190_steer25",
+   "elo": 3190,
+   "games": 500,
+   "seed": 3100,
+   "chunk": 50,
+   "opts": [
+    "SmotherSteer=25"
+   ]
+  }
+ ]
+}
