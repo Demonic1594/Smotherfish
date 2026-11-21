@@ -1,0 +1,16 @@
+{
+ "exp": "selftest1",
+ "tc": "5+0.05",
+ "chunk": 24,
+ "runner": "self",
+ "runs": [
+  {
+   "name": "e1500_H_self",
+   "elo": 1500,
+   "games": 24,
+   "seed": 3200,
+   "chunk": 24,
+   "opts": []
+  }
+ ]
+}
