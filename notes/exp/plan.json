@@ -1,5 +1,5 @@
 {
- "exp": "grid27",
+ "exp": "grid27b",
  "tc": "5+0.05",
  "chunk": 100,
  "runs": [
@@ -7,7 +7,7 @@
    "name": "e1500_F_A",
    "elo": 1500,
    "games": 2000,
-   "seed": 2700,
+   "seed": 2705,
    "chunk": 100,
    "opts": [
     "SmotherGoal=Full"
@@ -17,7 +17,7 @@
    "name": "e1500_F_robust",
    "elo": 1500,
    "games": 2000,
-   "seed": 2700,
+   "seed": 2705,
    "chunk": 100,
    "opts": [
     "SmotherGoal=Full",
@@ -28,7 +28,7 @@
    "name": "e1500_F_strict",
    "elo": 1500,
    "games": 2000,
-   "seed": 2700,
+   "seed": 2705,
    "chunk": 100,
    "opts": [
     "SmotherGoal=Full",
@@ -39,7 +39,7 @@
    "name": "e1500_F_mate30",
    "elo": 1500,
    "games": 2000,
-   "seed": 2700,
+   "seed": 2705,
    "chunk": 100,
    "opts": [
     "SmotherGoal=Full",
