@@ -1,0 +1,4 @@
+{"name": "defaults_vs_brutal_off", "tc": "10+0.1",
+ "elo0": -5, "elo1": 0, "alpha": 0.05, "beta": 0.05,
+ "new_opts": [], "base_opts": ["SmotherBrutal=false"],
+ "base_ref": "", "runners": 16, "games": 400, "max_waves": 6}
