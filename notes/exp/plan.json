@@ -1,0 +1,51 @@
+{
+ "exp": "grid32",
+ "tc": "15+0.15",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e1500_H_after40_tc15",
+   "elo": 1500,
+   "games": 600,
+   "seed": 3500,
+   "chunk": 50,
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "tc": "15+0.15"
+  },
+  {
+   "name": "e1500_H_after55_tc15",
+   "elo": 1500,
+   "games": 600,
+   "seed": 3500,
+   "chunk": 50,
+   "opts": [
+    "SmotherPartialAfter=55"
+   ],
+   "tc": "15+0.15"
+  },
+  {
+   "name": "e2000_H_after40_tc15",
+   "elo": 2000,
+   "games": 600,
+   "seed": 3500,
+   "chunk": 50,
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "tc": "15+0.15"
+  },
+  {
+   "name": "e2000_H_after55_tc15",
+   "elo": 2000,
+   "games": 600,
+   "seed": 3500,
+   "chunk": 50,
+   "opts": [
+    "SmotherPartialAfter=55"
+   ],
+   "tc": "15+0.15"
+  }
+ ]
+}
