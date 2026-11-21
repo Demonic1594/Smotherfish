@@ -1,0 +1,53 @@
+{
+ "exp": "grid28",
+ "tc": "5+0.05",
+ "chunk": 100,
+ "runs": [
+  {
+   "name": "e1500_tc5_F_A",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 2800,
+   "chunk": 100,
+   "opts": [
+    "SmotherGoal=Full"
+   ]
+  },
+  {
+   "name": "e1500_tc5_F_esc6",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 2800,
+   "chunk": 100,
+   "opts": [
+    "SmotherGoal=Full",
+    "SmotherEscapeMoves=6",
+    "SmotherEscapePercent=25"
+   ]
+  },
+  {
+   "name": "e1500_tc15_F_A",
+   "elo": 1500,
+   "games": 600,
+   "seed": 2800,
+   "chunk": 50,
+   "opts": [
+    "SmotherGoal=Full"
+   ],
+   "tc": "15+0.15"
+  },
+  {
+   "name": "e1500_tc15_F_esc6",
+   "elo": 1500,
+   "games": 600,
+   "seed": 2800,
+   "chunk": 50,
+   "opts": [
+    "SmotherGoal=Full",
+    "SmotherEscapeMoves=6",
+    "SmotherEscapePercent=25"
+   ],
+   "tc": "15+0.15"
+  }
+ ]
+}
