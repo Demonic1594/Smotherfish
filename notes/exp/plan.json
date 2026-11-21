@@ -1,0 +1,25 @@
+{
+ "exp": "grid26b",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "maia3_1100_H",
+   "elo": 1100,
+   "games": 500,
+   "seed": 2610,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "maia3_1500_H",
+   "elo": 1500,
+   "games": 500,
+   "seed": 2610,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-1500"
+  }
+ ]
+}
