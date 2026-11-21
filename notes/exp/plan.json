@@ -1,0 +1,15 @@
+{
+ "exp": "helpertest1",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e1500_H_helper",
+   "elo": 1500,
+   "games": 200,
+   "seed": 3300,
+   "chunk": 50,
+   "opts": []
+  }
+ ]
+}
