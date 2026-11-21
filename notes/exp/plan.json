@@ -1,0 +1,56 @@
+{
+ "exp": "grid25",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e3000_A_800_600",
+   "elo": 3000,
+   "games": 1000,
+   "seed": 2500,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e3000_B_500_300",
+   "elo": 3000,
+   "games": 1000,
+   "seed": 2500,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildCp=500",
+    "SmotherBuildFloor=300"
+   ]
+  },
+  {
+   "name": "e3000_C_300_150",
+   "elo": 3000,
+   "games": 1000,
+   "seed": 2500,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150"
+   ]
+  },
+  {
+   "name": "e3190_A_800_600",
+   "elo": 3190,
+   "games": 500,
+   "seed": 2500,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e3190_B_500_300",
+   "elo": 3190,
+   "games": 500,
+   "seed": 2500,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildCp=500",
+    "SmotherBuildFloor=300"
+   ]
+  }
+ ]
+}
