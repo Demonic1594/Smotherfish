@@ -1,0 +1,4 @@
+{"name": "v12_vs_v11", "tc": "10+0.1",
+ "elo0": -5, "elo1": 0, "alpha": 0.05, "beta": 0.05,
+ "new_opts": [], "base_opts": [],
+ "base_ref": "1e53f6f6beadd1010cd6b904e299e6c41f49e649", "runners": 18, "games": 400, "max_waves": 6}
