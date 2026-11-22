@@ -1,1 +1,1 @@
-{"name": "recall1", "input": "notes/data/conc200.jsonl.gz", "shards": 20, "args": "--games 50", "try": 2}
+{"name": "recall2", "input": "notes/data/tc180_e1500.jsonl.gz", "shards": 20, "args": "--games 15"}
