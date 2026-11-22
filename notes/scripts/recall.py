@@ -37,6 +37,8 @@ ap.add_argument("--moves", type=int, default=12)
 ap.add_argument("--quiet", type=int, default=2)
 ap.add_argument("--every", type=int, default=1)
 ap.add_argument("--shard", default="0/1", help="i/n: every n-th won game from i")
+ap.add_argument("--strict", action="store_true",
+                help="oracle counts only strict proofs (every defence smothered)")
 A = ap.parse_args()
 
 E = {}
@@ -74,10 +76,12 @@ def init():
     # The prover's limits in a game when not yet crushing (defaults 8 / 1 / 5M).
     E["small"] = Eng({"Threads": 1, "Hash": 16, "SmotherParallel": "false",
                       "SmotherGoal": "Full", "SmotherMaxMoves": 8, "SmotherQuietMoves": 1,
-                      "SmotherNodes": 5000000})
+                      "SmotherNodes": 5000000,
+                      "SmotherStrict": "true" if A.strict else "false"})
     E["oracle"] = Eng({"Threads": 1, "Hash": 16, "SmotherParallel": "false",
                        "SmotherGoal": "Full", "SmotherMaxMoves": A.moves,
-                       "SmotherQuietMoves": A.quiet, "SmotherNodes": A.nodes})
+                       "SmotherQuietMoves": A.quiet, "SmotherNodes": A.nodes,
+                       "SmotherStrict": "true" if A.strict else "false"})
 
 
 def score_us(lines):
