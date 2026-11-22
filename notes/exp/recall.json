@@ -1,0 +1,1 @@
+{"name": "recall1", "input": "notes/data/conc200.jsonl.gz", "shards": 20, "args": "--games 50"}
