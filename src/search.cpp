@@ -937,8 +937,13 @@ bool Search::Worker::iterative_deepening() {
 
     // When playing with strength handicap enable MultiPV search that we will
     // use behind-the-scenes to retrieve a set of possible moves.
+    // Human mode (HumanBlunder, with a strength limit): a share of moves is
+    // picked at random from a wider candidate list without Skill's cap of
+    // one pawn per mistake, so the engine can really drop material, as
+    // weak human players do.
+    skill.blunder = skill.enabled() ? int(options["HumanBlunder"]) : 0;
     if (skill.enabled())
-        multiPV = std::max(multiPV, usize(4));
+        multiPV = std::max(multiPV, usize(skill.blunder ? 8 : 4));
 
     // Smother steering also needs exact scores for a few candidate moves.
     // With SmotherSteerWonOnly, only in won mode, so play at full strength
@@ -2805,6 +2810,10 @@ Move Skill::pick_best(const RootMoves& rootMoves, usize multiPV) {
     }
     int    delta    = std::min(topScore - minScore, int(PawnValue));
     int    maxScore = -VALUE_INFINITE;
+
+    // Human mode: a blunder is any candidate but the best, chosen uniformly.
+    if (blunder > 0 && multiPV > 1 && int(rng.rand<unsigned>() % 100) < blunder)
+        return best = rootMoves[1 + rng.rand<unsigned>() % (multiPV - 1)].pv[0];
     double weakness = 120 - 2 * level;
 
     // Choose best move. For each move score we add two terms dependent on

@@ -264,7 +264,8 @@ struct Skill {
     Move pick_best(const RootMoves&, usize multiPV);
 
     double level;
-    Move   best = Move::none();
+    int    blunder = 0;  // HumanBlunder: percent of moves picked from the wider list
+    Move   best    = Move::none();
 };
 
 // SearchManager manages the search from the main thread. It is responsible for

@@ -119,6 +119,11 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     // Analysis strength (see Engine::go): 0 = full strength, else the Elo
     // whose search depth analysis ("go infinite") is capped at. Not named
     // UCI_*, so GUIs that hide those options (DroidFish) show it.
+    // Human mode: with a strength limit (UCI_LimitStrength / Skill Level), the
+    // percent of moves picked at random from the top 8 candidates, including
+    // real mistakes (Skill alone never loses more than about a pawn per move).
+    options.add("HumanBlunder", Option(0, 0, 100));
+
     options.add("Analysis Elo", Option(0, 0, Stockfish::Search::Skill::HighestElo));
 
     options.add("UCI_ShowWDL", Option(false));
