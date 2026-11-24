@@ -1,0 +1,120 @@
+{
+ "exp": "resign3",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1500_H",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 33000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_E6",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 33000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0",
+    "SmotherBuildCp=600",
+    "SmotherBuildFloor=450"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_E5",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 33000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0",
+    "SmotherBuildCp=500",
+    "SmotherBuildFloor=350"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_E4",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 33000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0",
+    "SmotherBuildCp=400",
+    "SmotherBuildFloor=250"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_H",
+   "elo": 1900,
+   "games": 600,
+   "seed": 33000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_E6",
+   "elo": 1900,
+   "games": 600,
+   "seed": 33000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0",
+    "SmotherBuildCp=600",
+    "SmotherBuildFloor=450"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_E5",
+   "elo": 1900,
+   "games": 600,
+   "seed": 33000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0",
+    "SmotherBuildCp=500",
+    "SmotherBuildFloor=350"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_E4",
+   "elo": 1900,
+   "games": 600,
+   "seed": 33000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0",
+    "SmotherBuildCp=400",
+    "SmotherBuildFloor=250"
+   ],
+   "opponent": "maia3-1900"
+  }
+ ],
+ "shard": [
+  3,
+  8
+ ],
+ "max_parallel": 20
+}
