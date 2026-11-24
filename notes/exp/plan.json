@@ -1,0 +1,84 @@
+{
+ "exp": "resign2",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1500_v15",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 32000,
+   "chunk": 25,
+   "opts": [
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_S40",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 32000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_S40H25",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 32000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherHold=25",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_v15",
+   "elo": 1900,
+   "games": 600,
+   "seed": 32000,
+   "chunk": 25,
+   "opts": [
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_S40",
+   "elo": 1900,
+   "games": 600,
+   "seed": 32000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_S40H25",
+   "elo": 1900,
+   "games": 600,
+   "seed": 32000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherHold=25",
+    "HarnessResign=curve:1.7,3.8,5.6,6.0,4.0"
+   ],
+   "opponent": "maia3-1900"
+  }
+ ],
+ "shard": [
+  1,
+  8
+ ],
+ "max_parallel": 20
+}
