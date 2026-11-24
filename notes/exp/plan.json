@@ -1,0 +1,139 @@
+{
+ "exp": "grid46",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e1500_C",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true"
+   ]
+  },
+  {
+   "name": "e1500_CK",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_CKT",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=8",
+    "SmotherBuildRingTable=90,40,0,-10,-15"
+   ]
+  },
+  {
+   "name": "e2500_B",
+   "elo": 2500,
+   "games": 400,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e2500_C",
+   "elo": 2500,
+   "games": 400,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true"
+   ]
+  },
+  {
+   "name": "e2500_CK",
+   "elo": 2500,
+   "games": 400,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2500_CKT",
+   "elo": 2500,
+   "games": 400,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=8",
+    "SmotherBuildRingTable=90,40,0,-10,-15"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 400,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_C",
+   "elo": 1500,
+   "games": 400,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_CK",
+   "elo": 1500,
+   "games": 400,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_CKT",
+   "elo": 1500,
+   "games": 400,
+   "seed": 34000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=8",
+    "SmotherBuildRingTable=90,40,0,-10,-15"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  7,
+  8
+ ],
+ "max_parallel": 20
+}
