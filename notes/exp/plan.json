@@ -1,0 +1,74 @@
+{
+ "exp": "tc180c15",
+ "tc": "180+2",
+ "chunk": 10,
+ "runs": [
+  {
+   "name": "e1500_D",
+   "elo": 1500,
+   "games": 300,
+   "seed": 28000,
+   "chunk": 10,
+   "opts": []
+  },
+  {
+   "name": "e1500_C15",
+   "elo": 1500,
+   "games": 300,
+   "seed": 28000,
+   "chunk": 10,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15"
+   ]
+  },
+  {
+   "name": "e2500_D",
+   "elo": 2500,
+   "games": 300,
+   "seed": 28000,
+   "chunk": 10,
+   "opts": []
+  },
+  {
+   "name": "e2500_C15",
+   "elo": 2500,
+   "games": 300,
+   "seed": 28000,
+   "chunk": 10,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15"
+   ]
+  },
+  {
+   "name": "m1500_D",
+   "elo": 1500,
+   "games": 300,
+   "seed": 28000,
+   "chunk": 10,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_C15",
+   "elo": 1500,
+   "games": 300,
+   "seed": 28000,
+   "chunk": 10,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  3,
+  7
+ ],
+ "max_parallel": 20
+}
