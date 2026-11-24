@@ -1,0 +1,126 @@
+{
+ "exp": "resign1",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1500_r2_v15",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "HarnessResign=8,2"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_r2_old",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildMoves=80",
+    "SmotherBuildRingTable=",
+    "HarnessResign=8,2"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_r2_S40H25",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherHold=25",
+    "HarnessResign=8,2"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_r5_v15",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "HarnessResign=8,5"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_r5_old",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildMoves=80",
+    "SmotherBuildRingTable=",
+    "HarnessResign=8,5"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_r5_S40H25",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherHold=25",
+    "HarnessResign=8,5"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_r10_v15",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "HarnessResign=8,10"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_r10_old",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildMoves=80",
+    "SmotherBuildRingTable=",
+    "HarnessResign=8,10"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_r10_S40H25",
+   "elo": 1500,
+   "games": 400,
+   "seed": 31000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherHold=25",
+    "HarnessResign=8,10"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  1,
+  8
+ ],
+ "max_parallel": 20
+}
