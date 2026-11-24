@@ -1,0 +1,197 @@
+{
+ "exp": "grid44",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160"
+   ]
+  },
+  {
+   "name": "e1500_X6",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildExit=6"
+   ]
+  },
+  {
+   "name": "e1500_X15",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildExit=15"
+   ]
+  },
+  {
+   "name": "e1500_T",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15"
+   ]
+  },
+  {
+   "name": "e1500_TX6",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15",
+    "SmotherBuildExit=6"
+   ]
+  },
+  {
+   "name": "e2500_B",
+   "elo": 2500,
+   "games": 600,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160"
+   ]
+  },
+  {
+   "name": "e2500_X6",
+   "elo": 2500,
+   "games": 600,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildExit=6"
+   ]
+  },
+  {
+   "name": "e2500_X15",
+   "elo": 2500,
+   "games": 600,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildExit=15"
+   ]
+  },
+  {
+   "name": "e2500_T",
+   "elo": 2500,
+   "games": 600,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15"
+   ]
+  },
+  {
+   "name": "e2500_TX6",
+   "elo": 2500,
+   "games": 600,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15",
+    "SmotherBuildExit=6"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 400,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_X6",
+   "elo": 1500,
+   "games": 400,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildExit=6"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_X15",
+   "elo": 1500,
+   "games": 400,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildExit=15"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_T",
+   "elo": 1500,
+   "games": 400,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_TX6",
+   "elo": 1500,
+   "games": 400,
+   "seed": 27000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=80",
+    "SmotherBuildMoves=160",
+    "SmotherBuildRingTable=60,50,0,-10,-15",
+    "SmotherBuildExit=6"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  0,
+  7
+ ],
+ "max_parallel": 20
+}
