@@ -659,7 +659,28 @@ void set_build_weights(const std::string& s) {
     for (int* p : f)
         if (!(is >> *p))
             break;
+    // Keep the extras set by set_build_extras().
+    w.ready      = buildWeights.ready;
+    w.defRingPct = buildWeights.defRingPct;
+    w.exit       = buildWeights.exit;
+    w.useTable   = buildWeights.useTable;
+    std::copy(std::begin(buildWeights.ringTable), std::end(buildWeights.ringTable), w.ringTable);
     buildWeights = w;
+}
+
+void set_build_extras(int ready, int defRingPct, const std::string& ringTable, int exit) {
+    buildWeights.ready      = ready;
+    buildWeights.exit       = exit;
+    buildWeights.defRingPct = defRingPct;
+    std::string t = ringTable;
+    std::replace(t.begin(), t.end(), ',', ' ');
+    std::istringstream is(t);
+    int                n = 0, v;
+    while (n < 6 && is >> v)
+        buildWeights.ringTable[n++] = v;
+    for (int i = n; n > 0 && i < 6; ++i)
+        buildWeights.ringTable[i] = buildWeights.ringTable[n - 1];
+    buildWeights.useTable = n > 0;
 }
 
 int build_score(const Position& pos, Color us, int survive, int cap, int version, int keep, int keepNear, int starve, int starveAt, int ownKeep, int escape, int knightSafe) {
@@ -677,7 +698,61 @@ int build_score(const Position& pos, Color us, int survive, int cap, int version
     const bool edge   = f == 0 || f == 7 || r == 0 || r == 7;
 
     const BuildWeights& W = buildWeights;
-    int score = W.boxed * boxed - W.hole * holes + (corner ? W.corner : edge ? W.edge : 0);
+    int ringScore = W.useTable ? W.ringTable[std::min(holes, 5)] : W.boxed * boxed - W.hole * holes;
+    if (W.defRingPct != 100 && pos.side_to_move() != us)
+        ringScore = ringScore * W.defRingPct / 100;
+    int score = ringScore + (corner ? W.corner : edge ? W.edge : 0);
+
+    // Exits (ChatGPT review): ways a defender ring piece can step off the ring
+    // to a square we do not attack. Offline (2,343 games, <= 1 open square):
+    // full smother within 10 moves 25.5% / 18.6% / 10.5% with 0 / 1-2 / 3+.
+    if (W.exit && holes <= 2)
+    {
+        const Bitboard occ = pos.pieces();
+        Bitboard       ours = 0, p = pos.pieces(us);
+        while (p)
+        {
+            const Square    s  = pop_lsb(p);
+            const PieceType pt = type_of(pos.piece_on(s));
+            ours |= pt == PAWN ? Attacks::attacks_bb(PAWN, s, us) : Attacks::attacks_bb(pt, s, occ);
+        }
+        const Bitboard safe  = ~ring & ~ours & ~pos.pieces(them) & ~square_bb(ksq);
+        Bitboard       rp    = ring & pos.pieces(them) & ~pos.pieces(KING);
+        int            exits = 0;
+        while (rp)
+        {
+            const Square    s  = pop_lsb(rp);
+            const PieceType pt = type_of(pos.piece_on(s));
+            Bitboard        to;
+            if (pt == PAWN)
+            {
+                const Square fwd = s + pawn_push(them);
+                to = (is_ok(fwd) && pos.empty(fwd) ? square_bb(fwd) : Bitboard(0))
+                   | (Attacks::attacks_bb(PAWN, s, them) & pos.pieces(us));
+            }
+            else
+                to = Attacks::attacks_bb(pt, s, occ);
+            exits += popcount(to & safe);
+        }
+        score -= W.exit * std::min(exits, 6);
+    }
+
+    // Ready squares: where a queen move would mate once the box is closed.
+    if (W.ready && holes <= 2 && pos.pieces(us, QUEEN))
+    {
+        Bitboard qatt = 0, q = pos.pieces(us, QUEEN);
+        while (q)
+            qatt |= Attacks::attacks_bb(QUEEN, pop_lsb(q), pos.pieces());
+        Bitboard cand = ring & ~pos.pieces(us) & qatt;
+        int      n    = 0;
+        while (cand && n < 2)
+        {
+            const Square s = pop_lsb(cand);
+            if (pos.attackers_to(s) & pos.pieces(us) & ~pos.pieces(QUEEN))
+                ++n;
+        }
+        score += holes <= 1 ? W.ready * n : W.ready * n / 3;
+    }
 
     // Every enemy piece is a possible blocker: keep them, especially near
     // their king.
