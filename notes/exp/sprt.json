@@ -1,0 +1,18 @@
+{
+ "name": "k16_vs_151_s3",
+ "tc": "10+0.1",
+ "elo0": -3,
+ "elo1": 0,
+ "alpha": 0.05,
+ "beta": 0.05,
+ "new_opts": [
+  "SmotherClassic=true",
+  "SmotherBuildKnightCheck=16"
+ ],
+ "base_opts": [],
+ "base_ref": "",
+ "runners": 18,
+ "games": 200,
+ "max_waves": 1,
+ "seed_offset": 3300000
+}
