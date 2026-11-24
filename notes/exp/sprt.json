@@ -1,0 +1,19 @@
+{
+ "name": "c15_vs_141_s6",
+ "tc": "10+0.1",
+ "elo0": -3,
+ "elo1": 0,
+ "alpha": 0.05,
+ "beta": 0.05,
+ "new_opts": [
+  "SmotherPartialAfter=80",
+  "SmotherBuildMoves=160",
+  "SmotherBuildRingTable=60,50,0,-10,-15"
+ ],
+ "base_opts": [],
+ "base_ref": "",
+ "runners": 18,
+ "games": 200,
+ "max_waves": 1,
+ "seed_offset": 2600000
+}
