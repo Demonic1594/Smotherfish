@@ -218,6 +218,12 @@ def play(job):
 
 
 PLAYED = {}
+RESIGN = {}
+VAL = {chess.PAWN: 1, chess.KNIGHT: 3, chess.BISHOP: 3, chess.ROOK: 5, chess.QUEEN: 9}
+
+
+def material(b, c):
+    return sum(VAL.get(p.piece_type, 0) for p in b.piece_map().values() if p.color == c)
 
 
 def play_game(job):
@@ -232,9 +238,15 @@ def play_game(job):
     our_clock = []; proofs = []  # our clock after each of our moves; plies with a proven smother
     pondering = None  # the opponent move our engine is pondering on
     ponder_hits = ponder_total = 0
+    resign_rng = random.Random(A.seed * 1000003 + gi)
     while result is None:
         stm = b.turn
         is_ours = (stm == chess.WHITE) == ours_white
+        deficit = material(b, not stm) - material(b, stm) if RESIGN and not is_ours else 0
+        if (not is_ours and RESIGN and deficit >= RESIGN["threshold"]
+                and resign_rng.random() * 100 < (RESIGN["curve"][min(deficit, 15) // 3 - 1]
+                                                 if "curve" in RESIGN else RESIGN["pct"])):
+            result = "0-1" if stm == chess.WHITE else "1-0"; reason = "resign"; break
         e = ours if is_ours else opp
         fixed = "" if is_ours else A.opp_go
         if is_ours and pondering is not None:
@@ -327,6 +339,21 @@ if __name__ == "__main__":
         fen = book[r % len(book)]
         jobs += [(2 * r, fen, True), (2 * r + 1, fen, False)]
     ours_opts = {"Threads": 1, "Hash": 16, **parse_opts(A.opt)}
+    # Harness settings passed as pseudo-options (the workflow only forwards
+    # --opt): HarnessResign=T,P makes the opponent resign before each of its
+    # moves with P percent chance once it is T or more points of material
+    # down (1/3/3/5/9), like a human who gives up a lost game.
+    for k in [k for k in ours_opts if k.startswith("Harness")]:
+        v = ours_opts.pop(k)
+        if k == "HarnessResign":
+            if v.startswith("curve:"):
+                # Percent per own move for deficits 3-5, 6-8, 9-11, 12-14,
+                # 15+ (measured on Lichess, notes/scripts/lichess_merge.py;
+                # blitz: curve:1.7,3.8,5.6,6.0,4.0).
+                RESIGN.update(threshold=3, curve=[float(x) for x in v[6:].split(",")])
+            else:
+                t, pct = v.split(",")
+                RESIGN.update(threshold=int(t), pct=float(pct))
     if A.ponder:
         ours_opts["Ponder"] = "true"
         # While pondering, our engine runs two threads (search and smother
