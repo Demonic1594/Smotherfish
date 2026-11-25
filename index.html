@@ -177,7 +177,7 @@ async function loadLive(force) {
   hb.innerHTML = helperRows.map(({ a, last, unknown }) => {
     let tag = unknown ? '<span class="tag t-warn">unknown (rate limit)</span>' : '<span class="tag t-idle">no runs yet</span>';
     if (last) {
-      const c = last.status !== "completed" ? ["t-run", "running"] : last.conclusion === "success" ? ["t-ok", "success"]
+      const c = last.status === "in_progress" ? ["t-run", "running"] : last.status !== "completed" ? ["t-warn", last.status] : last.conclusion === "success" ? ["t-ok", "success"]
         : last.conclusion === "cancelled" ? ["t-warn", "cancelled"] : ["t-bad", last.conclusion || "failed"];
       tag = `<span class="tag ${c[0]}">${esc(c[1])}</span>`;
     }
