@@ -4,6 +4,92 @@
  "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
  "experiments": [
   {
+   "id": "grid55",
+   "date": "2026-11-26",
+   "title": "Track B round 1: build earlier and longer",
+   "question": "Spending strength: does starting construction at +5 or +4 (floor +3 / +2, 200 moves, material counting less) raise knight smothers?",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [
+    {
+     "label": "1.6 defaults",
+     "cells": [
+      {
+       "k": 84,
+       "n": 2308
+      },
+      {
+       "k": 46,
+       "n": 1104
+      },
+      {
+       "k": 5,
+       "n": 380
+      }
+     ]
+    },
+    {
+     "label": "O1: from +5",
+     "cells": [
+      {
+       "k": 92,
+       "n": 2308
+      },
+      {
+       "k": 39,
+       "n": 1128
+      },
+      {
+       "k": 5,
+       "n": 360
+      }
+     ]
+    },
+    {
+     "label": "O2: O1 + material 1/16",
+     "cells": [
+      {
+       "k": 71,
+       "n": 2304,
+       "losses": 1
+      },
+      {
+       "k": 42,
+       "n": 1104
+      },
+      {
+       "k": 3,
+       "n": 380
+      }
+     ]
+    },
+    {
+     "label": "O3: from +4",
+     "cells": [
+      {
+       "k": 73,
+       "n": 2308,
+       "losses": 4
+      },
+      {
+       "k": 40,
+       "n": 1104
+      },
+      {
+       "k": 2,
+       "n": 360,
+       "losses": 2
+      }
+     ]
+    }
+   ],
+   "verdict": "No gain in knight smothers; draws rise from 0.4% to 6-8% (games hit the 400-move cap). Strength stays far above the floor (96-98% vs Stockfish 2600).",
+   "outcome": "no"
+  },
+  {
    "id": "grid53",
    "date": "2026-11-26",
    "title": "Decoy term in the main version (Track A)",
