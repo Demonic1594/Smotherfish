@@ -17,6 +17,7 @@
 #include "bitboard.h"
 #include "movegen.h"
 #include "position.h"
+#include "smother_net.h"
 
 namespace Stockfish::Smother {
 
@@ -659,8 +660,154 @@ void set_build_weights(const std::string& s) {
     for (int* p : f)
         if (!(is >> *p))
             break;
+    // Keep the extras set by set_build_extras().
+    w.ready      = buildWeights.ready;
+    w.defRingPct = buildWeights.defRingPct;
+    w.exit       = buildWeights.exit;
+    w.knightCheck = buildWeights.knightCheck;
+    w.decoy       = buildWeights.decoy;
+    w.modelScale  = buildWeights.modelScale;
+    w.netScale    = buildWeights.netScale;
+    std::copy(std::begin(buildWeights.model), std::end(buildWeights.model), w.model);
+    w.useTable   = buildWeights.useTable;
+    std::copy(std::begin(buildWeights.ringTable), std::end(buildWeights.ringTable), w.ringTable);
     buildWeights = w;
 }
+
+void set_build_extras(int ready, int defRingPct, const std::string& ringTable, int exit, int knightCheck, int decoy,
+                      int modelScale, const std::string& model) {
+    buildWeights.ready      = ready;
+    buildWeights.modelScale = modelScale;
+    {
+        std::string m = model;
+        std::replace(m.begin(), m.end(), ',', ' ');
+        std::istringstream ms(m);
+        double             c;
+        for (int i = 0; i < 17; ++i)
+            buildWeights.model[i] = (ms >> c) ? int(c * 100) : 0;  // hundredths
+    }
+    buildWeights.decoy      = decoy;
+    buildWeights.knightCheck = knightCheck;
+    buildWeights.exit       = exit;
+    buildWeights.defRingPct = defRingPct;
+    std::string t = ringTable;
+    std::replace(t.begin(), t.end(), ',', ' ');
+    std::istringstream is(t);
+    int                n = 0, v;
+    while (n < 6 && is >> v)
+        buildWeights.ringTable[n++] = v;
+    for (int i = n; n > 0 && i < 6; ++i)
+        buildWeights.ringTable[i] = buildWeights.ringTable[n - 1];
+    buildWeights.useTable = n > 0;
+}
+
+// Knight (classic) smother network (SmotherBuildNetScale). Inputs exactly as
+// notes/scripts/classic_feats.py (17 features) and nn_data.py (5x5 window
+// around the enemy king, mirrored toward a1, 6 channels per square).
+// Returns the log-odds of a knight smother within 10 of our moves.
+float net_logit(const Position& pos, Color us, float* feats) {
+    const Color    them = ~us;
+    const Square   ksq  = pos.square<KING>(them);
+    const Bitboard ring = Attacks::attacks_bb(KING, ksq);
+    const Bitboard occ  = pos.pieces();
+    const Bitboard openSq = ring & ~pos.pieces(them);
+    const int      holes  = popcount(openSq);
+    const int      kf = file_of(ksq), kr = rank_of(ksq);
+    const int      e  = (kf == 0 || kf == 7) + (kr == 0 || kr == 7);
+    const bool     corner = e == 2, edge = e == 1;
+
+    Bitboard pawnGuard = 0, tp = pos.pieces(them, PAWN);
+    while (tp)
+        pawnGuard |= Attacks::attacks_bb(PAWN, pop_lsb(tp), them);
+    const Bitboard checkSqs = Attacks::attacks_bb(KNIGHT, ksq) & ~pos.pieces(us) & ~pawnGuard;
+    int      kd = 9;
+    Bitboard kn = pos.pieces(us, KNIGHT);
+    while (kn && kd > 1)
+    {
+        Bitboard one = Attacks::attacks_bb(KNIGHT, pop_lsb(kn));
+        if (one & checkSqs)
+            kd = 1;
+        else
+        {
+            Bitboard two = 0;
+            while (one)
+                two |= Attacks::attacks_bb(KNIGHT, pop_lsb(one));
+            if (two & checkSqs)
+                kd = 2;
+        }
+    }
+    Bitboard ours = 0, p = pos.pieces(us);
+    while (p)
+    {
+        const Square    s  = pop_lsb(p);
+        const PieceType pt = type_of(pos.piece_on(s));
+        ours |= pt == PAWN ? Attacks::attacks_bb(PAWN, s, us) : Attacks::attacks_bb(pt, s, occ);
+    }
+    bool decoy = false;
+    if (holes == 1 && corner)
+    {
+        const Bitboard att = pos.attackers_to(lsb(openSq));
+        decoy = (att & pos.pieces(them) & ~pos.pieces(KING)) && (att & pos.pieces(us, QUEEN, ROOK))
+             && (att & pos.pieces(us) & ~pos.pieces(QUEEN));
+    }
+    int            exits = 0;
+    const Bitboard safe  = ~ring & ~ours & ~pos.pieces(them) & ~square_bb(ksq);
+    Bitboard       rp    = ring & pos.pieces(them) & ~pos.pieces(KING);
+    while (rp)
+    {
+        const Square    s  = pop_lsb(rp);
+        const PieceType pt = type_of(pos.piece_on(s));
+        exits += popcount((pt == PAWN ? Attacks::attacks_bb(PAWN, s, them) : Attacks::attacks_bb(pt, s, occ)) & safe);
+    }
+    const float f[17] = {float(corner), float(edge), float(holes == 0), float(holes == 1), float(holes == 2),
+                         float(corner && holes == 0), float(corner && holes == 1), float(kd == 1), float(kd == 2),
+                         float(corner && holes == 1 && kd == 1), float(corner && holes == 0 && kd == 1), float(decoy),
+                         float(bool(pos.pieces(us, QUEEN))), float(!(openSq & ~ours)),
+                         std::min(popcount(pos.pieces(them) & ~pos.pieces(KING)), 8) / 8.0f,
+                         std::min(exits, 6) / 6.0f, std::min(popcount(pos.pieces(us, KNIGHT)), 2) / 2.0f};
+    if (feats)
+        std::copy(f, f + 17, feats);
+
+    float h[Net::Hidden];
+    std::copy(Net::B1, Net::B1 + Net::Hidden, h);
+    for (int i = 0; i < 17; ++i)
+        if (f[i] != 0)
+            for (int j = 0; j < Net::Hidden; ++j)
+                h[j] += f[i] * Net::W1[i][j];
+    const int fx = kf > 3 ? -1 : 1, ry = kr > 3 ? -1 : 1;
+    for (int i = 0; i < 5; ++i)
+        for (int j = 0; j < 5; ++j)
+        {
+            const int fl = kf + fx * (i - 2), rk = kr + ry * (j - 2);
+            int       ch;
+            if (fl < 0 || fl > 7 || rk < 0 || rk > 7)
+                ch = 0;
+            else
+            {
+                const Piece pc = pos.piece_on(make_square(File(fl), Rank(rk)));
+                if (pc == NO_PIECE)
+                    continue;
+                const PieceType pt = type_of(pc);
+                if (color_of(pc) == them)
+                {
+                    if (pt == KING)
+                        continue;
+                    ch = pt == PAWN ? 1 : 2;
+                }
+                else
+                    ch = pt == KNIGHT ? 3 : pt == QUEEN ? 4 : 5;
+            }
+            const float* w = Net::W1[17 + (i * 5 + j) * 6 + ch];
+            for (int k = 0; k < Net::Hidden; ++k)
+                h[k] += w[k];
+        }
+    float out = Net::B2;
+    for (int j = 0; j < Net::Hidden; ++j)
+        out += Net::W2[j] * std::max(h[j], 0.0f);
+    return out;
+}
+
+void set_build_net(int scale) { buildWeights.netScale = scale; }
 
 int build_score(const Position& pos, Color us, int survive, int cap, int version, int keep, int keepNear, int starve, int starveAt, int ownKeep, int escape, int knightSafe) {
     if (version == 2)
@@ -677,7 +824,161 @@ int build_score(const Position& pos, Color us, int survive, int cap, int version
     const bool edge   = f == 0 || f == 7 || r == 0 || r == 7;
 
     const BuildWeights& W = buildWeights;
-    int score = W.boxed * boxed - W.hole * holes + (corner ? W.corner : edge ? W.edge : 0);
+    int ringScore = W.useTable ? W.ringTable[std::min(holes, 5)] : W.boxed * boxed - W.hole * holes;
+    if (W.defRingPct != 100 && pos.side_to_move() != us)
+        ringScore = ringScore * W.defRingPct / 100;
+    const bool learned = W.modelScale || W.netScale;
+    int score = learned ? 0 : ringScore + (corner ? W.corner : edge ? W.edge : 0);
+
+    // Learned classic model: features as in notes/scripts (classic_feats.py).
+    if (W.modelScale)
+    {
+        const Bitboard occ  = pos.pieces();
+        Bitboard       pawnGuard = 0, tp = pos.pieces(them, PAWN);
+        while (tp)
+            pawnGuard |= Attacks::attacks_bb(PAWN, pop_lsb(tp), them);
+        const Bitboard checkSqs = Attacks::attacks_bb(KNIGHT, ksq) & ~pos.pieces(us) & ~pawnGuard;
+        int            kd       = 9;
+        Bitboard       kn       = pos.pieces(us, KNIGHT);
+        while (kn && kd > 1)
+        {
+            Bitboard one = Attacks::attacks_bb(KNIGHT, pop_lsb(kn));
+            if (one & checkSqs)
+                kd = 1;
+            else
+            {
+                Bitboard two = 0;
+                while (one)
+                    two |= Attacks::attacks_bb(KNIGHT, pop_lsb(one));
+                if (two & checkSqs)
+                    kd = 2;
+            }
+        }
+        Bitboard ours = 0, p = pos.pieces(us);
+        while (p)
+        {
+            const Square    s  = pop_lsb(p);
+            const PieceType pt = type_of(pos.piece_on(s));
+            ours |= pt == PAWN ? Attacks::attacks_bb(PAWN, s, us) : Attacks::attacks_bb(pt, s, occ);
+        }
+        const Bitboard openSq = ring & ~pos.pieces(them);
+        const bool     stuck  = !(openSq & ~ours);
+        bool           decoy  = false;
+        if (holes == 1 && corner)
+        {
+            const Square   s   = lsb(openSq);
+            const Bitboard att = pos.attackers_to(s);
+            decoy = (att & pos.pieces(them) & ~pos.pieces(KING)) && (att & pos.pieces(us, QUEEN, ROOK))
+                 && (att & pos.pieces(us) & ~pos.pieces(QUEEN));
+        }
+        int      exits = 0;
+        Bitboard rp    = ring & pos.pieces(them) & ~pos.pieces(KING);
+        const Bitboard safe = ~ring & ~ours & ~pos.pieces(them) & ~square_bb(ksq);
+        while (rp)
+        {
+            const Square    s  = pop_lsb(rp);
+            const PieceType pt = type_of(pos.piece_on(s));
+            if (pt != PAWN)  // pawn exits are not counted (as in the fit)
+                exits += popcount(Attacks::attacks_bb(pt, s, occ) & safe);
+        }
+        const int units   = std::min(popcount(pos.pieces(them) & ~pos.pieces(KING)), 8);
+        const int knights = std::min(popcount(pos.pieces(us, KNIGHT)), 2);
+        const int* c = W.model;  // hundredths of a log-odd; continuous features scaled as in the fit
+        int        z = c[0] * corner + c[1] * edge + c[2] * (holes == 0) + c[3] * (holes == 1) + c[4] * (holes == 2)
+               + c[5] * (corner && holes == 0) + c[6] * (corner && holes == 1) + c[7] * (kd == 1) + c[8] * (kd == 2)
+               + c[9] * (corner && holes == 1 && kd == 1) + c[10] * (corner && holes == 0 && kd == 1) + c[11] * decoy
+               + c[12] * bool(pos.pieces(us, QUEEN)) + c[13] * stuck + c[14] * units / 8
+               + c[15] * std::min(exits, 6) / 6 + c[16] * knights / 2;
+        score += W.modelScale * z / 100;
+    }
+    if (W.netScale)
+        score += int(W.netScale * net_logit(pos, us));
+
+    // Exits (ChatGPT review): ways a defender ring piece can step off the ring
+    // to a square we do not attack. Offline (2,343 games, <= 1 open square):
+    // full smother within 10 moves 25.5% / 18.6% / 10.5% with 0 / 1-2 / 3+.
+    if (W.exit && holes <= 2)
+    {
+        const Bitboard occ = pos.pieces();
+        Bitboard       ours = 0, p = pos.pieces(us);
+        while (p)
+        {
+            const Square    s  = pop_lsb(p);
+            const PieceType pt = type_of(pos.piece_on(s));
+            ours |= pt == PAWN ? Attacks::attacks_bb(PAWN, s, us) : Attacks::attacks_bb(pt, s, occ);
+        }
+        const Bitboard safe  = ~ring & ~ours & ~pos.pieces(them) & ~square_bb(ksq);
+        Bitboard       rp    = ring & pos.pieces(them) & ~pos.pieces(KING);
+        int            exits = 0;
+        while (rp)
+        {
+            const Square    s  = pop_lsb(rp);
+            const PieceType pt = type_of(pos.piece_on(s));
+            Bitboard        to;
+            if (pt == PAWN)
+            {
+                const Square fwd = s + pawn_push(them);
+                to = (is_ok(fwd) && pos.empty(fwd) ? square_bb(fwd) : Bitboard(0))
+                   | (Attacks::attacks_bb(PAWN, s, them) & pos.pieces(us));
+            }
+            else
+                to = Attacks::attacks_bb(pt, s, occ);
+            exits += popcount(to & safe);
+        }
+        score -= W.exit * std::min(exits, 6);
+    }
+
+    // Decoy: the last open square can be filled by force.
+    if (W.decoy && !learned && holes == 1 && corner)
+    {
+        const Square   s   = lsb(ring & ~pos.pieces(them));
+        const Bitboard att = pos.attackers_to(s);
+        if ((att & pos.pieces(them) & ~pos.pieces(KING)) && (att & pos.pieces(us, QUEEN, ROOK))
+            && (att & pos.pieces(us) & ~pos.pieces(QUEEN)))
+            score += W.decoy;
+    }
+
+    // Knight routes to safe checking squares (classic smothers).
+    if (W.knightCheck && !learned)
+    {
+        Bitboard pawnGuard = 0, tp = pos.pieces(them, PAWN);
+        while (tp)
+            pawnGuard |= Attacks::attacks_bb(PAWN, pop_lsb(tp), them);
+        const Bitboard checkSqs = Attacks::attacks_bb(KNIGHT, ksq) & ~pos.pieces(us) & ~pawnGuard;
+        Bitboard       kn       = pos.pieces(us, KNIGHT);
+        while (kn)
+        {
+            const Square s   = pop_lsb(kn);
+            Bitboard     one = Attacks::attacks_bb(KNIGHT, s);
+            if (one & checkSqs)
+                score += W.knightCheck;
+            else
+            {
+                Bitboard two = 0;
+                while (one)
+                    two |= Attacks::attacks_bb(KNIGHT, pop_lsb(one));
+                if (two & checkSqs)
+                    score += W.knightCheck / 2;
+            }
+        }
+    }
+
+    // Ready squares: where a queen move would mate once the box is closed.
+    if (W.ready && holes <= 2 && pos.pieces(us, QUEEN))
+    {
+        Bitboard qatt = 0, q = pos.pieces(us, QUEEN);
+        while (q)
+            qatt |= Attacks::attacks_bb(QUEEN, pop_lsb(q), pos.pieces());
+        Bitboard cand = ring & ~pos.pieces(us) & qatt;
+        int      n    = 0;
+        while (cand && n < 2)
+        {
+            const Square s = pop_lsb(cand);
+            if (pos.attackers_to(s) & pos.pieces(us) & ~pos.pieces(QUEEN))
+                ++n;
+        }
+        score += holes <= 1 ? W.ready * n : W.ready * n / 3;
+    }
 
     // Every enemy piece is a possible blocker: keep them, especially near
     // their king.
@@ -728,10 +1029,10 @@ int build_score(const Position& pos, Color us, int survive, int cap, int version
     }
 
     // The finishers: knights and the queen near the king.
-    Bitboard knights = pos.pieces(us, KNIGHT);
+    Bitboard knights = learned ? Bitboard(0) : pos.pieces(us, KNIGHT);
     while (knights)
         score += W.knight * std::max(0, 4 - sq_distance(pop_lsb(knights), ksq));
-    Bitboard queens = pos.pieces(us, QUEEN);
+    Bitboard queens = learned ? Bitboard(0) : pos.pieces(us, QUEEN);
     while (queens)
         score += W.queen * std::max(0, 4 - sq_distance(pop_lsb(queens), ksq));
 
