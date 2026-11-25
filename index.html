@@ -4,113 +4,268 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Smotherfish Test Status</title>
-<meta name="description" content="Live status of the Smotherfish volunteer test network: helpers, running experiments and results.">
+<meta name="description" content="Smotherfish: a Stockfish-strength engine that plays for the smothered mate. Live status of its volunteer test network, results and releases.">
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
 :root {
-  --bg: #f7f7f5; --panel: #ffffff; --text: #1d1f21; --muted: #5f6368; --line: #e2e2de;
-  --accent: #2f6f4e; --accent-soft: #e4f0e9; --warn: #9a5b00; --warn-soft: #fbefdc;
-  --bad: #a33a2f; --bad-soft: #f8e3e0; --run: #1f5fa8; --run-soft: #e2ecf8;
+  --bg: #050c1f; --bg-2: #081634; --panel: #0c1c40; --panel-2: #10244f; --line: #1c3263; --line-2: #26407a;
+  --text: #e8eefb; --muted: #9db0d6; --faint: #6e82ad;
+  --blue: #3d6fd0; --blue-2: #7ea4ec; --ice: #dce6f8; --red: #e5392f; --red-soft: rgba(229,57,47,.16);
+  --ok: #43c08a; --ok-soft: rgba(67,192,138,.14); --warn: #e8b04a; --warn-soft: rgba(232,176,74,.15);
+  --bad: #f0675d; --bad-soft: rgba(240,103,93,.15); --run: #7ea4ec; --run-soft: rgba(126,164,236,.16);
+  --seg-knight: #e5392f; --seg-full: #7ea4ec; --seg-near: #3d6fd0; --seg-plain: #31466f; --seg-draw: #8a8f99;
+  --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 8px 24px rgba(0,0,0,.25);
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #141615; --panel: #1c1f1d; --text: #e6e6e3; --muted: #a0a49f; --line: #2e322f;
-    --accent: #7cc49b; --accent-soft: #20342a; --warn: #e0b060; --warn-soft: #3a2f1c;
-    --bad: #ec8b7f; --bad-soft: #3b2220; --run: #8db8ec; --run-soft: #1d2b3c;
+:root[data-theme="light"] {
+  --bg: #eef3fc; --bg-2: #e3ebfa; --panel: #ffffff; --panel-2: #f5f8fe; --line: #d5deef; --line-2: #c3d0ea;
+  --text: #0b1735; --muted: #4a5a80; --faint: #7484a6;
+  --blue: #2a56b0; --blue-2: #3d6fd0; --ice: #0b1735; --red: #d22a20; --red-soft: rgba(210,42,32,.10);
+  --ok: #1f8a5b; --ok-soft: rgba(31,138,91,.10); --warn: #9a6400; --warn-soft: rgba(154,100,0,.10);
+  --bad: #b8352b; --bad-soft: rgba(184,53,43,.10); --run: #2a56b0; --run-soft: rgba(42,86,176,.10);
+  --seg-knight: #d22a20; --seg-full: #7ea4ec; --seg-near: #2a56b0; --seg-plain: #c6d1e8; --seg-draw: #9aa1ad;
+  --shadow: 0 1px 2px rgba(11,23,53,.06), 0 6px 18px rgba(11,23,53,.06);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #eef3fc; --bg-2: #e3ebfa; --panel: #ffffff; --panel-2: #f5f8fe; --line: #d5deef; --line-2: #c3d0ea;
+    --text: #0b1735; --muted: #4a5a80; --faint: #7484a6;
+    --blue: #2a56b0; --blue-2: #3d6fd0; --ice: #0b1735; --red: #d22a20; --red-soft: rgba(210,42,32,.10);
+    --ok: #1f8a5b; --ok-soft: rgba(31,138,91,.10); --warn: #9a6400; --warn-soft: rgba(154,100,0,.10);
+    --bad: #b8352b; --bad-soft: rgba(184,53,43,.10); --run: #2a56b0; --run-soft: rgba(42,86,176,.10);
+    --seg-knight: #d22a20; --seg-full: #7ea4ec; --seg-near: #2a56b0; --seg-plain: #c6d1e8; --seg-draw: #9aa1ad;
+    --shadow: 0 1px 2px rgba(11,23,53,.06), 0 6px 18px rgba(11,23,53,.06);
+    color-scheme: light;
   }
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text);
-  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 48px; }
-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
-h1 { font-size: 24px; margin: 0; letter-spacing: -0.01em; }
-h2 { font-size: 17px; margin: 32px 0 10px; }
-h3 { font-size: 15px; margin: 0 0 4px; }
-a { color: var(--accent); }
-.muted { color: var(--muted); }
-.small { font-size: 13px; }
-.links { display: flex; gap: 14px; font-size: 14px; flex-wrap: wrap; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 18px; }
-.card, .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
-.card { padding: 14px 16px; }
-.card .num { font-size: 28px; font-weight: 650; font-variant-numeric: tabular-nums; line-height: 1.2; }
-.panel { padding: 14px 16px; margin-bottom: 12px; }
+html { background: var(--bg); }
+body {
+  margin: 0; color: var(--text); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background:
+    radial-gradient(1200px 500px at 85% -10%, color-mix(in srgb, var(--blue) 28%, transparent), transparent 60%),
+    radial-gradient(900px 420px at -10% 20%, color-mix(in srgb, var(--blue) 16%, transparent), transparent 60%),
+    var(--bg);
+  min-height: 100vh;
+}
+a { color: var(--blue-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+main { max-width: 1080px; margin: 0 auto; padding: 20px 16px 56px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--text); }
+.brand img { width: 44px; height: 44px; border-radius: 11px; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.brand b { font-size: 19px; letter-spacing: -.01em; display: block; line-height: 1.15; }
+.brand span { font-size: 12.5px; color: var(--muted); }
+nav { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+nav a, .btn { font-size: 13.5px; padding: 6px 11px; border-radius: 8px; color: var(--muted); }
+nav a:hover { background: var(--panel); color: var(--text); text-decoration: none; }
+.btn { border: 1px solid var(--line-2); background: var(--panel); color: var(--text); cursor: pointer; font: inherit; font-size: 13px; }
+.btn:hover { border-color: var(--blue-2); }
+.btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; font-weight: 600; }
+.btn.primary:hover { filter: brightness(1.1); text-decoration: none; }
+.icon-btn { width: 34px; height: 32px; padding: 0; display: inline-grid; place-items: center; }
+
+.hero { display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; align-items: stretch; margin: 26px 0 8px; }
+.hero h1 { font-size: clamp(26px, 4.2vw, 38px); line-height: 1.12; margin: 0 0 10px; letter-spacing: -.02em; }
+.hero h1 em { font-style: normal; color: var(--red); }
+.hero p { color: var(--muted); margin: 0 0 16px; max-width: 56ch; }
+.hero .cta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.tag-ver { font-size: 12px; color: var(--muted); }
+.board { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: var(--shadow); display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; }
+.box { display: grid; grid-template-columns: repeat(3, 30px); gap: 6px; }
+.box i { width: 30px; height: 30px; border-radius: 6px; background: var(--bg-2); border: 1px solid var(--line-2); }
+.box i.k { background: var(--red); border-color: var(--red); box-shadow: 0 0 18px color-mix(in srgb, var(--red) 55%, transparent); }
+.kpi .big { font-size: 44px; font-weight: 750; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.kpi .big small { font-size: 16px; color: var(--muted); font-weight: 600; margin-left: 6px; }
+.kpi .lbl { color: var(--muted); font-size: 13px; margin-top: 6px; }
+.kpi .vs { margin-top: 10px; font-size: 13px; color: var(--muted); }
+.kpi .vs b { color: var(--text); }
+
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 4px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 13px 15px; box-shadow: var(--shadow); }
+.card .n { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.15; }
+.card .t { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+.card .s { font-size: 12.5px; color: var(--faint); }
+
+section { margin-top: 34px; }
+.sh { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+h2 { font-size: 18px; margin: 0; letter-spacing: -.01em; display: flex; align-items: center; gap: 9px; }
+h2::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: var(--blue); box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 25%, transparent); }
+.sub { color: var(--muted); font-size: 13px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); }
+.pad { padding: 14px 16px; }
 .scroll { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
-th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
-th { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font-size: 11.5px; font-weight: 650; color: var(--faint); text-transform: uppercase; letter-spacing: .05em; }
+tr:last-child td { border-bottom: 0; }
 td.num, th.num { text-align: right; }
 td.wrap { white-space: normal; min-width: 220px; }
-tr:last-child td { border-bottom: 0; }
-.tag { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
-.t-run { background: var(--run-soft); color: var(--run); }
-.t-ok { background: var(--accent-soft); color: var(--accent); }
-.t-warn { background: var(--warn-soft); color: var(--warn); }
-.t-bad { background: var(--bad-soft); color: var(--bad); }
-.t-idle { background: var(--line); color: var(--muted); }
-.best { font-weight: 650; }
-.loss { color: var(--bad); font-size: 12px; }
-.verdict { margin: 8px 0 0; }
-.empty { padding: 10px 0; color: var(--muted); }
-ul.plain { margin: 0; padding-left: 18px; }
-button { font: inherit; font-size: 13px; padding: 4px 12px; border-radius: 8px; border: 1px solid var(--line);
-  background: var(--panel); color: var(--text); cursor: pointer; }
-button:hover { border-color: var(--muted); }
-.row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-.bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; min-width: 80px; }
-.bar > span { display: block; height: 100%; background: var(--accent); }
-footer { margin-top: 36px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; vertical-align: middle; background: var(--faint); }
+.tag { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 650; }
+.t-run { background: var(--run-soft); color: var(--run); } .t-run .dot { background: var(--run); animation: pulse 1.6s infinite; }
+.t-ok { background: var(--ok-soft); color: var(--ok); } .t-ok .dot { background: var(--ok); }
+.t-warn { background: var(--warn-soft); color: var(--warn); } .t-warn .dot { background: var(--warn); }
+.t-bad { background: var(--bad-soft); color: var(--bad); } .t-bad .dot { background: var(--bad); }
+.t-idle { background: color-mix(in srgb, var(--faint) 15%, transparent); color: var(--muted); }
+@keyframes pulse { 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .t-run .dot { animation: none; } }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+.empty { padding: 14px 16px; color: var(--muted); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--muted); margin: 0 0 12px; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; background: var(--c); }
+.ends { display: grid; gap: 14px; }
+.end-grp .opp { font-size: 13px; font-weight: 650; margin-bottom: 6px; }
+.end-row { display: grid; grid-template-columns: 52px 1fr 64px; gap: 10px; align-items: center; margin: 4px 0; font-size: 13px; }
+.end-row .ver { color: var(--muted); font-variant-numeric: tabular-nums; }
+.stack { display: flex; height: 18px; border-radius: 5px; overflow: hidden; background: var(--bg-2); }
+.stack i { display: block; height: 100%; }
+.end-row .kn { text-align: right; font-weight: 700; color: var(--red); font-variant-numeric: tabular-nums; }
+
+details.exp { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 10px; box-shadow: var(--shadow); }
+details.exp > summary { list-style: none; cursor: pointer; padding: 13px 16px; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+details.exp > summary::-webkit-details-marker { display: none; }
+details.exp > summary h3 { margin: 0; font-size: 15px; }
+details.exp > summary .meta { font-size: 12px; color: var(--faint); }
+details.exp > summary .v { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+details.exp[open] > summary { border-bottom: 1px solid var(--line); }
+details.exp .body { padding: 10px 4px 12px; }
+details.exp .q { color: var(--muted); font-size: 13px; padding: 2px 12px 8px; margin: 0; }
+.best { font-weight: 750; color: var(--text); }
+.cnt { color: var(--faint); font-size: 12px; }
+.loss { color: var(--bad); font-size: 12px; font-weight: 600; }
+
+.find { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.find .card { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
+.find .card b { font-size: 22px; color: var(--blue-2); font-variant-numeric: tabular-nums; min-width: 64px; }
+.find .card p { margin: 0; font-size: 13.5px; color: var(--muted); }
+
+.join { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.step { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); }
+.step .no { width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center; background: var(--blue); color: #fff; font-weight: 700; font-size: 13px; margin-bottom: 8px; }
+.step p { margin: 4px 0 0; color: var(--muted); font-size: 13.5px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--faint); font-size: 12.5px; display: grid; gap: 4px; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .find, .join { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .board { grid-template-columns: 1fr; justify-items: start; }
+  .box { grid-template-columns: repeat(3, 24px); } .box i { width: 24px; height: 24px; }
+  .kpi .big { font-size: 38px; }
+}
 </style>
 </head>
 <body>
 <main>
-  <header>
-    <h1>Smotherfish test status</h1>
-    <nav class="links">
-      <a href="https://github.com/Demonic1594/Smotherfish">Repository</a>
-      <a href="https://github.com/Demonic1594/Smotherfish/blob/smotherfish/docs/HELPING.md">Help test</a>
-      <a href="https://github.com/Demonic1594/Smotherfish/releases">Releases</a>
+  <header class="top">
+    <a class="brand" href="https://github.com/Demonic1594/Smotherfish" aria-label="Smotherfish on GitHub">
+      <img src="icon-192.png" alt="" width="44" height="44">
+      <div><b>Smotherfish</b><span>Test status and results</span></div>
+    </a>
+    <nav>
+      <a href="#live">Live</a><a href="#results">Results</a><a href="#help">Help test</a>
+      <a href="https://github.com/Demonic1594/Smotherfish">GitHub</a>
+      <button class="btn icon-btn" id="theme" type="button" aria-label="Switch light or dark theme" title="Switch theme">◐</button>
     </nav>
   </header>
-  <p class="muted">Every Smotherfish change is tested over thousands of games on GitHub Actions, spread over the main
-    repository and volunteers' forks. This page reads their public status live from GitHub.</p>
 
-  <section class="cards" aria-label="Summary">
-    <div class="card"><div class="muted small">Accounts</div><div class="num" id="c-accounts">–</div><div class="small muted" id="c-accounts-sub">main repository and helper forks</div></div>
-    <div class="card"><div class="muted small">Running now</div><div class="num" id="c-running">–</div><div class="small muted">experiment workflows</div></div>
-    <div class="card"><div class="muted small">Capacity</div><div class="num" id="c-cap">–</div><div class="small muted">games at once at full use</div></div>
-    <div class="card"><div class="muted small">Knight smothers vs Stockfish 1500</div><div class="num" id="c-best">–</div><div class="small muted" id="c-best-sub">per 100 games</div></div>
+  <div class="hero">
+    <div>
+      <h1>Stockfish strength.<br>Playing for the <em>smothered mate</em>.</h1>
+      <p id="headline">A knight mates a king that its own pieces box in on every side. Every change is tested over thousands of games on volunteers' GitHub Actions; this page reads their status live.</p>
+      <div class="cta">
+        <a class="btn primary" id="dl" href="https://github.com/Demonic1594/Smotherfish/releases">Download Smotherfish</a>
+        <a class="btn" href="https://github.com/Demonic1594/Smotherfish/blob/smotherfish/docs/HELPING.md">Help test it</a>
+        <span class="tag-ver" id="ver"></span>
+      </div>
+    </div>
+    <div class="board" aria-label="Headline result">
+      <div class="box" aria-hidden="true"><i></i><i></i><i></i><i></i><i class="k"></i><i></i><i></i><i></i><i></i></div>
+      <div class="kpi">
+        <div class="big" id="k-rate">–<small>/ 100 games</small></div>
+        <div class="lbl">knight smothers against Stockfish 1500</div>
+        <div class="vs" id="k-vs"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards" aria-label="Summary">
+    <div class="card"><div class="t">Accounts</div><div class="n" id="c-accounts">–</div><div class="s">main repository and helpers</div></div>
+    <div class="card"><div class="t">Running now</div><div class="n" id="c-running">–</div><div class="s">test workflows</div></div>
+    <div class="card"><div class="t">Capacity</div><div class="n" id="c-cap">–</div><div class="s">games at once</div></div>
+    <div class="card"><div class="t">Strength</div><div class="n" id="c-elo">–</div><div class="s" id="c-elo-s">latest check</div></div>
+  </div>
+
+  <section id="live">
+    <div class="sh"><h2>Running now</h2><button class="btn" id="refresh" type="button">Refresh</button></div>
+    <div class="panel scroll"><table id="running"><thead><tr><th>Account</th><th>Workflow</th><th>Experiment</th><th>Status</th><th class="num">Started</th></tr></thead><tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody></table></div>
   </section>
 
-  <div class="row"><h2>Running now</h2><button id="refresh" type="button">Refresh</button></div>
-  <div class="panel scroll"><table id="running"><thead><tr><th>Account</th><th>Workflow</th><th>Experiment</th><th>Status</th><th class="num">Started</th></tr></thead><tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody></table></div>
+  <section>
+    <div class="sh"><h2>Helpers</h2><span class="sub">Shown by ID only (a short hash of the account name)</span></div>
+    <div class="panel scroll"><table id="helpers"><thead><tr><th>Account</th><th class="num">Share</th><th>Latest run</th><th>Result</th><th class="num">When</th></tr></thead><tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody></table></div>
+  </section>
 
-  <h2>Helpers</h2>
-  <div class="panel scroll"><table id="helpers"><thead><tr><th>Account</th><th class="num">Share</th><th>Latest run</th><th>Result</th><th class="num">When</th></tr></thead><tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody></table>
-    <p class="small muted">Helpers are shown by ID only (first 6 hex digits of a hash of the account name). <a href="https://github.com/Demonic1594/Smotherfish/blob/smotherfish/docs/HELPING.md">How to join.</a></p></div>
+  <section id="results">
+    <div class="sh"><h2>How games end</h2><span class="sub" id="ends-note"></span></div>
+    <div class="panel pad">
+      <div class="legend" id="legend"></div>
+      <div class="ends" id="ends"></div>
+    </div>
+  </section>
 
-  <h2>Results</h2>
-  <p class="small muted" id="metric"></p>
-  <div id="results"></div>
+  <section>
+    <div class="sh"><h2>Experiments</h2><span class="sub" id="metric"></span></div>
+    <div id="exps"></div>
+  </section>
 
-  <h2>Strength tests</h2>
-  <div class="panel scroll"><table id="strength"><thead><tr><th>Date</th><th>Test</th><th class="num">Elo</th><th class="num">95% range</th><th class="num">Games</th><th>Verdict</th></tr></thead><tbody></tbody></table></div>
+  <section>
+    <div class="sh"><h2>Strength tests</h2><span class="sub">Paired games against the previous version, SPRT</span></div>
+    <div class="panel scroll"><table id="strength"><thead><tr><th>Date</th><th>Test</th><th class="num">Elo</th><th class="num">95% range</th><th class="num">Games</th><th>Verdict</th></tr></thead><tbody></tbody></table></div>
+  </section>
 
-  <h2>What the data shows</h2>
-  <div class="panel"><ul class="plain" id="audits"></ul></div>
+  <section>
+    <div class="sh"><h2>What the data shows</h2></div>
+    <div class="find" id="audits"></div>
+  </section>
 
-  <footer class="small muted">
+  <section id="help">
+    <div class="sh"><h2>Help test Smotherfish</h2><span class="sub">Lend your GitHub Actions minutes; nothing runs on your computer</span></div>
+    <div class="join">
+      <div class="step"><div class="no">1</div><b>Fork the repository</b><p>Keep the <span class="mono">smotherfish</span> branch.</p></div>
+      <div class="step"><div class="no">2</div><b>Enable workflows</b><p>In your fork's Actions tab (GitHub turns them off on new forks).</p></div>
+      <div class="step"><div class="no">3</div><b>Run "Helper poll" once</b><p>Your fork then picks up its share of every test. <a href="https://github.com/Demonic1594/Smotherfish/blob/smotherfish/docs/HELPING.md">Full guide</a></p></div>
+    </div>
+  </section>
+
+  <footer>
     <div id="stamp"></div>
-    <div>Live data comes from GitHub's public API (60 requests per hour per visitor; this page uses about 10 per load and caches for 5 minutes).</div>
+    <div>Live data comes from GitHub's public API (60 requests per hour per visitor; about 10 per load, cached for 5 minutes). Results are updated after each analysis.</div>
   </footer>
 </main>
 <script>
 const MAIN = "Demonic1594/Smotherfish";
 const API = "https://api.github.com";
-const OPP = { e1500: "Stockfish 1500", m1500: "Maia-3 1500", e2500: "Stockfish 2500" };
-const GAMES_PER_SHARE = 80; // 20 jobs x 4 games at once
+const OPP = { e1500: "Stockfish 1500", m1500: "Maia-3 1500", e2500: "Stockfish 2500", e2600: "Stockfish 2600" };
+const GAMES_PER_SHARE = 80;
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+(function theme() {
+  let t = null; try { t = localStorage.getItem("theme"); } catch (e) {}
+  if (t) document.documentElement.dataset.theme = t;
+  $("theme").addEventListener("click", () => {
+    const cur = document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    const next = cur === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+})();
 
 function ago(iso) {
   if (!iso) return "–";
@@ -120,18 +275,12 @@ function ago(iso) {
   if (s < 172800) return Math.round(s / 3600) + " h ago";
   return Math.round(s / 86400) + " days ago";
 }
-
 async function hid(login) {
   const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(login.toLowerCase()));
   return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 6);
 }
-
-function cacheGet(k) {
-  try { const v = JSON.parse(localStorage.getItem(k)); if (v && Date.now() - v.t < 300000) return v.d; } catch (e) {}
-  return null;
-}
+function cacheGet(k) { try { const v = JSON.parse(localStorage.getItem(k)); if (v && Date.now() - v.t < 300000) return v.d; } catch (e) {} return null; }
 function cacheSet(k, d) { try { localStorage.setItem(k, JSON.stringify({ t: Date.now(), d })); } catch (e) {} }
-
 async function gh(path, force) {
   const k = "gh:" + path;
   if (!force) { const c = cacheGet(k); if (c) return c; }
@@ -139,83 +288,93 @@ async function gh(path, force) {
   if (!r.ok) throw new Error(r.status === 403 ? "GitHub rate limit reached; try again later" : "GitHub API " + r.status);
   const d = await r.json(); cacheSet(k, d); return d;
 }
+const tag = (cls, text) => `<span class="tag ${cls}"><span class="dot"></span>${esc(text)}</span>`;
+function runTag(r) {
+  if (!r) return '<span class="tag t-idle">no runs yet</span>';
+  if (r.status === "in_progress") return tag("t-run", "running");
+  if (r.status !== "completed") return tag("t-warn", r.status);
+  if (r.conclusion === "success") return tag("t-ok", "success");
+  if (r.conclusion === "cancelled") return tag("t-warn", "cancelled");
+  return tag("t-bad", r.conclusion || "failed");
+}
+const expName = (r) => esc((r.head_branch || "").replace(/^actions-exp\//, ""));
 
 async function loadLive(force) {
   let conf = { weights: {}, manual: [] };
   try { conf = await (await fetch("volunteers.json", { cache: "no-store" })).json(); } catch (e) {}
   const forks = await gh(`/repos/${MAIN}/forks?per_page=100`, force);
-  const accounts = [{ id: "main", full: MAIN, share: conf.weights.own || 1 }];
+  const accounts = [{ id: "main", full: MAIN, share: (conf.weights || {}).own || 1 }];
   for (const f of forks) {
     const id = await hid(f.owner.login);
-    accounts.push({ id, full: f.full_name, share: conf.weights[id] || 1, manual: conf.manual.includes(id) });
+    accounts.push({ id, full: f.full_name, share: (conf.weights || {})[id] || 1, manual: (conf.manual || []).includes(id) });
   }
   const runsets = await Promise.all(accounts.map((a) =>
     gh(`/repos/${a.full}/actions/runs?per_page=15`, force).then((d) => d.workflow_runs || []).catch(() => null)));
-  const running = [], helperRows = [];
+  const running = [], rows = [];
   accounts.forEach((a, i) => {
-    if (runsets[i] === null) { helperRows.push({ a, last: null, unknown: true }); return; }
-    const runs = runsets[i].filter((r) => r.name !== "Helper poll");
-    for (const r of runs) if (r.status !== "completed")
-      running.push({ a, r });
-    const last = runs[0] || runsets[i][0];
-    helperRows.push({ a, last });
+    if (runsets[i] === null) { rows.push({ a, unknown: true }); return; }
+    const runs = runsets[i].filter((r) => r.name !== "Helper poll" && r.name !== "pages build and deployment");
+    for (const r of runs) if (r.status !== "completed") running.push({ a, r });
+    rows.push({ a, last: runs[0] });
   });
   $("c-accounts").textContent = accounts.length;
-  const shares = accounts.reduce((s, a) => s + a.share, 0);
-  $("c-cap").textContent = (shares * GAMES_PER_SHARE).toLocaleString();
+  $("c-cap").textContent = (accounts.reduce((s, a) => s + a.share, 0) * GAMES_PER_SHARE).toLocaleString();
   $("c-running").textContent = running.length;
-
-  const tb = $("running").tBodies[0];
-  tb.innerHTML = running.length ? running.map(({ a, r }) => `<tr>
-      <td>${a.id === "main" ? '<a href="https://github.com/' + MAIN + '/actions">main</a>' : esc(a.id)}</td>
-      <td>${esc(r.name)}</td><td>${esc((r.head_branch || "").replace(/^actions-exp\//, ""))}</td>
-      <td><span class="tag ${r.status === "in_progress" ? "t-run" : "t-warn"}">${r.status === "in_progress" ? "running" : esc(r.status)}</span></td>
-      <td class="num">${ago(r.run_started_at)}</td></tr>`).join("")
-    : '<tr><td colspan="5" class="empty">Nothing running. The next experiment starts when one is distributed.</td></tr>';
-
-  const hb = $("helpers").tBodies[0];
-  hb.innerHTML = helperRows.map(({ a, last, unknown }) => {
-    let tag = unknown ? '<span class="tag t-warn">unknown (rate limit)</span>' : '<span class="tag t-idle">no runs yet</span>';
-    if (last) {
-      const c = last.status === "in_progress" ? ["t-run", "running"] : last.status !== "completed" ? ["t-warn", last.status] : last.conclusion === "success" ? ["t-ok", "success"]
-        : last.conclusion === "cancelled" ? ["t-warn", "cancelled"] : ["t-bad", last.conclusion || "failed"];
-      tag = `<span class="tag ${c[0]}">${esc(c[1])}</span>`;
-    }
-    const name = a.id === "main" ? "main repository" : esc(a.id) + (a.manual ? ' <span class="small muted">(started by hand)</span>' : "");
-    return `<tr><td>${name}</td><td class="num">${a.share}</td>
-      <td>${last ? esc(last.name) + ' <span class="muted small">' + esc((last.head_branch || "").replace(/^actions-exp\//, "")) + "</span>" : "–"}</td>
-      <td>${tag}</td><td class="num">${last ? ago(last.updated_at) : "–"}</td></tr>`;
-  }).join("");
+  const name = (a) => a.id === "main" ? `<a href="https://github.com/${MAIN}/actions">main repository</a>` : `<span class="mono">${esc(a.id)}</span>`;
+  $("running").tBodies[0].innerHTML = running.length ? running.map(({ a, r }) =>
+    `<tr><td>${name(a)}</td><td>${esc(r.name)}</td><td class="mono">${expName(r)}</td><td>${runTag(r)}</td><td class="num">${ago(r.run_started_at)}</td></tr>`).join("")
+    : '<tr><td colspan="5" class="empty">Nothing running right now. The next test starts when one is distributed.</td></tr>';
+  $("helpers").tBodies[0].innerHTML = rows.map(({ a, last, unknown }) =>
+    `<tr><td>${name(a)}${a.manual ? ' <span class="cnt">(started by hand)</span>' : ""}</td><td class="num">${a.share}</td>
+     <td>${last ? esc(last.name) + ' <span class="cnt mono">' + expName(last) + "</span>" : "–"}</td>
+     <td>${unknown ? tag("t-warn", "unknown (rate limit)") : runTag(last)}</td><td class="num">${last ? ago(last.updated_at) : "–"}</td></tr>`).join("");
   $("stamp").textContent = "Live data loaded " + new Date().toLocaleString() + ".";
 }
 
-function rate(cell) { return cell.rate != null ? cell.rate : (100 * cell.k) / cell.n; }
-
+const rate = (c) => c.rate != null ? c.rate : (100 * c.k) / c.n;
 async function loadResults() {
   const R = await (await fetch("results.json", { cache: "no-store" })).json();
-  $("metric").textContent = R.metric + ". " + R.baseline_note + " Counts in brackets; losses in red.";
-  const best = R.experiments.find((e) => e.id === "grid52") || R.experiments[0];
-  const b = best.arms[0].cells[0];
-  $("c-best").textContent = rate(b).toFixed(1);
-  $("c-best-sub").textContent = "per 100 games (1.5.1: 0.7)";
-  $("results").innerHTML = R.experiments.map((e) => {
+  if (R.release) {
+    $("dl").href = R.release.url; $("dl").textContent = "Download Smotherfish " + R.release.version;
+    $("ver").textContent = "Released " + R.release.date;
+  }
+  const E = R.endings;
+  if (E) {
+    const names = { knight: "Knight smother", full: "Full smother, other piece", near: "Near smother", plain: "Plain mate", draw: "Draw" };
+    $("legend").innerHTML = E.keys.map((k) => `<span style="--c: var(--seg-${k})">${names[k]}</span>`).join("");
+    $("ends-note").textContent = "share of games, 5s + 0.05s per move";
+    const groups = [...new Set(E.rows.map((r) => r.opp))];
+    $("ends").innerHTML = groups.map((g) => `<div class="end-grp"><div class="opp">${esc(g)}</div>` + E.rows.filter((r) => r.opp === g).map((r) =>
+      `<div class="end-row"><span class="ver">${esc(r.ver)}</span><div class="stack" role="img" aria-label="${esc(r.ver)}: ${E.keys.map((k, i) => names[k] + " " + r.v[i] + "%").join(", ")}">` +
+      E.keys.map((k, i) => `<i style="width:${r.v[i]}%;background:var(--seg-${k})" title="${names[k]}: ${r.v[i]}%"></i>`).join("") +
+      `</div><span class="kn" title="Knight smothers">${r.v[0].toFixed(1)}%</span></div>`).join("") + "</div>").join("");
+    const a = E.rows.find((r) => r.opp === "Stockfish 1500" && r.ver === "1.6"), b = E.rows.find((r) => r.opp === "Stockfish 1500" && r.ver === "1.5.1");
+    if (a) { $("k-rate").firstChild.textContent = a.v[0].toFixed(1); }
+    if (a && b) $("k-vs").innerHTML = `1.5.1: <b>${b.v[0].toFixed(1)}</b> &nbsp;·&nbsp; ${Math.round(a.v[0] / b.v[0])}× more, no strength cost`;
+  }
+  $("metric").textContent = "knight smothers per 100 games; tap a card for details";
+  $("exps").innerHTML = R.experiments.map((e, idx) => {
     const cols = e.opponents;
     const top = cols.map((_, j) => Math.max(...e.arms.map((a) => (a.cells[j] ? rate(a.cells[j]) : -1))));
     const rows = e.arms.map((a) => `<tr><td>${esc(a.label)}</td>${cols.map((_, j) => {
-      const c = a.cells[j]; if (!c) return '<td class="num muted">–</td>';
+      const c = a.cells[j]; if (!c) return '<td class="num cnt">–</td>';
       const r = rate(c);
-      return `<td class="num${r === top[j] ? " best" : ""}">${r.toFixed(1)}${c.k != null ? ' <span class="muted small">(' + c.k + "/" + c.n + ")</span>" : ""}${c.losses ? ' <span class="loss">' + c.losses + " lost</span>" : ""}</td>`;
+      return `<td class="num"><span class="${r === top[j] ? "best" : ""}">${r.toFixed(1)}</span>${c.k != null ? ' <span class="cnt">' + c.k + "/" + c.n + "</span>" : ""}${c.losses ? ' <span class="loss">' + c.losses + " lost</span>" : ""}</td>`;
     }).join("")}</tr>`).join("");
-    const tag = e.outcome === "yes" ? '<span class="tag t-ok">adopted</span>' : '<span class="tag t-idle">not adopted</span>';
-    return `<div class="panel"><div class="row"><h3>${esc(e.title)}</h3><span class="small muted">${esc(e.id)} · ${esc(e.date)} ${tag}</span></div>
-      <p class="small muted" style="margin:2px 0 8px">${esc(e.question)}</p>
-      <div class="scroll"><table><thead><tr><th>Setting</th>${cols.map((o) => '<th class="num">' + esc(OPP[o] || o) + "</th>").join("")}</tr></thead><tbody>${rows}</tbody></table></div>
-      <p class="verdict small">${esc(e.verdict)}</p></div>`;
+    const st = e.outcome === "yes" ? tag("t-ok", "adopted") : e.outcome === "running" ? tag("t-run", "running") : '<span class="tag t-idle">not adopted</span>';
+    return `<details class="exp"${idx === 0 ? " open" : ""}><summary><h3>${esc(e.title)}</h3><span>${st}</span>
+      <span class="meta">${esc(e.id)} · ${esc(e.date)}</span><span></span><span class="v">${esc(e.verdict)}</span></summary>
+      <div class="body"><p class="q">${esc(e.question)}</p><div class="scroll"><table><thead><tr><th>Setting</th>${cols.map((o) => '<th class="num">' + esc(OPP[o] || o) + "</th>").join("")}</tr></thead><tbody>${rows}</tbody></table></div></div></details>`;
   }).join("");
   $("strength").tBodies[0].innerHTML = R.strength.map((s) => `<tr><td>${esc(s.date)}</td><td>${esc(s.title)}</td>
     <td class="num">${s.elo > 0 ? "+" : ""}${s.elo.toFixed(1)}</td><td class="num">${s.lo.toFixed(1)} to ${s.hi > 0 ? "+" : ""}${s.hi.toFixed(1)}</td>
-    <td class="num">${s.games ? s.games.toLocaleString() : "–"}</td><td class="small wrap">${esc(s.verdict)}</td></tr>`).join("");
-  $("audits").innerHTML = R.audits.map((a) => "<li>" + esc(a) + "</li>").join("");
+    <td class="num">${s.games ? s.games.toLocaleString() : "–"}</td><td class="wrap">${esc(s.verdict)}</td></tr>`).join("");
+  const s0 = R.strength[0];
+  if (s0) { $("c-elo").textContent = (s0.elo > 0 ? "+" : "") + s0.elo.toFixed(1); $("c-elo-s").textContent = "Elo, " + s0.title.replace(/\s*\(.*\)$/, ""); }
+  $("audits").innerHTML = R.audits.map((a) => {
+    const m = a.match(/(\d+(?:\.\d+)?%|\d[\d,]* of [\d,]+)/);
+    return `<div class="card"><b>${m ? esc(m[1]) : "•"}</b><p>${esc(a)}</p></div>`;
+  }).join("");
 }
 
 async function refresh(force) {
@@ -226,7 +385,7 @@ async function refresh(force) {
   }
 }
 $("refresh").addEventListener("click", () => refresh(true));
-loadResults().catch((e) => { $("results").innerHTML = '<p class="empty">Results unavailable: ' + esc(e.message) + "</p>"; });
+loadResults().catch((e) => { $("exps").innerHTML = '<p class="empty">Results unavailable: ' + esc(e.message) + "</p>"; });
 refresh(false);
 setInterval(() => refresh(false), 600000);
 </script>
