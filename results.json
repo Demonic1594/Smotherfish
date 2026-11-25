@@ -4,6 +4,99 @@
  "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
  "experiments": [
   {
+   "id": "grid53",
+   "date": "2026-11-26",
+   "title": "Decoy term in the main version (Track A)",
+   "question": "Does rewarding the setup of Philidor's sacrifice (a piece ready to go to the last open square) add knight smothers at full strength?",
+   "opponents": [
+    "e1500",
+    "m1500"
+   ],
+   "arms": [
+    {
+     "label": "1.6 defaults",
+     "cells": [
+      {
+       "k": 219,
+       "n": 6000
+      },
+      {
+       "k": 38,
+       "n": 1200
+      }
+     ]
+    },
+    {
+     "label": "Decoy 40",
+     "cells": [
+      {
+       "k": 209,
+       "n": 6000
+      },
+      {
+       "k": 36,
+       "n": 1200
+      }
+     ]
+    },
+    {
+     "label": "Decoy 80",
+     "cells": [
+      {
+       "k": 212,
+       "n": 6000
+      },
+      {
+       "k": 44,
+       "n": 1200
+      }
+     ]
+    }
+   ],
+   "verdict": "No gain against Stockfish 1500 at 6,000 games per setting; the Maia-3 difference is within noise. Stays off.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid54",
+   "date": "2026-11-26",
+   "title": "Strength margin of 1.6 (Track B baseline)",
+   "question": "How far above a 2600 opponent does 1.6 play? Track B may spend strength down to scoring 80% against Stockfish 2600 (10+0.1).",
+   "opponents": [
+    "e2600",
+    "e3000"
+   ],
+   "arms": [
+    {
+     "label": "1.6 score, %",
+     "cells": [
+      {
+       "rate": 99.8,
+       "n": 940
+      },
+      {
+       "rate": 99.0,
+       "n": 360
+      }
+     ]
+    },
+    {
+     "label": "1.6 knight smothers",
+     "cells": [
+      {
+       "k": 11,
+       "n": 940
+      },
+      {
+       "k": 2,
+       "n": 360
+      }
+     ]
+    }
+   ],
+   "verdict": "99.8% against Stockfish 2600 and 99.0% against 3000 (0 losses): a large margin above the 80% floor.",
+   "outcome": "no"
+  },
+  {
    "id": "grid52",
    "date": "2026-11-25",
    "title": "Prep phase: keep the smother ingredients before construction",
