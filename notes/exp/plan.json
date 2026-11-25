@@ -1,0 +1,205 @@
+{
+ "exp": "grid52",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16"
+   ]
+  },
+  {
+   "name": "e1500_P",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=400"
+   ]
+  },
+  {
+   "name": "e1500_P2",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=400",
+    "SmotherPrepKnight=80",
+    "SmotherPrepQueen=80",
+    "SmotherPrepPiece=40",
+    "SmotherPrepShield=20"
+   ]
+  },
+  {
+   "name": "e1500_P3",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=300",
+    "SmotherPrepKnight=80",
+    "SmotherPrepQueen=80",
+    "SmotherPrepPiece=40",
+    "SmotherPrepShield=20"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 600,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_P",
+   "elo": 1500,
+   "games": 600,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=400"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_P2",
+   "elo": 1500,
+   "games": 600,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=400",
+    "SmotherPrepKnight=80",
+    "SmotherPrepQueen=80",
+    "SmotherPrepPiece=40",
+    "SmotherPrepShield=20"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_P3",
+   "elo": 1500,
+   "games": 600,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=300",
+    "SmotherPrepKnight=80",
+    "SmotherPrepQueen=80",
+    "SmotherPrepPiece=40",
+    "SmotherPrepShield=20"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2500_B",
+   "elo": 2500,
+   "games": 400,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16"
+   ]
+  },
+  {
+   "name": "e2500_P",
+   "elo": 2500,
+   "games": 400,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=400"
+   ]
+  },
+  {
+   "name": "e2500_P2",
+   "elo": 2500,
+   "games": 400,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=400",
+    "SmotherPrepKnight=80",
+    "SmotherPrepQueen=80",
+    "SmotherPrepPiece=40",
+    "SmotherPrepShield=20"
+   ]
+  },
+  {
+   "name": "e2500_P3",
+   "elo": 2500,
+   "games": 400,
+   "seed": 41000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildKnightCheck=16",
+    "SmotherPrepCp=300",
+    "SmotherPrepKnight=80",
+    "SmotherPrepQueen=80",
+    "SmotherPrepPiece=40",
+    "SmotherPrepShield=20"
+   ]
+  }
+ ],
+ "shard": [
+  1,
+  8
+ ],
+ "max_parallel": 20
+}

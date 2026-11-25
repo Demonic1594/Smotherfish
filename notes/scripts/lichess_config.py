@@ -42,6 +42,13 @@ ch["variants"] = ["standard"]
 # manipulation): declined as challengers, never challenged.
 OWN_BOTS = [f"SmotherfishBot{i}" for i in range(1, 9)]
 ch["block_list"] = OWN_BOTS
+# No 30-second games: at 30+0 we lost twice on the clock (Nov 25) and there
+# is no time to build a smother. At most 2 games per bot per hour (one 3124
+# bot played bot 4 about 30 times in a row, all draws or losses).
+ch["min_base"] = 60
+ch["bullet_requires_increment"] = True
+ch["recent_bot_challenge_age"] = 3600
+ch["max_recent_bot_challenges"] = 2
 
 mm = c["matchmaking"]
 mm["allow_matchmaking"] = True
