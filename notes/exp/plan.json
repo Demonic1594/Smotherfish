@@ -1,0 +1,163 @@
+{
+ "exp": "grid48",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16"
+   ]
+  },
+  {
+   "name": "e1500_K22",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildKeep=22"
+   ]
+  },
+  {
+   "name": "e1500_K22M16",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildKeep=22",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e1500_ST",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildStarve=10",
+    "SmotherBuildStarveAt=4"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 600,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_K22",
+   "elo": 1500,
+   "games": 600,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildKeep=22"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_K22M16",
+   "elo": 1500,
+   "games": 600,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildKeep=22",
+    "SmotherBuildMaterialDiv=16"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_ST",
+   "elo": 1500,
+   "games": 600,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildStarve=10",
+    "SmotherBuildStarveAt=4"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2500_B",
+   "elo": 2500,
+   "games": 400,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16"
+   ]
+  },
+  {
+   "name": "e2500_K22",
+   "elo": 2500,
+   "games": 400,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildKeep=22"
+   ]
+  },
+  {
+   "name": "e2500_K22M16",
+   "elo": 2500,
+   "games": 400,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildKeep=22",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2500_ST",
+   "elo": 2500,
+   "games": 400,
+   "seed": 37000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherBuildKnightCheck=16",
+    "SmotherBuildStarve=10",
+    "SmotherBuildStarveAt=4"
+   ]
+  }
+ ],
+ "shard": [
+  1,
+  8
+ ],
+ "max_parallel": 20
+}
