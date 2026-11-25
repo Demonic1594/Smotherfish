@@ -1,0 +1,365 @@
+{
+ "updated": "2026-11-25",
+ "metric": "Knight (classic) smothered mates per 100 games, 5s + 0.05s per move",
+ "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
+ "experiments": [
+  {
+   "id": "grid52",
+   "date": "2026-11-25",
+   "title": "Prep phase: keep the smother ingredients before construction",
+   "question": "Does a bonus for keeping our knight and queen and the enemy's pieces and king-side pawns between +4 and +8 raise knight smothers?",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2500"
+   ],
+   "arms": [
+    {
+     "label": "B",
+     "cells": [
+      {
+       "k": 95,
+       "n": 2500
+      },
+      {
+       "k": 20,
+       "n": 600
+      },
+      {
+       "k": 3,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Prep from +4",
+     "cells": [
+      {
+       "k": 83,
+       "n": 2500
+      },
+      {
+       "k": 15,
+       "n": 600
+      },
+      {
+       "k": 9,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Prep +4, double",
+     "cells": [
+      {
+       "k": 79,
+       "n": 2500
+      },
+      {
+       "k": 21,
+       "n": 600
+      },
+      {
+       "k": 6,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Prep +3, double",
+     "cells": [
+      {
+       "k": 91,
+       "n": 2500
+      },
+      {
+       "k": 30,
+       "n": 600
+      },
+      {
+       "k": 8,
+       "n": 400
+      }
+     ]
+    }
+   ],
+   "verdict": "No gain against Stockfish 1500; differences elsewhere within noise. Stays off.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid51",
+   "date": "2026-11-25",
+   "title": "Small neural network as the construction score",
+   "question": "A 16-neuron network predicts knight smothers better than the hand score (AUC 0.968 vs 0.936). Does it give more smothers in games?",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2500"
+   ],
+   "arms": [
+    {
+     "label": "B (hand score)",
+     "cells": [
+      {
+       "k": 98,
+       "n": 2500
+      },
+      {
+       "k": 30,
+       "n": 600
+      },
+      {
+       "k": 6,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Network x6",
+     "cells": [
+      {
+       "k": 105,
+       "n": 2500
+      },
+      {
+       "k": 32,
+       "n": 600
+      },
+      {
+       "k": 5,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Network x11",
+     "cells": [
+      {
+       "k": 71,
+       "n": 2500,
+       "losses": 1
+      },
+      {
+       "k": 18,
+       "n": 600
+      },
+      {
+       "k": 2,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Network x20",
+     "cells": [
+      {
+       "k": 19,
+       "n": 2500,
+       "losses": 14
+      },
+      {
+       "k": 9,
+       "n": 600
+      },
+      {
+       "k": 2,
+       "n": 400,
+       "losses": 9
+      }
+     ]
+    },
+    {
+     "label": "Network x30",
+     "cells": [
+      {
+       "k": 9,
+       "n": 2500,
+       "losses": 22
+      },
+      {
+       "k": 2,
+       "n": 600,
+       "losses": 4
+      },
+      null
+     ]
+    },
+    {
+     "label": "Network x45",
+     "cells": [
+      {
+       "k": 4,
+       "n": 2500,
+       "losses": 28
+      },
+      {
+       "k": 3,
+       "n": 600,
+       "losses": 4
+      },
+      null
+     ]
+    }
+   ],
+   "verdict": "At x6 it ties the hand score; stronger settings give up material chasing the network and lose games. Off by default.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid50",
+   "date": "2026-11-25",
+   "title": "Learned linear model as the construction score",
+   "question": "17 hand features fitted to 4.5M positions (AUC 0.936) instead of the hand-written terms.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2500"
+   ],
+   "arms": [
+    {
+     "label": "B (hand score)",
+     "cells": [
+      {
+       "k": 96,
+       "n": 2500
+      },
+      {
+       "k": 22,
+       "n": 600
+      },
+      {
+       "k": 7,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Model x6",
+     "cells": [
+      {
+       "k": 63,
+       "n": 2500
+      },
+      {
+       "k": 15,
+       "n": 600
+      },
+      {
+       "k": 9,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Model x11",
+     "cells": [
+      {
+       "k": 84,
+       "n": 2500
+      },
+      {
+       "k": 15,
+       "n": 600
+      },
+      {
+       "k": 4,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Model x20",
+     "cells": [
+      {
+       "k": 103,
+       "n": 2500
+      },
+      {
+       "k": 26,
+       "n": 600
+      },
+      {
+       "k": 9,
+       "n": 400,
+       "losses": 1
+      }
+     ]
+    },
+    {
+     "label": "Model x35",
+     "cells": [
+      {
+       "k": 65,
+       "n": 2500
+      },
+      {
+       "k": 21,
+       "n": 600
+      },
+      null
+     ]
+    }
+   ],
+   "verdict": "Peaks near x20, equal to the hand score. Off by default.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid46",
+   "date": "2026-11-24",
+   "title": "Aiming for knight smothers",
+   "question": "1.5 aims at any smother. What do SmotherClassic and the knight-route bonus (KnightCheck) give?",
+   "opponents": [
+    "e1500"
+   ],
+   "arms": [
+    {
+     "label": "1.5 defaults",
+     "cells": [
+      {
+       "rate": 0.7,
+       "n": 2500
+      }
+     ]
+    },
+    {
+     "label": "Classic + KnightCheck 8",
+     "cells": [
+      {
+       "rate": 4.0,
+       "n": 2500
+      }
+     ]
+    }
+   ],
+   "verdict": "About 5-6 times more knight smothers; the basis of the 1.6 settings.",
+   "outcome": "yes"
+  }
+ ],
+ "strength": [
+  {
+   "date": "2026-11-25",
+   "title": "Prover time in undecided positions off vs on",
+   "games": 28800,
+   "elo": 0.3,
+   "lo": -0.6,
+   "hi": 1.2,
+   "tc": "10+0.1",
+   "verdict": "The prover costs no measurable strength."
+  },
+  {
+   "date": "2026-11-24",
+   "title": "Knight settings (Classic + KnightCheck 16) vs 1.5.1",
+   "games": null,
+   "elo": 0.7,
+   "lo": -0.5,
+   "hi": 1.8,
+   "tc": "10+0.1",
+   "verdict": "No measurable strength cost."
+  }
+ ],
+ "audits": [
+  "83% of knight smothers close the box with the defender's forced reply to a check in the final sequence (2,481 smothers).",
+  "In stalled won positions, a forced knight smother existed in 2 of 120 positions with one open square, even with a much larger prover budget.",
+  "One-move traps against the real opponent (Stockfish 1500) were available in 1 of 240 stalled positions.",
+  "The engine's expected defender reply matched the real reply 81% of the time in construction mode."
+ ]
+}

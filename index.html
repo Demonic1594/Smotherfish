@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smotherfish Test Status</title>
+<meta name="description" content="Live status of the Smotherfish volunteer test network: helpers, running experiments and results.">
+<style>
+:root {
+  --bg: #f7f7f5; --panel: #ffffff; --text: #1d1f21; --muted: #5f6368; --line: #e2e2de;
+  --accent: #2f6f4e; --accent-soft: #e4f0e9; --warn: #9a5b00; --warn-soft: #fbefdc;
+  --bad: #a33a2f; --bad-soft: #f8e3e0; --run: #1f5fa8; --run-soft: #e2ecf8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141615; --panel: #1c1f1d; --text: #e6e6e3; --muted: #a0a49f; --line: #2e322f;
+    --accent: #7cc49b; --accent-soft: #20342a; --warn: #e0b060; --warn-soft: #3a2f1c;
+    --bad: #ec8b7f; --bad-soft: #3b2220; --run: #8db8ec; --run-soft: #1d2b3c;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 48px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+h1 { font-size: 24px; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: 17px; margin: 32px 0 10px; }
+h3 { font-size: 15px; margin: 0 0 4px; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.links { display: flex; gap: 14px; font-size: 14px; flex-wrap: wrap; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 18px; }
+.card, .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+.card { padding: 14px 16px; }
+.card .num { font-size: 28px; font-weight: 650; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.panel { padding: 14px 16px; margin-bottom: 12px; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+td.num, th.num { text-align: right; }
+td.wrap { white-space: normal; min-width: 220px; }
+tr:last-child td { border-bottom: 0; }
+.tag { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.t-run { background: var(--run-soft); color: var(--run); }
+.t-ok { background: var(--accent-soft); color: var(--accent); }
+.t-warn { background: var(--warn-soft); color: var(--warn); }
+.t-bad { background: var(--bad-soft); color: var(--bad); }
+.t-idle { background: var(--line); color: var(--muted); }
+.best { font-weight: 650; }
+.loss { color: var(--bad); font-size: 12px; }
+.verdict { margin: 8px 0 0; }
+.empty { padding: 10px 0; color: var(--muted); }
+ul.plain { margin: 0; padding-left: 18px; }
+button { font: inherit; font-size: 13px; padding: 4px 12px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--panel); color: var(--text); cursor: pointer; }
+button:hover { border-color: var(--muted); }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; min-width: 80px; }
+.bar > span { display: block; height: 100%; background: var(--accent); }
+footer { margin-top: 36px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Smotherfish test status</h1>
+    <nav class="links">
+      <a href="https://github.com/Demonic1594/Smotherfish">Repository</a>
+      <a href="https://github.com/Demonic1594/Smotherfish/blob/ccr-00291b96-tkvbkh/docs/HELPING.md">Help test</a>
+      <a href="https://github.com/Demonic1594/Smotherfish/releases">Releases</a>
+    </nav>
+  </header>
+  <p class="muted">Every Smotherfish change is tested over thousands of games on GitHub Actions, spread over the main
+    repository and volunteers' forks. This page reads their public status live from GitHub.</p>
+
+  <section class="cards" aria-label="Summary">
+    <div class="card"><div class="muted small">Accounts</div><div class="num" id="c-accounts">–</div><div class="small muted" id="c-accounts-sub">main repository and helper forks</div></div>
+    <div class="card"><div class="muted small">Running now</div><div class="num" id="c-running">–</div><div class="small muted">experiment workflows</div></div>
+    <div class="card"><div class="muted small">Capacity</div><div class="num" id="c-cap">–</div><div class="small muted">games at once at full use</div></div>
+    <div class="card"><div class="muted small">Knight smothers vs Stockfish 1500</div><div class="num" id="c-best">–</div><div class="small muted" id="c-best-sub">per 100 games</div></div>
+  </section>
+
+  <div class="row"><h2>Running now</h2><button id="refresh" type="button">Refresh</button></div>
+  <div class="panel scroll"><table id="running"><thead><tr><th>Account</th><th>Workflow</th><th>Experiment</th><th>Status</th><th class="num">Started</th></tr></thead><tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody></table></div>
+
+  <h2>Helpers</h2>
+  <div class="panel scroll"><table id="helpers"><thead><tr><th>Account</th><th class="num">Share</th><th>Latest run</th><th>Result</th><th class="num">When</th></tr></thead><tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody></table>
+    <p class="small muted">Helpers are shown by ID only (first 6 hex digits of a hash of the account name). <a href="https://github.com/Demonic1594/Smotherfish/blob/ccr-00291b96-tkvbkh/docs/HELPING.md">How to join.</a></p></div>
+
+  <h2>Results</h2>
+  <p class="small muted" id="metric"></p>
+  <div id="results"></div>
+
+  <h2>Strength tests</h2>
+  <div class="panel scroll"><table id="strength"><thead><tr><th>Date</th><th>Test</th><th class="num">Elo</th><th class="num">95% range</th><th class="num">Games</th><th>Verdict</th></tr></thead><tbody></tbody></table></div>
+
+  <h2>What the data shows</h2>
+  <div class="panel"><ul class="plain" id="audits"></ul></div>
+
+  <footer class="small muted">
+    <div id="stamp"></div>
+    <div>Live data comes from GitHub's public API (60 requests per hour per visitor; this page uses about 10 per load and caches for 5 minutes).</div>
+  </footer>
+</main>
+<script>
+const MAIN = "Demonic1594/Smotherfish";
+const API = "https://api.github.com";
+const OPP = { e1500: "Stockfish 1500", m1500: "Maia-3 1500", e2500: "Stockfish 2500" };
+const GAMES_PER_SHARE = 80; // 20 jobs x 4 games at once
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function ago(iso) {
+  if (!iso) return "–";
+  const s = (Date.now() - new Date(iso).getTime()) / 1000;
+  if (s < 90) return "just now";
+  if (s < 5400) return Math.round(s / 60) + " min ago";
+  if (s < 172800) return Math.round(s / 3600) + " h ago";
+  return Math.round(s / 86400) + " days ago";
+}
+
+async function hid(login) {
+  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(login.toLowerCase()));
+  return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 6);
+}
+
+function cacheGet(k) {
+  try { const v = JSON.parse(localStorage.getItem(k)); if (v && Date.now() - v.t < 300000) return v.d; } catch (e) {}
+  return null;
+}
+function cacheSet(k, d) { try { localStorage.setItem(k, JSON.stringify({ t: Date.now(), d })); } catch (e) {} }
+
+async function gh(path, force) {
+  const k = "gh:" + path;
+  if (!force) { const c = cacheGet(k); if (c) return c; }
+  const r = await fetch(API + path, { headers: { Accept: "application/vnd.github+json" } });
+  if (!r.ok) throw new Error(r.status === 403 ? "GitHub rate limit reached; try again later" : "GitHub API " + r.status);
+  const d = await r.json(); cacheSet(k, d); return d;
+}
+
+async function loadLive(force) {
+  let conf = { weights: {}, manual: [] };
+  try { conf = await (await fetch("volunteers.json", { cache: "no-store" })).json(); } catch (e) {}
+  const forks = await gh(`/repos/${MAIN}/forks?per_page=100`, force);
+  const accounts = [{ id: "main", full: MAIN, share: conf.weights.own || 1 }];
+  for (const f of forks) {
+    const id = await hid(f.owner.login);
+    accounts.push({ id, full: f.full_name, share: conf.weights[id] || 1, manual: conf.manual.includes(id) });
+  }
+  const runsets = await Promise.all(accounts.map((a) =>
+    gh(`/repos/${a.full}/actions/runs?per_page=15`, force).then((d) => d.workflow_runs || []).catch(() => null)));
+  const running = [], helperRows = [];
+  accounts.forEach((a, i) => {
+    if (runsets[i] === null) { helperRows.push({ a, last: null, unknown: true }); return; }
+    const runs = runsets[i].filter((r) => r.name !== "Helper poll");
+    for (const r of runs) if (r.status !== "completed")
+      running.push({ a, r });
+    const last = runs[0] || runsets[i][0];
+    helperRows.push({ a, last });
+  });
+  $("c-accounts").textContent = accounts.length;
+  const shares = accounts.reduce((s, a) => s + a.share, 0);
+  $("c-cap").textContent = (shares * GAMES_PER_SHARE).toLocaleString();
+  $("c-running").textContent = running.length;
+
+  const tb = $("running").tBodies[0];
+  tb.innerHTML = running.length ? running.map(({ a, r }) => `<tr>
+      <td>${a.id === "main" ? '<a href="https://github.com/' + MAIN + '/actions">main</a>' : esc(a.id)}</td>
+      <td>${esc(r.name)}</td><td>${esc((r.head_branch || "").replace(/^actions-exp\//, ""))}</td>
+      <td><span class="tag ${r.status === "in_progress" ? "t-run" : "t-warn"}">${r.status === "in_progress" ? "running" : esc(r.status)}</span></td>
+      <td class="num">${ago(r.run_started_at)}</td></tr>`).join("")
+    : '<tr><td colspan="5" class="empty">Nothing running. The next experiment starts when one is distributed.</td></tr>';
+
+  const hb = $("helpers").tBodies[0];
+  hb.innerHTML = helperRows.map(({ a, last, unknown }) => {
+    let tag = unknown ? '<span class="tag t-warn">unknown (rate limit)</span>' : '<span class="tag t-idle">no runs yet</span>';
+    if (last) {
+      const c = last.status !== "completed" ? ["t-run", "running"] : last.conclusion === "success" ? ["t-ok", "success"]
+        : last.conclusion === "cancelled" ? ["t-warn", "cancelled"] : ["t-bad", last.conclusion || "failed"];
+      tag = `<span class="tag ${c[0]}">${esc(c[1])}</span>`;
+    }
+    const name = a.id === "main" ? "main repository" : esc(a.id) + (a.manual ? ' <span class="small muted">(started by hand)</span>' : "");
+    return `<tr><td>${name}</td><td class="num">${a.share}</td>
+      <td>${last ? esc(last.name) + ' <span class="muted small">' + esc((last.head_branch || "").replace(/^actions-exp\//, "")) + "</span>" : "–"}</td>
+      <td>${tag}</td><td class="num">${last ? ago(last.updated_at) : "–"}</td></tr>`;
+  }).join("");
+  $("stamp").textContent = "Live data loaded " + new Date().toLocaleString() + ".";
+}
+
+function rate(cell) { return cell.rate != null ? cell.rate : (100 * cell.k) / cell.n; }
+
+async function loadResults() {
+  const R = await (await fetch("results.json", { cache: "no-store" })).json();
+  $("metric").textContent = R.metric + ". " + R.baseline_note + " Counts in brackets; losses in red.";
+  const best = R.experiments.find((e) => e.id === "grid52") || R.experiments[0];
+  const b = best.arms[0].cells[0];
+  $("c-best").textContent = rate(b).toFixed(1);
+  $("c-best-sub").textContent = "per 100 games (1.5.1: 0.7)";
+  $("results").innerHTML = R.experiments.map((e) => {
+    const cols = e.opponents;
+    const top = cols.map((_, j) => Math.max(...e.arms.map((a) => (a.cells[j] ? rate(a.cells[j]) : -1))));
+    const rows = e.arms.map((a) => `<tr><td>${esc(a.label)}</td>${cols.map((_, j) => {
+      const c = a.cells[j]; if (!c) return '<td class="num muted">–</td>';
+      const r = rate(c);
+      return `<td class="num${r === top[j] ? " best" : ""}">${r.toFixed(1)}${c.k != null ? ' <span class="muted small">(' + c.k + "/" + c.n + ")</span>" : ""}${c.losses ? ' <span class="loss">' + c.losses + " lost</span>" : ""}</td>`;
+    }).join("")}</tr>`).join("");
+    const tag = e.outcome === "yes" ? '<span class="tag t-ok">adopted</span>' : '<span class="tag t-idle">not adopted</span>';
+    return `<div class="panel"><div class="row"><h3>${esc(e.title)}</h3><span class="small muted">${esc(e.id)} · ${esc(e.date)} ${tag}</span></div>
+      <p class="small muted" style="margin:2px 0 8px">${esc(e.question)}</p>
+      <div class="scroll"><table><thead><tr><th>Setting</th>${cols.map((o) => '<th class="num">' + esc(OPP[o] || o) + "</th>").join("")}</tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="verdict small">${esc(e.verdict)}</p></div>`;
+  }).join("");
+  $("strength").tBodies[0].innerHTML = R.strength.map((s) => `<tr><td>${esc(s.date)}</td><td>${esc(s.title)}</td>
+    <td class="num">${s.elo > 0 ? "+" : ""}${s.elo.toFixed(1)}</td><td class="num">${s.lo.toFixed(1)} to ${s.hi > 0 ? "+" : ""}${s.hi.toFixed(1)}</td>
+    <td class="num">${s.games ? s.games.toLocaleString() : "–"}</td><td class="small wrap">${esc(s.verdict)}</td></tr>`).join("");
+  $("audits").innerHTML = R.audits.map((a) => "<li>" + esc(a) + "</li>").join("");
+}
+
+async function refresh(force) {
+  try { await loadLive(force); }
+  catch (e) {
+    $("running").tBodies[0].innerHTML = `<tr><td colspan="5" class="empty">${esc(e.message)}</td></tr>`;
+    $("stamp").textContent = "Live data unavailable: " + e.message;
+  }
+}
+$("refresh").addEventListener("click", () => refresh(true));
+loadResults().catch((e) => { $("results").innerHTML = '<p class="empty">Results unavailable: ' + esc(e.message) + "</p>"; });
+refresh(false);
+setInterval(() => refresh(false), 600000);
+</script>
+</body>
+</html>
