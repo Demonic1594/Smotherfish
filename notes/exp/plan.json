@@ -1,0 +1,93 @@
+{
+ "exp": "grid51b",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_N30",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 40000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildNetScale=30"
+   ]
+  },
+  {
+   "name": "e1500_N45",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 40000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildNetScale=45"
+   ]
+  },
+  {
+   "name": "e1500_M35",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 40000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildModelScale=35"
+   ]
+  },
+  {
+   "name": "m1500_N30",
+   "elo": 1500,
+   "games": 600,
+   "seed": 40000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildNetScale=30"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_N45",
+   "elo": 1500,
+   "games": 600,
+   "seed": 40000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildNetScale=45"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_M35",
+   "elo": 1500,
+   "games": 600,
+   "seed": 40000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=true",
+    "SmotherCrushQuiet=3",
+    "SmotherCrushMoves=16",
+    "SmotherBuildModelScale=35"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  1,
+  8
+ ],
+ "max_parallel": 20
+}
