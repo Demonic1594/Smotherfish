@@ -406,7 +406,11 @@ async function loadAll() {
   const active = S.tests.filter((t) => t.state === "running"), fin = S.tests.filter((t) => t.state !== "running");
   $("c-active").textContent = active.length; $("c-fin").textContent = fin.length;
   $("tests-active").innerHTML = active.length ? active.map((t, i) => testCard(t, verdicts, i === 0)).join("") : '<div class="panel empty">No test is running. The next one starts when it is distributed.</div>';
-  $("tests-fin").innerHTML = fin.map((t) => testCard(t, verdicts, false)).join("");
+  const FIN_SHOWN = 12;
+  $("tests-fin").innerHTML = fin.slice(0, FIN_SHOWN).map((t) => testCard(t, verdicts, false)).join("") +
+    (fin.length > FIN_SHOWN ? `<button class="btn" id="more-fin" type="button" style="justify-self:start">Show all ${fin.length} finished tests</button>` : "");
+  const more = $("more-fin");
+  if (more) more.addEventListener("click", () => { $("tests-fin").innerHTML = fin.map((t) => testCard(t, verdicts, false)).join(""); });
   const working = S.accounts.filter((a) => a.running_runs > 0).length;
   $("s-acc").textContent = S.accounts.length; $("s-acc-s").textContent = working + " working now";
   $("s-jobs").textContent = fmt(S.jobs_running); $("s-jobs-s").textContent = "≈ " + fmt(S.jobs_running * 4) + " games at once";
