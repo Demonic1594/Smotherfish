@@ -4,6 +4,96 @@
  "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
  "experiments": [
   {
+   "id": "grid56",
+   "date": "2026-11-26",
+   "title": "Track B round 2: trap steering",
+   "question": "Spending strength on traps: among moves that keep the win, prefer those the opponent is likely to answer into a forced knight smother.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [
+    {
+     "label": "1.6 defaults",
+     "cells": [
+      {
+       "k": 79,
+       "n": 2500
+      },
+      {
+       "k": 56,
+       "n": 2000
+      },
+      {
+       "k": 4,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "S1: trap steering",
+     "cells": [
+      {
+       "k": 58,
+       "n": 2500,
+       "losses": 2
+      },
+      {
+       "k": 54,
+       "n": 2000,
+       "losses": 1
+      },
+      {
+       "k": 0,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "S2: deeper trap search",
+     "cells": [
+      {
+       "k": 47,
+       "n": 2500,
+       "losses": 1
+      },
+      {
+       "k": 42,
+       "n": 2000,
+       "losses": 1
+      },
+      {
+       "k": 5,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "S3: steering + earlier building",
+     "cells": [
+      {
+       "k": 47,
+       "n": 2500,
+       "losses": 9
+      },
+      {
+       "k": 56,
+       "n": 2000,
+       "losses": 1
+      },
+      {
+       "k": 2,
+       "n": 380,
+       "losses": 4
+      }
+     ]
+    }
+   ],
+   "verdict": "Trap steering lowers knight smothers (2.3 and 1.9 vs 3.2 per 100 against Stockfish 1500), also against human-like Maia-3.",
+   "outcome": "no"
+  },
+  {
    "id": "grid55",
    "date": "2026-11-26",
    "title": "Track B round 1: build earlier and longer",
@@ -549,7 +639,8 @@
   "83% of knight smothers close the box with the defender's forced reply to a check in the final sequence (2,481 smothers).",
   "In stalled won positions, a forced knight smother existed in 2 of 120 positions with one open square, even with a much larger prover budget.",
   "One-move traps against the real opponent (Stockfish 1500) were available in 1 of 240 stalled positions.",
-  "The engine's expected defender reply matched the real reply 81% of the time in construction mode."
+  "The engine's expected defender reply matched the real reply 81% of the time in construction mode.",
+  "The opening barely matters: across 600 opening and colour combinations (25,308 games), an opening's knight-smother rate in one half of the games hardly predicts the other half (r = 0.05)."
  ],
  "release": {
   "version": "1.6",
