@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "metric": "Knight (classic) smothered mates per 100 games, 5s + 0.05s per move",
  "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
  "experiments": [
@@ -335,6 +335,16 @@
   }
  ],
  "strength": [
+  {
+   "date": "2026-11-26",
+   "title": "1.6 settings vs 1.5.1 (final check)",
+   "games": 32400,
+   "elo": -0.3,
+   "lo": -1.2,
+   "hi": 0.5,
+   "tc": "10+0.1",
+   "verdict": "Passed: no strength loss (bounds -3 to +1)."
+  },
   {
    "date": "2026-11-25",
    "title": "Prover time in undecided positions off vs on",
