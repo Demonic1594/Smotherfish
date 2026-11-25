@@ -116,14 +116,19 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
                 Option(Stockfish::Search::Skill::LowestElo, Stockfish::Search::Skill::LowestElo,
                        Stockfish::Search::Skill::HighestElo));
 
-    // Analysis strength (see Engine::go): 0 = full strength, else the Elo
-    // whose search depth analysis ("go infinite") is capped at. Not named
-    // UCI_*, so GUIs that hide those options (DroidFish) show it.
     // Human mode: with a strength limit (UCI_LimitStrength / Skill Level), the
     // percent of moves picked at random from the top 8 candidates, including
     // real mistakes (Skill alone never loses more than about a pawn per move).
     options.add("HumanBlunder", Option(0, 0, 100));
+    // The same in tenths of a percent, for finer steps (the larger applies).
+    options.add("HumanBlunderPermille", Option(0, 0, 1000));
+    // Play like a human of this rating (1020-2400, human-like Maia-3 scale);
+    // sets the strength limit and blunders itself. 0 = off.
+    options.add("HumanElo", Option(0, 0, 2400));
 
+    // Analysis strength (see Engine::go): 0 = full strength, else the Elo
+    // whose search depth analysis ("go infinite") is capped at. Not named
+    // UCI_*, so GUIs that hide those options (DroidFish) show it.
     options.add("Analysis Elo", Option(0, 0, Stockfish::Search::Skill::HighestElo));
 
     options.add("UCI_ShowWDL", Option(false));
@@ -152,6 +157,9 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     options.add("SmotherMaxMoves", Option(8, 1, 20));
 
     options.add("SmotherQuietMoves", Option(1, 0, 3));
+    // Prover limits once the game is crushing (mate in hand, +10, or construction).
+    options.add("SmotherCrushMoves", Option(12, 1, 20));
+    options.add("SmotherCrushQuiet", Option(2, 0, 3));
 
     options.add("SmotherTimePercent", Option(25, 0, 100));
 
@@ -226,7 +234,7 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     options.add("SmotherBuild", Option(true));
     options.add("SmotherBuildCp", Option(800, 0, 10000));
     options.add("SmotherBuildFloor", Option(600, 0, 10000));
-    options.add("SmotherBuildMoves", Option(80, 0, 200));
+    options.add("SmotherBuildMoves", Option(160, 0, 200));
     options.add("SmotherBuildWeight", Option(8, 0, 100));
     // 1 = hand-set build_score weights, 2 = weights fitted to game data.
     options.add("SmotherBuildVersion", Option(1, 1, 2));
@@ -237,6 +245,15 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     // moves have been played in the game (0 = never; 80 = after the default
     // construction budget is used up). SmotherPartial counts them always.
     options.add("SmotherPartialAfter", Option(0, 0, 200));
+    // Hybrid against a human opponent (UCI_Opponent): near smothers count
+    // after this many construction moves instead of 80 (0 = no difference).
+    options.add("SmotherHumanAfter", Option(40, 0, 200));
+    // Standard UCI: "[title|none] [rating|none] [computer|human] name", sent
+    // by lichess-bot and other GUIs; only the computer/human word is used.
+    options.add("UCI_Opponent", Option(""));
+    // Hybrid: after the switch, hold out for a full smother for up to this many
+    // consecutive moves where one is very likely (0 = off; see search.cpp).
+    options.add("SmotherHold", Option(0, 0, 50));
     // Near ("all but one") proof found: look for a true smother at most this
     // many moves longer and prefer it (bounded by the prover's move limit).
     options.add("SmotherFullExtra", Option(3, 0, 20));
@@ -245,8 +262,8 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     options.add("SmotherFullFirst", Option(0, 0, 100));
     // One switch for the smother goal in brutal mode, for GUIs (DroidFish):
     // Full   = only true smothers count (the options above decide),
-    // Hybrid = (default) true smothers first, "all but one" ones after 40 construction
-    //          moves (as SmotherPartialAfter 40; an explicit value there wins),
+    // Hybrid = (default) true smothers first, "all but one" ones after 80 construction
+    //          moves (as SmotherPartialAfter 80; an explicit value there wins),
     // Near   = "all but one" smothers always count (as SmotherPartial).
     options.add("SmotherGoal", Option("Hybrid var Full var Hybrid var Near", "Hybrid"));
     // Blocker survivability in the build score, a bit mask: 1 pinned
@@ -291,6 +308,25 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     options.add("SmotherBuildWeights", Option("13,8,23,8,2,4"));
     options.add("SmotherBuildEscape", Option(4, 0, 50));
     options.add("SmotherBuildKnightSafe", Option(0, 0, 50));
+    // Outside review round 2 (off by default; see Smother::BuildWeights):
+    // Ready: points per ready mating square; DefRing: percent of the ring
+    // score when the defender is to move; RingTable: points by open ring
+    // squares 0..5+, comma separated, replacing the linear ring terms.
+    options.add("SmotherBuildReady", Option(0, 0, 200));
+    options.add("SmotherBuildDefRing", Option(100, 0, 100));
+    options.add("SmotherBuildRingTable", Option("60,50,0,-10,-15"));
+    // Exit: points lost per safe way off the ring for a defender ring piece.
+    options.add("SmotherBuildExit", Option(0, 0, 50));
+    // KnightCheck: points per knight one knight move from a safe checking
+    // square (half for two moves); for classic (knight) smothers.
+    options.add("SmotherBuildKnightCheck", Option(0, 0, 100));
+    // Decoy: points when a sacrifice can force the last blocker into the box.
+    options.add("SmotherBuildDecoy", Option(0, 0, 200));
+    // Learned classic-smother model: points per log-odd (0 = off) and the 17
+    // coefficients (corner, edge, h0, h1, h2, corner*h0, corner*h1, kd1, kd2,
+    // corner*h1*kd1, corner*h0*kd1, decoy, queen, stuck, units, exits, knights).
+    options.add("SmotherBuildModelScale", Option(0, 0, 100));
+    options.add("SmotherBuildModel", Option("-1.28,-0.30,5.01,2.73,1.93,1.25,1.92,0.79,0.76,0.67,3.54,0.95,0.97,0.27,1.28,-0.29,0.85"));
 
     // While pondering, let the parallel prover search deep and unbounded on
     // the opponent's time.
