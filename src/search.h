@@ -264,7 +264,7 @@ struct Skill {
     Move pick_best(const RootMoves&, usize multiPV);
 
     double level;
-    int    blunder = 0;  // HumanBlunder: percent of moves picked from the wider list
+    int    blunder = 0;  // human mode: per mille of moves picked from the wider list
     Move   best    = Move::none();
 };
 
@@ -323,6 +323,7 @@ class SearchManager {
     int               smotherExpectPly = 0;     // and its game ply
     int               smotherEscapeLeft = 0;    // moves left with the escape budget
     int               smotherBuilds   = 0;      // moves played in construction mode this game
+    int               smotherHoldRun  = 0;      // consecutive moves SmotherHold held out
     bool              smotherBuilding = false;  // construction mode on the last move
     bool              smotherSeekNow  = false;  // this move: seek mode (set before helpers start)
     bool              smotherBuildNow = false;  // this move: construction mode (likewise)
