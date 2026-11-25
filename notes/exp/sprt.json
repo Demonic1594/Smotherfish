@@ -1,0 +1,17 @@
+{
+ "name": "proverquiet_s1",
+ "tc": "10+0.1",
+ "elo0": 0,
+ "elo1": 3,
+ "alpha": 0.05,
+ "beta": 0.05,
+ "new_opts": [
+  "SmotherTimePercent=0"
+ ],
+ "base_opts": [],
+ "base_ref": "",
+ "runners": 18,
+ "games": 200,
+ "max_waves": 1,
+ "seed_offset": 4100000
+}
