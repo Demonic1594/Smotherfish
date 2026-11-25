@@ -153,6 +153,8 @@ void UCIEngine::loop() {
             benchmark(is);
         else if (token == "d")
             sync_cout << engine.visualize() << sync_endl;
+        else if (token == "smothernet")
+            sync_cout << engine.smother_net_trace() << sync_endl;
         else if (token == "eval")
             engine.trace_eval();
         else if (token == "compiler")
