@@ -1,0 +1,158 @@
+{
+ "exp": "grid56",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 64500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "m1500_S1",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e1500_S1",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true"
+   ]
+  },
+  {
+   "name": "e2600_S1",
+   "elo": 2600,
+   "games": 400,
+   "seed": 64500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true"
+   ]
+  },
+  {
+   "name": "m1500_S2",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true",
+    "SmotherWinTrapDepth=7",
+    "SmotherWinSteerTime=100"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e1500_S2",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true",
+    "SmotherWinTrapDepth=7",
+    "SmotherWinSteerTime=100"
+   ]
+  },
+  {
+   "name": "e2600_S2",
+   "elo": 2600,
+   "games": 400,
+   "seed": 64500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true",
+    "SmotherWinTrapDepth=7",
+    "SmotherWinSteerTime=100"
+   ]
+  },
+  {
+   "name": "m1500_S3",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true",
+    "SmotherBuildCp=500",
+    "SmotherBuildFloor=300",
+    "SmotherBuildMoves=200"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e1500_S3",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true",
+    "SmotherBuildCp=500",
+    "SmotherBuildFloor=300",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_S3",
+   "elo": 2600,
+   "games": 400,
+   "seed": 64500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherSteer=100",
+    "SmotherSteerWonOnly=true",
+    "SmotherBuildCp=500",
+    "SmotherBuildFloor=300",
+    "SmotherBuildMoves=200"
+   ]
+  }
+ ],
+ "shard": [
+  2,
+  15
+ ],
+ "max_parallel": 20
+}
