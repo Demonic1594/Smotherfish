@@ -130,7 +130,7 @@ def cmd_targets(args):
     only = set(args[args.index("--only") + 1].split(",")) if "--only" in args else None
     for acc, _ in accounts():
         if only is None or acc in only:
-            print(f"{acc}:{c['base']}:{c['weights'].get(acc, 1)}")
+            print(f"{acc}:{c.get('bases', {}).get(acc, c['base'])}:{c['weights'].get(acc, 1)}")
 
 
 def cmd_status(args):
