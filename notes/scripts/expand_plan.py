@@ -71,9 +71,11 @@ def cost(j):
 # (notes/scripts/merge_shards.py). Seeds come from the chunk index, so the
 # shards never repeat a game.
 if "shard" in plan:
+    # i may be a list: an account with more capacity takes several shards.
     i, n = plan["shard"]
+    mine = set(i) if isinstance(i, list) else {i}
     jobs.sort(key=lambda j: (j["name"], j["chunk"]))
-    jobs = [j for k, j in enumerate(jobs) if k % n == i]
+    jobs = [j for k, j in enumerate(jobs) if k % n in mine]
 jobs.sort(key=cost)
 if len(jobs) > 256:
     sys.exit("matrix too large (max 256 jobs)")

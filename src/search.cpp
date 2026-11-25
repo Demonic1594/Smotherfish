@@ -31,6 +31,7 @@
 #include <iostream>
 #include <memory>
 #include <ratio>
+#include <sstream>
 #include <string>
 #include <thread>
 #include <utility>
@@ -212,6 +213,45 @@ bool is_shuffling(Move move, Stack* const ss, const Position& pos) {
         && (ss - 2)->currentMove.from_sq() == (ss - 4)->currentMove.to_sq();
 }
 
+// Strength settings from the options. HumanElo (0 = off) sets them from a
+// rating on the human-like Maia-3 scale (the Maia-3 level it scores 50%
+// against at 5+0.05; human5, notes/HANDOFF.md): blunders at the bottom of
+// the range, then the UCI_Elo limiter alone. Otherwise Skill Level /
+// UCI_LimitStrength with HumanBlunder / HumanBlunderPermille.
+Skill make_skill(const OptionsMap& options) {
+    if (const int h = int(options["HumanElo"]))
+    {
+        // rating, UCI_Elo, blunders per mille
+        // human6-8 checked it: 1600 played 1595, 1800 ~1805, 2200 ~2115;
+        // direct low-end rates (human8): 90 per mille ~1400, 110 ~1255, 130
+        // ~1020; 72 ~1490. The limiter at 1455 played ~2420 (Maia-3's top
+        // levels are compressed, so the scale ends there).
+        constexpr int map[][3] = {{1020, 1320, 130}, {1255, 1320, 110}, {1400, 1320, 90},
+                                  {1490, 1320, 72},  {1580, 1320, 40},  {1700, 1320, 20},
+                                  {1735, 1320, 10},  {1780, 1320, 5},   {1815, 1320, 2},
+                                  {1880, 1320, 0},   {2420, 1455, 0}};
+        constexpr int n = int(std::size(map));
+        const int     r = std::clamp(h, map[0][0], map[n - 1][0]);
+        int           i = 0;
+        while (i < n - 2 && r > map[i + 1][0])
+            ++i;
+        const int lo = map[i][0], span = map[i + 1][0] - lo;
+        auto      lerp = [&](int k) { return map[i][k] + (map[i + 1][k] - map[i][k]) * (r - lo) / span; };
+        Skill     skill(20, lerp(1));
+        skill.blunder = lerp(2);
+        return skill;
+    }
+    Skill skill(options["Skill Level"], options["UCI_LimitStrength"] ? int(options["UCI_Elo"]) : 0);
+    // Human mode (HumanBlunder, with a strength limit): a share of moves is
+    // picked at random from a wider candidate list without Skill's cap of
+    // one pawn per mistake, so the engine can really drop material, as
+    // weak human players do.
+    skill.blunder = skill.enabled() ? std::max(10 * int(options["HumanBlunder"]),
+                                               int(options["HumanBlunderPermille"]))
+                                    : 0;
+    return skill;
+}
+
 }  // namespace
 
 Search::Worker::Worker(SharedState&                   sharedState,
@@ -307,10 +347,65 @@ void Search::Worker::start_smother_prover() {
         const bool goalHybrid = options["SmotherGoal"] == "Hybrid";
         int        after      = int(options["SmotherPartialAfter"]);
         if (after == 0 && goalHybrid)
-            after = 40;
+        {
+            after = 80;  // 1.5 (grid41-44, tc180c15): was 40
+            // Against a human (UCI_Opponent "title rating human name", as
+            // lichess-bot sends it): people resign lost games, so take near
+            // smothers sooner. resign2 (Maia-3 resigning on the measured
+            // Lichess blitz curve): switch 40 kept every true smother and
+            // doubled true + near (17.5 vs 8.5 per 100 games).
+            if (const int human = int(options["SmotherHumanAfter"]); human > 0)
+            {
+                std::istringstream opp{std::string(options["UCI_Opponent"])};
+                std::string        title, rating, kind;
+                if (opp >> title >> rating >> kind && kind == "human")
+                    after = human;
+            }
+        }
+        // SmotherHold: past the switch, keep holding out for a full smother
+        // for up to N consecutive moves in the positions where one most
+        // often follows: at most one open square next to the enemy king, a
+        // "ready" square (an open one our queen reaches in one move, with
+        // another of our pieces guarding it) and the king unable to step out
+        // (every open square covered). Measured (4,494 games): a full smother
+        // within 10 moves 43-55% of the time there, 2% on average. Elsewhere
+        // the near one is accepted at once.
+        bool hold = false;
+        if (const int holdMax = int(options["SmotherHold"]);
+            holdMax > 0 && after > 0 && mgr.smotherBuilds >= after && mgr.smotherHoldRun < holdMax)
+        {
+            const Color    us    = rootPos.side_to_move(), them = ~us;
+            const Square   ksq   = rootPos.square<KING>(them);
+            const Bitboard ring  = Attacks::attacks_bb(KING, ksq);
+            const Bitboard open  = ring & ~rootPos.pieces(them);
+            if (popcount(open) <= 1 && rootPos.pieces(us, QUEEN))
+            {
+                const Bitboard occ = rootPos.pieces();
+                Bitboard       qatt = 0, q = rootPos.pieces(us, QUEEN);
+                while (q)
+                    qatt |= Attacks::attacks_bb(QUEEN, pop_lsb(q), occ);
+                bool     ready = false, stuck = true;
+                Bitboard o     = open;
+                while (o)
+                {
+                    const Square   s  = pop_lsb(o);
+                    const Bitboard by = rootPos.attackers_to(s) & rootPos.pieces(us);
+                    stuck &= bool(by);
+                    ready |= (qatt & s) && (by & ~rootPos.pieces(QUEEN));
+                }
+                Bitboard c = ring & ~rootPos.pieces(us) & qatt;  // also enemy-held ring squares
+                while (c && !ready)
+                {
+                    const Square s = pop_lsb(c);
+                    ready = rootPos.attackers_to(s) & rootPos.pieces(us) & ~rootPos.pieces(QUEEN);
+                }
+                hold = ready && stuck;
+            }
+        }
+        mgr.smotherHoldRun = hold ? mgr.smotherHoldRun + 1 : 0;
         mgr.smotherPartialNow =
           bool(options["SmotherPartial"]) || goalNear
-          || (after > 0 && mgr.smotherBrutal && mgr.smotherBuilds >= after);
+          || (after > 0 && mgr.smotherBrutal && mgr.smotherBuilds >= after && !hold);
     }
 
     if (!options["SmotherMate"] || rootMoves.empty())
@@ -327,8 +422,8 @@ void Search::Worker::start_smother_prover() {
     sl.robust     = bool(options["SmotherRobust"]);
     if (mgr.smotherCrush)
     {
-        sl.maxMoves   = std::max(sl.maxMoves, 12);
-        sl.quietMoves = std::max(sl.quietMoves, 2);
+        sl.maxMoves   = std::max(sl.maxMoves, int(options["SmotherCrushMoves"]));
+        sl.quietMoves = std::max(sl.quietMoves, int(options["SmotherCrushQuiet"]));
     }
 
 
@@ -619,8 +714,7 @@ void Search::Worker::start_searching() {
                                               - limits.inc[rootPos.side_to_move()]);
 
     Worker* bestThread = this;
-    Skill   skill =
-      Skill(options["Skill Level"], options["UCI_LimitStrength"] ? int(options["UCI_Elo"]) : 0);
+    Skill   skill      = make_skill(options);
 
     const int steer = int(options["SmotherSteer"]);
 
@@ -897,6 +991,12 @@ bool Search::Worker::iterative_deepening() {
             buildNmp       = int(options["SmotherBuildNmp"]);
             buildOwnKeep   = int(options["SmotherBuildOwnKeep"]);
             Smother::set_build_weights(std::string(options["SmotherBuildWeights"]));
+            Smother::set_build_extras(int(options["SmotherBuildReady"]),
+                                      int(options["SmotherBuildDefRing"]),
+                                      std::string(options["SmotherBuildRingTable"]),
+                                      int(options["SmotherBuildExit"]),
+                                      int(options["SmotherBuildKnightCheck"]),
+                                      int(options["SmotherBuildDecoy"]));
             buildEscape    = int(options["SmotherBuildEscape"]);
             buildKnightSafe = int(options["SmotherBuildKnightSafe"]);
             shapeWeight    = 0;
@@ -933,15 +1033,11 @@ bool Search::Worker::iterative_deepening() {
     }
 
     usize multiPV = usize(options["MultiPV"]);
-    Skill skill(options["Skill Level"], options["UCI_LimitStrength"] ? int(options["UCI_Elo"]) : 0);
+    Skill skill = make_skill(options);
 
     // When playing with strength handicap enable MultiPV search that we will
-    // use behind-the-scenes to retrieve a set of possible moves.
-    // Human mode (HumanBlunder, with a strength limit): a share of moves is
-    // picked at random from a wider candidate list without Skill's cap of
-    // one pawn per mistake, so the engine can really drop material, as
-    // weak human players do.
-    skill.blunder = skill.enabled() ? int(options["HumanBlunder"]) : 0;
+    // use behind-the-scenes to retrieve a set of possible moves (8 with
+    // blunders, which are picked among all of them).
     if (skill.enabled())
         multiPV = std::max(multiPV, usize(skill.blunder ? 8 : 4));
 
@@ -1352,7 +1448,8 @@ void Search::Worker::clear() {
     if (is_mainthread())
         main_manager()->smotherExpectKey = 0, main_manager()->smotherEscapeLeft = 0;
     if (is_mainthread())
-        main_manager()->smotherBuilds = 0, main_manager()->smotherBuilding = false;
+        main_manager()->smotherBuilds = 0, main_manager()->smotherBuilding = false,
+        main_manager()->smotherHoldRun = 0;
     if (is_mainthread())
         main_manager()->smotherSeeks = 0;
     mainHistory.fill(-5);
@@ -2801,9 +2898,13 @@ Move Skill::pick_best(const RootMoves& rootMoves, usize multiPV) {
     // With tablebases at the root, rootMoves are ordered by tbRank rather
     // than by score, so compute the score range explicitly to keep 'delta'
     // non-negative.
+    // Human mode searches 8 lines so blunders have candidates, but the normal
+    // choice stays among the usual 4 (more would weaken every move).
+    const usize choices = blunder > 0 ? std::min(multiPV, usize(4)) : multiPV;
+
     Value topScore = rootMoves[0].score;
     Value minScore = rootMoves[0].score;
-    for (usize i = 1; i < multiPV; ++i)
+    for (usize i = 1; i < choices; ++i)
     {
         topScore = std::max(topScore, rootMoves[i].score);
         minScore = std::min(minScore, rootMoves[i].score);
@@ -2812,14 +2913,14 @@ Move Skill::pick_best(const RootMoves& rootMoves, usize multiPV) {
     int    maxScore = -VALUE_INFINITE;
 
     // Human mode: a blunder is any candidate but the best, chosen uniformly.
-    if (blunder > 0 && multiPV > 1 && int(rng.rand<unsigned>() % 100) < blunder)
+    if (blunder > 0 && multiPV > 1 && int(rng.rand<unsigned>() % 1000) < blunder)
         return best = rootMoves[1 + rng.rand<unsigned>() % (multiPV - 1)].pv[0];
     double weakness = 120 - 2 * level;
 
     // Choose best move. For each move score we add two terms dependent on
     // weakness. One is deterministic and bigger for weaker levels, and one
     // is random. Then we choose the move with the resulting highest score.
-    for (usize i = 0; i < multiPV; ++i)
+    for (usize i = 0; i < choices; ++i)
     {
         // This is our magic formula
         int push = int(weakness * int(topScore - rootMoves[i].score)
