@@ -1,85 +1,77 @@
 {
- "generated": "2026-11-25T20:18:29Z",
- "games_per_hour": null,
- "jobs_running": 0,
- "active_games": 29228,
+ "generated": "2026-11-26T01:07:14Z",
+ "games_per_hour": 913,
+ "jobs_running": 4,
+ "active_games": 12872,
  "accounts": [
   {
    "id": "main",
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 3012,
+   "active_games": 1176,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
+    "exp": "grid57",
     "status": "completed",
     "conclusion": "success",
-    "updated": "2026-11-25T19:45:21Z"
+    "updated": "2026-11-26T01:05:42Z"
    }
   },
   {
    "id": "87fb66",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
-   "active_games": 2556,
+   "running_runs": 1,
+   "jobs": 1,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-25T20:14:45Z"
+    "exp": "grid57",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-26T01:04:59Z"
    }
-  },
-  {
-   "id": "2456cd",
-   "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
-   "active_games": 0,
-   "last": null
   },
   {
    "id": "f0afe4",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
-   "active_games": 2572,
+   "running_runs": 1,
+   "jobs": 1,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-25T20:10:59Z"
+    "exp": "grid57",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-26T01:04:59Z"
    }
   },
   {
    "id": "a8e399",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
-   "active_games": 2588,
+   "running_runs": 1,
+   "jobs": 2,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-25T20:10:58Z"
+    "exp": "grid57",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-26T01:04:41Z"
    }
   },
   {
    "id": "f2d74f",
    "share": 1,
-   "running_runs": 0,
+   "running_runs": 1,
    "jobs": 0,
-   "active_games": 2752,
+   "active_games": 1176,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-25T19:57:12Z"
+    "exp": "grid57",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-26T01:04:09Z"
    }
   },
   {
@@ -87,13 +79,13 @@
    "share": 4,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1015,
+   "active_games": 4664,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56-r1",
+    "exp": "grid57",
     "status": "completed",
     "conclusion": "success",
-    "updated": "2026-11-25T20:04:50Z"
+    "updated": "2026-11-26T01:06:29Z"
    }
   },
   {
@@ -101,13 +93,13 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2980,
+   "active_games": 1176,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
+    "exp": "grid57",
     "status": "completed",
     "conclusion": "success",
-    "updated": "2026-11-25T19:55:39Z"
+    "updated": "2026-11-26T01:06:43Z"
    }
   },
   {
@@ -115,13 +107,13 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2990,
+   "active_games": 1180,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
+    "exp": "grid57",
     "status": "completed",
     "conclusion": "success",
-    "updated": "2026-11-25T19:53:09Z"
+    "updated": "2026-11-26T01:06:33Z"
    }
   },
   {
@@ -129,13 +121,13 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 3000,
+   "active_games": 1180,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
+    "exp": "grid57",
     "status": "completed",
     "conclusion": "success",
-    "updated": "2026-11-25T19:54:30Z"
+    "updated": "2026-11-26T01:07:06Z"
    }
   },
   {
@@ -143,13 +135,13 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2930,
+   "active_games": 1180,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
+    "exp": "grid57",
     "status": "completed",
     "conclusion": "success",
-    "updated": "2026-11-25T19:53:56Z"
+    "updated": "2026-11-26T01:06:00Z"
    }
   },
   {
@@ -157,23 +149,280 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2833,
+   "active_games": 1140,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid56",
+    "exp": "grid57",
     "status": "completed",
-    "conclusion": "failure",
-    "updated": "2026-11-25T19:53:57Z"
+    "conclusion": "success",
+    "updated": "2026-11-26T01:06:45Z"
    }
   }
  ],
  "tests": [
   {
+   "id": "grid57",
+   "plan_sha": "9f6336bf7dca6cbea3f89b5a3c8cb45074f080d8",
+   "parts": [
+    "grid57"
+   ],
+   "created": "2026-11-26T01:05:37Z",
+   "tc": [
+    "10+0.1",
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "e1500",
+     "name": "Stockfish 1500"
+    },
+    {
+     "key": "m1500",
+     "name": "Maia-3 1500"
+    },
+    {
+     "key": "e2600",
+     "name": "Stockfish 2600"
+    }
+   ],
+   "planned": 16400,
+   "delivered": 12872,
+   "state": "running",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "e1500": {
+       "games": 1924,
+       "w": 1918,
+       "d": 6,
+       "l": 0,
+       "knight": 56,
+       "full": 60,
+       "planned": 2500
+      },
+      "m1500": {
+       "games": 912,
+       "w": 911,
+       "d": 1,
+       "l": 0,
+       "knight": 32,
+       "full": 32,
+       "planned": 1200
+      },
+      "e2600": {
+       "games": 280,
+       "w": 279,
+       "d": 1,
+       "l": 0,
+       "knight": 2,
+       "full": 4,
+       "planned": 400
+      }
+     }
+    },
+    {
+     "arm": "H40",
+     "opts": [
+      "SmotherPartialAfter=40"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 1996,
+       "w": 1988,
+       "d": 8,
+       "l": 0,
+       "knight": 73,
+       "full": 79,
+       "planned": 2500,
+       "dknight": 0.75,
+       "z": 1.29
+      },
+      "m1500": {
+       "games": 984,
+       "w": 984,
+       "d": 0,
+       "l": 0,
+       "knight": 29,
+       "full": 31,
+       "planned": 1200,
+       "dknight": -0.56,
+       "z": -0.68
+      },
+      "e2600": {
+       "games": 340,
+       "w": 340,
+       "d": 0,
+       "l": 0,
+       "knight": 7,
+       "full": 7,
+       "planned": 400,
+       "dknight": 1.34,
+       "z": 1.45
+      }
+     }
+    },
+    {
+     "arm": "AK",
+     "opts": [
+      "SmotherClassic=false"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 1924,
+       "w": 1923,
+       "d": 1,
+       "l": 0,
+       "knight": 24,
+       "full": 216,
+       "planned": 2500,
+       "dknight": -1.66,
+       "z": -3.58
+      },
+      "m1500": {
+       "games": 912,
+       "w": 912,
+       "d": 0,
+       "l": 0,
+       "knight": 15,
+       "full": 120,
+       "planned": 1200,
+       "dknight": -1.86,
+       "z": -2.48
+      },
+      "e2600": {
+       "games": 280,
+       "w": 280,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 21,
+       "planned": 400,
+       "dknight": -0.71,
+       "z": -1.15
+      }
+     }
+    },
+    {
+     "arm": "AN",
+     "opts": [
+      "SmotherClassic=false",
+      "SmotherGoal=Near"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 1996,
+       "w": 1996,
+       "d": 0,
+       "l": 0,
+       "knight": 14,
+       "full": 63,
+       "planned": 2500,
+       "dknight": -2.21,
+       "z": -5.12
+      },
+      "m1500": {
+       "games": 984,
+       "w": 984,
+       "d": 0,
+       "l": 0,
+       "knight": 9,
+       "full": 46,
+       "planned": 1200,
+       "dknight": -2.59,
+       "z": -3.75
+      },
+      "e2600": {
+       "games": 340,
+       "w": 340,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 7,
+       "planned": 400,
+       "dknight": -0.71,
+       "z": -1.22
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "0f17ee",
+     "expected": 1176,
+     "delivered": 1176,
+     "copied": true
+    },
+    {
+     "id": "7a213a",
+     "expected": 1180,
+     "delivered": 1180,
+     "copied": true
+    },
+    {
+     "id": "87fb66",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "8e9ce5",
+     "expected": 1140,
+     "delivered": 1140,
+     "copied": true
+    },
+    {
+     "id": "a8e399",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "acf111",
+     "expected": 1180,
+     "delivered": 1180,
+     "copied": true
+    },
+    {
+     "id": "d32e35",
+     "expected": 4664,
+     "delivered": 4664,
+     "copied": true
+    },
+    {
+     "id": "dc665d",
+     "expected": 1180,
+     "delivered": 1180,
+     "copied": true
+    },
+    {
+     "id": "f0afe4",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "f2d74f",
+     "expected": 1176,
+     "delivered": 1176,
+     "copied": true
+    },
+    {
+     "id": "own",
+     "expected": 1176,
+     "delivered": 1176,
+     "copied": true
+    }
+   ]
+  },
+  {
    "id": "grid56",
    "plan_sha": "151c3132846b6cc22a221e888a70c8b6e532bf1a",
    "parts": [
     "grid56",
-    "grid56-r1"
+    "grid56-r1",
+    "grid56-r2"
    ],
    "created": "2026-11-25T19:45:16Z",
    "tc": [
@@ -195,38 +444,38 @@
     }
    ],
    "planned": 19600,
-   "delivered": 13000,
-   "state": "running",
+   "delivered": 19580,
+   "state": "finished-partial",
    "arms": [
     {
      "arm": "B",
      "opts": [],
      "cells": {
       "m1500": {
-       "games": 1304,
-       "w": 1304,
+       "games": 2000,
+       "w": 2000,
        "d": 0,
        "l": 0,
-       "knight": 42,
-       "full": 44,
+       "knight": 56,
+       "full": 58,
        "planned": 2000
       },
       "e1500": {
-       "games": 1660,
-       "w": 1653,
-       "d": 7,
+       "games": 2500,
+       "w": 2491,
+       "d": 9,
        "l": 0,
-       "knight": 57,
-       "full": 60,
+       "knight": 79,
+       "full": 86,
        "planned": 2500
       },
       "e2600": {
-       "games": 280,
-       "w": 280,
+       "games": 400,
+       "w": 400,
        "d": 0,
        "l": 0,
-       "knight": 3,
-       "full": 3,
+       "knight": 4,
+       "full": 4,
        "planned": 400
       }
      }
@@ -239,37 +488,37 @@
      ],
      "cells": {
       "m1500": {
-       "games": 1344,
-       "w": 1343,
+       "games": 2000,
+       "w": 1999,
        "d": 0,
        "l": 1,
-       "knight": 39,
-       "full": 39,
+       "knight": 54,
+       "full": 55,
        "planned": 2000,
-       "dknight": -0.32,
-       "z": -0.47
+       "dknight": -0.1,
+       "z": -0.19
       },
       "e1500": {
-       "games": 1660,
-       "w": 1652,
-       "d": 6,
+       "games": 2500,
+       "w": 2489,
+       "d": 9,
        "l": 2,
-       "knight": 43,
-       "full": 43,
+       "knight": 58,
+       "full": 58,
        "planned": 2500,
        "dknight": -0.84,
-       "z": -1.4
+       "z": -1.79
       },
       "e2600": {
-       "games": 220,
-       "w": 219,
-       "d": 1,
+       "games": 400,
+       "w": 398,
+       "d": 2,
        "l": 0,
        "knight": 0,
        "full": 0,
        "planned": 400,
-       "dknight": -1.07,
-       "z": -1.4
+       "dknight": -1.0,
+       "z": -1.79
       }
      }
     },
@@ -283,37 +532,37 @@
      ],
      "cells": {
       "m1500": {
-       "games": 1352,
-       "w": 1350,
+       "games": 2000,
+       "w": 1998,
        "d": 1,
        "l": 1,
-       "knight": 25,
-       "full": 26,
+       "knight": 42,
+       "full": 44,
        "planned": 2000,
-       "dknight": -1.37,
-       "z": -2.21
+       "dknight": -0.7,
+       "z": -1.41
       },
       "e1500": {
-       "games": 1660,
-       "w": 1652,
-       "d": 8,
-       "l": 0,
-       "knight": 37,
-       "full": 39,
+       "games": 2500,
+       "w": 2489,
+       "d": 10,
+       "l": 1,
+       "knight": 47,
+       "full": 49,
        "planned": 2500,
-       "dknight": -1.2,
-       "z": -2.06
+       "dknight": -1.28,
+       "z": -2.85
       },
       "e2600": {
-       "games": 300,
-       "w": 300,
+       "games": 400,
+       "w": 400,
        "d": 0,
        "l": 0,
-       "knight": 3,
-       "full": 3,
+       "knight": 5,
+       "full": 5,
        "planned": 400,
-       "dknight": -0.07,
-       "z": -0.08
+       "dknight": 0.25,
+       "z": 0.33
       }
      }
     },
@@ -328,37 +577,37 @@
      ],
      "cells": {
       "m1500": {
-       "games": 1280,
-       "w": 1251,
-       "d": 28,
+       "games": 2000,
+       "w": 1959,
+       "d": 40,
        "l": 1,
-       "knight": 38,
-       "full": 41,
+       "knight": 56,
+       "full": 60,
        "planned": 2000,
-       "dknight": -0.25,
-       "z": -0.36
+       "dknight": 0.0,
+       "z": 0.0
       },
       "e1500": {
-       "games": 1660,
-       "w": 1548,
-       "d": 105,
-       "l": 7,
-       "knight": 33,
-       "full": 35,
+       "games": 2500,
+       "w": 2345,
+       "d": 146,
+       "l": 9,
+       "knight": 47,
+       "full": 50,
        "planned": 2500,
-       "dknight": -1.45,
-       "z": -2.53
+       "dknight": -1.28,
+       "z": -2.85
       },
       "e2600": {
-       "games": 280,
-       "w": 263,
-       "d": 15,
-       "l": 2,
+       "games": 380,
+       "w": 352,
+       "d": 24,
+       "l": 4,
        "knight": 2,
        "full": 2,
        "planned": 400,
-       "dknight": -0.36,
-       "z": -0.45
+       "dknight": -0.47,
+       "z": -0.76
       }
      }
     }
@@ -369,12 +618,6 @@
      "expected": 1308,
      "delivered": 1308,
      "copied": true
-    },
-    {
-     "id": "2456cd",
-     "expected": 1320,
-     "delivered": 0,
-     "copied": false
     },
     {
      "id": "7a213a",
@@ -408,8 +651,8 @@
     },
     {
      "id": "d32e35",
-     "expected": 5304,
-     "delivered": 24,
+     "expected": 6624,
+     "delivered": 6604,
      "copied": true
     },
     {
@@ -443,7 +686,8 @@
    "plan_sha": "38c036122f547360c24d8c3e0d2aeec850957d63",
    "parts": [
     "grid55",
-    "grid55-r1"
+    "grid55-r2",
+    "grid55-r3"
    ],
    "created": "2026-11-25T19:24:28Z",
    "tc": [
@@ -465,38 +709,38 @@
     }
    ],
    "planned": 16400,
-   "delivered": 12876,
-   "state": "running",
+   "delivered": 16400,
+   "state": "finished",
    "arms": [
     {
      "arm": "B",
      "opts": [],
      "cells": {
       "e1500": {
-       "games": 1948,
-       "w": 1938,
-       "d": 10,
+       "games": 2500,
+       "w": 2489,
+       "d": 11,
        "l": 0,
-       "knight": 72,
-       "full": 77,
+       "knight": 93,
+       "full": 100,
        "planned": 2500
       },
       "m1500": {
-       "games": 936,
-       "w": 936,
+       "games": 1200,
+       "w": 1200,
        "d": 0,
        "l": 0,
-       "knight": 33,
-       "full": 35,
+       "knight": 49,
+       "full": 51,
        "planned": 1200
       },
       "e2600": {
-       "games": 320,
-       "w": 319,
+       "games": 400,
+       "w": 399,
        "d": 1,
        "l": 0,
-       "knight": 4,
-       "full": 5,
+       "knight": 6,
+       "full": 7,
        "planned": 400
       }
      }
@@ -510,37 +754,37 @@
      ],
      "cells": {
       "e1500": {
-       "games": 1948,
-       "w": 1790,
-       "d": 158,
+       "games": 2500,
+       "w": 2292,
+       "d": 208,
        "l": 0,
-       "knight": 78,
-       "full": 81,
+       "knight": 101,
+       "full": 105,
        "planned": 2500,
-       "dknight": 0.31,
-       "z": 0.49
+       "dknight": 0.32,
+       "z": 0.57
       },
       "m1500": {
-       "games": 960,
-       "w": 924,
-       "d": 36,
+       "games": 1200,
+       "w": 1156,
+       "d": 44,
        "l": 0,
-       "knight": 32,
-       "full": 33,
+       "knight": 44,
+       "full": 47,
        "planned": 1200,
-       "dknight": -0.19,
-       "z": -0.23
+       "dknight": -0.42,
+       "z": -0.52
       },
       "e2600": {
-       "games": 340,
-       "w": 322,
-       "d": 18,
+       "games": 400,
+       "w": 378,
+       "d": 22,
        "l": 0,
        "knight": 5,
        "full": 5,
        "planned": 400,
-       "dknight": 0.22,
-       "z": 0.24
+       "dknight": -0.25,
+       "z": -0.3
       }
      }
     },
@@ -554,37 +798,37 @@
      ],
      "cells": {
       "e1500": {
-       "games": 1944,
-       "w": 1810,
-       "d": 133,
+       "games": 2500,
+       "w": 2336,
+       "d": 163,
        "l": 1,
-       "knight": 58,
-       "full": 62,
+       "knight": 77,
+       "full": 82,
        "planned": 2500,
-       "dknight": -0.71,
-       "z": -1.22
+       "dknight": -0.64,
+       "z": -1.23
       },
       "m1500": {
-       "games": 936,
-       "w": 920,
-       "d": 16,
+       "games": 1200,
+       "w": 1174,
+       "d": 26,
        "l": 0,
-       "knight": 36,
-       "full": 38,
+       "knight": 43,
+       "full": 45,
        "planned": 1200,
-       "dknight": 0.32,
-       "z": 0.36
+       "dknight": -0.5,
+       "z": -0.63
       },
       "e2600": {
-       "games": 320,
-       "w": 301,
-       "d": 19,
+       "games": 400,
+       "w": 371,
+       "d": 29,
        "l": 0,
        "knight": 3,
        "full": 3,
        "planned": 400,
-       "dknight": -0.31,
-       "z": -0.38
+       "dknight": -0.75,
+       "z": -1.0
       }
      }
     },
@@ -598,37 +842,37 @@
      ],
      "cells": {
       "e1500": {
-       "games": 1948,
-       "w": 1833,
-       "d": 113,
-       "l": 2,
-       "knight": 61,
-       "full": 65,
+       "games": 2500,
+       "w": 2345,
+       "d": 151,
+       "l": 4,
+       "knight": 78,
+       "full": 86,
        "planned": 2500,
-       "dknight": -0.56,
-       "z": -0.95
+       "dknight": -0.6,
+       "z": -1.15
       },
       "m1500": {
-       "games": 936,
-       "w": 917,
-       "d": 19,
+       "games": 1200,
+       "w": 1177,
+       "d": 23,
        "l": 0,
-       "knight": 32,
-       "full": 34,
+       "knight": 44,
+       "full": 46,
        "planned": 1200,
-       "dknight": -0.11,
-       "z": -0.12
+       "dknight": -0.42,
+       "z": -0.52
       },
       "e2600": {
-       "games": 340,
-       "w": 315,
-       "d": 23,
-       "l": 2,
-       "knight": 3,
-       "full": 3,
+       "games": 400,
+       "w": 368,
+       "d": 29,
+       "l": 3,
+       "knight": 2,
+       "full": 2,
        "planned": 400,
-       "dknight": -0.37,
-       "z": -0.46
+       "dknight": -1.0,
+       "z": -1.41
       }
      }
     }
@@ -639,12 +883,6 @@
      "expected": 1272,
      "delivered": 1272,
      "copied": true
-    },
-    {
-     "id": "2456cd",
-     "expected": 1252,
-     "delivered": 0,
-     "copied": false
     },
     {
      "id": "7a213a",
@@ -678,8 +916,8 @@
     },
     {
      "id": "d32e35",
-     "expected": 2544,
-     "delivered": 272,
+     "expected": 3796,
+     "delivered": 3796,
      "copied": true
     },
     {
@@ -730,7 +968,7 @@
    ],
    "planned": 1400,
    "delivered": 1300,
-   "state": "running",
+   "state": "finished-partial",
    "arms": [
     {
      "arm": "B",
@@ -2375,7 +2613,7 @@
    ],
    "planned": 2400,
    "delivered": 2052,
-   "state": "running",
+   "state": "finished-partial",
    "arms": [
     {
      "arm": "D",
@@ -9293,456 +9531,6 @@
    ]
   },
   {
-   "id": "grid36",
-   "plan_sha": "06bb84ba24ea94f132d6821757cd9db2571042ce",
-   "parts": [
-    "grid36"
-   ],
-   "created": "2026-11-22T13:00:25Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    },
-    {
-     "key": "e2500",
-     "name": "Stockfish 2500"
-    }
-   ],
-   "planned": 10800,
-   "delivered": 10800,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "C",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 1200,
-       "w": 1199,
-       "d": 1,
-       "l": 0,
-       "knight": 7,
-       "full": 82,
-       "planned": 1200
-      },
-      "e2500": {
-       "games": 600,
-       "w": 598,
-       "d": 1,
-       "l": 1,
-       "knight": 1,
-       "full": 26,
-       "planned": 600
-      }
-     }
-    },
-    {
-     "arm": "L1",
-     "opts": [
-      "SmotherBuildLmr=1024"
-     ],
-     "cells": {
-      "e1500": {
-       "games": 1200,
-       "w": 1197,
-       "d": 3,
-       "l": 0,
-       "knight": 13,
-       "full": 92,
-       "planned": 1200
-      },
-      "e2500": {
-       "games": 600,
-       "w": 598,
-       "d": 2,
-       "l": 0,
-       "knight": 2,
-       "full": 23,
-       "planned": 600
-      }
-     }
-    },
-    {
-     "arm": "L2",
-     "opts": [
-      "SmotherBuildLmr=2048"
-     ],
-     "cells": {
-      "e1500": {
-       "games": 1200,
-       "w": 1198,
-       "d": 2,
-       "l": 0,
-       "knight": 8,
-       "full": 105,
-       "planned": 1200
-      },
-      "e2500": {
-       "games": 600,
-       "w": 599,
-       "d": 1,
-       "l": 0,
-       "knight": 0,
-       "full": 20,
-       "planned": 600
-      }
-     }
-    },
-    {
-     "arm": "D",
-     "opts": [
-      "SmotherBuildDefLmr=1024"
-     ],
-     "cells": {
-      "e1500": {
-       "games": 1200,
-       "w": 1199,
-       "d": 1,
-       "l": 0,
-       "knight": 12,
-       "full": 88,
-       "planned": 1200
-      },
-      "e2500": {
-       "games": 600,
-       "w": 599,
-       "d": 1,
-       "l": 0,
-       "knight": 1,
-       "full": 20,
-       "planned": 600
-      }
-     }
-    },
-    {
-     "arm": "LD",
-     "opts": [
-      "SmotherBuildLmr=1024",
-      "SmotherBuildDefLmr=1024"
-     ],
-     "cells": {
-      "e1500": {
-       "games": 1200,
-       "w": 1199,
-       "d": 1,
-       "l": 0,
-       "knight": 10,
-       "full": 96,
-       "planned": 1200
-      },
-      "e2500": {
-       "games": 600,
-       "w": 600,
-       "d": 0,
-       "l": 0,
-       "knight": 1,
-       "full": 22,
-       "planned": 600
-      }
-     }
-    },
-    {
-     "arm": "N",
-     "opts": [
-      "SmotherBuildNmp=2"
-     ],
-     "cells": {
-      "e1500": {
-       "games": 1200,
-       "w": 1199,
-       "d": 1,
-       "l": 0,
-       "knight": 11,
-       "full": 87,
-       "planned": 1200
-      },
-      "e2500": {
-       "games": 600,
-       "w": 597,
-       "d": 3,
-       "l": 0,
-       "knight": 2,
-       "full": 25,
-       "planned": 600
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "0f17ee",
-     "expected": 1800,
-     "delivered": 1800,
-     "copied": true
-    },
-    {
-     "id": "7a213a",
-     "expected": 1800,
-     "delivered": 1800,
-     "copied": true
-    },
-    {
-     "id": "8e9ce5",
-     "expected": 1800,
-     "delivered": 1800,
-     "copied": true
-    },
-    {
-     "id": "acf111",
-     "expected": 1800,
-     "delivered": 1800,
-     "copied": true
-    },
-    {
-     "id": "d32e35",
-     "expected": 1800,
-     "delivered": 1800,
-     "copied": true
-    },
-    {
-     "id": "dc665d",
-     "expected": 1800,
-     "delivered": 1800,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "conc200",
-   "plan_sha": "2317f12a8eb4bc2e897ecdb13c0fb3f247586bd3",
-   "parts": [
-    "conc200"
-   ],
-   "created": "2026-11-22T10:34:12Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 4000,
-   "delivered": 4000,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "H_conc",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 4000,
-       "w": 3998,
-       "d": 2,
-       "l": 0,
-       "knight": 37,
-       "full": 324,
-       "planned": 4000
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "d32e35",
-     "expected": 4000,
-     "delivered": 4000,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "grid35",
-   "plan_sha": "9488f91a24396892baa9547cddca66865c75bd0e",
-   "parts": [
-    "grid35"
-   ],
-   "created": "2026-11-22T04:27:29Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    },
-    {
-     "key": "e2000",
-     "name": "Stockfish 2000"
-    },
-    {
-     "key": "e2500",
-     "name": "Stockfish 2500"
-    },
-    {
-     "key": "e3000",
-     "name": "Stockfish 3000"
-    }
-   ],
-   "planned": 3500,
-   "delivered": 3500,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "H_v12",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 1000,
-       "w": 998,
-       "d": 1,
-       "l": 1,
-       "knight": 3,
-       "full": 75,
-       "planned": 1000
-      },
-      "e2000": {
-       "games": 1000,
-       "w": 999,
-       "d": 1,
-       "l": 0,
-       "knight": 4,
-       "full": 56,
-       "planned": 1000
-      },
-      "e2500": {
-       "games": 1000,
-       "w": 998,
-       "d": 1,
-       "l": 1,
-       "knight": 0,
-       "full": 39,
-       "planned": 1000
-      },
-      "e3000": {
-       "games": 500,
-       "w": 495,
-       "d": 5,
-       "l": 0,
-       "knight": 0,
-       "full": 7,
-       "planned": 500
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "0f17ee",
-     "expected": 850,
-     "delivered": 850,
-     "copied": true
-    },
-    {
-     "id": "7a213a",
-     "expected": 850,
-     "delivered": 850,
-     "copied": true
-    },
-    {
-     "id": "8e9ce5",
-     "expected": 900,
-     "delivered": 900,
-     "copied": true
-    },
-    {
-     "id": "acf111",
-     "expected": 900,
-     "delivered": 900,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "grid35-s3",
-   "plan_sha": "9488f91a24396892baa9547cddca66865c75bd0e",
-   "parts": [
-    "grid35-s3"
-   ],
-   "created": "2026-11-22T04:27:29Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    },
-    {
-     "key": "e2000",
-     "name": "Stockfish 2000"
-    },
-    {
-     "key": "e2500",
-     "name": "Stockfish 2500"
-    },
-    {
-     "key": "e3000",
-     "name": "Stockfish 3000"
-    }
-   ],
-   "planned": 3500,
-   "delivered": 0,
-   "state": "finished-partial",
-   "arms": [
-    {
-     "arm": "H_v12",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 0,
-       "w": 0,
-       "d": 0,
-       "l": 0,
-       "knight": 0,
-       "full": 0,
-       "planned": 1000
-      },
-      "e2000": {
-       "games": 0,
-       "w": 0,
-       "d": 0,
-       "l": 0,
-       "knight": 0,
-       "full": 0,
-       "planned": 1000
-      },
-      "e2500": {
-       "games": 0,
-       "w": 0,
-       "d": 0,
-       "l": 0,
-       "knight": 0,
-       "full": 0,
-       "planned": 1000
-      },
-      "e3000": {
-       "games": 0,
-       "w": 0,
-       "d": 0,
-       "l": 0,
-       "knight": 0,
-       "full": 0,
-       "planned": 500
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "7a213a",
-     "expected": 850,
-     "delivered": 0,
-     "copied": true
-    }
-   ]
-  },
-  {
    "id": "grid33",
    "plan_sha": "ae17113f7176da6093a43e3bb6085ac508593fd4",
    "parts": [
@@ -9834,98 +9622,6 @@
    ]
   },
   {
-   "id": "grid34",
-   "plan_sha": "8318e46b4458d53e0c0a6ef339fb2c0c827d4623",
-   "parts": [
-    "grid34"
-   ],
-   "created": "2026-11-21T19:16:32Z",
-   "tc": [
-    "180+2"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 240,
-   "delivered": 240,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "N_tc180",
-     "opts": [
-      "SmotherGoal=Near"
-     ],
-     "cells": {
-      "e1500": {
-       "games": 240,
-       "w": 240,
-       "d": 0,
-       "l": 0,
-       "knight": 2,
-       "full": 10,
-       "planned": 240
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "7a213a",
-     "expected": 240,
-     "delivered": 240,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "polltest3",
-   "plan_sha": "a907bd5eb2fd9c3ee475dc0898114bc9f5fa1fd4",
-   "parts": [
-    "polltest3"
-   ],
-   "created": "2026-11-21T18:31:34Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 20,
-   "delivered": 20,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "polltest3",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 20,
-       "w": 20,
-       "d": 0,
-       "l": 0,
-       "knight": 0,
-       "full": 4,
-       "planned": 20
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "acf111",
-     "expected": 20,
-     "delivered": 20,
-     "copied": true
-    }
-   ]
-  },
-  {
    "id": "grid32",
    "plan_sha": "72980f2ab6898650de266699cc4d697ed8328211",
    "parts": [
@@ -10007,51 +9703,6 @@
      "id": "own",
      "expected": 2400,
      "delivered": 2398,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "polltest",
-   "plan_sha": "9eb6d99dcc80effd55a28a60462005bfd331c0db",
-   "parts": [
-    "polltest"
-   ],
-   "created": "2026-11-21T14:58:52Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 20,
-   "delivered": 20,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "polltest",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 20,
-       "w": 19,
-       "d": 1,
-       "l": 0,
-       "knight": 0,
-       "full": 0,
-       "planned": 20
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "8e9ce5",
-     "expected": 20,
-     "delivered": 20,
      "copied": true
     }
    ]
@@ -11347,6 +10998,10 @@
   {
    "t": "2026-11-25T20:18:29Z",
    "games": 427642
+  },
+  {
+   "t": "2026-11-26T01:07:14Z",
+   "games": 432038
   }
  ]
 }
