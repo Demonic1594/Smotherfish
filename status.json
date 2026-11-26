@@ -1,29 +1,35 @@
 {
- "generated": "2026-11-26T15:17:02Z",
- "games_per_hour": 2930,
- "jobs_running": 3,
+ "generated": "2026-11-26T15:32:10Z",
+ "games_per_hour": 2959,
+ "jobs_running": 0,
  "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 1,
-   "running_runs": 0,
+   "running_runs": 1,
    "jobs": 0,
    "active_games": 0,
-   "last": null
+   "last": {
+    "workflow": "Smother experiment",
+    "exp": "cachetest3",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-26T15:30:51Z"
+   }
   },
   {
    "id": "af5be9",
    "share": 1,
-   "running_runs": 1,
-   "jobs": 3,
+   "running_runs": 0,
+   "jobs": 0,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "helpercheck-af5be9",
-    "status": "in_progress",
-    "conclusion": null,
-    "updated": "2026-11-26T15:17:01Z"
+    "status": "completed",
+    "conclusion": "success",
+    "updated": "2026-11-26T15:20:44Z"
    }
   },
   {
@@ -225,6 +231,141 @@
  ],
  "tests": [
   {
+   "id": "cachetest3",
+   "plan_sha": "694c5769e86063d551314137748e46fd99d6d5ed",
+   "parts": [
+    "cachetest3"
+   ],
+   "created": "2026-11-26T15:29:11Z",
+   "tc": [
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "m1500",
+     "name": "Maia-3 1500"
+    }
+   ],
+   "planned": 60,
+   "delivered": 0,
+   "state": "running",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 60
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "own",
+     "expected": 60,
+     "delivered": 0,
+     "copied": true
+    }
+   ]
+  },
+  {
+   "id": "cachetest2",
+   "plan_sha": "45cbd231bc1dce055da85c6a35587e6141c5b252",
+   "parts": [
+    "cachetest2"
+   ],
+   "created": "2026-11-26T15:26:31Z",
+   "tc": [
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "m1500",
+     "name": "Maia-3 1500"
+    }
+   ],
+   "planned": 60,
+   "delivered": 60,
+   "state": "finished",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "m1500": {
+       "games": 60,
+       "w": 60,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 60
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "own",
+     "expected": 60,
+     "delivered": 60,
+     "copied": true
+    }
+   ]
+  },
+  {
+   "id": "cachetest1",
+   "plan_sha": "021b42a0e5d7f0dda796dc7d80d45b690a1a0540",
+   "parts": [
+    "cachetest1"
+   ],
+   "created": "2026-11-26T15:21:57Z",
+   "tc": [
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "m1500",
+     "name": "Maia-3 1500"
+    }
+   ],
+   "planned": 60,
+   "delivered": 60,
+   "state": "finished",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "m1500": {
+       "games": 60,
+       "w": 60,
+       "d": 0,
+       "l": 0,
+       "knight": 1,
+       "full": 1,
+       "planned": 60
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "own",
+     "expected": 60,
+     "delivered": 60,
+     "copied": true
+    }
+   ]
+  },
+  {
    "id": "helpercheck-af5be9",
    "plan_sha": "b55424f049a7b2ae885c6c8d2019dadad82da323",
    "parts": [
@@ -241,20 +382,20 @@
     }
    ],
    "planned": 50,
-   "delivered": 0,
-   "state": "running",
+   "delivered": 50,
+   "state": "finished",
    "arms": [
     {
      "arm": "B",
      "opts": [],
      "cells": {
       "e1500": {
-       "games": 0,
-       "w": 0,
+       "games": 50,
+       "w": 50,
        "d": 0,
        "l": 0,
-       "knight": 0,
-       "full": 0,
+       "knight": 3,
+       "full": 4,
        "planned": 50
       }
      }
@@ -264,7 +405,7 @@
     {
      "id": "af5be9",
      "expected": 50,
-     "delivered": 0,
+     "delivered": 50,
      "copied": true
     }
    ]
@@ -12400,10 +12541,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-26T09:28:56Z",
-   "games": 509160
-  },
-  {
    "t": "2026-11-26T09:44:03Z",
    "games": 509160
   },
@@ -12486,6 +12623,10 @@
   {
    "t": "2026-11-26T15:17:02Z",
    "games": 526160
+  },
+  {
+   "t": "2026-11-26T15:32:10Z",
+   "games": 526330
   }
  ]
 }
