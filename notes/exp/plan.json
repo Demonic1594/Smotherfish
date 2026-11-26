@@ -1,0 +1,21 @@
+{
+ "exp": "cachetest1",
+ "tc": "5+0.05",
+ "chunk": 10,
+ "runs": [
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 60,
+   "seed": 91000,
+   "chunk": 10,
+   "opts": [],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  0,
+  1
+ ],
+ "max_parallel": 20
+}
