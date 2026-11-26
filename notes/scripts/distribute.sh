@@ -23,6 +23,18 @@ mapfile -t targets < <(python3 notes/scripts/volunteers.py targets ${ONLY:+--onl
 [ ${#targets[@]} -gt 0 ] || { echo "no targets"; exit 1; }
 n=0; for t in "${targets[@]}"; do n=$((n + ${t##*:})); done
 exp=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["exp"])' "$plan")
+# GitHub runs at most 256 matrix jobs per workflow run: refuse a split that
+# gives any target more (an account with several shares takes them in one
+# run). Split the plan into parts, or lower that account's weight.
+python3 - "$plan" "$n" "${targets[@]}" <<'PY' || exit 1
+import json, sys
+plan = json.load(open(sys.argv[1])); n = int(sys.argv[2])
+jobs = sum(-(-int(r["games"]) // (int(r.get("chunk", plan.get("chunk", 100))) // 2 * 2)) for r in plan["runs"])
+for t in sys.argv[3:]:
+    w = int(t.rsplit(":", 1)[1]); mine = -(-jobs * w // n)
+    if mine > 256:
+        sys.exit(f"{t.split(':')[0]} would get about {mine} jobs (limit 256 per run): split the plan or lower its weight")
+PY
 tmp=$(mktemp); cp "$plan" "$tmp"
 cur=$(git rev-parse --abbrev-ref HEAD)
 git fetch -q origin smotherfish
