@@ -1,0 +1,134 @@
+{
+ "exp": "grid60",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 3000,
+   "seed": 70000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 70000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 70500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e1500_D1",
+   "elo": 1500,
+   "games": 3000,
+   "seed": 70000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ]
+  },
+  {
+   "name": "m1500_D1",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 70000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_D1",
+   "elo": 2600,
+   "games": 400,
+   "seed": 70500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ]
+  },
+  {
+   "name": "e1500_D100",
+   "elo": 1500,
+   "games": 3000,
+   "seed": 70000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=100"
+   ]
+  },
+  {
+   "name": "m1500_D100",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 70000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=100"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_D100",
+   "elo": 2600,
+   "games": 400,
+   "seed": 70500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildDefSee=100"
+   ]
+  },
+  {
+   "name": "e1500_D300",
+   "elo": 1500,
+   "games": 3000,
+   "seed": 70000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=300"
+   ]
+  },
+  {
+   "name": "m1500_D300",
+   "elo": 1500,
+   "games": 1500,
+   "seed": 70000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=300"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_D300",
+   "elo": 2600,
+   "games": 400,
+   "seed": 70500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildDefSee=300"
+   ]
+  }
+ ],
+ "shard": [
+  2,
+  14
+ ],
+ "max_parallel": 20
+}
