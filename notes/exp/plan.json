@@ -1,0 +1,5029 @@
+{
+ "tc": "5+0.05",
+ "chunk": 25,
+ "exp": "grid63-r1",
+ "runs": [
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76514,
+   "first_chunk": 14,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76508,
+   "first_chunk": 8,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76502,
+   "first_chunk": 2,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76521,
+   "first_chunk": 21,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76515,
+   "first_chunk": 15,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76509,
+   "first_chunk": 9,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76503,
+   "first_chunk": 3,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76522,
+   "first_chunk": 22,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76026,
+   "first_chunk": 26,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76003,
+   "first_chunk": 3,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76018,
+   "first_chunk": 18,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76019,
+   "first_chunk": 19,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 16,
+   "chunk": 16,
+   "seed": 76041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76515,
+   "first_chunk": 15,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76509,
+   "first_chunk": 9,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76503,
+   "first_chunk": 3,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76522,
+   "first_chunk": 22,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76516,
+   "first_chunk": 16,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76510,
+   "first_chunk": 10,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76504,
+   "first_chunk": 4,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76523,
+   "first_chunk": 23,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76004,
+   "first_chunk": 4,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76019,
+   "first_chunk": 19,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76039,
+   "first_chunk": 39,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76012,
+   "first_chunk": 12,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76031,
+   "first_chunk": 31,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76516,
+   "first_chunk": 16,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76510,
+   "first_chunk": 10,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76504,
+   "first_chunk": 4,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76523,
+   "first_chunk": 23,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76517,
+   "first_chunk": 17,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76511,
+   "first_chunk": 11,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76505,
+   "first_chunk": 5,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76524,
+   "first_chunk": 24,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76039,
+   "first_chunk": 39,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76040,
+   "first_chunk": 40,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76017,
+   "first_chunk": 17,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76032,
+   "first_chunk": 32,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76517,
+   "first_chunk": 17,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76511,
+   "first_chunk": 11,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76505,
+   "first_chunk": 5,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76524,
+   "first_chunk": 24,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76518,
+   "first_chunk": 18,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76512,
+   "first_chunk": 12,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76506,
+   "first_chunk": 6,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76025,
+   "first_chunk": 25,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76040,
+   "first_chunk": 40,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76003,
+   "first_chunk": 3,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76018,
+   "first_chunk": 18,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76033,
+   "first_chunk": 33,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 16,
+   "chunk": 16,
+   "seed": 76041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76518,
+   "first_chunk": 18,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76512,
+   "first_chunk": 12,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76506,
+   "first_chunk": 6,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76500,
+   "first_chunk": 0,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76519,
+   "first_chunk": 19,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76513,
+   "first_chunk": 13,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76507,
+   "first_chunk": 7,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76026,
+   "first_chunk": 26,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76003,
+   "first_chunk": 3,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76004,
+   "first_chunk": 4,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76019,
+   "first_chunk": 19,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 16,
+   "chunk": 16,
+   "seed": 76041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76500,
+   "first_chunk": 0,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76519,
+   "first_chunk": 19,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76513,
+   "first_chunk": 13,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76507,
+   "first_chunk": 7,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76501,
+   "first_chunk": 1,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76520,
+   "first_chunk": 20,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76514,
+   "first_chunk": 14,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76508,
+   "first_chunk": 8,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76012,
+   "first_chunk": 12,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76031,
+   "first_chunk": 31,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76004,
+   "first_chunk": 4,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76039,
+   "first_chunk": 39,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76501,
+   "first_chunk": 1,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76520,
+   "first_chunk": 20,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76514,
+   "first_chunk": 14,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76508,
+   "first_chunk": 8,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76502,
+   "first_chunk": 2,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76521,
+   "first_chunk": 21,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76515,
+   "first_chunk": 15,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76509,
+   "first_chunk": 9,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76032,
+   "first_chunk": 32,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76025,
+   "first_chunk": 25,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76040,
+   "first_chunk": 40,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76017,
+   "first_chunk": 17,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76502,
+   "first_chunk": 2,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76521,
+   "first_chunk": 21,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76515,
+   "first_chunk": 15,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76509,
+   "first_chunk": 9,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76503,
+   "first_chunk": 3,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76522,
+   "first_chunk": 22,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76516,
+   "first_chunk": 16,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76510,
+   "first_chunk": 10,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76033,
+   "first_chunk": 33,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76025,
+   "first_chunk": 25,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76026,
+   "first_chunk": 26,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76003,
+   "first_chunk": 3,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76018,
+   "first_chunk": 18,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 16,
+   "chunk": 16,
+   "seed": 76041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76503,
+   "first_chunk": 3,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76522,
+   "first_chunk": 22,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76516,
+   "first_chunk": 16,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76510,
+   "first_chunk": 10,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76504,
+   "first_chunk": 4,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76523,
+   "first_chunk": 23,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76517,
+   "first_chunk": 17,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76511,
+   "first_chunk": 11,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76026,
+   "first_chunk": 26,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76004,
+   "first_chunk": 4,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76019,
+   "first_chunk": 19,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76504,
+   "first_chunk": 4,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76523,
+   "first_chunk": 23,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76517,
+   "first_chunk": 17,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76511,
+   "first_chunk": 11,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76505,
+   "first_chunk": 5,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76524,
+   "first_chunk": 24,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76518,
+   "first_chunk": 18,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76512,
+   "first_chunk": 12,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76012,
+   "first_chunk": 12,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76031,
+   "first_chunk": 31,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76039,
+   "first_chunk": 39,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76505,
+   "first_chunk": 5,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76506,
+   "first_chunk": 6,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76507,
+   "first_chunk": 7,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76508,
+   "first_chunk": 8,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76524,
+   "first_chunk": 24,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76500,
+   "first_chunk": 0,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76501,
+   "first_chunk": 1,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76502,
+   "first_chunk": 2,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76518,
+   "first_chunk": 18,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76519,
+   "first_chunk": 19,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76520,
+   "first_chunk": 20,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76521,
+   "first_chunk": 21,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76512,
+   "first_chunk": 12,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76513,
+   "first_chunk": 13,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76514,
+   "first_chunk": 14,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76515,
+   "first_chunk": 15,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76506,
+   "first_chunk": 6,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76507,
+   "first_chunk": 7,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76508,
+   "first_chunk": 8,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76509,
+   "first_chunk": 9,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76500,
+   "first_chunk": 0,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76501,
+   "first_chunk": 1,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76502,
+   "first_chunk": 2,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76503,
+   "first_chunk": 3,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76519,
+   "first_chunk": 19,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76520,
+   "first_chunk": 20,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76521,
+   "first_chunk": 21,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76522,
+   "first_chunk": 22,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76513,
+   "first_chunk": 13,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76514,
+   "first_chunk": 14,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76515,
+   "first_chunk": 15,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76516,
+   "first_chunk": 16,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76017,
+   "first_chunk": 17,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76018,
+   "first_chunk": 18,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76019,
+   "first_chunk": 19,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76039,
+   "first_chunk": 39,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76032,
+   "first_chunk": 32,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76033,
+   "first_chunk": 33,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76012,
+   "first_chunk": 12,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76031,
+   "first_chunk": 31,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76012,
+   "first_chunk": 12,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76031,
+   "first_chunk": 31,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76032,
+   "first_chunk": 32,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76025,
+   "first_chunk": 25,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76026,
+   "first_chunk": 26,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76003,
+   "first_chunk": 3,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76004,
+   "first_chunk": 4,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76040,
+   "first_chunk": 40,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 16,
+   "chunk": 16,
+   "seed": 76041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76509,
+   "first_chunk": 9,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76503,
+   "first_chunk": 3,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76522,
+   "first_chunk": 22,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76516,
+   "first_chunk": 16,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76510,
+   "first_chunk": 10,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76504,
+   "first_chunk": 4,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76523,
+   "first_chunk": 23,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76517,
+   "first_chunk": 17,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76040,
+   "first_chunk": 40,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76017,
+   "first_chunk": 17,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76032,
+   "first_chunk": 32,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76033,
+   "first_chunk": 33,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76025,
+   "first_chunk": 25,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76510,
+   "first_chunk": 10,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76504,
+   "first_chunk": 4,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76523,
+   "first_chunk": 23,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76517,
+   "first_chunk": 17,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76511,
+   "first_chunk": 11,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76505,
+   "first_chunk": 5,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76524,
+   "first_chunk": 24,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76518,
+   "first_chunk": 18,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76003,
+   "first_chunk": 3,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76018,
+   "first_chunk": 18,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76033,
+   "first_chunk": 33,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76026,
+   "first_chunk": 26,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 16,
+   "chunk": 16,
+   "seed": 76041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76511,
+   "first_chunk": 11,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76505,
+   "first_chunk": 5,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76524,
+   "first_chunk": 24,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76518,
+   "first_chunk": 18,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76512,
+   "first_chunk": 12,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76506,
+   "first_chunk": 6,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76500,
+   "first_chunk": 0,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76519,
+   "first_chunk": 19,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76004,
+   "first_chunk": 4,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76019,
+   "first_chunk": 19,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76012,
+   "first_chunk": 12,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76031,
+   "first_chunk": 31,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76512,
+   "first_chunk": 12,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76506,
+   "first_chunk": 6,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76500,
+   "first_chunk": 0,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76519,
+   "first_chunk": 19,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76513,
+   "first_chunk": 13,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76507,
+   "first_chunk": 7,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76501,
+   "first_chunk": 1,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76520,
+   "first_chunk": 20,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76039,
+   "first_chunk": 39,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76017,
+   "first_chunk": 17,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76032,
+   "first_chunk": 32,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76513,
+   "first_chunk": 13,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76507,
+   "first_chunk": 7,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76501,
+   "first_chunk": 1,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76520,
+   "first_chunk": 20,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76514,
+   "first_chunk": 14,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76508,
+   "first_chunk": 8,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76502,
+   "first_chunk": 2,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 76521,
+   "first_chunk": 21,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76025,
+   "first_chunk": 25,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76040,
+   "first_chunk": 40,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76017,
+   "first_chunk": 17,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76018,
+   "first_chunk": 18,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76033,
+   "first_chunk": 33,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 24,
+   "chunk": 24,
+   "seed": 76029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1100"
+  }
+ ],
+ "shard": [
+  18,
+  19
+ ],
+ "max_parallel": 20
+}
