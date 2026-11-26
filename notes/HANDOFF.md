@@ -2068,3 +2068,14 @@ as DefSee: B swings ~3.0-4.3 between runs of a few thousand games; only
 fresh-data replication counts. SmotherStallAfter stays off (dev branch):
 no knight change, no shorter games against these opponents; its only
 use would be long stalls like JKnlm2Kk, which are rare here.
+
+grid66 (harness trap prototype, Maia-3 1500 x2000 + 1100 x1000 per arm;
+in one-gap decided positions the harness plays the move whose Maia-weighted
+replies walk into a forced knight smother in 2, if the engine confirms the
+win; trap thinking not on our clock): knight per 100: B 3.67, P>=0.05 4.27
+(z +1.2), any safe trap 3.53 (z -0.3); no losses. P 0.05: 624 trap moves
+in 218 of 3,000 games, 92 knight smothers within 4 plies of a trap (15%
+per trap move, as predicted offline 17%). The mechanism works but the net
+gain is small: traps arise in ~7% of games, many of which smothered
+anyway; unlikely traps (P 0) cost more than they catch. grid67: B vs
+P 0.05, 6,000 games each, fresh seeds, decides.
