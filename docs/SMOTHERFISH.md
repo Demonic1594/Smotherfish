@@ -253,8 +253,9 @@ Their measurements are in `notes/HANDOFF.md`.
 | Purpose | Settings | Notes |
 | ------- | -------- | ----- |
 | Knight smothered mates (default) | none | About 4 per 100 games against Stockfish 1500, 5 against Maia-3 1500. |
-| As many smothered mates of any kind as possible | `SmotherClassic false`, `SmotherGoal Near` | About two thirds of games against Stockfish 1500 end in a full or near smother (1.5.1 measurements). |
-| True smothers of any piece | `SmotherClassic false`, `SmotherGoal Full` | The most full smothers, few near ones. |
+| As many smothered mates of any kind as possible | `SmotherClassic false`, `SmotherGoal Near` | 1.6 at 5+0.05: 67.6 of 100 games against Stockfish 1500 and 67.5 against Maia-3 1500 end in a smother (mostly near smothers), 51.8 against Stockfish 2600; defaults give 6.8. Knight smothers fall to 0.8. No losses, 100% against 2600 (grid57). |
+| Full smothers by any piece | `SmotherClassic false` | 1.6 at 5+0.05 against Stockfish 1500: 42.8 of 100 games end in a smother, 11.1 of them full (3.5 times the defaults); knight smothers 1.3. No losses (grid57). |
+| True smothers of any piece only | `SmotherClassic false`, `SmotherGoal Full` | The most full smothers, few near ones. |
 | Ordinary Stockfish play | `SmotherBrutal false` | Smothers only when the prover finds a forced one. |
 | Quick games against people | defaults (with `UCI_Opponent` from the GUI) | Builds for a shorter time, since people resign. |
 | A human-like sparring partner | `HumanElo` N | Section 5. |

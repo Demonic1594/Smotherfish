@@ -125,12 +125,28 @@ def cmd_list(_):
         print(f"{i:8s} {w:>6s}  {pushed}")
 
 
+def fork_base(url, base):
+    """The version a fork's share is built on: the fork's own current
+    default-branch commit. A share's workflow files must equal the fork's
+    (GitHub refuses a fork's token creating a branch with other workflow
+    files), and Helper kick keeps forks synced, so a fixed base goes stale;
+    a fork with changes of its own keeps its own workflows too. Falls back to
+    base if the fork cannot be read."""
+    if subprocess.run(["git", "fetch", "-q", url, "smotherfish"], stderr=subprocess.DEVNULL).returncode:
+        return base
+    head = subprocess.run(["git", "rev-parse", "FETCH_HEAD"], capture_output=True, text=True).stdout.strip()
+    return head[:12] if head else base
+
+
 def cmd_targets(args):
     c = conf()
     only = set(args[args.index("--only") + 1].split(",")) if "--only" in args else None
-    for acc, _ in accounts():
+    for acc, url in accounts():
         if only is None or acc in only:
-            print(f"{acc}:{c.get('bases', {}).get(acc, c['base'])}:{c['weights'].get(acc, 1)}")
+            b = c.get("bases", {}).get(acc)
+            if b is None:
+                b = fork_base(url, c["base"])
+            print(f"{acc}:{b}:{c['weights'].get(acc, 1)}")
 
 
 def cmd_status(args):

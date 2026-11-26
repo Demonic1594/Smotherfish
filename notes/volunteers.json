@@ -1,19 +1,23 @@
 {
- "base": "6a8caf3d",
+ "base": "4c013135",
  "weights": {
-  "d32e35": 4
+  "d32e35": 5
  },
  "exclude": [
   "2456cd"
  ],
  "notes": {
-  "d32e35": "enterprise account: 84 jobs at once on Nov 26 (probe conctest1), weight 4",
+  "d32e35": "measured 84 concurrent jobs (Nov 25), 108-109 (Nov 27 01:12 JST): weight 5 = 100 jobs, ~9 left free",
   "dc665d": "no working schedule: needs Run workflow by hand",
   "superseded": "refill parts replaced by a later refill; merge and status skip them",
-  "2456cd": "excluded Nov 26: owner made the fork private to use their own Actions"
+  "2456cd": "excluded Nov 26: owner made the fork private to use their own Actions",
+  "sync": "Helper kick keeps these forks (IDs or all) synced with Sync fork (fast-forward only) and refills their Maia cache. Left on for all, forks never fall behind base."
  },
  "bases": {},
  "superseded": [
   "grid55-r1"
+ ],
+ "sync": [
+  "all"
  ]
 }

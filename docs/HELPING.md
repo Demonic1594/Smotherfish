@@ -43,7 +43,13 @@ experiments on its own schedule, about once an hour, or when you press
 
 ## Keeping your fork up to date
 
-Use **Sync fork** on your fork's main page only when the maintainers ask:
+With the repository owner as a collaborator (see above), the maintainers
+keep your fork synced for you: the "Helper kick" workflow uses GitHub's
+own **Sync fork**. If you have changes of your own, ours are merged in
+alongside them when they do not conflict; when they do conflict, your fork
+is left exactly as it is, and its share of each test is built on the newest
+version it already has. Without a collaborator, use
+**Sync fork** on your fork's main page when the maintainers ask:
 experiments are built on the version your fork is on.
 
 ## Leaving
@@ -80,6 +86,7 @@ on the status page.
 [test status page](https://demonic1594.github.io/Smotherfish/), which lists
 every helper with its latest run.
 
-**Do I need to keep my fork in sync?** Only when the maintainers ask (after a
-release). Experiments carry their own engine code, so an unsynced fork keeps
-working until then.
+**Do I need to keep my fork in sync?** Not if the owner is a collaborator:
+it is synced automatically when needed. Otherwise only when the maintainers
+ask (after a release). Experiments carry their own engine code, so an
+unsynced fork keeps working until then.

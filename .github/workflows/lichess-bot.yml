@@ -26,6 +26,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # to start the next session (see "Next session")
 
 concurrency:
   group: lichess-bot-${{ inputs.bot || '1' }}  # one session per bot account
@@ -57,9 +58,9 @@ jobs:
           pip install -q -r /tmp/lb/requirements.txt
           mkdir -p /tmp/lb/engines
           cp src/stockfish /tmp/lb/engines/smotherfish
-          # Two games at once (about 60-75 per 5 hours), each engine 1 search
-          # thread + 1 prover thread: 4 threads on the runner's 4 cores.
-          python notes/scripts/lichess_config.py /tmp/lb/config.yml.default /tmp/lb/config.yml 1 1024 2 "$OPTS"
+          # Strongest: one game at a time, 3 search threads + the smother
+          # prover's thread on the runner's 4 cores, 4 GB hash (16 GB runner).
+          python notes/scripts/lichess_config.py /tmp/lb/config.yml.default /tmp/lb/config.yml 3 4096 1 "$OPTS"
         env:
           OPTS: ${{ inputs.options || '' }}
       - name: Play
@@ -103,3 +104,25 @@ jobs:
         env:
           T: ${{ (inputs.bot || '1') == '1' && secrets.LICHESS_BOT_TOKEN || secrets[format('LICHESS_BOT_TOKEN{0}', inputs.bot)] }}
           BOT: ${{ inputs.bot || '1' }}
+      # Around the clock: each session starts the next one for the same bot
+      # (the concurrency group keeps one session per bot). Stop by setting the
+      # repository variable BOTS_LOOP to "off" (Settings, Secrets and
+      # variables, Actions, Variables); the session in progress finishes.
+      - name: Next session
+        if: always() && vars.BOTS_LOOP != 'off'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          BOT: ${{ inputs.bot || '1' }}
+          HOURS: ${{ inputs.hours || '5' }}
+          OPTS: ${{ inputs.options || '' }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          body = {"ref": "smotherfish", "inputs": {"bot": os.environ["BOT"], "hours": os.environ["HOURS"], "options": os.environ["OPTS"]}}
+          req = urllib.request.Request(f"https://api.github.com/repos/{os.environ['REPO']}/actions/workflows/lichess-bot.yml/dispatches",
+              data=json.dumps(body).encode(), method="POST",
+              headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
+          urllib.request.urlopen(req, timeout=30)
+          print("started the next session of bot", os.environ["BOT"])
+          PY

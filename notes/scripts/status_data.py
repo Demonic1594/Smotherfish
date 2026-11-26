@@ -145,7 +145,7 @@ def main(out, prev_path=None):
             names.add(b.split("/")[2])
         elif b.startswith("actions-exp/"):
             names.add(b.split("/", 1)[1])
-    names = {n for n in names if not n.startswith(("sprt", "conctest", "maia-grid")) and n not in set(conf.get("superseded", []))}
+    names = {n for n in names if not n.startswith(("sprt", "conctest", "maia-grid", "helpercheck", "cachetest")) and n not in set(conf.get("superseded", []))}
     groups = collections.defaultdict(list)              # grid55-r1 belongs to grid55
     for n in names:
         groups[n.split("-r")[0] if "-r" in n and n.split("-r")[-1].isdigit() else n].append(n)

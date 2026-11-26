@@ -104,7 +104,7 @@ No settings are needed: smother hunting is on by default. Common profiles:
 | Goal | Settings |
 | ---- | -------- |
 | Knight smothered mates (default) | none |
-| Any smothered mate, as often as possible | `SmotherClassic false`, `SmotherGoal Near` |
+| Any smothered mate, as often as possible (about two thirds of games against 1500-rated opponents; mostly near smothers) | `SmotherClassic false`, `SmotherGoal Near` |
 | Ordinary Stockfish play, smothers only when proven | `SmotherBrutal false` |
 | Play like a human of a given rating | `HumanElo` 1020-2400 (calibrated against Maia-3) |
 | Weaker analysis on a phone | `Analysis Elo` N |

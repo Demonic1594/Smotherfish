@@ -124,19 +124,43 @@ jobs:
       - run: pip install -q chess
       - if: startsWith(matrix.opp, 'maia-')
         run: sudo apt-get install -y -q libopenblas0 >/dev/null
+      # Maia-3 in its own virtualenv plus the downloaded network, cached per
+      # repository: the first Maia job of a fork installs it (about a minute),
+      # later jobs restore it in seconds.
+      - name: Restore Maia-3 (cache)
+        id: maia3cache
+        if: startsWith(matrix.opp, 'maia3-')
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/maia3env
+            ~/.cache/huggingface
+          key: maia3-1e13597c-torch2.15.0-${{ runner.os }}-${{ runner.arch }}-v1
       - name: Install Maia-3 (human-like, any rating)
         if: startsWith(matrix.opp, 'maia3-')
         run: |
           # Pinned to the versions tested (Nov 21): maia3 1e13597c, torch 2.15.0 CPU.
-          pip install -q torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
-          git clone -q https://github.com/CSSLab/maia3.git /tmp/maia3
-          git -C /tmp/maia3 checkout -q 1e13597c42d4858b7cfd7cfdae01e297263364b2
-          pip install -q /tmp/maia3
-          maia3-cache --model maia3-5m
-          m=$(command -v maia3-uci)
+          if [ ! -x ~/maia3env/bin/maia3-uci ]; then
+            python3 -m venv ~/maia3env
+            ~/maia3env/bin/pip install -q torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+            git clone -q https://github.com/CSSLab/maia3.git /tmp/maia3
+            git -C /tmp/maia3 checkout -q 1e13597c42d4858b7cfd7cfdae01e297263364b2
+            ~/maia3env/bin/pip install -q /tmp/maia3
+            ~/maia3env/bin/maia3-cache --model maia3-5m
+          fi
+          m=$HOME/maia3env/bin/maia3-uci
           printf '#!/bin/sh\nexport OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 HF_HUB_OFFLINE=1\nexec %s --model maia3-5m --device cpu --no-use-amp "$@"\n' "$m" > engines/maia3
           chmod +x engines/maia3
-          (printf 'uci\nisready\nposition startpos\ngo nodes 1\n'; sleep 30) | timeout 60 engines/maia3 | grep -m1 bestmove
+          # Answers within seconds; the old check waited a fixed 30 s.
+          timeout 90 python3 - "engines/maia3" <<'PY'
+          import subprocess, sys
+          p = subprocess.Popen(sys.argv[1:], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+          p.stdin.write("uci\nisready\nposition startpos\ngo nodes 1\n"); p.stdin.flush()
+          for line in p.stdout:
+              if line.startswith("bestmove"):
+                  print(line.strip()); break
+          p.kill()
+          PY
       - name: Play ${{ matrix.name }} chunk ${{ matrix.chunk }}
         env:
           OPENBLAS_NUM_THREADS: "1"  # one BLAS thread per lc0 process

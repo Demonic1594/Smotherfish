@@ -1,0 +1,50 @@
+# Maia cache: installs Maia-3 (PyTorch CPU + the 5M network) once on the
+# default branch and saves it with actions/cache. A cache is visible to the
+# branch that saved it and to every branch when saved on the default branch,
+# so experiment branches (actions-exp/*) restore it in seconds instead of
+# installing for about a minute per job. Run by Helper kick after a sync, by
+# hand, and weekly (GitHub evicts caches unused for 7 days).
+name: Maia cache
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 3 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  warm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Restore Maia-3 (cache)
+        id: maia3cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/maia3env
+            ~/.cache/huggingface
+          key: maia3-1e13597c-torch2.15.0-${{ runner.os }}-${{ runner.arch }}-v1
+      - name: Install Maia-3
+        if: steps.maia3cache.outputs.cache-hit != 'true'
+        run: |
+          python3 -m venv ~/maia3env
+          ~/maia3env/bin/pip install -q torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+          git clone -q https://github.com/CSSLab/maia3.git /tmp/maia3
+          git -C /tmp/maia3 checkout -q 1e13597c42d4858b7cfd7cfdae01e297263364b2
+          ~/maia3env/bin/pip install -q /tmp/maia3
+          ~/maia3env/bin/maia3-cache --model maia3-5m
+      - name: Check it plays
+        run: |
+          export HF_HUB_OFFLINE=1
+          timeout 90 python3 - "$HOME/maia3env/bin/maia3-uci" <<'PY'
+          import subprocess, sys
+          p = subprocess.Popen(sys.argv[1:] + ["--model", "maia3-5m", "--device", "cpu", "--no-use-amp"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+          p.stdin.write("uci\nisready\nposition startpos\ngo nodes 1\n"); p.stdin.flush()
+          for line in p.stdout:
+              if line.startswith("bestmove"):
+                  print(line.strip()); break
+          p.kill()
+          PY
