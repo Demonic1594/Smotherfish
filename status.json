@@ -1,11 +1,19 @@
 {
- "generated": "2026-11-26T14:31:40Z",
- "games_per_hour": 8319,
+ "generated": "2026-11-26T14:46:49Z",
+ "games_per_hour": 4957,
  "jobs_running": 0,
  "active_games": 0,
  "accounts": [
   {
    "id": "main",
+   "share": 1,
+   "running_runs": 0,
+   "jobs": 0,
+   "active_games": 0,
+   "last": null
+  },
+  {
+   "id": "97884e",
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
@@ -12223,10 +12231,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-26T08:41:52Z",
-   "games": 477560
-  },
-  {
    "t": "2026-11-26T08:57:01Z",
    "games": 497160
   },
@@ -12308,6 +12312,10 @@
   },
   {
    "t": "2026-11-26T14:31:40Z",
+   "games": 526060
+  },
+  {
+   "t": "2026-11-26T14:46:49Z",
    "games": 526060
   }
  ]
