@@ -989,6 +989,7 @@ bool Search::Worker::iterative_deepening() {
             buildStarveAt  = 4;
             buildLmr       = 0;
             buildDefLmr    = 0;
+            buildDefSee    = int(options["SmotherBuildDefSee"]) * 1000 / perK;
             buildNmp       = 0;
             buildOwnKeep   = 0;
             Smother::set_build_weights(std::string(options["SmotherBuildWeights"]));
@@ -1001,6 +1002,7 @@ bool Search::Worker::iterative_deepening() {
                                       int(options["SmotherBuildModelScale"]),
                                       std::string(options["SmotherBuildModel"]));
             Smother::set_build_net(int(options["SmotherBuildNetScale"]));
+            Smother::set_build_armgap(int(options["SmotherBuildArmGap"]));
             buildEscape    = int(options["SmotherBuildEscape"]);
             buildKnightSafe = 0;
             shapeWeight    = 0;
@@ -1936,6 +1938,26 @@ moves_loop:  // When in check, search starts here
             smotherLmr = us == shapeUs ? (buildLmr && smother_builds(pos, move) ? buildLmr : 0)
                        : buildDefLmr && smother_opens(pos, move) ? buildDefLmr
                                                                  : 0;
+
+        // Construction mode (SmotherBuildDefSee): above the floor material
+        // counts 1/8, so the defender in our tree gives pieces away to break
+        // the box, which real opponents do not. Its moves that lose more than
+        // SmotherBuildDefSee by static exchange are not searched, unless they
+        // give check; only after one move has been searched, so the node
+        // always has a real value (stalemate and mate are found as before).
+        // A move whose piece then attacks one of our pieces other than pawns
+        // is a threat (a fork or a sacrifice that wins material back) and is
+        // always searched: static exchange alone does not see those.
+        if (buildDefSee && buildSmother && us != shapeUs && !rootNode && !givesCheck
+            && !is_loss(bestValue) && !pos.see_ge(move, -buildDefSee))
+        {
+            const PieceType pt  = type_of(movedPiece);
+            const Bitboard  occ = pos.pieces() ^ square_bb(move.from_sq());
+            const Bitboard  att = pt == PAWN ? Attacks::attacks_bb(PAWN, move.to_sq(), us)
+                                             : Attacks::attacks_bb(pt, move.to_sq(), occ);
+            if (!(att & (pos.pieces(~us) ^ pos.pieces(~us, PAWN))))
+                continue;
+        }
 
         // Calculate new depth for this move
         newDepth = depth - 1;
