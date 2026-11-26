@@ -130,7 +130,7 @@ def cmd_targets(args):
     only = set(args[args.index("--only") + 1].split(",")) if "--only" in args else None
     for acc, _ in accounts():
         if only is None or acc in only:
-            print(f"{acc}:{c['base']}:{c['weights'].get(acc, 1)}")
+            print(f"{acc}:{c.get('bases', {}).get(acc, c['base'])}:{c['weights'].get(acc, 1)}")
 
 
 def cmd_status(args):
@@ -162,7 +162,7 @@ def cmd_refill(args):
     while os.path.exists(os.path.join(HERE, "..", "exp", f"{exp}-r{k}.json")):
         k += 1
     runs = [{"name": j["name"], "elo": j["elo"], "games": j["games"], "chunk": j["games"],
-             "seed": j["seed"], "tc": j["tc"], "opts": j["opts"].split(),
+             "seed": j["seed"], "first_chunk": j["chunk"], "tc": j["tc"], "opts": j["opts"].split(),
              **({"opponent": j["opp"]} if j["opp"] else {}),
              **({"opp_opts": j["oppopts"].split()} if j["oppopts"] else {})} for j in missing]
     plan = {k2: v for k2, v in base.items() if k2 not in ("runs", "exp", "shard")}
@@ -176,8 +176,9 @@ def cmd_refill(args):
 def cmd_merge(args):
     exp, outdir = args[0], args[1]
     os.makedirs(outdir, exist_ok=True)
+    skip = set(conf().get("superseded", []))
     exps = [exp] + [f"{exp}-r{k}" for k in range(1, 10)
-                    if os.path.exists(os.path.join(HERE, "..", "exp", f"{exp}-r{k}.json"))]
+                    if os.path.exists(os.path.join(HERE, "..", "exp", f"{exp}-r{k}.json")) and f"{exp}-r{k}" not in skip]
     merged = collections.defaultdict(list)
     for e in exps:
         for acc, url in accounts():
