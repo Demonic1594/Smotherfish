@@ -2039,3 +2039,14 @@ but fork or attack a bigger piece were pruned. Fix: never prune a defender
 move whose piece then attacks one of our non-pawn pieces. grid62: B vs
 the threat-aware D1 (Maia-3 1500 x4000, Maia-3 1100 x2000, SF1500 x2000,
 SF2600 x400).
+
+grid62 (threat-aware DefSee 1 vs B, 16,800 games): knight per 100 -
+Maia-3 1500 3.92 vs D1T 3.27 (z -1.6), Maia-3 1100 5.00 vs 4.25 (z -1.1),
+SF1500 4.40 vs 3.20 (z -2.0), SF2600 1.25 vs 1.25; pooled 5+0.05 4.31 vs
+3.50 (z -2.65). No losses either side. The Maia-3 1500 "gain" of grid60/61
+did not replicate (this B arm alone scored 3.92 where the earlier B arms
+scored 2.98-3.1: the baseline itself swings by ~1 per 100 between runs of
+4,000 games). Conclusion: pruning the imagined defender's losing moves does
+not raise knight smothers; with the threat exception it lowers them.
+SmotherBuildDefSee stays off, development branch only. Lesson: a single
+post-hoc cell at z ~2 is not enough; require replication on fresh data.
