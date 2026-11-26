@@ -1975,3 +1975,26 @@ near = "all but one" smother.
   1500 opponents, z about 0.9).
 - So the "obsessed" setting exists already as a preset: AN for any smother,
   AK for full smothers. No setting beats 1.6 on knight smothers.
+
+## Why boxes slip away: the arming finding (26 Nov, from grid57 B/H40 logs)
+
+Offline on 1.6's games (scratchpad scripts, python-chess):
+- Every knight smother came out of a full box (all ring squares held by
+  defender units). 18% of games reach one; 17% of those convert. 82% of
+  box episodes end when the defender moves a box unit out on its next move.
+- At the moment a box closes: knight one move from a checking square the
+  defender does not guard -> knight smother next move 48 of 48 (100%);
+  checking square guarded 50 of 104; no knight check 0 of 721.
+- Arming x box state, P(knight smother within 20 plies): one open ring
+  square armed 5.3-6.1% vs not armed 0.5%; two open squares 0.18-0.41% vs
+  0.13%. We are armed in 43% of two-open positions but only 28% of one-open
+  positions: the unconditional KnightCheck term spends its pull where it
+  does nothing.
+- Dead ends checked: a knight smother in 1-2 instead of the final queen
+  smother: 0 cases; forced knight smothers missed by the prover in box
+  positions: 1 of 189; promotions already favour knights (1,886 vs 1,277
+  queens); more attacking pieces near the king goes with fewer defender
+  units around it; the knight-smother rate per 40 plies is flat (~0.6%).
+- New option SmotherBuildArmGap (extra KnightCheck points while at most
+  one ring square is open, off by default; bench unchanged). grid58: B vs
+  ArmGap 24 / 48 / 48 + KnightCheck 8, same opponents as grid57.
