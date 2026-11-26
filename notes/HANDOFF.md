@@ -2028,3 +2028,14 @@ one of six post-hoc cells). Mechanism unchanged: our captures after +8
 material 6.5-6.7, defender units at the end 2.2-2.5 in every arm, so the
 real games did not keep more defender material. grid61 confirms D1 vs B
 against Maia-3 only (the human-like case).
+
+grid61 (DefSee 1 vs B, Maia-3 only, 12,000 games): Maia-3 1500 (4,000):
+B 2.98, D1 3.83 per 100 (z +2.1); with grid60: 3.02 vs 4.05 (+34%,
+z +2.9). Maia-3 1100 (2,000): 4.70 vs 4.80 (z +0.2). Pooled fresh z +1.7.
+One loss (D1 vs Maia-3 1100, game 6): +11 material at ply 25, then lost
+material step by step to two central knights and a passed d-pawn that
+queened. Likely cause: defender knight moves that lose by static exchange
+but fork or attack a bigger piece were pruned. Fix: never prune a defender
+move whose piece then attacks one of our non-pawn pieces. grid62: B vs
+the threat-aware D1 (Maia-3 1500 x4000, Maia-3 1100 x2000, SF1500 x2000,
+SF2600 x400).

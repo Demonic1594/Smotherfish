@@ -1945,9 +1945,19 @@ moves_loop:  // When in check, search starts here
         // SmotherBuildDefSee by static exchange are not searched, unless they
         // give check; only after one move has been searched, so the node
         // always has a real value (stalemate and mate are found as before).
+        // A move whose piece then attacks one of our pieces other than pawns
+        // is a threat (a fork or a sacrifice that wins material back) and is
+        // always searched: static exchange alone does not see those.
         if (buildDefSee && buildSmother && us != shapeUs && !rootNode && !givesCheck
             && !is_loss(bestValue) && !pos.see_ge(move, -buildDefSee))
-            continue;
+        {
+            const PieceType pt  = type_of(movedPiece);
+            const Bitboard  occ = pos.pieces() ^ square_bb(move.from_sq());
+            const Bitboard  att = pt == PAWN ? Attacks::attacks_bb(PAWN, move.to_sq(), us)
+                                             : Attacks::attacks_bb(pt, move.to_sq(), occ);
+            if (!(att & (pos.pieces(~us) ^ pos.pieces(~us, PAWN))))
+                continue;
+        }
 
         // Calculate new depth for this move
         newDepth = depth - 1;
