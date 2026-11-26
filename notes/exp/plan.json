@@ -1,0 +1,52 @@
+{
+ "exp": "grid61",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 72000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 2000,
+   "seed": 72000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1500_D1",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 72000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_D1",
+   "elo": 1100,
+   "games": 2000,
+   "seed": 72000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ],
+   "opponent": "maia3-1100"
+  }
+ ],
+ "shard": [
+  9,
+  14
+ ],
+ "max_parallel": 20
+}
