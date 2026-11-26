@@ -2050,3 +2050,12 @@ scored 2.98-3.1: the baseline itself swings by ~1 per 100 between runs of
 not raise knight smothers; with the threat exception it lowers them.
 SmotherBuildDefSee stays off, development branch only. Lesson: a single
 post-hoc cell at z ~2 is not enough; require replication on fresh data.
+
+grid64 (SmotherStallAfter: a hybrid build with no new low in open squares
+next to the enemy king for N construction moves takes the near smother;
+from Lichess game JKnlm2Kk, where White checked a cornered king for ~90
+moves): knight per 100, SF1500 + Maia-3 1500 (3,700 each): B 3.16, S12
+4.03 (z +2.0), S24 4.05 (z +2.1), S40 3.59 (z +1.0); mean plies 239-241
+(no shortening), no losses, 99.8-100% vs 2600. B is at the low end of its
+usual range, so grid65 replicates on fresh seeds (B / S12 / S24, 6,000
+games each) before anything is believed.
