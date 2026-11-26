@@ -1,0 +1,137 @@
+{
+ "exp": "grid58",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 66000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 66000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 66500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e1500_G24",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 66000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildArmGap=24"
+   ]
+  },
+  {
+   "name": "m1500_G24",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 66000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildArmGap=24"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_G24",
+   "elo": 2600,
+   "games": 400,
+   "seed": 66500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildArmGap=24"
+   ]
+  },
+  {
+   "name": "e1500_G48",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 66000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildArmGap=48"
+   ]
+  },
+  {
+   "name": "m1500_G48",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 66000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildArmGap=48"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_G48",
+   "elo": 2600,
+   "games": 400,
+   "seed": 66500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildArmGap=48"
+   ]
+  },
+  {
+   "name": "e1500_G48K8",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 66000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "m1500_G48K8",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 66000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_G48K8",
+   "elo": 2600,
+   "games": 400,
+   "seed": 66500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  }
+ ],
+ "shard": [
+  13,
+  14
+ ],
+ "max_parallel": 20
+}
