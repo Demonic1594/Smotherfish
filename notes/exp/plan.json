@@ -1,0 +1,95 @@
+{
+ "exp": "grid66",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 82000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 1000,
+   "seed": 82000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1500_T05",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 82000,
+   "chunk": 25,
+   "opts": [
+    "HarnessTrap=0.05"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_T05",
+   "elo": 1100,
+   "games": 1000,
+   "seed": 82000,
+   "chunk": 25,
+   "opts": [
+    "HarnessTrap=0.05"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1500_T00",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 82000,
+   "chunk": 25,
+   "opts": [
+    "HarnessTrap=0.0"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_T00",
+   "elo": 1100,
+   "games": 1000,
+   "seed": 82000,
+   "chunk": 25,
+   "opts": [
+    "HarnessTrap=0.0"
+   ],
+   "opponent": "maia3-1100"
+  }
+ ],
+ "shard": [
+  [
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   93,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99
+  ],
+  400
+ ],
+ "max_parallel": 20
+}
