@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-26T11:45:10Z",
- "games_per_hour": 8308,
- "jobs_running": 3,
+ "generated": "2026-11-26T12:00:18Z",
+ "games_per_hour": 8317,
+ "jobs_running": 0,
  "active_games": 0,
  "accounts": [
   {
@@ -21,15 +21,15 @@
   {
    "id": "0cf451",
    "share": 1,
-   "running_runs": 1,
-   "jobs": 3,
+   "running_runs": 0,
+   "jobs": 0,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "helpercheck-0cf451",
-    "status": "in_progress",
-    "conclusion": null,
-    "updated": "2026-11-26T11:44:29Z"
+    "status": "completed",
+    "conclusion": "success",
+    "updated": "2026-11-26T11:48:18Z"
    }
   },
   {
@@ -205,20 +205,20 @@
     }
    ],
    "planned": 50,
-   "delivered": 0,
-   "state": "running",
+   "delivered": 50,
+   "state": "finished",
    "arms": [
     {
      "arm": "B",
      "opts": [],
      "cells": {
       "e1500": {
-       "games": 0,
-       "w": 0,
+       "games": 50,
+       "w": 50,
        "d": 0,
        "l": 0,
-       "knight": 0,
-       "full": 0,
+       "knight": 2,
+       "full": 2,
        "planned": 50
       }
      }
@@ -228,7 +228,7 @@
     {
      "id": "0cf451",
      "expected": 50,
-     "delivered": 0,
+     "delivered": 50,
      "copied": true
     }
    ]
@@ -12229,10 +12229,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-26T05:55:15Z",
-   "games": 477560
-  },
-  {
    "t": "2026-11-26T06:10:25Z",
    "games": 477560
   },
@@ -12311,6 +12307,10 @@
   {
    "t": "2026-11-26T11:45:10Z",
    "games": 526010
+  },
+  {
+   "t": "2026-11-26T12:00:18Z",
+   "games": 526060
   }
  ]
 }
