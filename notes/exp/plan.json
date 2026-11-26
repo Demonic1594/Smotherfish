@@ -1,0 +1,137 @@
+{
+ "exp": "grid57",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 64500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_H40",
+   "elo": 2600,
+   "games": 400,
+   "seed": 64500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_AK",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "m1500_AK",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_AK",
+   "elo": 2600,
+   "games": 400,
+   "seed": 64500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "e1500_AN",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "m1500_AN",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 64000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_AN",
+   "elo": 2600,
+   "games": 400,
+   "seed": 64500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  }
+ ],
+ "shard": [
+  13,
+  14
+ ],
+ "max_parallel": 20
+}
