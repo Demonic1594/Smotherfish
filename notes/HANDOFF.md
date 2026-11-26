@@ -1998,3 +1998,14 @@ Offline on 1.6's games (scratchpad scripts, python-chess):
 - New option SmotherBuildArmGap (extra KnightCheck points while at most
   one ring square is open, off by default; bench unchanged). grid58: B vs
   ArmGap 24 / 48 / 48 + KnightCheck 8, same opponents as grid57.
+
+grid58 result (16,400 games, all accounts): no gain. Knight smothers per
+100, pooled Stockfish 1500 + Maia-3 1500 (3,700 each): B 3.73, ArmGap 24
+3.57 (z -0.4), ArmGap 48 3.41 (z -0.8), ArmGap 48 + KnightCheck 8 4.03
+(z +0.7); all 99.8-100% against 2600, no losses. Mechanism check: the
+share of one-open-square positions with a knight armed did not move (B
+27.0%, G48 27.2%, G48K8 27.8%), nor did arming when a box forms (18.7 /
+18.5 / 19.3%). The eval term cannot steer the knight in: one-open states
+last about a move and the defender in our own tree (material at 1/8)
+dissolves the box rather than allow the bonus, as the fresh-view review
+predicted. SmotherBuildArmGap stays off (dev branch only, not released).
