@@ -2009,3 +2009,12 @@ share of one-open-square positions with a knight armed did not move (B
 last about a move and the defender in our own tree (material at 1/8)
 dissolves the box rather than allow the bonus, as the fresh-view review
 predicted. SmotherBuildArmGap stays off (dev branch only, not released).
+
+grid59 (confirmation, 25,594 games; Akleotes's 4 shares refilled as
+grid59-r1 after its run hit the 256-job limit): knight smothers per 100,
+Stockfish 1500 + Maia-3 1500 pooled (6,000 per arm): B 3.55, H40 3.23
+(z -1.0), ArmGap 48 + KnightCheck 8 3.64 (z +0.3, 3 losses to Stockfish
+1500), both 3.52 (z -0.1). Pooled with the earlier tests against their own
+B: H40 3.29 vs 3.34 (9,700 games each, z -0.2); ArmGap 48 + KnightCheck 8
+3.79 vs 3.62 (z +0.6). Neither meets the rule (z >= 2, no losses): 1.6
+as released stays the baseline; no strength SPRT needed.
