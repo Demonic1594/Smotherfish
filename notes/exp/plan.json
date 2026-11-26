@@ -1,0 +1,3888 @@
+{
+ "tc": "5+0.05",
+ "chunk": 25,
+ "exp": "grid59-r1",
+ "runs": [
+  {
+   "name": "e2600_AK8",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68509,
+   "first_chunk": 9,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2600_AK8",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68510,
+   "first_chunk": 10,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2600_AK8",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68511,
+   "first_chunk": 11,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2600_AK8",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68512,
+   "first_chunk": 12,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68503,
+   "first_chunk": 3,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68504,
+   "first_chunk": 4,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68505,
+   "first_chunk": 5,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68506,
+   "first_chunk": 6,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68517,
+   "first_chunk": 17,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68518,
+   "first_chunk": 18,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68519,
+   "first_chunk": 19,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_H40",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68500,
+   "first_chunk": 0,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e2600_H40",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68511,
+   "first_chunk": 11,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e2600_H40",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68512,
+   "first_chunk": 12,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e2600_H40",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68513,
+   "first_chunk": 13,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e2600_H40",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68514,
+   "first_chunk": 14,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e2600_HAK",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68505,
+   "first_chunk": 5,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2600_HAK",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68506,
+   "first_chunk": 6,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2600_HAK",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68507,
+   "first_chunk": 7,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2600_HAK",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68508,
+   "first_chunk": 8,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e2600_HAK",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 68519,
+   "first_chunk": 19,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68019,
+   "first_chunk": 19,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68033,
+   "first_chunk": 33,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68047,
+   "first_chunk": 47,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68048,
+   "first_chunk": 48,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68049,
+   "first_chunk": 49,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68050,
+   "first_chunk": 50,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68061,
+   "first_chunk": 61,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68062,
+   "first_chunk": 62,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68063,
+   "first_chunk": 63,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68064,
+   "first_chunk": 64,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68075,
+   "first_chunk": 75,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68076,
+   "first_chunk": 76,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68077,
+   "first_chunk": 77,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68078,
+   "first_chunk": 78,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68089,
+   "first_chunk": 89,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68090,
+   "first_chunk": 90,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68091,
+   "first_chunk": 91,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68092,
+   "first_chunk": 92,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68103,
+   "first_chunk": 103,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68104,
+   "first_chunk": 104,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68105,
+   "first_chunk": 105,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68106,
+   "first_chunk": 106,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68117,
+   "first_chunk": 117,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68118,
+   "first_chunk": 118,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68119,
+   "first_chunk": 119,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68120,
+   "first_chunk": 120,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68131,
+   "first_chunk": 131,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68132,
+   "first_chunk": 132,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68133,
+   "first_chunk": 133,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68134,
+   "first_chunk": 134,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68145,
+   "first_chunk": 145,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68146,
+   "first_chunk": 146,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68147,
+   "first_chunk": 147,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68148,
+   "first_chunk": 148,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68159,
+   "first_chunk": 159,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68160,
+   "first_chunk": 160,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68161,
+   "first_chunk": 161,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68162,
+   "first_chunk": 162,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68048,
+   "first_chunk": 48,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68049,
+   "first_chunk": 49,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68050,
+   "first_chunk": 50,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68051,
+   "first_chunk": 51,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68062,
+   "first_chunk": 62,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68063,
+   "first_chunk": 63,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68064,
+   "first_chunk": 64,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68065,
+   "first_chunk": 65,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68076,
+   "first_chunk": 76,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68077,
+   "first_chunk": 77,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68078,
+   "first_chunk": 78,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68079,
+   "first_chunk": 79,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68090,
+   "first_chunk": 90,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68091,
+   "first_chunk": 91,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68092,
+   "first_chunk": 92,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68093,
+   "first_chunk": 93,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68104,
+   "first_chunk": 104,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68105,
+   "first_chunk": 105,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68106,
+   "first_chunk": 106,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68107,
+   "first_chunk": 107,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68118,
+   "first_chunk": 118,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68119,
+   "first_chunk": 119,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68120,
+   "first_chunk": 120,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68121,
+   "first_chunk": 121,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68132,
+   "first_chunk": 132,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68133,
+   "first_chunk": 133,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68134,
+   "first_chunk": 134,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68135,
+   "first_chunk": 135,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68146,
+   "first_chunk": 146,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68147,
+   "first_chunk": 147,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68148,
+   "first_chunk": 148,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68149,
+   "first_chunk": 149,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68160,
+   "first_chunk": 160,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68161,
+   "first_chunk": 161,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68162,
+   "first_chunk": 162,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68163,
+   "first_chunk": 163,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68049,
+   "first_chunk": 49,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68050,
+   "first_chunk": 50,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68051,
+   "first_chunk": 51,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68052,
+   "first_chunk": 52,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68063,
+   "first_chunk": 63,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68064,
+   "first_chunk": 64,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68065,
+   "first_chunk": 65,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68066,
+   "first_chunk": 66,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68077,
+   "first_chunk": 77,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68078,
+   "first_chunk": 78,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68079,
+   "first_chunk": 79,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68080,
+   "first_chunk": 80,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68091,
+   "first_chunk": 91,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68092,
+   "first_chunk": 92,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68093,
+   "first_chunk": 93,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68094,
+   "first_chunk": 94,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68105,
+   "first_chunk": 105,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68106,
+   "first_chunk": 106,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68107,
+   "first_chunk": 107,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68108,
+   "first_chunk": 108,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68119,
+   "first_chunk": 119,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68120,
+   "first_chunk": 120,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68121,
+   "first_chunk": 121,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68122,
+   "first_chunk": 122,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68133,
+   "first_chunk": 133,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68134,
+   "first_chunk": 134,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68135,
+   "first_chunk": 135,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68136,
+   "first_chunk": 136,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68147,
+   "first_chunk": 147,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68148,
+   "first_chunk": 148,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68149,
+   "first_chunk": 149,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68150,
+   "first_chunk": 150,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68161,
+   "first_chunk": 161,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68162,
+   "first_chunk": 162,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68163,
+   "first_chunk": 163,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68164,
+   "first_chunk": 164,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68025,
+   "first_chunk": 25,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68039,
+   "first_chunk": 39,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68050,
+   "first_chunk": 50,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68051,
+   "first_chunk": 51,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68052,
+   "first_chunk": 52,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68053,
+   "first_chunk": 53,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68064,
+   "first_chunk": 64,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68065,
+   "first_chunk": 65,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68066,
+   "first_chunk": 66,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68067,
+   "first_chunk": 67,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68078,
+   "first_chunk": 78,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68079,
+   "first_chunk": 79,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68080,
+   "first_chunk": 80,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68081,
+   "first_chunk": 81,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68092,
+   "first_chunk": 92,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68093,
+   "first_chunk": 93,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68094,
+   "first_chunk": 94,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68095,
+   "first_chunk": 95,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68106,
+   "first_chunk": 106,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68107,
+   "first_chunk": 107,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68108,
+   "first_chunk": 108,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68109,
+   "first_chunk": 109,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68120,
+   "first_chunk": 120,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68121,
+   "first_chunk": 121,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68122,
+   "first_chunk": 122,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68123,
+   "first_chunk": 123,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68134,
+   "first_chunk": 134,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68135,
+   "first_chunk": 135,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68136,
+   "first_chunk": 136,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68137,
+   "first_chunk": 137,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68148,
+   "first_chunk": 148,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68149,
+   "first_chunk": 149,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68150,
+   "first_chunk": 150,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68151,
+   "first_chunk": 151,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68162,
+   "first_chunk": 162,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68163,
+   "first_chunk": 163,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68164,
+   "first_chunk": 164,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68165,
+   "first_chunk": 165,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68042,
+   "first_chunk": 42,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68043,
+   "first_chunk": 43,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68044,
+   "first_chunk": 44,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68055,
+   "first_chunk": 55,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68056,
+   "first_chunk": 56,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68057,
+   "first_chunk": 57,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68058,
+   "first_chunk": 58,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68069,
+   "first_chunk": 69,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68070,
+   "first_chunk": 70,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68071,
+   "first_chunk": 71,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68072,
+   "first_chunk": 72,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68042,
+   "first_chunk": 42,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68043,
+   "first_chunk": 43,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68044,
+   "first_chunk": 44,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68055,
+   "first_chunk": 55,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68056,
+   "first_chunk": 56,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68057,
+   "first_chunk": 57,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68058,
+   "first_chunk": 58,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68069,
+   "first_chunk": 69,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68070,
+   "first_chunk": 70,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68071,
+   "first_chunk": 71,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68072,
+   "first_chunk": 72,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68042,
+   "first_chunk": 42,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68043,
+   "first_chunk": 43,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68044,
+   "first_chunk": 44,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68055,
+   "first_chunk": 55,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68056,
+   "first_chunk": 56,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68057,
+   "first_chunk": 57,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68058,
+   "first_chunk": 58,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68069,
+   "first_chunk": 69,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68070,
+   "first_chunk": 70,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68071,
+   "first_chunk": 71,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68072,
+   "first_chunk": 72,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68042,
+   "first_chunk": 42,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68043,
+   "first_chunk": 43,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68044,
+   "first_chunk": 44,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68055,
+   "first_chunk": 55,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68056,
+   "first_chunk": 56,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68057,
+   "first_chunk": 57,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68058,
+   "first_chunk": 58,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68069,
+   "first_chunk": 69,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68070,
+   "first_chunk": 70,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68071,
+   "first_chunk": 71,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 68072,
+   "first_chunk": 72,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 68083,
+   "first_chunk": 83,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 68083,
+   "first_chunk": 83,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 68083,
+   "first_chunk": 83,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 8,
+   "chunk": 8,
+   "seed": 68083,
+   "first_chunk": 83,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  1,
+  14
+ ],
+ "max_parallel": 20
+}

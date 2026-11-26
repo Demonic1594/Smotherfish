@@ -27,14 +27,17 @@ jobs = []
 for run in plan["runs"]:
     chunk = int(run.get("chunk", default_chunk))
     chunk -= chunk % 2
-    games, i = int(run["games"]), 0
+    # "first_chunk": the chunk index of the first job (refills keep each
+    # job's original index so result files and artifacts do not collide).
+    first = int(run.get("first_chunk", 0))
+    games, i = int(run["games"]), first
     while games > 0:
         g = min(chunk, games)
         g -= g % 2
         if g <= 0:
             break
         jobs.append({"name": run["name"], "elo": int(run["elo"]), "games": g,
-                     "seed": int(run.get("seed", 1)) + i, "chunk": i,
+                     "seed": int(run.get("seed", 1)) + i - first, "chunk": i,
                      "opts": " ".join(run.get("opts", [])), "tc": run.get("tc", tc),
                      "opp": run.get("opponent", ""),
                      "oppopts": " ".join(run.get("opp_opts", [])),
