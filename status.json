@@ -1,165 +1,403 @@
 {
- "generated": "2026-11-26T02:07:46Z",
- "games_per_hour": 1361,
- "jobs_running": 0,
+ "generated": "2026-11-26T02:23:27Z",
+ "games_per_hour": 2777,
+ "jobs_running": 189,
  "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 18,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:05:42Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:18:40Z"
    }
   },
   {
    "id": "87fb66",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 17,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:09:01Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:20Z"
    }
   },
   {
    "id": "f0afe4",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 19,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:08:34Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:16Z"
    }
   },
   {
    "id": "a8e399",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 19,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:08:47Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:24Z"
    }
   },
   {
    "id": "f2d74f",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 17,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:07:33Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:25Z"
    }
   },
   {
    "id": "d32e35",
    "share": 4,
-   "running_runs": 0,
+   "running_runs": 1,
    "jobs": 0,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:06:29Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:03Z"
    }
   },
   {
    "id": "0f17ee",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 20,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:06:43Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:15Z"
    }
   },
   {
    "id": "7a213a",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 20,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:06:33Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:10Z"
    }
   },
   {
    "id": "acf111",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 19,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:07:06Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:15Z"
    }
   },
   {
    "id": "dc665d",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 20,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:06:00Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:31Z"
    }
   },
   {
    "id": "8e9ce5",
    "share": 1,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 20,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid57",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T01:06:45Z"
+    "exp": "grid58",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-26T02:19:35Z"
    }
   }
  ],
  "tests": [
+  {
+   "id": "grid58",
+   "plan_sha": "4f8615500e71fe359c465282f11e78798c61aa7e",
+   "parts": [
+    "grid58"
+   ],
+   "created": "2026-11-26T02:16:59Z",
+   "tc": [
+    "10+0.1",
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "e1500",
+     "name": "Stockfish 1500"
+    },
+    {
+     "key": "m1500",
+     "name": "Maia-3 1500"
+    },
+    {
+     "key": "e2600",
+     "name": "Stockfish 2600"
+    }
+   ],
+   "planned": 16400,
+   "delivered": 0,
+   "state": "running",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2500
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1200
+      },
+      "e2600": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 400
+      }
+     }
+    },
+    {
+     "arm": "G24",
+     "opts": [
+      "SmotherBuildArmGap=24"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2500
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1200
+      },
+      "e2600": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 400
+      }
+     }
+    },
+    {
+     "arm": "G48",
+     "opts": [
+      "SmotherBuildArmGap=48"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2500
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1200
+      },
+      "e2600": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 400
+      }
+     }
+    },
+    {
+     "arm": "G48K8",
+     "opts": [
+      "SmotherBuildArmGap=48",
+      "SmotherBuildKnightCheck=8"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2500
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1200
+      },
+      "e2600": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 400
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "0f17ee",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "7a213a",
+     "expected": 1180,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "87fb66",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "8e9ce5",
+     "expected": 1140,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "a8e399",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "acf111",
+     "expected": 1180,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "d32e35",
+     "expected": 4664,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "dc665d",
+     "expected": 1180,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "f0afe4",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "f2d74f",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "own",
+     "expected": 1176,
+     "delivered": 0,
+     "copied": true
+    }
+   ]
+  },
   {
    "id": "grid57",
    "plan_sha": "9f6336bf7dca6cbea3f89b5a3c8cb45074f080d8",
@@ -10996,10 +11234,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-25T20:18:29Z",
-   "games": 427642
-  },
-  {
    "t": "2026-11-26T01:07:14Z",
    "games": 432038
   },
@@ -11017,6 +11251,10 @@
   },
   {
    "t": "2026-11-26T02:07:46Z",
+   "games": 435566
+  },
+  {
+   "t": "2026-11-26T02:23:27Z",
    "games": 435566
   }
  ]
