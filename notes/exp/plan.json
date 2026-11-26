@@ -1,0 +1,20 @@
+{
+ "exp": "helpercheck-701ef3",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 50,
+   "seed": 90000,
+   "chunk": 25,
+   "opts": []
+  }
+ ],
+ "shard": [
+  0,
+  1
+ ],
+ "max_parallel": 20
+}
