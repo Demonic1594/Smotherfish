@@ -125,12 +125,31 @@ def cmd_list(_):
         print(f"{i:8s} {w:>6s}  {pushed}")
 
 
+def fork_base(url, base):
+    """The version a fork's share is built on: base if the fork's default
+    branch contains it (synced), else the newest commit of ours it does
+    contain (a fork with conflicting changes of its own is not synced by
+    Helper kick; its share must not bring newer workflow files)."""
+    if subprocess.run(["git", "fetch", "-q", url, "smotherfish"], stderr=subprocess.DEVNULL).returncode:
+        return base
+    head = subprocess.run(["git", "rev-parse", "FETCH_HEAD"], capture_output=True, text=True).stdout.strip()
+    if not subprocess.run(["git", "merge-base", "--is-ancestor", base, head]).returncode:
+        return base
+    mb = subprocess.run(["git", "merge-base", base, head], capture_output=True, text=True).stdout.strip()
+    return mb[:8] if mb else base
+
+
 def cmd_targets(args):
     c = conf()
     only = set(args[args.index("--only") + 1].split(",")) if "--only" in args else None
-    for acc, _ in accounts():
+    for acc, url in accounts():
         if only is None or acc in only:
-            print(f"{acc}:{c.get('bases', {}).get(acc, c['base'])}:{c['weights'].get(acc, 1)}")
+            b = c.get("bases", {}).get(acc)
+            if b is None:
+                b = c["base"] if acc == "own" else fork_base(url, c["base"])
+                if b != c["base"]:
+                    print(f"{acc}: not synced (changes of its own); its share is built on {b}", file=sys.stderr)
+            print(f"{acc}:{b}:{c['weights'].get(acc, 1)}")
 
 
 def cmd_status(args):

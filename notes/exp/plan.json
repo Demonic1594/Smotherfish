@@ -1,0 +1,143 @@
+{
+ "exp": "grid63",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 1000,
+   "seed": 76000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1900_B",
+   "elo": 1900,
+   "games": 1000,
+   "seed": 76000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "s1500_B",
+   "elo": 1500,
+   "games": 200,
+   "seed": 76500,
+   "chunk": 8,
+   "tc": "180+2",
+   "opts": []
+  },
+  {
+   "name": "t1500_B",
+   "elo": 1500,
+   "games": 200,
+   "seed": 76500,
+   "chunk": 8,
+   "tc": "180+2",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_AK",
+   "elo": 1100,
+   "games": 1000,
+   "seed": 76000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1900_AK",
+   "elo": 1900,
+   "games": 1000,
+   "seed": 76000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "s1500_AK",
+   "elo": 1500,
+   "games": 200,
+   "seed": 76500,
+   "chunk": 8,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ]
+  },
+  {
+   "name": "t1500_AK",
+   "elo": 1500,
+   "games": 200,
+   "seed": 76500,
+   "chunk": 8,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_AN",
+   "elo": 1100,
+   "games": 1000,
+   "seed": 76000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "m1900_AN",
+   "elo": 1900,
+   "games": 1000,
+   "seed": 76000,
+   "chunk": 25,
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "s1500_AN",
+   "elo": 1500,
+   "games": 200,
+   "seed": 76500,
+   "chunk": 8,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ]
+  },
+  {
+   "name": "t1500_AN",
+   "elo": 1500,
+   "games": 200,
+   "seed": 76500,
+   "chunk": 8,
+   "tc": "180+2",
+   "opts": [
+    "SmotherClassic=false",
+    "SmotherGoal=Near"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  0,
+  19
+ ],
+ "max_parallel": 20
+}
