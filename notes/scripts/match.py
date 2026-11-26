@@ -226,6 +226,98 @@ def material(b, c):
     return sum(VAL.get(p.piece_type, 0) for p in b.piece_map().values() if p.color == c)
 
 
+# Trap prototype (HarnessTrap=P): in decided positions where the enemy king
+# has at most one open square around it, play the move whose defender
+# replies walk into a forced knight smother (within 2 of our moves, checks
+# only) with the highest Maia-3 probability for the opponent's rating, if
+# that is at least P and our engine says the move keeps us winning. Measures
+# the ceiling of opponent-model steering; its thinking is not on our clock.
+TRAP = {}
+
+
+def _ks(b):
+    if not b.is_checkmate():
+        return False
+    t = b.turn; K = b.king(t); c = list(b.checkers())
+    return (len(c) == 1 and b.piece_type_at(c[0]) == chess.KNIGHT
+            and all((p := b.piece_at(s)) and p.color == t for s in chess.SquareSet(chess.BB_KING_ATTACKS[K])))
+
+
+def _forced(b, n):
+    for m in list(b.legal_moves):
+        if not b.gives_check(m):
+            continue
+        b.push(m)
+        if b.is_checkmate():
+            ok = _ks(b)
+        elif n == 1:
+            ok = False
+        else:
+            ok = True
+            for r in list(b.legal_moves):
+                b.push(r); ok = _forced(b, n - 1); b.pop()
+                if not ok:
+                    break
+        b.pop()
+        if ok:
+            return True
+    return False
+
+
+def _maia(board):
+    m = ENGS.get("maia")
+    if m is None or m.poll() is not None:
+        m = subprocess.Popen([os.path.expanduser("~/maia3env/bin/python"),
+                              os.path.join(os.path.dirname(os.path.abspath(__file__)), "maia_policy.py")],
+                             stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                             text=True, bufsize=1, env={**os.environ, "HF_HUB_OFFLINE": "1"})
+        while not m.stdout.readline().startswith("ready"):
+            pass
+        ENGS["maia"] = m
+    m.stdin.write(f"{A.elo} {board.fen()}\n"); m.stdin.flush()
+    return json.loads(m.stdout.readline())
+
+
+def _score_after(e, fen0, moves, mv):
+    # Our engine's score for playing mv (searchmoves), side to move = us.
+    e.send(f"position fen {fen0} moves {' '.join(moves)}" if moves else f"position fen {fen0}")
+    e.send(f"go nodes {TRAP['nodes']} searchmoves {mv}")
+    sc = None
+    while True:
+        l = e.readline()
+        if l.startswith("info") and " score " in l:
+            t = l.split(" score ")[1].split()
+            sc = 100000 if (t[0] == "mate" and int(t[1]) > 0) else -100000 if t[0] == "mate" else int(t[1])
+        elif l.startswith("bestmove"):
+            return sc
+
+
+def trap_move(b, ours, fen0, moves):
+    us = b.turn; them = not us
+    K = b.king(them)
+    if sum(1 for s in chess.SquareSet(chess.BB_KING_ATTACKS[K]) if not ((p := b.piece_at(s)) and p.color == them)) > 1:
+        return None
+    if material(b, us) - material(b, them) < 5:
+        return None
+    best = None
+    for m in list(b.legal_moves):
+        b.push(m)
+        hits = []
+        for r in list(b.legal_moves):
+            b.push(r); h = _forced(b, 2); b.pop()
+            if h:
+                hits.append(r.uci())
+        if hits:
+            pr = _maia(b); mass = sum(pr.get(h, 0) for h in hits)
+            if best is None or mass > best[1]:
+                best = (m.uci(), mass)
+        b.pop()
+    if best is None or best[1] < TRAP["p"]:
+        return None
+    sc = _score_after(ours, fen0, moves, best[0])
+    return best if sc is not None and sc >= 400 else None
+
+
 def play_game(job):
     gi, fen0, ours_white = job
     ours, opp = ENGS["ours"], ENGS["opp"]
@@ -235,6 +327,7 @@ def play_game(job):
     moves, clock = [], {chess.WHITE: BASE, chess.BLACK: BASE}
     PLAYED["moves"] = moves
     steers = 0; steer_plies = []; result = None; reason = ""
+    traps = []  # [ply, Maia probability] of each trap move the prototype played
     our_clock = []; proofs = []  # our clock after each of our moves; plies with a proven smother
     pondering = None  # the opponent move our engine is pondering on
     ponder_hits = ponder_total = 0
@@ -249,7 +342,13 @@ def play_game(job):
             result = "0-1" if stm == chess.WHITE else "1-0"; reason = "resign"; break
         e = ours if is_ours else opp
         fixed = "" if is_ours else A.opp_go
-        if is_ours and pondering is not None:
+        tm = trap_move(b, ours, fen0, moves) if (is_ours and TRAP) else None
+        if tm is not None:
+            if pondering is not None:
+                ours.stop_ponder(); pondering = None
+            mv, dt, infos = tm[0], 0.0, []
+            traps.append([len(moves), round(tm[1], 3)])
+        elif is_ours and pondering is not None:
             ponder_total += 1
             if moves and moves[-1] == pondering:
                 ponder_hits += 1
@@ -321,7 +420,7 @@ def play_game(job):
             "steers": steers, "steer_plies": steer_plies, "moves": " ".join(moves),
             "our_clock": our_clock, "proofs": proofs,
             "open": nopen if ours_mated_them else None,
-            "ponder_hits": ponder_hits, "ponder_total": ponder_total}
+            "ponder_hits": ponder_hits, "ponder_total": ponder_total, "traps": traps}
 
 
 def parse_opts(lst):
@@ -345,7 +444,9 @@ if __name__ == "__main__":
     # down (1/3/3/5/9), like a human who gives up a lost game.
     for k in [k for k in ours_opts if k.startswith("Harness")]:
         v = ours_opts.pop(k)
-        if k == "HarnessResign":
+        if k == "HarnessTrap":
+            TRAP.update(p=float(v), nodes=200000)
+        elif k == "HarnessResign":
             if v.startswith("curve:"):
                 # Percent per own move for deficits 3-5, 6-8, 9-11, 12-14,
                 # 15+ (measured on Lichess, notes/scripts/lichess_merge.py;
