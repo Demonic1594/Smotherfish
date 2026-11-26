@@ -1,0 +1,90 @@
+{
+ "exp": "grid62",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 74000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_B",
+   "elo": 1100,
+   "games": 2000,
+   "seed": 74000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 74000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 74500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "m1500_D1T",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 74000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1100_D1T",
+   "elo": 1100,
+   "games": 2000,
+   "seed": 74000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ],
+   "opponent": "maia3-1100"
+  },
+  {
+   "name": "e1500_D1T",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 74000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ]
+  },
+  {
+   "name": "e2600_D1T",
+   "elo": 2600,
+   "games": 400,
+   "seed": 74500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildDefSee=1"
+   ]
+  }
+ ],
+ "shard": [
+  2,
+  14
+ ],
+ "max_parallel": 20
+}

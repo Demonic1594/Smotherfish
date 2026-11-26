@@ -426,6 +426,7 @@ class Worker {
     int   buildStarveAt  = 4;      // SmotherBuildStarveAt
     int   buildLmr       = 0;      // SmotherBuildLmr
     int   buildDefLmr    = 0;      // SmotherBuildDefLmr
+    int   buildDefSee    = 0;      // SmotherBuildDefSee (0 = off)
     int   buildNmp       = 0;      // SmotherBuildNmp
     int   buildOwnKeep   = 0;      // SmotherBuildOwnKeep
     int   buildEscape    = 4;      // SmotherBuildEscape
