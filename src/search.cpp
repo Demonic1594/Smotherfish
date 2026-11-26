@@ -989,6 +989,7 @@ bool Search::Worker::iterative_deepening() {
             buildStarveAt  = 4;
             buildLmr       = 0;
             buildDefLmr    = 0;
+            buildDefSee    = int(options["SmotherBuildDefSee"]) * 1000 / perK;
             buildNmp       = 0;
             buildOwnKeep   = 0;
             Smother::set_build_weights(std::string(options["SmotherBuildWeights"]));
@@ -1937,6 +1938,16 @@ moves_loop:  // When in check, search starts here
             smotherLmr = us == shapeUs ? (buildLmr && smother_builds(pos, move) ? buildLmr : 0)
                        : buildDefLmr && smother_opens(pos, move) ? buildDefLmr
                                                                  : 0;
+
+        // Construction mode (SmotherBuildDefSee): above the floor material
+        // counts 1/8, so the defender in our tree gives pieces away to break
+        // the box, which real opponents do not. Its moves that lose more than
+        // SmotherBuildDefSee by static exchange are not searched, unless they
+        // give check; only after one move has been searched, so the node
+        // always has a real value (stalemate and mate are found as before).
+        if (buildDefSee && buildSmother && us != shapeUs && !rootNode && !givesCheck
+            && !is_loss(bestValue) && !pos.see_ge(move, -buildDefSee))
+            continue;
 
         // Calculate new depth for this move
         newDepth = depth - 1;

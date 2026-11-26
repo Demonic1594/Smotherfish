@@ -266,6 +266,10 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     // ArmGap: extra KnightCheck points while the box has at most one open
     // square (experimental, 0 = off).
     options.add("SmotherBuildArmGap", Option(0, 0, 200));
+    // DefSee: while building, the defender's moves in our search that lose
+    // more than this (centipawns, static exchange) are skipped unless they
+    // give check (experimental, 0 = off).
+    options.add("SmotherBuildDefSee", Option(0, 0, 2000));
     // Learned classic-smother model: points per log-odd (0 = off) and the 17
     // coefficients (corner, edge, h0, h1, h2, corner*h0, corner*h1, kd1, kd2,
     // corner*h1*kd1, corner*h0*kd1, decoy, queen, stuck, units, exits, knights).
