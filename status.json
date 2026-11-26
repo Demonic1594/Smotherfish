@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-26T05:40:09Z",
- "games_per_hour": 10008,
+ "generated": "2026-11-26T05:55:15Z",
+ "games_per_hour": 9483,
  "jobs_running": 0,
- "active_games": 25594,
+ "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2376,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -23,7 +23,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2368,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -37,7 +37,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2368,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -51,7 +51,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2372,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -65,7 +65,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2356,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -79,7 +79,7 @@
    "share": 4,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2080,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -93,7 +93,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2338,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -107,7 +107,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2336,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -121,7 +121,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2336,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -135,7 +135,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2320,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -149,7 +149,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2344,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid59-r1",
@@ -188,7 +188,7 @@
    ],
    "planned": 25600,
    "delivered": 25594,
-   "state": "running",
+   "state": "finished-partial",
    "arms": [
     {
      "arm": "B",
@@ -11584,6 +11584,10 @@
   },
   {
    "t": "2026-11-26T05:40:09Z",
+   "games": 477560
+  },
+  {
+   "t": "2026-11-26T05:55:15Z",
    "games": 477560
   }
  ]
