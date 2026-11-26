@@ -31,6 +31,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # How much this fork lends: the repository variable HELPER_JOBS (jobs
+      # at once, 1-256; default 20 = all of a free account's capacity). It is
+      # published on the branch helper-info, where the main project reads it:
+      # this fork's share of each test is proportional to it, and its
+      # experiment runs never use more jobs at once than it says.
+      - name: Publish this fork's settings
+        env:
+          JOBS: ${{ vars.HELPER_JOBS }}
+        run: |
+          j=$(printf '%s' "$JOBS" | tr -cd '0-9'); [ -n "$j" ] || j=20
+          [ "$j" -lt 1 ] && j=1; [ "$j" -gt 256 ] && j=256
+          cur=$(git fetch -q origin helper-info 2>/dev/null && git show FETCH_HEAD:jobs 2>/dev/null || true)
+          if [ "$cur" != "$j" ]; then
+            # A one-file commit on its own branch, built in this checkout so
+            # the push uses this workflow's token.
+            blob=$(printf '%s\n' "$j" | git hash-object -w --stdin)
+            tree=$(printf '100644 blob %s\tjobs\n' "$blob" | git mktree)
+            c=$(GIT_AUTHOR_NAME=helper-poll GIT_AUTHOR_EMAIL=41898282+github-actions[bot]@users.noreply.github.com \
+                GIT_COMMITTER_NAME=helper-poll GIT_COMMITTER_EMAIL=41898282+github-actions[bot]@users.noreply.github.com \
+                git commit-tree "$tree" -m "helper settings: $j jobs at once")
+            git push -q -f origin "$c:refs/heads/helper-info"
+            echo "published: $j jobs at once"
+          else
+            echo "unchanged: $j jobs at once"
+          fi
       - name: Start new helper experiments
         env:
           GH_TOKEN: ${{ github.token }}

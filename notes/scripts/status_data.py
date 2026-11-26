@@ -244,7 +244,7 @@ def main(out, prev_path=None):
             j = api(f"/repos/{repo_of[acc]}/actions/runs/{r['id']}/jobs?filter=latest&per_page=100") or {}
             jobs += sum(1 for x in j.get("jobs", []) if x["status"] == "in_progress")
         games = sum(a["delivered"] for t in tests if t["state"] == "running" for a in t["accounts"] if a["id"] == acc)
-        acc_out.append({"id": "main" if acc == "own" else acc, "share": conf["weights"].get(acc, 1),
+        acc_out.append({"id": "main" if acc == "own" else acc, "share": V.jobs_for(acc, url, conf),
                         "running_runs": len(live), "jobs": jobs, "active_games": games,
                         "last": {"workflow": last["name"], "exp": last["head_branch"].replace("actions-exp/", ""), "status": last["status"],
                                  "conclusion": last["conclusion"], "updated": last["updated_at"]} if last else None})

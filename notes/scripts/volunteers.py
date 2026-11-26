@@ -4,11 +4,15 @@
 Helpers are the public forks of the main repository, found through the
 GitHub API (no login needed). A fork's ID is the first 6 hex digits of
 sha256 of its owner's name in lower case, as in helper-poll.yml.
-notes/volunteers.json sets shares (weights) and exclusions by ID only, so no
-helper names are stored in the repository.
+Shares are proportional to each account's jobs at once: a fork's owner sets
+the repository variable HELPER_JOBS in their fork (default 20, all of a
+free account), which its Helper poll publishes on the branch helper-info;
+notes/volunteers.json "jobs" overrides it by ID (our own account, accounts
+measured to run more) and lists exclusions, by ID only, so no helper names
+are stored in the repository.
 
 usage:
-  volunteers.py list                    helpers: ID, weight, last push
+  volunteers.py list                    helpers: ID, jobs at once, last push
   volunteers.py targets [--only ID,...] target lines for distribute.sh
   volunteers.py status EXP              games delivered per account vs expected
   volunteers.py refill EXP              plan with the jobs of accounts that
@@ -28,8 +32,27 @@ CONF = os.path.join(HERE, "..", "volunteers.json")
 
 def conf():
     c = json.load(open(CONF))
-    c.setdefault("weights", {}); c.setdefault("exclude", []); c.setdefault("base", "33bbe361")
+    c.setdefault("jobs", {}); c.setdefault("exclude", []); c.setdefault("base", "33bbe361")
     return c
+
+
+DEFAULT_JOBS = 20  # a free account's jobs at once
+
+
+def jobs_for(acc, url, c=None):
+    """Jobs at once an account lends: volunteers.json "jobs" by ID, else
+    the HELPER_JOBS its Helper poll published (branch helper-info), else 20."""
+    c = c or conf()
+    if acc in c["jobs"]:
+        return int(c["jobs"][acc])
+    if acc != "own":
+        d = git_fetch(url, "helper-info")
+        if d:
+            try:
+                return max(1, min(256, int((show(d, "jobs") or "").strip())))
+            except ValueError:
+                pass
+    return DEFAULT_JOBS
 
 
 def hid(owner):
@@ -118,10 +141,10 @@ def survey(exp):
 
 def cmd_list(_):
     c = conf()
-    print(f"{'id':8s} weight  last push")
-    print(f"{'own':8s} {c['weights'].get('own', 1):6d}  (main repository)")
-    for i, _, pushed in forks():
-        w = "excluded" if i in c["exclude"] else str(c["weights"].get(i, 1))
+    print(f"{'id':8s}   jobs  last push")
+    print(f"{'own':8s} {jobs_for('own', '', c):6d}  (main repository)")
+    for i, url, pushed in forks():
+        w = "excluded" if i in c["exclude"] else str(jobs_for(i, url, c))
         print(f"{i:8s} {w:>6s}  {pushed}")
 
 
@@ -146,7 +169,7 @@ def cmd_targets(args):
             b = c.get("bases", {}).get(acc)
             if b is None:
                 b = fork_base(url, c["base"])
-            print(f"{acc}:{b}:{c['weights'].get(acc, 1)}")
+            print(f"{acc}:{b}:{jobs_for(acc, url, c)}")
 
 
 def cmd_status(args):

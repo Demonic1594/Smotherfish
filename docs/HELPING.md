@@ -23,14 +23,26 @@ experiment meant for your fork and starts it there.
 
 ## What your fork does
 
-- Every experiment is split into shares; each fork gets one (some accounts
-  with more capacity get more).
-- Your fork plays about 20 jobs at once, each 25 games on a 4-core GitHub
-  machine, and writes the results to the branch `actions-exp/<experiment>`
+- Every experiment is split over the helpers in proportion to the jobs each
+  lends at once (20 by default).
+- Your fork plays up to 20 jobs at once (or your `HELPER_JOBS`, see below),
+  each about 25 games on a 4-core GitHub machine, and writes the results to the branch `actions-exp/<experiment>`
   in your fork. The maintainers read them from there; nothing is pushed to
   this repository.
 - Public repositories have free Actions minutes on GitHub's standard
   machines.
+
+## Choosing how much your fork runs
+
+By default your fork lends all of a free account's capacity: 20 jobs at
+once. To lend less (or more, on a paid or organisation account), set a
+repository variable in your fork: **Settings**, **Secrets and variables**,
+**Actions**, **Variables**, **New repository variable**, name `HELPER_JOBS`,
+value the number of jobs at once (1 to 256). Your fork's Helper poll
+publishes it on a small branch named `helper-info`, and your share of each
+test is proportional to it: a fork lending 10 jobs gets half the share of
+one lending 20, and its test runs never use more than 10 jobs at once.
+Changes apply from the next test.
 
 ## Starting automatically
 

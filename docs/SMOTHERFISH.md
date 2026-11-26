@@ -253,7 +253,7 @@ Their measurements are in `notes/HANDOFF.md`.
 | Purpose | Settings | Notes |
 | ------- | -------- | ----- |
 | Knight smothered mates (default) | none | About 4 per 100 games against Stockfish 1500, 5 against Maia-3 1500. |
-| As many smothered mates of any kind as possible | `SmotherClassic false`, `SmotherGoal Near` | 1.6 at 5+0.05: 67.6 of 100 games against Stockfish 1500 and 67.5 against Maia-3 1500 end in a smother (mostly near smothers), 51.8 against Stockfish 2600; defaults give 6.8. Knight smothers fall to 0.8. No losses, 100% against 2600 (grid57). |
+| As many smothered mates of any kind as possible | `SmotherClassic false`, `SmotherGoal Near` | 1.6 at 5+0.05: 67.6 of 100 games against Stockfish 1500 and 67.5 against Maia-3 1500 end in a smother (mostly near smothers), 51.8 against Stockfish 2600; defaults give 6.8. Across levels (grid63): 72.8 against Maia-3 1100, 66.1 against Maia-3 1900, and at 3+2 69.7 against Stockfish 1500 and 69.3 against Maia-3 1500. Knight smothers fall to 0.5-2.4. No losses (grid57, grid63). |
 | Full smothers by any piece | `SmotherClassic false` | 1.6 at 5+0.05 against Stockfish 1500: 42.8 of 100 games end in a smother, 11.1 of them full (3.5 times the defaults); knight smothers 1.3. No losses (grid57). |
 | True smothers of any piece only | `SmotherClassic false`, `SmotherGoal Full` | The most full smothers, few near ones. |
 | Ordinary Stockfish play | `SmotherBrutal false` | Smothers only when the prover finds a forced one. |
