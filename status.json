@@ -1,21 +1,21 @@
 {
- "generated": "2026-11-26T15:32:10Z",
- "games_per_hour": 2959,
- "jobs_running": 0,
+ "generated": "2026-11-26T15:47:17Z",
+ "games_per_hour": 2896,
+ "jobs_running": 19,
  "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 1,
    "running_runs": 1,
-   "jobs": 0,
+   "jobs": 19,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "cachetest3",
+    "exp": "grid63",
     "status": "in_progress",
     "conclusion": null,
-    "updated": "2026-11-26T15:30:51Z"
+    "updated": "2026-11-26T15:46:19Z"
    }
   },
   {
@@ -231,22 +231,35 @@
  ],
  "tests": [
   {
-   "id": "cachetest3",
-   "plan_sha": "694c5769e86063d551314137748e46fd99d6d5ed",
+   "id": "grid63",
+   "plan_sha": "ae51988911ad75073f23bbe412ee17dea4cd0bda",
    "parts": [
-    "cachetest3"
+    "grid63"
    ],
-   "created": "2026-11-26T15:29:11Z",
+   "created": "2026-11-26T15:46:04Z",
    "tc": [
+    "180+2",
     "5+0.05"
    ],
    "opponents": [
     {
-     "key": "m1500",
-     "name": "Maia-3 1500"
+     "key": "m1100",
+     "name": "Maia-3 1100"
+    },
+    {
+     "key": "m1900",
+     "name": "Maia-3 1900"
+    },
+    {
+     "key": "s1500",
+     "name": "s1500"
+    },
+    {
+     "key": "t1500",
+     "name": "t1500"
     }
    ],
-   "planned": 60,
+   "planned": 7200,
    "delivered": 0,
    "state": "running",
    "arms": [
@@ -254,284 +267,130 @@
      "arm": "B",
      "opts": [],
      "cells": {
-      "m1500": {
+      "m1100": {
        "games": 0,
        "w": 0,
        "d": 0,
        "l": 0,
        "knight": 0,
        "full": 0,
-       "planned": 60
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "own",
-     "expected": 60,
-     "delivered": 0,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "cachetest2",
-   "plan_sha": "45cbd231bc1dce055da85c6a35587e6141c5b252",
-   "parts": [
-    "cachetest2"
-   ],
-   "created": "2026-11-26T15:26:31Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "m1500",
-     "name": "Maia-3 1500"
-    }
-   ],
-   "planned": 60,
-   "delivered": 60,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "B",
-     "opts": [],
-     "cells": {
-      "m1500": {
-       "games": 60,
-       "w": 60,
+       "planned": 1000
+      },
+      "m1900": {
+       "games": 0,
+       "w": 0,
        "d": 0,
        "l": 0,
        "knight": 0,
        "full": 0,
-       "planned": 60
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "own",
-     "expected": 60,
-     "delivered": 60,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "cachetest1",
-   "plan_sha": "021b42a0e5d7f0dda796dc7d80d45b690a1a0540",
-   "parts": [
-    "cachetest1"
-   ],
-   "created": "2026-11-26T15:21:57Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "m1500",
-     "name": "Maia-3 1500"
-    }
-   ],
-   "planned": 60,
-   "delivered": 60,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "B",
-     "opts": [],
-     "cells": {
-      "m1500": {
-       "games": 60,
-       "w": 60,
+       "planned": 1000
+      },
+      "s1500": {
+       "games": 0,
+       "w": 0,
        "d": 0,
        "l": 0,
-       "knight": 1,
-       "full": 1,
-       "planned": 60
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "own",
-     "expected": 60,
-     "delivered": 60,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "helpercheck-af5be9",
-   "plan_sha": "b55424f049a7b2ae885c6c8d2019dadad82da323",
-   "parts": [
-    "helpercheck-af5be9"
-   ],
-   "created": "2026-11-26T15:16:27Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 50,
-   "delivered": 50,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "B",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 50,
-       "w": 50,
+       "knight": 0,
+       "full": 0,
+       "planned": 200
+      },
+      "t1500": {
+       "games": 0,
+       "w": 0,
        "d": 0,
        "l": 0,
-       "knight": 3,
-       "full": 4,
-       "planned": 50
+       "knight": 0,
+       "full": 0,
+       "planned": 200
       }
      }
-    }
-   ],
-   "accounts": [
+    },
     {
-     "id": "af5be9",
-     "expected": 50,
-     "delivered": 50,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "helpercheck-97884e",
-   "plan_sha": "65325607bc5bfc778f67bb32f31d32ee61c467b3",
-   "parts": [
-    "helpercheck-97884e"
-   ],
-   "created": "2026-11-26T14:59:26Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 50,
-   "delivered": 50,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "B",
-     "opts": [],
+     "arm": "AK",
+     "opts": [
+      "SmotherClassic=false"
+     ],
      "cells": {
-      "e1500": {
-       "games": 50,
-       "w": 50,
+      "m1100": {
+       "games": 0,
+       "w": 0,
        "d": 0,
        "l": 0,
-       "knight": 1,
-       "full": 1,
-       "planned": 50
+       "knight": 0,
+       "full": 0,
+       "planned": 1000
+      },
+      "m1900": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1000
+      },
+      "s1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 200
+      },
+      "t1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 200
       }
      }
-    }
-   ],
-   "accounts": [
+    },
     {
-     "id": "97884e",
-     "expected": 50,
-     "delivered": 50,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "helpercheck-c79670",
-   "plan_sha": "60c2eee1e78abc25f606e716a6640e61e09eb18d",
-   "parts": [
-    "helpercheck-c79670"
-   ],
-   "created": "2026-11-26T14:59:17Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 50,
-   "delivered": 50,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "B",
-     "opts": [],
+     "arm": "AN",
+     "opts": [
+      "SmotherClassic=false",
+      "SmotherGoal=Near"
+     ],
      "cells": {
-      "e1500": {
-       "games": 50,
-       "w": 50,
+      "m1100": {
+       "games": 0,
+       "w": 0,
        "d": 0,
        "l": 0,
-       "knight": 2,
-       "full": 2,
-       "planned": 50
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "c79670",
-     "expected": 50,
-     "delivered": 50,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "helpercheck-0cf451",
-   "plan_sha": "1e66d0f881b1c943319a5b0d1eb19eb8e5e26503",
-   "parts": [
-    "helpercheck-0cf451"
-   ],
-   "created": "2026-11-26T11:43:42Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 50,
-   "delivered": 50,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "B",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 50,
-       "w": 50,
+       "knight": 0,
+       "full": 0,
+       "planned": 1000
+      },
+      "m1900": {
+       "games": 0,
+       "w": 0,
        "d": 0,
        "l": 0,
-       "knight": 2,
-       "full": 2,
-       "planned": 50
+       "knight": 0,
+       "full": 0,
+       "planned": 1000
+      },
+      "s1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 200
+      },
+      "t1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 200
       }
      }
     }
@@ -539,53 +398,98 @@
    "accounts": [
     {
      "id": "0cf451",
-     "expected": 50,
-     "delivered": 50,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "helpercheck-701ef3",
-   "plan_sha": "a6d9c20a9f6793cb4b4b5adaa8023089397ebd0a",
-   "parts": [
-    "helpercheck-701ef3"
-   ],
-   "created": "2026-11-26T10:34:42Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
+     "expected": 384,
+     "delivered": 0,
+     "copied": false
+    },
     {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 50,
-   "delivered": 50,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "B",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 50,
-       "w": 49,
-       "d": 1,
-       "l": 0,
-       "knight": 0,
-       "full": 0,
-       "planned": 50
-      }
-     }
-    }
-   ],
-   "accounts": [
+     "id": "0f17ee",
+     "expected": 376,
+     "delivered": 0,
+     "copied": false
+    },
     {
      "id": "701ef3",
-     "expected": 50,
-     "delivered": 50,
+     "expected": 376,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "7a213a",
+     "expected": 368,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "87fb66",
+     "expected": 376,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "8e9ce5",
+     "expected": 376,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "97884e",
+     "expected": 384,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "a8e399",
+     "expected": 376,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "acf111",
+     "expected": 376,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "af5be9",
+     "expected": 400,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "c79670",
+     "expected": 400,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "d32e35",
+     "expected": 1496,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "dc665d",
+     "expected": 376,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "f0afe4",
+     "expected": 368,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "f2d74f",
+     "expected": 376,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "own",
+     "expected": 392,
+     "delivered": 0,
      "copied": true
     }
    ]
@@ -12541,10 +12445,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-26T09:44:03Z",
-   "games": 509160
-  },
-  {
    "t": "2026-11-26T09:59:13Z",
    "games": 509160
   },
@@ -12627,6 +12527,10 @@
   {
    "t": "2026-11-26T15:32:10Z",
    "games": 526330
+  },
+  {
+   "t": "2026-11-26T15:47:17Z",
+   "games": 525960
   }
  ]
 }
