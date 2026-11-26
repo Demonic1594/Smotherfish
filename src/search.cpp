@@ -403,8 +403,12 @@ void Search::Worker::start_smother_prover() {
             }
         }
         mgr.smotherHoldRun = hold ? mgr.smotherHoldRun + 1 : 0;
+        // SmotherStallAfter N: a hybrid build that has not closed the box any
+        // further for N construction moves takes the near smother now.
+        const int  stallN  = int(options["SmotherStallAfter"]);
+        const bool stalled = goalHybrid && stallN > 0 && mgr.smotherBrutal && mgr.smotherStall >= stallN;
         mgr.smotherPartialNow =
-          false || goalNear
+          false || goalNear || stalled
           || (after > 0 && mgr.smotherBrutal && mgr.smotherBuilds >= after && !hold);
     }
 
@@ -632,7 +636,19 @@ void Search::Worker::decide_smother_modes() {
                        && popcount(rootPos.pieces(~us)) >= 4;
     mgr.smotherBuilding = mgr.smotherBuildNow;
     if (mgr.smotherBuildNow)
+    {
         ++mgr.smotherBuilds;
+        // Progress of the build (SmotherStallAfter): the fewest squares next
+        // to the enemy king not held by its own units. No new low for N
+        // construction moves = stalled (e.g. checking a cornered king back
+        // and forth with no defender unit left to close the box).
+        const Square ksq  = rootPos.square<KING>(~us);
+        const int    open = popcount(Attacks::attacks_bb(KING, ksq) & ~rootPos.pieces(~us));
+        if (open < mgr.smotherBestOpen)
+            mgr.smotherBestOpen = open, mgr.smotherStall = 0;
+        else
+            ++mgr.smotherStall;
+    }
 }
 
 void Search::Worker::start_searching() {
@@ -1455,7 +1471,8 @@ void Search::Worker::clear() {
         main_manager()->smotherExpectKey = 0, main_manager()->smotherEscapeLeft = 0;
     if (is_mainthread())
         main_manager()->smotherBuilds = 0, main_manager()->smotherBuilding = false,
-        main_manager()->smotherHoldRun = 0;
+        main_manager()->smotherHoldRun = 0, main_manager()->smotherBestOpen = 99,
+        main_manager()->smotherStall = 0;
     if (is_mainthread())
         main_manager()->smotherSeeks = 0;
     mainHistory.fill(-5);

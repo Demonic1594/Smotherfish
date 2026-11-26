@@ -266,6 +266,10 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     // ArmGap: extra KnightCheck points while the box has at most one open
     // square (experimental, 0 = off).
     options.add("SmotherBuildArmGap", Option(0, 0, 200));
+    // StallAfter: with SmotherGoal Hybrid, take the near smother once the
+    // build has not closed the box any further for N construction moves
+    // (experimental, 0 = off).
+    options.add("SmotherStallAfter", Option(0, 0, 400));
     // DefSee: while building, the defender's moves in our search that lose
     // more than this (centipawns, static exchange) are skipped unless they
     // give check (experimental, 0 = off).
