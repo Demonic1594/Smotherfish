@@ -102,6 +102,12 @@ struct BuildWeights {
     //   guarded by another piece (a sacrifice there forces the last blocker
     //   in: Philidor's pattern for the classic smother).
     int  ready = 0, defRingPct = 100, exit = 0, knightCheck = 0, decoy = 0;
+    // armGap: extra points per knight of ours one knight move from a safe
+    //   checking square, only while at most one ring square is not held by a
+    //   defender unit. In 1.6's games a box closes and is used at once only
+    //   when a knight is already there (100% vs 0%), and arming is worth ~10x
+    //   with one open square but nearly nothing with two (notes/HANDOFF.md).
+    int  armGap = 0;
     // Learned classic-smother model (SmotherBuildModel, 17 coefficients in
     // log-odds of a knight smother within 10 moves, fitted on 832k positions
     // of our games; see notes/HANDOFF.md). modelScale = points per log-odd;
@@ -130,6 +136,7 @@ void set_build_net(int scale);
 // squares in front of the enemy king.
 int prep_score(const Position& pos, Color us, int knight, int queen, int piece, int shield);
 
+void set_build_armgap(int points);
 int build_score(const Position& pos, Color us, int survive = 0, int cap = 12, int version = 1, int keep = 11, int keepNear = 2, int starve = 0, int starveAt = 4, int ownKeep = 0, int escape = 4, int knightSafe = 0);
 
 // Smother traps: pos has the DEFENDER to move (we just played our candidate).
