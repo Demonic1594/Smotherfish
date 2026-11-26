@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-26T18:33:54Z",
+ "generated": "2026-11-26T18:49:02Z",
  "games_per_hour": 7199,
  "jobs_running": 0,
  "active_games": 0,
  "accounts": [
   {
    "id": "main",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -20,7 +20,7 @@
   },
   {
    "id": "af5be9",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -34,7 +34,7 @@
   },
   {
    "id": "c79670",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -48,7 +48,7 @@
   },
   {
    "id": "97884e",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -62,7 +62,7 @@
   },
   {
    "id": "0cf451",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -76,7 +76,7 @@
   },
   {
    "id": "701ef3",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -90,7 +90,7 @@
   },
   {
    "id": "87fb66",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -104,7 +104,7 @@
   },
   {
    "id": "f0afe4",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -118,7 +118,7 @@
   },
   {
    "id": "a8e399",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -132,7 +132,7 @@
   },
   {
    "id": "f2d74f",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -146,7 +146,7 @@
   },
   {
    "id": "d32e35",
-   "share": 5,
+   "share": 100,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -160,7 +160,7 @@
   },
   {
    "id": "0f17ee",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -174,7 +174,7 @@
   },
   {
    "id": "7a213a",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -188,7 +188,7 @@
   },
   {
    "id": "acf111",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -202,7 +202,7 @@
   },
   {
    "id": "dc665d",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -216,7 +216,7 @@
   },
   {
    "id": "8e9ce5",
-   "share": 1,
+   "share": 20,
    "running_runs": 0,
    "jobs": 0,
    "active_games": 0,
@@ -12955,10 +12955,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-26T12:45:43Z",
-   "games": 526060
-  },
-  {
    "t": "2026-11-26T13:00:51Z",
    "games": 526060
   },
@@ -13040,6 +13036,10 @@
   },
   {
    "t": "2026-11-26T18:33:54Z",
+   "games": 567836
+  },
+  {
+   "t": "2026-11-26T18:49:02Z",
    "games": 567836
   }
  ]
