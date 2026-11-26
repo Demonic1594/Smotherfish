@@ -2018,3 +2018,13 @@ Stockfish 1500 + Maia-3 1500 pooled (6,000 per arm): B 3.55, H40 3.23
 B: H40 3.29 vs 3.34 (9,700 games each, z -0.2); ArmGap 48 + KnightCheck 8
 3.79 vs 3.62 (z +0.6). Neither meets the rule (z >= 2, no losses): 1.6
 as released stays the baseline; no strength SPRT needed.
+
+grid60 (SmotherBuildDefSee: the defender in our search skips moves losing
+more than N cp unless they give check; 19,600 games): knight per 100,
+SF1500 + Maia-3 1500 pooled (4,500 per arm): B 3.02, D1 3.40 (z +1.0),
+D100 3.18 (+0.4), D300 3.18 (+0.4); no losses, 99.8-100% vs 2600. By
+opponent, D1: SF1500 2.8 vs 3.0, Maia-3 4.7 vs 3.1 (z ~2.2 on its own, but
+one of six post-hoc cells). Mechanism unchanged: our captures after +8
+material 6.5-6.7, defender units at the end 2.2-2.5 in every arm, so the
+real games did not keep more defender material. grid61 confirms D1 vs B
+against Maia-3 only (the human-like case).
