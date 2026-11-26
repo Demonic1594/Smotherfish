@@ -1,0 +1,143 @@
+{
+ "exp": "grid59",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 68000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 68000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 68500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e1500_H40",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 68000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "m1500_H40",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 68000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_H40",
+   "elo": 2600,
+   "games": 400,
+   "seed": 68500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40"
+   ]
+  },
+  {
+   "name": "e1500_AK8",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 68000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "m1500_AK8",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 68000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_AK8",
+   "elo": 2600,
+   "games": 400,
+   "seed": 68500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "e1500_HAK",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 68000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  },
+  {
+   "name": "m1500_HAK",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 68000,
+   "chunk": 25,
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_HAK",
+   "elo": 2600,
+   "games": 400,
+   "seed": 68500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherPartialAfter=40",
+    "SmotherBuildArmGap=48",
+    "SmotherBuildKnightCheck=8"
+   ]
+  }
+ ],
+ "shard": [
+  0,
+  14
+ ],
+ "max_parallel": 20
+}
