@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-26T01:07:14Z",
- "games_per_hour": 913,
- "jobs_running": 4,
- "active_games": 12872,
+ "generated": "2026-11-26T01:22:23Z",
+ "games_per_hour": 1564,
+ "jobs_running": 0,
+ "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1176,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
@@ -21,57 +21,57 @@
   {
    "id": "87fb66",
    "share": 1,
-   "running_runs": 1,
-   "jobs": 1,
+   "running_runs": 0,
+   "jobs": 0,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
-    "status": "in_progress",
-    "conclusion": null,
-    "updated": "2026-11-26T01:04:59Z"
+    "status": "completed",
+    "conclusion": "success",
+    "updated": "2026-11-26T01:09:01Z"
    }
   },
   {
    "id": "f0afe4",
    "share": 1,
-   "running_runs": 1,
-   "jobs": 1,
+   "running_runs": 0,
+   "jobs": 0,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
-    "status": "in_progress",
-    "conclusion": null,
-    "updated": "2026-11-26T01:04:59Z"
+    "status": "completed",
+    "conclusion": "success",
+    "updated": "2026-11-26T01:08:34Z"
    }
   },
   {
    "id": "a8e399",
    "share": 1,
-   "running_runs": 1,
-   "jobs": 2,
+   "running_runs": 0,
+   "jobs": 0,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
-    "status": "in_progress",
-    "conclusion": null,
-    "updated": "2026-11-26T01:04:41Z"
+    "status": "completed",
+    "conclusion": "success",
+    "updated": "2026-11-26T01:08:47Z"
    }
   },
   {
    "id": "f2d74f",
    "share": 1,
-   "running_runs": 1,
+   "running_runs": 0,
    "jobs": 0,
-   "active_games": 1176,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
-    "status": "in_progress",
-    "conclusion": null,
-    "updated": "2026-11-26T01:04:09Z"
+    "status": "completed",
+    "conclusion": "success",
+    "updated": "2026-11-26T01:07:33Z"
    }
   },
   {
@@ -79,7 +79,7 @@
    "share": 4,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 4664,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
@@ -93,7 +93,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1176,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
@@ -107,7 +107,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1180,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
@@ -121,7 +121,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1180,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
@@ -135,7 +135,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1180,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
@@ -149,7 +149,7 @@
    "share": 1,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1140,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid57",
@@ -186,38 +186,38 @@
     }
    ],
    "planned": 16400,
-   "delivered": 12872,
-   "state": "running",
+   "delivered": 16400,
+   "state": "finished",
    "arms": [
     {
      "arm": "B",
      "opts": [],
      "cells": {
       "e1500": {
-       "games": 1924,
-       "w": 1918,
-       "d": 6,
+       "games": 2500,
+       "w": 2491,
+       "d": 9,
        "l": 0,
-       "knight": 56,
-       "full": 60,
+       "knight": 74,
+       "full": 80,
        "planned": 2500
       },
       "m1500": {
-       "games": 912,
-       "w": 911,
+       "games": 1200,
+       "w": 1199,
        "d": 1,
        "l": 0,
-       "knight": 32,
-       "full": 32,
+       "knight": 37,
+       "full": 37,
        "planned": 1200
       },
       "e2600": {
-       "games": 280,
-       "w": 279,
+       "games": 400,
+       "w": 399,
        "d": 1,
        "l": 0,
-       "knight": 2,
-       "full": 4,
+       "knight": 3,
+       "full": 5,
        "planned": 400
       }
      }
@@ -229,37 +229,37 @@
      ],
      "cells": {
       "e1500": {
-       "games": 1996,
-       "w": 1988,
-       "d": 8,
+       "games": 2500,
+       "w": 2491,
+       "d": 9,
        "l": 0,
-       "knight": 73,
-       "full": 79,
+       "knight": 87,
+       "full": 94,
        "planned": 2500,
-       "dknight": 0.75,
-       "z": 1.29
+       "dknight": 0.52,
+       "z": 1.02
       },
       "m1500": {
-       "games": 984,
-       "w": 984,
+       "games": 1200,
+       "w": 1200,
        "d": 0,
        "l": 0,
-       "knight": 29,
-       "full": 31,
+       "knight": 38,
+       "full": 40,
        "planned": 1200,
-       "dknight": -0.56,
-       "z": -0.68
+       "dknight": 0.08,
+       "z": 0.12
       },
       "e2600": {
-       "games": 340,
-       "w": 340,
+       "games": 400,
+       "w": 400,
        "d": 0,
        "l": 0,
-       "knight": 7,
-       "full": 7,
+       "knight": 9,
+       "full": 9,
        "planned": 400,
-       "dknight": 1.34,
-       "z": 1.45
+       "dknight": 1.5,
+       "z": 1.73
       }
      }
     },
@@ -270,37 +270,37 @@
      ],
      "cells": {
       "e1500": {
-       "games": 1924,
-       "w": 1923,
+       "games": 2500,
+       "w": 2499,
        "d": 1,
        "l": 0,
-       "knight": 24,
-       "full": 216,
+       "knight": 32,
+       "full": 278,
        "planned": 2500,
-       "dknight": -1.66,
-       "z": -3.58
+       "dknight": -1.68,
+       "z": -4.08
       },
       "m1500": {
-       "games": 912,
-       "w": 912,
+       "games": 1200,
+       "w": 1200,
        "d": 0,
        "l": 0,
-       "knight": 15,
-       "full": 120,
+       "knight": 20,
+       "full": 157,
        "planned": 1200,
-       "dknight": -1.86,
-       "z": -2.48
+       "dknight": -1.42,
+       "z": -2.25
       },
       "e2600": {
-       "games": 280,
-       "w": 280,
+       "games": 400,
+       "w": 400,
        "d": 0,
        "l": 0,
        "knight": 0,
-       "full": 21,
+       "full": 22,
        "planned": 400,
-       "dknight": -0.71,
-       "z": -1.15
+       "dknight": -0.75,
+       "z": -1.5
       }
      }
     },
@@ -312,37 +312,37 @@
      ],
      "cells": {
       "e1500": {
-       "games": 1996,
-       "w": 1996,
+       "games": 2500,
+       "w": 2500,
        "d": 0,
        "l": 0,
-       "knight": 14,
-       "full": 63,
+       "knight": 19,
+       "full": 81,
        "planned": 2500,
-       "dknight": -2.21,
-       "z": -5.12
+       "dknight": -2.2,
+       "z": -5.7
       },
       "m1500": {
-       "games": 984,
-       "w": 984,
+       "games": 1200,
+       "w": 1200,
        "d": 0,
        "l": 0,
-       "knight": 9,
-       "full": 46,
+       "knight": 10,
+       "full": 50,
        "planned": 1200,
-       "dknight": -2.59,
-       "z": -3.75
+       "dknight": -2.25,
+       "z": -3.94
       },
       "e2600": {
-       "games": 340,
-       "w": 340,
+       "games": 400,
+       "w": 400,
        "d": 0,
        "l": 0,
        "knight": 0,
-       "full": 7,
+       "full": 8,
        "planned": 400,
-       "dknight": -0.71,
-       "z": -1.22
+       "dknight": -0.75,
+       "z": -1.5
       }
      }
     }
@@ -363,7 +363,7 @@
     {
      "id": "87fb66",
      "expected": 1176,
-     "delivered": 0,
+     "delivered": 1176,
      "copied": true
     },
     {
@@ -375,7 +375,7 @@
     {
      "id": "a8e399",
      "expected": 1176,
-     "delivered": 0,
+     "delivered": 1176,
      "copied": true
     },
     {
@@ -399,7 +399,7 @@
     {
      "id": "f0afe4",
      "expected": 1176,
-     "delivered": 0,
+     "delivered": 1176,
      "copied": true
     },
     {
@@ -11002,6 +11002,10 @@
   {
    "t": "2026-11-26T01:07:14Z",
    "games": 432038
+  },
+  {
+   "t": "2026-11-26T01:22:23Z",
+   "games": 435566
   }
  ]
 }
