@@ -2059,3 +2059,12 @@ moves): knight per 100, SF1500 + Maia-3 1500 (3,700 each): B 3.16, S12
 (no shortening), no losses, 99.8-100% vs 2600. B is at the low end of its
 usual range, so grid65 replicates on fresh seeds (B / S12 / S24, 6,000
 games each) before anything is believed.
+
+grid65 (replication, fresh seeds, 6,000 games per arm): knight per 100,
+SF1500 + Maia-3 1500: B 3.77, S12 3.90 (z +0.4, 1 loss), S24 3.63
+(z -0.4). Pooled with grid64: S12 3.95 vs 3.54 (z +1.5), S24 3.79 vs 3.54
+(z +1.0). grid64's +2 did not replicate (its B was low, 3.16). Same lesson
+as DefSee: B swings ~3.0-4.3 between runs of a few thousand games; only
+fresh-data replication counts. SmotherStallAfter stays off (dev branch):
+no knight change, no shorter games against these opponents; its only
+use would be long stalls like JKnlm2Kk, which are rare here.
