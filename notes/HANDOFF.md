@@ -2114,3 +2114,15 @@ and 91-95% vs SF2600 (7-15 losses) against 99.9%. Building earlier adds no
 knight smother at all; games drag to the cap and strength drops; keeping
 pieces harder hurts. With grid55 (+4/+5) the "build earlier" direction is
 closed.
+
+Item B (learned smother model with human data), offline gate (Nov 27):
+Lichess release lichess-data (12 months): 22,524 human games ending in a
+knight smother, 39,941 full, 930,794 near, 428k decided-game sample. Human
+set (nn_data features, winner = us; 22.5k classic + 16k full + 20.6k near +
+95.5k decided): 1.49M positions, 47,051 positives (knight smother within 10
+of our moves). Engine set (1.6 vs Maia-3 and SF1500, grid62-67 B arms):
+2.6M positions, 9,037 positives. AUC on held-out engine games: H=16
+engine 0.950 / human 0.925 / both 0.956; H=32 0.959 / both 0.959; H=64
+engine 0.964 / both 0.962. Human games transfer well but add nothing once
+the model is large enough, and better prediction did not give more smothers
+in play before (grid50-51). Gate failed: not put into the engine.
