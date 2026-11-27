@@ -1,35 +1,35 @@
 {
- "generated": "2026-11-27T19:15:32Z",
- "games_per_hour": 27820,
- "jobs_running": 1,
+ "generated": "2026-11-27T19:16:25Z",
+ "games_per_hour": 27727,
+ "jobs_running": 20,
  "active_games": 21360,
  "accounts": [
   {
    "id": "main",
    "share": 20,
    "running_runs": 1,
-   "jobs": 1,
+   "jobs": 0,
    "active_games": 1440,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid75",
+    "exp": "grid75b",
     "status": "in_progress",
     "conclusion": null,
-    "updated": "2026-11-27T19:15:27Z"
+    "updated": "2026-11-27T19:15:49Z"
    }
   },
   {
    "id": "af5be9",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 20,
    "active_games": 1440,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid74",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-27T18:25:05Z"
+    "exp": "grid75b",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T19:15:52Z"
    }
   },
   {
@@ -224,6 +224,236 @@
   }
  ],
  "tests": [
+  {
+   "id": "grid75b",
+   "plan_sha": "d0a09feaa72336842b1e16c7113095ea80f9d1e1",
+   "parts": [
+    "grid75b"
+   ],
+   "created": "2026-11-27T19:15:29Z",
+   "tc": [
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "m1100",
+     "name": "Maia-3 1100"
+    },
+    {
+     "key": "m1500",
+     "name": "Maia-3 1500"
+    },
+    {
+     "key": "m1900",
+     "name": "Maia-3 1900"
+    },
+    {
+     "key": "m2300",
+     "name": "m2300"
+    }
+   ],
+   "planned": 4800,
+   "delivered": 0,
+   "state": "running",
+   "arms": [
+    {
+     "arm": "he1020",
+     "opts": [
+      "HumanElo=1020"
+     ],
+     "cells": {
+      "m1100": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 600
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 600
+      }
+     }
+    },
+    {
+     "arm": "he1490",
+     "opts": [
+      "HumanElo=1490"
+     ],
+     "cells": {
+      "m1100": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 600
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 600
+      }
+     }
+    },
+    {
+     "arm": "he1880",
+     "opts": [
+      "HumanElo=1880"
+     ],
+     "cells": {
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 600
+      },
+      "m1900": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 600
+      }
+     }
+    },
+    {
+     "arm": "he2200",
+     "opts": [
+      "HumanElo=2200"
+     ],
+     "cells": {
+      "m1900": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 600
+      },
+      "m2300": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 600
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "0cf451",
+     "expected": 480,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "0f17ee",
+     "expected": 0,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "701ef3",
+     "expected": 480,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "7a213a",
+     "expected": 0,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "87fb66",
+     "expected": 480,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "8e9ce5",
+     "expected": 0,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "97884e",
+     "expected": 480,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "a8e399",
+     "expected": 480,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "acf111",
+     "expected": 0,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "af5be9",
+     "expected": 480,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "d32e35",
+     "expected": 480,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "dc665d",
+     "expected": 0,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "f0afe4",
+     "expected": 480,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "f2d74f",
+     "expected": 480,
+     "delivered": 0,
+     "copied": false
+    },
+    {
+     "id": "own",
+     "expected": 480,
+     "delivered": 0,
+     "copied": true
+    }
+   ]
+  },
   {
    "id": "grid75",
    "plan_sha": "909c53c061a511055de276b76a9ba16a9b3589ce",
@@ -15420,6 +15650,10 @@
   },
   {
    "t": "2026-11-27T19:15:32Z",
+   "games": 728640
+  },
+  {
+   "t": "2026-11-27T19:16:25Z",
    "games": 728640
   }
  ]
