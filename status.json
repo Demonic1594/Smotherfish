@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-27T15:55:20Z",
- "games_per_hour": 36859,
- "jobs_running": 0,
+ "generated": "2026-11-27T16:10:24Z",
+ "games_per_hour": 29730,
+ "jobs_running": 1,
  "active_games": 0,
  "accounts": [
   {
@@ -147,15 +147,15 @@
   {
    "id": "d32e35",
    "share": 100,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 1,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid70",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-27T15:53:40Z"
+    "exp": "conctest2",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T16:10:19Z"
    }
   },
   {
@@ -14090,6 +14090,10 @@
   },
   {
    "t": "2026-11-27T15:55:20Z",
+   "games": 645280
+  },
+  {
+   "t": "2026-11-27T16:10:24Z",
    "games": 645280
   }
  ]
