@@ -1,0 +1,155 @@
+{
+ "exp": "grid71",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e1500_E3",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ]
+  },
+  {
+   "name": "e1500_E3P40",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3",
+    "SmotherEscapePercent=40"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_E3",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_E3P40",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3",
+    "SmotherEscapePercent=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2500_B",
+   "elo": 2500,
+   "games": 1200,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e2500_E3",
+   "elo": 2500,
+   "games": 1200,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ]
+  },
+  {
+   "name": "e2500_E3P40",
+   "elo": 2500,
+   "games": 1200,
+   "seed": 97000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3",
+    "SmotherEscapePercent=40"
+   ]
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 97000,
+   "chunk": 20,
+   "opts": [],
+   "tc": "10+0.1"
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 400,
+   "seed": 97000,
+   "chunk": 20,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ],
+   "tc": "10+0.1"
+  },
+  {
+   "name": "e2600_E3P40",
+   "elo": 2600,
+   "games": 400,
+   "seed": 97000,
+   "chunk": 20,
+   "opts": [
+    "SmotherEscapeMoves=3",
+    "SmotherEscapePercent=40"
+   ],
+   "tc": "10+0.1"
+  }
+ ],
+ "shard": [
+  [
+   380,
+   381,
+   382,
+   383,
+   384,
+   385,
+   386,
+   387,
+   388,
+   389,
+   390,
+   391,
+   392,
+   393,
+   394,
+   395,
+   396,
+   397,
+   398,
+   399
+  ],
+  400
+ ],
+ "max_parallel": 20
+}
