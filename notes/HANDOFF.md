@@ -2105,3 +2105,12 @@ Stopped. HarnessTrap stays in match.py for later experiments.
 - 1.6 unchanged. Every lever tried since Nov 26 (ArmGap, PartialAfter 40,
   DefSee, StallAfter, trap steering) is within noise of 1.6; the baseline
   itself swings 3.0-4.3 knight smothers per 100 between runs.
+
+grid68 (Track B early build, temporary; 16,400 + refill): knight per 100,
+SF1500 + Maia-3 1500: B 3.50; build from +3 (floor +1.5, 200 moves) 3.43
+(z -0.2); + Keep 16, material 1/16 2.05 (z -4.1); from +2 (floor +1) 3.37
+(z -0.3). Draws 8-10% (mostly the 400-ply cap) against 0.2%, 3-9 losses,
+and 91-95% vs SF2600 (7-15 losses) against 99.9%. Building earlier adds no
+knight smother at all; games drag to the cap and strength drops; keeping
+pieces harder hurts. With grid55 (+4/+5) the "build earlier" direction is
+closed.
