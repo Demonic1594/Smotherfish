@@ -324,6 +324,8 @@ class SearchManager {
     int               smotherEscapeLeft = 0;    // moves left with the escape budget
     int               smotherBuilds   = 0;      // moves played in construction mode this game
     int               smotherHoldRun  = 0;      // consecutive moves SmotherHold held out
+    int               smotherBestOpen = 99;     // fewest open squares next to the enemy king while building
+    int               smotherStall    = 0;      // construction moves since that last improved
     bool              smotherBuilding = false;  // construction mode on the last move
     bool              smotherSeekNow  = false;  // this move: seek mode (set before helpers start)
     bool              smotherBuildNow = false;  // this move: construction mode (likewise)
@@ -426,6 +428,7 @@ class Worker {
     int   buildStarveAt  = 4;      // SmotherBuildStarveAt
     int   buildLmr       = 0;      // SmotherBuildLmr
     int   buildDefLmr    = 0;      // SmotherBuildDefLmr
+    int   buildDefSee    = 0;      // SmotherBuildDefSee (0 = off)
     int   buildNmp       = 0;      // SmotherBuildNmp
     int   buildOwnKeep   = 0;      // SmotherBuildOwnKeep
     int   buildEscape    = 4;      // SmotherBuildEscape
