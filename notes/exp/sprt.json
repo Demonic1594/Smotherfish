@@ -1,0 +1,15 @@
+{
+ "name": "up1_vs_16_701ef3",
+ "tc": "10+0.1",
+ "elo0": 0,
+ "elo1": 3,
+ "alpha": 0.05,
+ "beta": 0.05,
+ "new_opts": [],
+ "base_opts": [],
+ "base_ref": "ef7774259cc1804390f02de1f2017ca9576b6488",
+ "runners": 20,
+ "games": 200,
+ "max_waves": 1,
+ "seed_offset": 7500000
+}
