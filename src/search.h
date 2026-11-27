@@ -376,8 +376,8 @@ class Worker {
     void decide_smother_modes();
     void finish_smother_prover(bool letFinish);
 
-    void do_move(
-      Position& pos, const Move move, const bool givesCheck, const bool capture, Stack* const ss);
+    void
+    do_move(Position& pos, const Move move, const bool givesCheck, const bool capture, Stack& ss);
     void do_null_move(Position& pos, Stack* const ss);
     void undo_move(Position& pos, const Move move);
     void undo_null_move(Position& pos);
@@ -414,6 +414,9 @@ class Worker {
     // Knight supply (SmotherKnightKeep): internal units per knight of the
     // root side, up to two; 0 = off.
     int  knightKeep  = 0;
+    // Construction mode (SmotherBuildStalemate): score a stalemated defender
+    // as a draw in the static evaluation (the quiescence search cannot see it).
+    bool buildStalemate = false;
     bool seekSmother = false;  // won mode: only smothered mates score as mate
     bool seekClassic = false;
     // Construction mode (SmotherBuild): above buildFloor the evaluation stops
