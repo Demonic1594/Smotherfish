@@ -265,6 +265,11 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     // KnightCheck: points per knight one knight move from a safe checking
     // square (half for two moves); for classic (knight) smothers.
     options.add("SmotherBuildKnightCheck", Option(16, 0, 100));
+    // Knight supply (experimental, off by default): from a previous score of
+    // SmotherKnightKeepCp (and all through construction), SmotherKnightKeep cp
+    // per knight of ours, up to two, never compressed by construction mode.
+    options.add("SmotherKnightKeep", Option(0, 0, 1000));
+    options.add("SmotherKnightKeepCp", Option(200, 0, 10000));
     // Decoy: points when a sacrifice can force the last blocker into the box.
     options.add("SmotherBuildDecoy", Option(0, 0, 200));
     // Learned classic-smother model: points per log-odd (0 = off) and the 17
