@@ -55,7 +55,7 @@ print(json.dumps(p, indent=1))
 PY
   git add src notes/scripts notes/exp/plan.json
   git commit -q -m "$exp: $w of $n job slots" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01AXQtdwTBPTjdbfRvbZua89"
+Claude-Session: https://claude.ai/code/session_01KPLjFVqA3Ah52n9TgVXHRo"
   if [ "$id" = own ]; then ref=actions-exp/$exp; else ref=helper-exp/$id/$exp; fi
   git push -q -f origin tmp-dist:refs/heads/$ref
   echo "$ref: $w of $n job slots (base $base)"
