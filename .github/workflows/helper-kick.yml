@@ -22,6 +22,10 @@ on:
   schedule:
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
+  # A test just distributed (notes/scripts/distribute.sh pushes these):
+  # start the forks at once instead of waiting for the schedule.
+  push:
+    branches: ["helper-exp/**"]
 
 permissions: {}
 
@@ -86,7 +90,14 @@ jobs:
               hid = hashlib.sha256(f["owner"]["login"].lower().encode()).hexdigest()[:6]
               if hid in excluded:
                   continue
-              if "all" in want_sync or hid in want_sync:
+              mine = {b.split("/", 2)[2] for b in waiting if b.count("/") == 2 and b.split("/")[1] == hid}
+              mine |= {b.split("/", 1)[1] for b in waiting if b.count("/") == 1}
+              started = {b.split("/", 1)[1] for b in heads(f"https://github.com/{repo}", "refs/heads/actions-exp/*")}
+              todo = sorted(mine - started)
+              # Never sync a fork with a share it has not copied yet: the share was
+              # built on the fork's current version, and syncing first would give
+              # the fork other workflow files, so GitHub would refuse the copy.
+              if ("all" in want_sync or hid in want_sync) and not todo:
                   branch = f.get("default_branch", "smotherfish")
                   req = urllib.request.Request(f"https://api.github.com/repos/{repo}/merge-upstream",
                       data=json.dumps({"branch": branch}).encode(), method="POST",
@@ -106,10 +117,6 @@ jobs:
                           print(f"{hid}: has changes of its own that conflict; not synced (left as is)")
                       else:
                           print(f"::warning::{hid}: could not sync (HTTP {e.code})")
-              mine = {b.split("/", 2)[2] for b in waiting if b.count("/") == 2 and b.split("/")[1] == hid}
-              mine |= {b.split("/", 1)[1] for b in waiting if b.count("/") == 1}
-              started = {b.split("/", 1)[1] for b in heads(f"https://github.com/{repo}", "refs/heads/actions-exp/*")}
-              todo = sorted(mine - started)
               if not todo:
                   print(f"{hid}: nothing waiting"); continue
               st, _ = api(f"/repos/{repo}/actions/workflows/helper-poll.yml/dispatches", {"ref": f.get("default_branch", "smotherfish")})

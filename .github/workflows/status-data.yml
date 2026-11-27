@@ -1,22 +1,25 @@
-# Status data: every 15 minutes, builds status.json for the test status page
+# Status data: builds status.json for the test status page
 # (notes/scripts/status_data.py: progress and live results of recent tests,
 # helper activity by ID, throughput) and publishes it on the gh-pages branch.
 #
-# GitHub runs short schedules late or not at all when it is busy (the cron
-# below fired hours apart), so each run also starts "Helper kick" and then
-# starts the next status run 15 minutes after its own start. The concurrency
-# group keeps a single chain. To stop the chain, set the repository variable
-# STATUS_LOOP to "off" (Settings, Secrets and variables, Actions, Variables).
+# Runs when an experiment, strength test or Helper kick in this repository
+# finishes, on the 15-minute schedule (which
+# GitHub may run late) and by hand. It holds no runner between updates (an
+# earlier version chained itself with a sleeping job; Actions were briefly
+# disabled on Nov 27 and that idle runner is the likeliest reason).
 name: Status data
 
 on:
   schedule:
     - cron: "3,18,33,48 * * * *"
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Smother experiment", "SPRT", "Helper kick"]
+    types: [completed]
 
 permissions:
   contents: write
-  actions: write
+  actions: read
 
 concurrency:
   group: status-data
@@ -28,8 +31,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Note the start time
-        run: echo "START=$(date +%s)" >> "$GITHUB_ENV"
       - uses: actions/checkout@v4
         with:
           ref: smotherfish
@@ -52,15 +53,3 @@ jobs:
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -q -m "Status data $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -q
-      - name: Start Helper kick, then the next status run
-        if: always() && vars.STATUS_LOOP != 'off'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPO: ${{ github.repository }}
-        run: |
-          dispatch() { curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$REPO/actions/workflows/$1/dispatches" -d '{"ref":"smotherfish"}' && echo "started $1"; }
-          dispatch helper-kick.yml || echo "::warning::could not start Helper kick"
-          wait=$(( ${START:-0} + 900 - $(date +%s) ))
-          [ "$wait" -gt 0 ] && sleep "$wait"
-          dispatch status-data.yml
