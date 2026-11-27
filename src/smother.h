@@ -60,6 +60,9 @@ struct Limits {
     // threatQuiet = the test may itself use one more quiet move.
     int  zugzwang    = 0;
     bool threatQuiet = false;
+    // Allow a smother line through a position seen once before in the game
+    // (experimental, off by default; see loops() in smother.cpp).
+    bool gameRepeat = false;
 };
 
 struct Result {
