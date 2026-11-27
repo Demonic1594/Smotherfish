@@ -229,10 +229,17 @@ bool Prover::attack(int n, Kind kind, int q) {
             else if (replies.size() && !loops(pos, ply, kind))  // no replies here = stalemate
             {
                 // Threat test: if the defender could pass, would a smother
-                // follow? Only moves that pass are searched in full.
-                pos.do_null_move();
-                const bool threat = attack(n - 1, SMOTHER, 0);
-                pos.undo_null_move();
+                // follow? Only moves that pass are searched in full. With
+                // few replies left the defender may be in zugzwang, where
+                // the obligation to move closes the box, so the test is
+                // skipped (lim.zugzwang).
+                bool threat = true;
+                if (!lim.zugzwang || int(replies.size()) > lim.zugzwang)
+                {
+                    pos.do_null_move();
+                    threat = attack(n - 1, SMOTHER, lim.threatQuiet ? std::min(q - 1, 1) : 0);
+                    pos.undo_null_move();
+                }
                 ok = !aborted && threat && defend(n - 1, SMOTHER, q - 1, replies);
             }
         }
