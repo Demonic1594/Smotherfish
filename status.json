@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-27T05:33:21Z",
- "games_per_hour": 2007,
- "jobs_running": 0,
+ "generated": "2026-11-27T05:35:24Z",
+ "games_per_hour": 1495,
+ "jobs_running": 10,
  "active_games": 11940,
  "accounts": [
   {
@@ -21,71 +21,71 @@
   {
    "id": "af5be9",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 2,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid67",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T19:43:36Z"
+    "exp": "grid68-r1",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T05:35:22Z"
    }
   },
   {
    "id": "c79670",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 2,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid67",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T19:43:26Z"
+    "exp": "grid68-r1",
+    "status": "queued",
+    "conclusion": null,
+    "updated": "2026-11-27T05:35:24Z"
    }
   },
   {
    "id": "97884e",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 2,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid67",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T19:42:44Z"
+    "exp": "grid68-r1",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T05:35:21Z"
    }
   },
   {
    "id": "0cf451",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 2,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid67",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T19:44:28Z"
+    "exp": "grid68-r1",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T05:35:20Z"
    }
   },
   {
    "id": "701ef3",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 2,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid67",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-26T19:42:39Z"
+    "exp": "grid68-r1",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T05:35:22Z"
    }
   },
   {
@@ -424,7 +424,7 @@
      "id": "0cf451",
      "expected": 880,
      "delivered": 0,
-     "copied": false
+     "copied": true
     },
     {
      "id": "0f17ee",
@@ -436,7 +436,7 @@
      "id": "701ef3",
      "expected": 940,
      "delivered": 0,
-     "copied": false
+     "copied": true
     },
     {
      "id": "7a213a",
@@ -460,7 +460,7 @@
      "id": "97884e",
      "expected": 880,
      "delivered": 0,
-     "copied": false
+     "copied": true
     },
     {
      "id": "a8e399",
@@ -478,13 +478,13 @@
      "id": "af5be9",
      "expected": 880,
      "delivered": 0,
-     "copied": false
+     "copied": true
     },
     {
      "id": "c79670",
      "expected": 880,
      "delivered": 0,
-     "copied": false
+     "copied": true
     },
     {
      "id": "d32e35",
@@ -8978,51 +8978,6 @@
    ]
   },
   {
-   "id": "conc360b",
-   "plan_sha": "f8edd7f2455b9094301e4039c783f1196d42bf26",
-   "parts": [
-    "conc360b"
-   ],
-   "created": "2026-11-23T11:50:10Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 500,
-   "delivered": 496,
-   "state": "finished-partial",
-   "arms": [
-    {
-     "arm": "v13",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 496,
-       "w": 495,
-       "d": 1,
-       "l": 0,
-       "knight": 5,
-       "full": 42,
-       "planned": 500
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "d32e35",
-     "expected": 500,
-     "delivered": 496,
-     "copied": true
-    }
-   ]
-  },
-  {
    "id": "human3",
    "plan_sha": "70e213535a175c4416fc17356d05b1ff09f0ea2e",
    "parts": [
@@ -9300,51 +9255,6 @@
      "id": "own",
      "expected": 516,
      "delivered": 516,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "conc360",
-   "plan_sha": "6b7e3ec43a4746cf3de068e640c645765cf06061",
-   "parts": [
-    "conc360"
-   ],
-   "created": "2026-11-23T07:17:10Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e1500",
-     "name": "Stockfish 1500"
-    }
-   ],
-   "planned": 2500,
-   "delivered": 2500,
-   "state": "finished",
-   "arms": [
-    {
-     "arm": "v13",
-     "opts": [],
-     "cells": {
-      "e1500": {
-       "games": 2500,
-       "w": 2497,
-       "d": 3,
-       "l": 0,
-       "knight": 22,
-       "full": 227,
-       "planned": 2500
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "d32e35",
-     "expected": 2500,
-     "delivered": 2500,
      "copied": true
     }
    ]
@@ -13651,6 +13561,10 @@
   {
    "t": "2026-11-27T05:33:21Z",
    "games": 600776
+  },
+  {
+   "t": "2026-11-27T05:35:24Z",
+   "games": 597780
   }
  ]
 }
