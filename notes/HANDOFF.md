@@ -2089,3 +2089,19 @@ this is the ceiling (the harness's trap thinking costs our clock nothing,
 and Maia is the exact opponent model). Decision: the trap direction is
 small; a built-in reply model would at best keep part of +0.4 per 100.
 Stopped. HarnessTrap stays in match.py for later experiments.
+
+## Morning summary (Nov 27, 08:45 JST)
+
+- Lichess bots (Akleotes, 1.6 defaults, strongest: 1 game at a time, 3
+  threads + prover, 4 GB hash; around the clock via the self-restart):
+  first sessions (Nov 26 01:25-06:25 JST) 105 games, +66 =39 -0, all
+  against bots (matchmaking): 1 knight smother (bot 3, move 20,
+  lichess.org/dBmklNkD), 3 near smothers; draws mostly against 2600-3050
+  bots. Second sessions started on their own at ~06:25 JST; all four
+  online and playing.
+- Overnight tests: grid66-67 (trap steering prototype): ceiling +0.4 knight
+  smothers per 100 (z +1.5 over 9,000 games each), stopped.
+- Status page updating (23:36 UTC), all 15 forks synced, no failed runs.
+- 1.6 unchanged. Every lever tried since Nov 26 (ArmGap, PartialAfter 40,
+  DefSee, StallAfter, trap steering) is within noise of 1.6; the baseline
+  itself swings 3.0-4.3 knight smothers per 100 between runs.
