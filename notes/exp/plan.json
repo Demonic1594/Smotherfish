@@ -1,0 +1,2393 @@
+{
+ "tc": "5+0.05",
+ "chunk": 25,
+ "exp": "grid68-r1",
+ "runs": [
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86500,
+   "first_chunk": 0,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86501,
+   "first_chunk": 1,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86502,
+   "first_chunk": 2,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86503,
+   "first_chunk": 3,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86504,
+   "first_chunk": 4,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86505,
+   "first_chunk": 5,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86506,
+   "first_chunk": 6,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86507,
+   "first_chunk": 7,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86508,
+   "first_chunk": 8,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86509,
+   "first_chunk": 9,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86510,
+   "first_chunk": 10,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86511,
+   "first_chunk": 11,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86512,
+   "first_chunk": 12,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86513,
+   "first_chunk": 13,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86514,
+   "first_chunk": 14,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86515,
+   "first_chunk": 15,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86516,
+   "first_chunk": 16,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86517,
+   "first_chunk": 17,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86518,
+   "first_chunk": 18,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86519,
+   "first_chunk": 19,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86020,
+   "first_chunk": 20,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86021,
+   "first_chunk": 21,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86022,
+   "first_chunk": 22,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86023,
+   "first_chunk": 23,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86024,
+   "first_chunk": 24,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86025,
+   "first_chunk": 25,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86026,
+   "first_chunk": 26,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86027,
+   "first_chunk": 27,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86028,
+   "first_chunk": 28,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86029,
+   "first_chunk": 29,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86030,
+   "first_chunk": 30,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86031,
+   "first_chunk": 31,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86032,
+   "first_chunk": 32,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86033,
+   "first_chunk": 33,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86034,
+   "first_chunk": 34,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86035,
+   "first_chunk": 35,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86036,
+   "first_chunk": 36,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86037,
+   "first_chunk": 37,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86038,
+   "first_chunk": 38,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86039,
+   "first_chunk": 39,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86500,
+   "first_chunk": 0,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86501,
+   "first_chunk": 1,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86502,
+   "first_chunk": 2,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86503,
+   "first_chunk": 3,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86504,
+   "first_chunk": 4,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86505,
+   "first_chunk": 5,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86506,
+   "first_chunk": 6,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86507,
+   "first_chunk": 7,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86508,
+   "first_chunk": 8,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86509,
+   "first_chunk": 9,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86510,
+   "first_chunk": 10,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86511,
+   "first_chunk": 11,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86512,
+   "first_chunk": 12,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86513,
+   "first_chunk": 13,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86514,
+   "first_chunk": 14,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86515,
+   "first_chunk": 15,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86516,
+   "first_chunk": 16,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86517,
+   "first_chunk": 17,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86518,
+   "first_chunk": 18,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86519,
+   "first_chunk": 19,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86040,
+   "first_chunk": 40,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86041,
+   "first_chunk": 41,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86042,
+   "first_chunk": 42,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86043,
+   "first_chunk": 43,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86044,
+   "first_chunk": 44,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86045,
+   "first_chunk": 45,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86046,
+   "first_chunk": 46,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86047,
+   "first_chunk": 47,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86048,
+   "first_chunk": 48,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86049,
+   "first_chunk": 49,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86050,
+   "first_chunk": 50,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86051,
+   "first_chunk": 51,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86052,
+   "first_chunk": 52,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86053,
+   "first_chunk": 53,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86054,
+   "first_chunk": 54,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86055,
+   "first_chunk": 55,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86056,
+   "first_chunk": 56,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86057,
+   "first_chunk": 57,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86058,
+   "first_chunk": 58,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86059,
+   "first_chunk": 59,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86500,
+   "first_chunk": 0,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86501,
+   "first_chunk": 1,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86502,
+   "first_chunk": 2,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86503,
+   "first_chunk": 3,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86504,
+   "first_chunk": 4,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86505,
+   "first_chunk": 5,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86506,
+   "first_chunk": 6,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86507,
+   "first_chunk": 7,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86508,
+   "first_chunk": 8,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86509,
+   "first_chunk": 9,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86510,
+   "first_chunk": 10,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86511,
+   "first_chunk": 11,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86512,
+   "first_chunk": 12,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86513,
+   "first_chunk": 13,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86514,
+   "first_chunk": 14,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86515,
+   "first_chunk": 15,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86516,
+   "first_chunk": 16,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86517,
+   "first_chunk": 17,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86518,
+   "first_chunk": 18,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86519,
+   "first_chunk": 19,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86060,
+   "first_chunk": 60,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86061,
+   "first_chunk": 61,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86062,
+   "first_chunk": 62,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86063,
+   "first_chunk": 63,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86064,
+   "first_chunk": 64,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86065,
+   "first_chunk": 65,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86066,
+   "first_chunk": 66,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86067,
+   "first_chunk": 67,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86068,
+   "first_chunk": 68,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86069,
+   "first_chunk": 69,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86070,
+   "first_chunk": 70,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86071,
+   "first_chunk": 71,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86072,
+   "first_chunk": 72,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86073,
+   "first_chunk": 73,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86074,
+   "first_chunk": 74,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86075,
+   "first_chunk": 75,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86076,
+   "first_chunk": 76,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86077,
+   "first_chunk": 77,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86078,
+   "first_chunk": 78,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86079,
+   "first_chunk": 79,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86500,
+   "first_chunk": 0,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86501,
+   "first_chunk": 1,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86502,
+   "first_chunk": 2,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86503,
+   "first_chunk": 3,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86504,
+   "first_chunk": 4,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86505,
+   "first_chunk": 5,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86506,
+   "first_chunk": 6,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86507,
+   "first_chunk": 7,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86508,
+   "first_chunk": 8,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86509,
+   "first_chunk": 9,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86510,
+   "first_chunk": 10,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86511,
+   "first_chunk": 11,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86512,
+   "first_chunk": 12,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86513,
+   "first_chunk": 13,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86514,
+   "first_chunk": 14,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86515,
+   "first_chunk": 15,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86516,
+   "first_chunk": 16,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86517,
+   "first_chunk": 17,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86518,
+   "first_chunk": 18,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 20,
+   "chunk": 20,
+   "seed": 86519,
+   "first_chunk": 19,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86080,
+   "first_chunk": 80,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86081,
+   "first_chunk": 81,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86082,
+   "first_chunk": 82,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86083,
+   "first_chunk": 83,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86084,
+   "first_chunk": 84,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86085,
+   "first_chunk": 85,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86086,
+   "first_chunk": 86,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86087,
+   "first_chunk": 87,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86088,
+   "first_chunk": 88,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86089,
+   "first_chunk": 89,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86090,
+   "first_chunk": 90,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86091,
+   "first_chunk": 91,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86092,
+   "first_chunk": 92,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86093,
+   "first_chunk": 93,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86094,
+   "first_chunk": 94,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86095,
+   "first_chunk": 95,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86096,
+   "first_chunk": 96,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86097,
+   "first_chunk": 97,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86098,
+   "first_chunk": 98,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86099,
+   "first_chunk": 99,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86100,
+   "first_chunk": 100,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86101,
+   "first_chunk": 101,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86102,
+   "first_chunk": 102,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86103,
+   "first_chunk": 103,
+   "tc": "5+0.05",
+   "opts": []
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86003,
+   "first_chunk": 3,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86004,
+   "first_chunk": 4,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86012,
+   "first_chunk": 12,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86000,
+   "first_chunk": 0,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86001,
+   "first_chunk": 1,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86002,
+   "first_chunk": 2,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86003,
+   "first_chunk": 3,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86004,
+   "first_chunk": 4,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86005,
+   "first_chunk": 5,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86006,
+   "first_chunk": 6,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86007,
+   "first_chunk": 7,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86008,
+   "first_chunk": 8,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86009,
+   "first_chunk": 9,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86010,
+   "first_chunk": 10,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86011,
+   "first_chunk": 11,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86012,
+   "first_chunk": 12,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86013,
+   "first_chunk": 13,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86014,
+   "first_chunk": 14,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86015,
+   "first_chunk": 15,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86016,
+   "first_chunk": 16,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86017,
+   "first_chunk": 17,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86018,
+   "first_chunk": 18,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 24,
+   "chunk": 24,
+   "seed": 86019,
+   "first_chunk": 19,
+   "tc": "5+0.05",
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 4,
+   "chunk": 4,
+   "seed": 86104,
+   "first_chunk": 104,
+   "tc": "5+0.05",
+   "opts": []
+  }
+ ],
+ "shard": [
+  [
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   93,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99
+  ],
+  100
+ ],
+ "max_parallel": 20
+}
