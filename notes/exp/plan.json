@@ -1,0 +1,112 @@
+{
+ "exp": "grid69",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 90000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 90000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e1500_Z4",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 90000,
+   "chunk": 25,
+   "opts": [
+    "SmotherProverZugzwang=4"
+   ]
+  },
+  {
+   "name": "m1500_Z4",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 90000,
+   "chunk": 25,
+   "opts": [
+    "SmotherProverZugzwang=4"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e1500_Z8",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 90000,
+   "chunk": 25,
+   "opts": [
+    "SmotherProverZugzwang=8"
+   ]
+  },
+  {
+   "name": "m1500_Z8",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 90000,
+   "chunk": 25,
+   "opts": [
+    "SmotherProverZugzwang=8"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 90000,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e2600_Z4",
+   "elo": 2600,
+   "games": 400,
+   "seed": 90000,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherProverZugzwang=4"
+   ]
+  }
+ ],
+ "shard": [
+  [
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   93,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99
+  ],
+  400
+ ],
+ "max_parallel": 20
+}
