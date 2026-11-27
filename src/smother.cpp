@@ -76,10 +76,13 @@ inline Key salted(Key k, Kind kind, int q) {
 // An attacker move on a smother line that brings back a position seen before,
 // earlier in the game or on this line, goes round in circles: the defender
 // who escaped from it once escapes the same way again, and the third time is
-// a draw. Plain-mate (ANY) lines keep the usual draw rule.
-inline bool loops(const Position& pos, int ply, Kind kind) {
+// a draw. Plain-mate (ANY) lines keep the usual draw rule. With gameRepeat
+// (SmotherRepeatOnce) a position seen once before in the game is allowed:
+// a repetition on the line itself or a third occurrence (is_draw) still
+// fails, so the line still cannot end in a draw by repetition.
+inline bool loops(const Position& pos, int ply, Kind kind, bool gameRepeat) {
     return pos.is_draw(ply)
-        || (kind == SMOTHER && pos.is_repetition(std::numeric_limits<int>::max()));
+        || (kind == SMOTHER && !gameRepeat && pos.is_repetition(std::numeric_limits<int>::max()));
 }
 
 struct ScoredMove {
@@ -224,9 +227,11 @@ bool Prover::attack(int n, Kind kind, int q) {
                 if (replies.size() == 0)  // in check with no moves: mate
                     ok = kind == ANY || smothered_given_mate(pos, lim.style);
                 else
-                    ok = n > 1 && !loops(pos, ply, kind) && defend(n - 1, kind, q, replies);
+                    ok = n > 1 && !loops(pos, ply, kind, lim.gameRepeat)
+                      && defend(n - 1, kind, q, replies);
             }
-            else if (replies.size() && !loops(pos, ply, kind))  // no replies here = stalemate
+            else if (replies.size()
+                     && !loops(pos, ply, kind, lim.gameRepeat))  // no replies here = stalemate
             {
                 // Threat test: if the defender could pass, would a smother
                 // follow? Only moves that pass are searched in full. With
