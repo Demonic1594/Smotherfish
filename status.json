@@ -1,27 +1,27 @@
 {
- "generated": "2026-11-27T19:20:28Z",
- "games_per_hour": 27738,
+ "generated": "2026-11-27T19:22:02Z",
+ "games_per_hour": 27577,
  "jobs_running": 0,
  "active_games": 23280,
  "accounts": [
   {
    "id": "main",
    "share": 20,
-   "running_runs": 1,
+   "running_runs": 0,
    "jobs": 0,
    "active_games": 2400,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid75b",
-    "status": "in_progress",
-    "conclusion": null,
-    "updated": "2026-11-27T19:19:20Z"
+    "status": "completed",
+    "conclusion": "success",
+    "updated": "2026-11-27T19:21:23Z"
    }
   },
   {
    "id": "af5be9",
    "share": 20,
-   "running_runs": 1,
+   "running_runs": 0,
    "jobs": 0,
    "active_games": 2400,
    "last": {
@@ -225,12 +225,12 @@
  ],
  "tests": [
   {
-   "id": "grid75",
-   "plan_sha": "3f6a06f23c20825458af87a272665df6bd7f8f1b",
+   "id": "grid75b",
+   "plan_sha": "c31b2d97929ed1328dd55e5a9eb5fd4bf6e3370d",
    "parts": [
-    "grid75"
+    "grid75b"
    ],
-   "created": "2026-11-27T19:20:12Z",
+   "created": "2026-11-27T19:21:19Z",
    "tc": [
     "5+0.05"
    ],
@@ -264,11 +264,11 @@
      "cells": {
       "m1100": {
        "games": 600,
-       "w": 240,
-       "d": 107,
-       "l": 253,
-       "knight": 1,
-       "full": 1,
+       "w": 265,
+       "d": 83,
+       "l": 252,
+       "knight": 0,
+       "full": 0,
        "planned": 600
       },
       "m1500": {
@@ -290,9 +290,9 @@
      "cells": {
       "m1100": {
        "games": 360,
-       "w": 196,
-       "d": 54,
-       "l": 110,
+       "w": 192,
+       "d": 57,
+       "l": 111,
        "knight": 1,
        "full": 1,
        "planned": 600
@@ -455,12 +455,12 @@
    ]
   },
   {
-   "id": "grid75b",
-   "plan_sha": "d0a09feaa72336842b1e16c7113095ea80f9d1e1",
+   "id": "grid75",
+   "plan_sha": "3f6a06f23c20825458af87a272665df6bd7f8f1b",
    "parts": [
-    "grid75b"
+    "grid75"
    ],
-   "created": "2026-11-27T19:15:29Z",
+   "created": "2026-11-27T19:20:12Z",
    "tc": [
     "5+0.05"
    ],
@@ -494,11 +494,11 @@
      "cells": {
       "m1100": {
        "games": 600,
-       "w": 265,
-       "d": 83,
-       "l": 252,
-       "knight": 0,
-       "full": 0,
+       "w": 240,
+       "d": 107,
+       "l": 253,
+       "knight": 1,
+       "full": 1,
        "planned": 600
       },
       "m1500": {
@@ -520,9 +520,9 @@
      "cells": {
       "m1100": {
        "games": 360,
-       "w": 192,
-       "d": 57,
-       "l": 111,
+       "w": 196,
+       "d": 54,
+       "l": 110,
        "knight": 1,
        "full": 1,
        "planned": 600
@@ -15658,6 +15658,10 @@
   },
   {
    "t": "2026-11-27T19:20:28Z",
+   "games": 730560
+  },
+  {
+   "t": "2026-11-27T19:22:02Z",
    "games": 730560
   }
  ]
