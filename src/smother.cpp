@@ -665,6 +665,7 @@ void set_build_weights(const std::string& s) {
     w.defRingPct = buildWeights.defRingPct;
     w.exit       = buildWeights.exit;
     w.knightCheck = buildWeights.knightCheck;
+    w.armGap      = buildWeights.armGap;
     w.decoy       = buildWeights.decoy;
     w.modelScale  = buildWeights.modelScale;
     w.netScale    = buildWeights.netScale;
@@ -673,6 +674,8 @@ void set_build_weights(const std::string& s) {
     std::copy(std::begin(buildWeights.ringTable), std::end(buildWeights.ringTable), w.ringTable);
     buildWeights = w;
 }
+
+void set_build_armgap(int points) { buildWeights.armGap = points; }
 
 void set_build_extras(int ready, int defRingPct, const std::string& ringTable, int exit, int knightCheck, int decoy,
                       int modelScale, const std::string& model) {
@@ -952,8 +955,9 @@ int build_score(const Position& pos, Color us, int survive, int cap, int version
     }
 
     // Knight routes to safe checking squares (classic smothers).
-    if (W.knightCheck && !learned)
+    if ((W.knightCheck || W.armGap) && !learned)
     {
+        const int gaps = popcount(ring & ~pos.pieces(them));
         Bitboard pawnGuard = 0, tp = pos.pieces(them, PAWN);
         while (tp)
             pawnGuard |= Attacks::attacks_bb(PAWN, pop_lsb(tp), them);
@@ -964,7 +968,7 @@ int build_score(const Position& pos, Color us, int survive, int cap, int version
             const Square s   = pop_lsb(kn);
             Bitboard     one = Attacks::attacks_bb(KNIGHT, s);
             if (one & checkSqs)
-                score += W.knightCheck;
+                score += W.knightCheck + (gaps <= 1 ? W.armGap : 0);
             else
             {
                 Bitboard two = 0;
