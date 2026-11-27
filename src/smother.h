@@ -54,6 +54,12 @@ struct Limits {
     TimePoint     deadline   = 0;        // absolute now() value, 0 = none
     bool          keepTable  = false;    // reuse the proof table (no clear)
     bool          robust     = false;    // prefer the line hardest to escape (costly)
+    // Threat test after a quiet attacker move (experimental, off by default):
+    // zugzwang = skip the test when the defender has at most this many
+    // replies (the obligation to move, not a threat, may close the box);
+    // threatQuiet = the test may itself use one more quiet move.
+    int  zugzwang    = 0;
+    bool threatQuiet = false;
 };
 
 struct Result {

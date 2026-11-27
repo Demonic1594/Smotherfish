@@ -161,6 +161,10 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     // Prover limits once the game is crushing (mate in hand, +10, or construction).
     options.add("SmotherCrushMoves", Option(16, 1, 20));
     options.add("SmotherCrushQuiet", Option(3, 0, 3));
+    // Experimental prover threat test (off by default): skip it when the
+    // defender has at most N replies (zugzwang), or let it use one quiet move.
+    options.add("SmotherProverZugzwang", Option(0, 0, 20));
+    options.add("SmotherProverThreatQuiet", Option(false));
 
     options.add("SmotherTimePercent", Option(25, 0, 100));
 
