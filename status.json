@@ -1,14 +1,14 @@
 {
- "generated": "2026-11-27T20:48:58Z",
- "games_per_hour": 21821,
- "jobs_running": 2,
+ "generated": "2026-11-27T20:49:55Z",
+ "games_per_hour": 21976,
+ "jobs_running": 41,
  "active_games": 7680,
  "accounts": [
   {
    "id": "main",
    "share": 20,
    "running_runs": 2,
-   "jobs": 2,
+   "jobs": 19,
    "active_games": 960,
    "last": {
     "workflow": "Smother experiment",
@@ -141,29 +141,29 @@
   {
    "id": "d32e35",
    "share": 100,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 21,
    "active_games": 960,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid75b",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-27T20:23:18Z"
+    "exp": "grid75b-r1",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T20:49:16Z"
    }
   },
   {
    "id": "0f17ee",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 1,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid74",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-27T18:24:48Z"
+    "exp": "grid75b",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T20:49:37Z"
    }
   },
   {
@@ -15551,10 +15551,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-27T14:55:58Z",
-   "games": 606680
-  },
-  {
    "t": "2026-11-27T15:08:43Z",
    "games": 614172
   },
@@ -15668,6 +15664,10 @@
   },
   {
    "t": "2026-11-27T20:48:58Z",
+   "games": 736320
+  },
+  {
+   "t": "2026-11-27T20:49:55Z",
    "games": 736320
   }
  ]
