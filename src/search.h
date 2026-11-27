@@ -411,6 +411,9 @@ class Worker {
     // bonuses (internal units) for keeping the smother ingredients.
     bool prepOn = false;
     int  prepKnight = 0, prepQueen = 0, prepPiece = 0, prepShield = 0;
+    // Knight supply (SmotherKnightKeep): internal units per knight of the
+    // root side, up to two; 0 = off.
+    int  knightKeep  = 0;
     bool seekSmother = false;  // won mode: only smothered mates score as mate
     bool seekClassic = false;
     // Construction mode (SmotherBuild): above buildFloor the evaluation stops
