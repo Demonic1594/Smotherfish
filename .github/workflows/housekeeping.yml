@@ -14,6 +14,9 @@ on:
       keep_days:
         description: "Keep copies younger than this many days"
         default: "3"
+      drop:
+        description: "Also delete these shares now, copied or not (comma-separated experiment names)"
+        default: ""
 
 permissions:
   contents: write
@@ -31,11 +34,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           KEEP_DAYS: ${{ inputs.keep_days || '3' }}
+          DROP: ${{ inputs.drop || '' }}
         run: |
           python3 - <<'PY'
           import datetime, hashlib, json, os, subprocess, urllib.request
           MAIN = "Demonic1594/Smotherfish"; TOKEN = os.environ["GH_TOKEN"]
           keep_days = float(os.environ.get("KEEP_DAYS") or 3)
+          drop = {x.strip() for x in os.environ.get("DROP", "").split(",") if x.strip()}  # stale shares never to be copied
           def api(path):
               req = urllib.request.Request("https://api.github.com" + path, headers={
                   "Authorization": "Bearer " + TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "smotherfish-housekeeping"})
@@ -57,6 +62,8 @@ jobs:
               parts = b.split("/")
               if len(parts) != 3: continue
               _, i, name = parts
+              if name in drop:
+                  doomed.append(b); continue                           # named stale share
               if i in ids and name not in copied[i]: continue          # not copied yet: keep
               if sha not in dates:
                   c = api(f"/repos/{MAIN}/commits/{sha}")
