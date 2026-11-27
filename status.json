@@ -1,35 +1,35 @@
 {
- "generated": "2026-11-27T21:19:29Z",
- "games_per_hour": 19143,
- "jobs_running": 1,
+ "generated": "2026-11-27T21:20:35Z",
+ "games_per_hour": 19084,
+ "jobs_running": 40,
  "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 20,
    "running_runs": 1,
-   "jobs": 1,
+   "jobs": 19,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid76",
     "status": "in_progress",
     "conclusion": null,
-    "updated": "2026-11-27T21:19:20Z"
+    "updated": "2026-11-27T21:19:30Z"
    }
   },
   {
    "id": "af5be9",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 20,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid75b",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-27T19:20:16Z"
+    "exp": "grid76",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T21:19:43Z"
    }
   },
   {
@@ -141,15 +141,15 @@
   {
    "id": "d32e35",
    "share": 100,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 1,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid75b-r1",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-27T20:53:07Z"
+    "exp": "grid76",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T21:19:46Z"
    }
   },
   {
@@ -211,15 +211,15 @@
   {
    "id": "8e9ce5",
    "share": 20,
-   "running_runs": 0,
+   "running_runs": 1,
    "jobs": 0,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid75b",
-    "status": "completed",
-    "conclusion": "failure",
-    "updated": "2026-11-27T19:28:15Z"
+    "exp": "grid76",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-27T21:19:43Z"
    }
   }
  ],
@@ -15789,10 +15789,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-27T15:26:04Z",
-   "games": 625480
-  },
-  {
    "t": "2026-11-27T15:45:27Z",
    "games": 625480
   },
@@ -15906,6 +15902,10 @@
   },
   {
    "t": "2026-11-27T21:19:29Z",
+   "games": 738240
+  },
+  {
+   "t": "2026-11-27T21:20:35Z",
    "games": 738240
   }
  ]
