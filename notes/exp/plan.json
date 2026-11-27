@@ -1,0 +1,77 @@
+{
+ "exp": "grid78b",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1900_he2200",
+   "elo": 1900,
+   "games": 600,
+   "seed": 108000,
+   "chunk": 25,
+   "opts": [
+    "HumanElo=2200"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m2300_he2200",
+   "elo": 2300,
+   "games": 600,
+   "seed": 108000,
+   "chunk": 25,
+   "opts": [
+    "HumanElo=2200"
+   ],
+   "opponent": "maia3-2300"
+  },
+  {
+   "name": "m1900_he2420",
+   "elo": 1900,
+   "games": 600,
+   "seed": 108000,
+   "chunk": 25,
+   "opts": [
+    "HumanElo=2420"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m2300_he2420",
+   "elo": 2300,
+   "games": 600,
+   "seed": 108000,
+   "chunk": 25,
+   "opts": [
+    "HumanElo=2420"
+   ],
+   "opponent": "maia3-2300"
+  }
+ ],
+ "shard": [
+  [
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   93,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99
+  ],
+  300
+ ],
+ "max_parallel": 20
+}

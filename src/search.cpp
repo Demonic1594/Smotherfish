@@ -36,6 +36,7 @@
 #include <thread>
 #include <utility>
 
+#include "attacks.h"
 #include "bitboard.h"
 #include "evaluate.h"
 #include "history.h"
@@ -306,7 +307,7 @@ void Search::Worker::start_smother_prover() {
     {
         if (rootPos.game_ply() == mgr.smotherExpectPly && rootPos.key() != mgr.smotherExpectKey)
         {
-            mgr.smotherEscapeLeft = 0;
+            mgr.smotherEscapeLeft = int(options["SmotherEscapeMoves"]);
             sync_cout << "info string smother escape: the defender left the proven line"
                       << sync_endl;
         }
@@ -468,7 +469,7 @@ void Search::Worker::start_smother_prover() {
             --mgr.smotherEscapeLeft;
             const TimePoint left =
               limits.time[rootPos.side_to_move()] - 2 * TimePoint(int(options["Move Overhead"]));
-            budget      = std::max(budget, left * 20 / 100);
+            budget      = std::max(budget, left * int(options["SmotherEscapePercent"]) / 100);
             sl.maxNodes = 0;
         }
         if (budget < 1)
@@ -1020,6 +1021,7 @@ bool Search::Worker::iterative_deepening() {
                                       std::string(options["SmotherBuildModel"]));
             Smother::set_build_net(int(options["SmotherBuildNetScale"]));
             buildEscape    = int(options["SmotherBuildEscape"]);
+            buildStalemate  = bool(options["SmotherBuildStalemate"]);
             buildKnightSafe = 0;
             shapeWeight    = 0;
         }
@@ -2728,6 +2730,26 @@ Value Search::Worker::mated_value(const Position& pos, int ply) const {
 }
 
 Value Search::Worker::evaluate(const Position& pos) {
+    // Construction mode (SmotherBuildStalemate, off by default): a defender
+    // to move, not in check, whose king has no move and who has no legal move
+    // at all is stalemated. The quiescence search does not detect stalemate,
+    // and the build score rewards a king with no free square most of all, so
+    // "we take the defender's last free piece and it cannot move" scored as a
+    // perfect box. 77 of 96 draws in 38,600 games (grid69/70) were such
+    // stalemates by us, at a median of +20 material.
+    if (buildSmother && buildStalemate && pos.side_to_move() != shapeUs && !pos.checkers())
+    {
+        const Color    them      = pos.side_to_move();
+        const Square   ksq       = pos.square<KING>(them);
+        const Bitboard occ       = pos.pieces() ^ square_bb(ksq);
+        bool           kingMoves = false;
+        Bitboard       to        = Attacks::attacks_bb(KING, ksq) & ~pos.pieces(them);
+        while (to && !kingMoves)
+            kingMoves = !(pos.attackers_to(pop_lsb(to), occ) & pos.pieces(~them));
+        if (!kingMoves && MoveList<ALL>(pos).size() == 0)
+            return VALUE_DRAW;
+    }
+
     Value v = Eval::evaluate(network[numaAccessToken], pos, accumulatorStack, refreshTable);
 
     // Won mode: a small, capped bonus for positions that favour a smothered
