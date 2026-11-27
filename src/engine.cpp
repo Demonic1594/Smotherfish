@@ -270,6 +270,13 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     // per knight of ours, up to two, never compressed by construction mode.
     options.add("SmotherKnightKeep", Option(0, 0, 1000));
     options.add("SmotherKnightKeepCp", Option(200, 0, 10000));
+    // Escape budget (experimental, off by default): after the defender leaves
+    // a proven smother line, the prover may use SmotherEscapePercent of the
+    // clock left, with no node cap, on each of our next SmotherEscapeMoves
+    // moves. Offline (12,200 1.6 games): a forced knight smother still
+    // existed within three of our moves after 35% of escapes.
+    options.add("SmotherEscapeMoves", Option(0, 0, 20));
+    options.add("SmotherEscapePercent", Option(20, 1, 50));
     // Decoy: points when a sacrifice can force the last blocker into the box.
     options.add("SmotherBuildDecoy", Option(0, 0, 200));
     // Learned classic-smother model: points per log-odd (0 = off) and the 17

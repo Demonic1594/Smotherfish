@@ -306,7 +306,7 @@ void Search::Worker::start_smother_prover() {
     {
         if (rootPos.game_ply() == mgr.smotherExpectPly && rootPos.key() != mgr.smotherExpectKey)
         {
-            mgr.smotherEscapeLeft = 0;
+            mgr.smotherEscapeLeft = int(options["SmotherEscapeMoves"]);
             sync_cout << "info string smother escape: the defender left the proven line"
                       << sync_endl;
         }
@@ -468,7 +468,7 @@ void Search::Worker::start_smother_prover() {
             --mgr.smotherEscapeLeft;
             const TimePoint left =
               limits.time[rootPos.side_to_move()] - 2 * TimePoint(int(options["Move Overhead"]));
-            budget      = std::max(budget, left * 20 / 100);
+            budget      = std::max(budget, left * int(options["SmotherEscapePercent"]) / 100);
             sl.maxNodes = 0;
         }
         if (budget < 1)
