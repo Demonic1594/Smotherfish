@@ -420,6 +420,8 @@ void Search::Worker::start_smother_prover() {
     sl.quietMoves = int(options["SmotherQuietMoves"]);
     sl.maxNodes   = std::uint64_t(int(options["SmotherNodes"]));
     sl.robust     = false;
+    sl.zugzwang    = int(options["SmotherProverZugzwang"]);
+    sl.threatQuiet = bool(options["SmotherProverThreatQuiet"]);
     if (mgr.smotherCrush)
     {
         sl.maxMoves   = std::max(sl.maxMoves, int(options["SmotherCrushMoves"]));
