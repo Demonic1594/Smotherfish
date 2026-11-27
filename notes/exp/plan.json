@@ -1,0 +1,127 @@
+{
+ "exp": "grid73",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 101000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e1500_E3",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 101000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 101000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_E3",
+   "elo": 1500,
+   "games": 2000,
+   "seed": 101000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2000_B",
+   "elo": 2000,
+   "games": 2000,
+   "seed": 101000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e2000_E3",
+   "elo": 2000,
+   "games": 2000,
+   "seed": 101000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ]
+  },
+  {
+   "name": "e2500_B",
+   "elo": 2500,
+   "games": 3000,
+   "seed": 101000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "e2500_E3",
+   "elo": 2500,
+   "games": 3000,
+   "seed": 101000,
+   "chunk": 25,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ]
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 1000,
+   "seed": 101000,
+   "chunk": 20,
+   "opts": [],
+   "tc": "10+0.1"
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 1000,
+   "seed": 101000,
+   "chunk": 20,
+   "opts": [
+    "SmotherEscapeMoves=3"
+   ],
+   "tc": "10+0.1"
+  }
+ ],
+ "shard": [
+  [
+   140,
+   141,
+   142,
+   143,
+   144,
+   145,
+   146,
+   147,
+   148,
+   149,
+   150,
+   151,
+   152,
+   153,
+   154,
+   155,
+   156,
+   157,
+   158,
+   159
+  ],
+  400
+ ],
+ "max_parallel": 20
+}
