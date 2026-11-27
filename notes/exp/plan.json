@@ -1,0 +1,179 @@
+{
+ "exp": "grid68",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 86000,
+   "chunk": 25,
+   "opts": []
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 86000,
+   "chunk": 25,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_B",
+   "elo": 2600,
+   "games": 400,
+   "seed": 86500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": []
+  },
+  {
+   "name": "e1500_E3",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 86000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "m1500_E3",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 86000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_E3",
+   "elo": 2600,
+   "games": 400,
+   "seed": 86500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "e1500_E3K",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 86000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "m1500_E3K",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 86000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_E3K",
+   "elo": 2600,
+   "games": 400,
+   "seed": 86500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=300",
+    "SmotherBuildFloor=150",
+    "SmotherBuildMoves=200",
+    "SmotherBuildKeep=16",
+    "SmotherBuildMaterialDiv=16"
+   ]
+  },
+  {
+   "name": "e1500_E2",
+   "elo": 1500,
+   "games": 2500,
+   "seed": 86000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  },
+  {
+   "name": "m1500_E2",
+   "elo": 1500,
+   "games": 1200,
+   "seed": 86000,
+   "chunk": 25,
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "e2600_E2",
+   "elo": 2600,
+   "games": 400,
+   "seed": 86500,
+   "chunk": 20,
+   "tc": "10+0.1",
+   "opts": [
+    "SmotherBuildCp=200",
+    "SmotherBuildFloor=100",
+    "SmotherBuildMoves=200"
+   ]
+  }
+ ],
+ "shard": [
+  [
+   380,
+   381,
+   382,
+   383,
+   384,
+   385,
+   386,
+   387,
+   388,
+   389,
+   390,
+   391,
+   392,
+   393,
+   394,
+   395,
+   396,
+   397,
+   398,
+   399
+  ],
+  400
+ ],
+ "max_parallel": 20
+}
