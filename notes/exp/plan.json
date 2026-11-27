@@ -1,0 +1,155 @@
+{
+ "exp": "grid76",
+ "tc": "5+0.05",
+ "chunk": 25,
+ "runs": [
+  {
+   "name": "m1500_L1360",
+   "elo": 1500,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1360"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_L1360",
+   "elo": 1900,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1360"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1500_L1400",
+   "elo": 1500,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1400"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1900_L1400",
+   "elo": 1900,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1400"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m1900_L1455",
+   "elo": 1900,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1455"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m2300_L1455",
+   "elo": 2300,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1455"
+   ],
+   "opponent": "maia3-2300"
+  },
+  {
+   "name": "m1900_L1520",
+   "elo": 1900,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1520"
+   ],
+   "opponent": "maia3-1900"
+  },
+  {
+   "name": "m2300_L1520",
+   "elo": 2300,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1520"
+   ],
+   "opponent": "maia3-2300"
+  },
+  {
+   "name": "m1300_pm10",
+   "elo": 1300,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1320",
+    "HumanBlunderPermille=10"
+   ],
+   "opponent": "maia3-1300"
+  },
+  {
+   "name": "m1500_pm10",
+   "elo": 1500,
+   "games": 600,
+   "seed": 105000,
+   "chunk": 25,
+   "opts": [
+    "UCI_LimitStrength=true",
+    "UCI_Elo=1320",
+    "HumanBlunderPermille=10"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109,
+   110,
+   111,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   118,
+   119
+  ],
+  300
+ ],
+ "max_parallel": 20
+}
