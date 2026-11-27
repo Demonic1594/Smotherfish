@@ -1,8 +1,236 @@
 {
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "metric": "Knight (classic) smothered mates per 100 games, 5s + 0.05s per move",
  "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
  "experiments": [
+  {
+   "id": "grid69",
+   "date": "2026-11-27",
+   "title": "Zugzwang-aware prover",
+   "question": "The prover keeps a quiet move only if a checks-only smother would follow a pass, so it misses zugzwang. Skip that test when the defender has 4 (Z4) or 8 (Z8) replies or fewer.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [
+    {
+     "label": "1.6 defaults",
+     "cells": [
+      {
+       "k": 157,
+       "n": 4000
+      },
+      {
+       "k": 68,
+       "n": 2000
+      },
+      {
+       "k": 8,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Z4",
+     "cells": [
+      {
+       "k": 149,
+       "n": 4000
+      },
+      {
+       "k": 68,
+       "n": 2000
+      },
+      {
+       "k": 1,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "Z8",
+     "cells": [
+      {
+       "k": 148,
+       "n": 4000
+      },
+      {
+       "k": 64,
+       "n": 2000
+      }
+     ]
+    }
+   ],
+   "verdict": "No gain: 3.73 and 3.70 vs 3.92 per 100 against Stockfish 1500, 3.40 and 3.20 vs 3.40 against Maia-3. More smothers are proven (Z8 6.0 vs 5.15 proof games per 100) but fewer delivered (61% vs 76%): a defender with few moves escapes into a quicker plain mate.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid68",
+   "date": "2026-11-27",
+   "title": "Track B: build from +3 or +2",
+   "question": "Start construction much earlier (from +3, floor +1.5, or from +2, floor +1), 200 moves.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [],
+   "verdict": "No gain: 3.37-3.43 vs 3.50 per 100; keeping pieces harder (Keep 16, material 1/16) lowers it to 2.05. Draws at the 400-ply cap rise to 8-10% and the score vs Stockfish 2600 drops to 91-95%. The build-earlier direction is closed.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid67",
+   "date": "2026-11-26",
+   "title": "Trap prototype, decider",
+   "question": "The harness plays the move whose Maia-3-weighted replies walk into a forced knight smother in 2 (probability at least 0.05), 6,000 games per arm on fresh seeds.",
+   "opponents": [
+    "m1500",
+    "m1100"
+   ],
+   "arms": [],
+   "verdict": "A small, consistent plus that never reaches significance: 4.07 vs 3.70 per 100 (z +1.0); with grid66 4.13 vs 3.69 (z +1.5). This is the ceiling of trap steering with an exact opponent model; stopped.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid66",
+   "date": "2026-11-26",
+   "title": "Trap prototype (harness)",
+   "question": "In decided positions with at most one open square next to the king, the harness picks the move most likely (by Maia-3) to walk into a forced knight smother in 2.",
+   "opponents": [
+    "m1500",
+    "m1100"
+   ],
+   "arms": [],
+   "verdict": "P >= 0.05: 4.27 vs 3.67 per 100 (z +1.2); any safe trap 3.53. Traps arise in about 7% of games; decided in grid67.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid65",
+   "date": "2026-11-26",
+   "title": "Stall switch, replication",
+   "question": "grid64's stall switch (take a near smother after N construction moves without a new low in open squares) on fresh seeds, 6,000 games per arm.",
+   "opponents": [
+    "e1500",
+    "m1500"
+   ],
+   "arms": [],
+   "verdict": "Did not replicate: S12 3.90, S24 3.63 vs 3.77 per 100. The baseline itself swings 3.0-4.3 between runs; SmotherStallAfter stays off.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid64",
+   "date": "2026-11-26",
+   "title": "Stall switch",
+   "question": "A hybrid build with no new low in open squares next to the enemy king for N construction moves takes the near smother (N = 12, 24, 40).",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [],
+   "verdict": "S12 4.03, S24 4.05 vs 3.16 per 100 (z +2.0), but the baseline was at the low end of its range; replicated in grid65, where it did not hold.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid63",
+   "date": "2026-11-26",
+   "title": "Any-smother presets across levels",
+   "question": "The any-smother presets (SmotherClassic false, SmotherGoal Near) against Maia-3 1100 and 1900 at 5+0.05, and at 3+2 against Stockfish 1500 and Maia-3 1500.",
+   "opponents": [
+    "m1100",
+    "m1900",
+    "e1500",
+    "m1500"
+   ],
+   "arms": [],
+   "verdict": "Any smother (mostly near): 72.8 per 100 vs Maia-3 1100, 66.1 vs 1900; at 3+2 69.7 vs Stockfish 1500 and 69.3 vs Maia-3 1500; knight smothers fall to 0.5-2.4. No losses. Documented as a preset, not a default.",
+   "outcome": "yes"
+  },
+  {
+   "id": "grid62",
+   "date": "2026-11-26",
+   "title": "Material-protecting defender, threat-aware",
+   "question": "DefSee 1 with an exception: never prune a defender move whose piece then attacks one of our pieces.",
+   "opponents": [
+    "m1500",
+    "m1100",
+    "e1500",
+    "e2600"
+   ],
+   "arms": [],
+   "verdict": "Lower: 3.50 vs 4.31 per 100 pooled at 5+0.05 (z -2.65). grid60-61's Maia-3 gain did not replicate; SmotherBuildDefSee stays off.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid61",
+   "date": "2026-11-26",
+   "title": "Material-protecting defender vs Maia-3",
+   "question": "DefSee 1 (the defender in our search skips moves that lose material by SEE, checks excepted) against Maia-3 only.",
+   "opponents": [
+    "m1500",
+    "m1100"
+   ],
+   "arms": [],
+   "verdict": "Maia-3 1500 3.83 vs 2.98 per 100 (z +2.1), Maia-3 1100 4.80 vs 4.70; one loss (pruned forks). Retested with a fix in grid62, where it did not hold.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid60",
+   "date": "2026-11-26",
+   "title": "Material-protecting defender",
+   "question": "The defender in our search skips moves that lose more than N cp by SEE unless they give check (N = 1, 100, 300).",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [],
+   "verdict": "No clear gain: D1 3.40 vs 3.02 per 100 pooled (z +1.0); real games did not keep more defender material.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid59",
+   "date": "2026-11-26",
+   "title": "Confirmation: earlier switch and ArmGap",
+   "question": "H40 (SmotherPartialAfter 40) and ArmGap 48 + KnightCheck 8 on fresh seeds, 6,000 games per arm.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [],
+   "verdict": "Neither replicates: H40 3.23 vs 3.55 per 100 (z -1.0), ArmGap 48 + KnightCheck 8 3.64 (z +0.3). 1.6 stays the baseline.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid58",
+   "date": "2026-11-26",
+   "title": "Arming bonus (ArmGap)",
+   "question": "Extra knight-route points while at most one square next to the enemy king is open, where an armed knight converts.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [],
+   "verdict": "No gain: 3.41-4.03 vs 3.73 per 100 pooled; the share of one-open positions with a knight armed did not move (27.0% vs 27.2-27.8%).",
+   "outcome": "no"
+  },
+  {
+   "id": "grid57",
+   "date": "2026-11-26",
+   "title": "Track B round 3: presets for all smother types",
+   "question": "Presets on existing options: H40, SmotherClassic false (AK), and SmotherClassic false with SmotherGoal Near (AN).",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2600"
+   ],
+   "arms": [],
+   "verdict": "Counting all smother types, AN gives 67.6 per 100 vs 6.8 for 1.6 against Stockfish 1500 and AK 42.8, with no losses; knight smothers fall to 0.8-1.7 vs 3.0. No setting beats 1.6 on knight smothers.",
+   "outcome": "no"
+  },
   {
    "id": "grid56",
    "date": "2026-11-26",
