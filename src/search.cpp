@@ -965,6 +965,22 @@ bool Search::Worker::iterative_deepening() {
                   : 0;
     shapeCap    = 100;
     prepOn = false;  // prep phase removed in 1.6 (measured: no gain)
+    {
+        // Knight supply (SmotherKnightKeep, off by default). Knights of ours at
+        // the decisive point (+8): 0 / 1 / 2 gave 0.48 / 3.65 / 6.07 knight
+        // smothers per 100 games (1.6, 3,635 games), and 29% of games had none.
+        // The 1.6-era prep phase (a 40-80 cp yes/no knight bonus) never changed
+        // that supply, so this counts each knight (up to two), starts earlier
+        // and stays on while building, after construction mode's compression.
+        auto&       m    = *threads.main_manager();
+        const Value prev = m.bestPreviousScore;
+        const int   kk   = int(options["SmotherKnightKeep"]);
+        knightKeep       = 0;
+        if (kk > 0 && options["SmotherBrutal"] && prev != VALUE_INFINITE && prev != -VALUE_INFINITE
+            && (m.smotherBuildNow || is_win(prev)
+                || UCIEngine::to_cp(prev, rootPos) >= int(options["SmotherKnightKeepCp"])))
+            knightKeep = kk * 1000 / std::max(1, UCIEngine::to_cp(Value(1000), rootPos));
+    }
     shapeUs     = us;
     {
         // Seek and construction mode are decided once per move by the main
@@ -2746,6 +2762,14 @@ Value Search::Worker::evaluate(const Position& pos) {
             u = std::min(u, VALUE_TB_WIN_IN_MAX_PLY - 1);
             v = pos.side_to_move() == shapeUs ? u : -u;
         }
+    }
+
+    // Knight supply: our knights (up to two) keep their value while winning.
+    if (knightKeep)
+    {
+        const int b = knightKeep * std::min(popcount(pos.pieces(shapeUs, KNIGHT)), 2);
+        v += pos.side_to_move() == shapeUs ? b : -b;
+        v = std::clamp(v, VALUE_TB_LOSS_IN_MAX_PLY + 1, VALUE_TB_WIN_IN_MAX_PLY - 1);
     }
     return v;
 }
