@@ -4,6 +4,85 @@
  "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
  "experiments": [
   {
+   "id": "grid70",
+   "date": "2026-11-27",
+   "title": "Knight supply: keep our knights",
+   "question": "Knights of ours at +8 (0 / 1 / 2) went with 0.48 / 3.65 / 6.07 knight smothers per 100. A bonus per knight (150 or 300 cp, up to two) from +2 and through construction keeps them.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2500",
+    "e2600"
+   ],
+   "arms": [
+    {
+     "label": "1.6 defaults",
+     "cells": [
+      {
+       "k": 93,
+       "n": 3000
+      },
+      {
+       "k": 74,
+       "n": 2000
+      },
+      {
+       "k": 18,
+       "n": 1200
+      },
+      {
+       "k": 8,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "K150",
+     "cells": [
+      {
+       "k": 70,
+       "n": 3000
+      },
+      {
+       "k": 76,
+       "n": 2000
+      },
+      {
+       "k": 14,
+       "n": 1200
+      },
+      {
+       "k": 3,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "K300",
+     "cells": [
+      {
+       "k": 68,
+       "n": 3000
+      },
+      {
+       "k": 53,
+       "n": 2000
+      },
+      {
+       "k": 9,
+       "n": 1200
+      },
+      {
+       "k": 4,
+       "n": 400
+      }
+     ]
+    }
+   ],
+   "verdict": "Fewer knight smothers: pooled 2.58 (K150) and 2.10 (K300, z -3.1) vs 2.98 per 100, although the bonus did keep the knights (no knight at +8: 26% to 9-13% against Stockfish 1500). The knight link was correlation, not a lever.",
+   "outcome": "no"
+  },
+  {
    "id": "grid69",
    "date": "2026-11-27",
    "title": "Zugzwang-aware prover",
