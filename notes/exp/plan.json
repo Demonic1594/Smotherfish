@@ -1,0 +1,96 @@
+{
+ "exp": "grid84",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 6000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e1500_C100",
+   "elo": 1500,
+   "games": 6000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=100",
+    "SmotherBuildStalemate=true"
+   ]
+  },
+  {
+   "name": "e1500_C300",
+   "elo": 1500,
+   "games": 6000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=300",
+    "SmotherBuildStalemate=true"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_C100",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=100",
+    "SmotherBuildStalemate=true"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_C300",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=300",
+    "SmotherBuildStalemate=true"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109,
+   110,
+   111,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   118,
+   119
+  ],
+  340
+ ],
+ "max_parallel": 20
+}
