@@ -1,21 +1,21 @@
 {
- "generated": "2026-11-28T04:55:19Z",
- "games_per_hour": 3345,
- "jobs_running": 0,
+ "generated": "2026-11-28T09:22:01Z",
+ "games_per_hour": 0,
+ "jobs_running": 2,
  "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 2,
+   "jobs": 2,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid80b",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-28T02:40:11Z"
+    "exp": "grid81b",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-28T09:22:01Z"
    }
   },
   {
@@ -216,6 +216,346 @@
   }
  ],
  "tests": [
+  {
+   "id": "grid81b",
+   "plan_sha": "709f49456090ee7144307cc27618234381196342",
+   "parts": [
+    "grid81b"
+   ],
+   "created": "2026-11-28T09:21:53Z",
+   "tc": [
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "e2000",
+     "name": "Stockfish 2000"
+    },
+    {
+     "key": "e2500",
+     "name": "Stockfish 2500"
+    }
+   ],
+   "planned": 12000,
+   "delivered": 0,
+   "state": "running",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "e2000": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2000
+      },
+      "e2500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2000
+      }
+     }
+    },
+    {
+     "arm": "D20",
+     "opts": [
+      "SmotherBuildDesperado=20"
+     ],
+     "cells": {
+      "e2000": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2000
+      },
+      "e2500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2000
+      }
+     }
+    },
+    {
+     "arm": "D40",
+     "opts": [
+      "SmotherBuildDesperado=40"
+     ],
+     "cells": {
+      "e2000": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2000
+      },
+      "e2500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 2000
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "701ef3",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "7a213a",
+     "expected": 0,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "87fb66",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "8e9ce5",
+     "expected": 0,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "97884e",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "a8e399",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "acf111",
+     "expected": 0,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "af5be9",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "d32e35",
+     "expected": 5000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "f0afe4",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "own",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    }
+   ]
+  },
+  {
+   "id": "grid81",
+   "plan_sha": "e7b76cf38dd15d787b3b11d526a5db080592d19d",
+   "parts": [
+    "grid81"
+   ],
+   "created": "2026-11-28T09:21:39Z",
+   "tc": [
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "e1500",
+     "name": "Stockfish 1500"
+    },
+    {
+     "key": "m1500",
+     "name": "Maia-3 1500"
+    }
+   ],
+   "planned": 19500,
+   "delivered": 0,
+   "state": "running",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 5000
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1500
+      }
+     }
+    },
+    {
+     "arm": "D20",
+     "opts": [
+      "SmotherBuildDesperado=20"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 5000
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1500
+      }
+     }
+    },
+    {
+     "arm": "D40",
+     "opts": [
+      "SmotherBuildDesperado=40"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 5000
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1500
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "701ef3",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "7a213a",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "87fb66",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "8e9ce5",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "97884e",
+     "expected": 1500,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "a8e399",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "acf111",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "af5be9",
+     "expected": 2000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "d32e35",
+     "expected": 7000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "f0afe4",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "own",
+     "expected": 2000,
+     "delivered": 0,
+     "copied": true
+    }
+   ]
+  },
   {
    "id": "grid80b",
    "plan_sha": "f814aea68ba30eb7f9018954d83663f1821901ea",
@@ -17180,75 +17520,15 @@
  ],
  "history": [
   {
-   "t": "2026-11-27T23:02:18Z",
-   "games": 752880
-  },
-  {
-   "t": "2026-11-27T23:03:20Z",
-   "games": 753360
-  },
-  {
-   "t": "2026-11-27T23:07:12Z",
-   "games": 756240
-  },
-  {
-   "t": "2026-11-27T23:08:55Z",
-   "games": 760080
-  },
-  {
-   "t": "2026-11-27T23:28:54Z",
-   "games": 760560
-  },
-  {
-   "t": "2026-11-27T23:30:06Z",
-   "games": 760560
-  },
-  {
-   "t": "2026-11-28T00:40:00Z",
-   "games": 760560
-  },
-  {
-   "t": "2026-11-28T00:40:54Z",
-   "games": 760560
-  },
-  {
-   "t": "2026-11-28T00:43:13Z",
-   "games": 760560
-  },
-  {
-   "t": "2026-11-28T00:45:22Z",
-   "games": 765360
-  },
-  {
-   "t": "2026-11-28T00:47:02Z",
-   "games": 767760
-  },
-  {
-   "t": "2026-11-28T02:34:30Z",
-   "games": 767760
-  },
-  {
-   "t": "2026-11-28T02:35:27Z",
-   "games": 767760
-  },
-  {
-   "t": "2026-11-28T02:39:16Z",
-   "games": 769200
-  },
-  {
-   "t": "2026-11-28T02:40:25Z",
-   "games": 772080
-  },
-  {
-   "t": "2026-11-28T02:57:03Z",
-   "games": 772560
-  },
-  {
    "t": "2026-11-28T04:53:58Z",
    "games": 772560
   },
   {
    "t": "2026-11-28T04:55:19Z",
+   "games": 772560
+  },
+  {
+   "t": "2026-11-28T09:22:01Z",
    "games": 772560
   }
  ]
