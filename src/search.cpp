@@ -1032,6 +1032,8 @@ bool Search::Worker::iterative_deepening() {
             Smother::set_build_net(int(options["SmotherBuildNetScale"]));
             buildEscape    = int(options["SmotherBuildEscape"]);
             buildStalemate  = bool(options["SmotherBuildStalemate"]);
+            buildDesperado  = int(options["SmotherBuildDesperado"]);
+            buildQueenFull  = bool(options["SmotherBuildQueenFull"]);
             buildKnightSafe = 0;
             shapeWeight    = 0;
         }
@@ -2778,9 +2780,66 @@ Value Search::Worker::evaluate(const Position& pos) {
         Value u = pos.side_to_move() == shapeUs ? v : -v;
         if (u >= buildFloor)
         {
-            u = buildFloor + (u - buildFloor) / buildMatDiv
-              + Smother::build_score(pos, shapeUs, buildSurvive, buildCap, buildVersion, buildKeep, buildKeepNear, buildStarve, buildStarveAt, buildOwnKeep, buildEscape, buildKnightSafe)
+            // SmotherBuildQueenFull (off by default): a defender queen off its
+            // king's ring counts at full value. The defender promoted after we
+            // led by +8 in 94% of our stalemates (grid69-74) and the promoted
+            // queen then forced them; at 1/8 (and with the reward for kept
+            // pieces) a promotion cost us almost nothing. Never below the
+            // floor, so giving material back never looks better.
+            Value q = VALUE_ZERO;
+            if (buildQueenFull)
+                q = popcount(pos.pieces(~shapeUs, QUEEN)
+                             & ~Attacks::attacks_bb(KING, pos.square<KING>(~shapeUs)))
+                  * QueenValue;
+            Value base = buildFloor + (u + q - buildFloor) / buildMatDiv - q;
+            if (q)
+                base = std::max(base, buildFloor + 1);
+            u = base
+              + Smother::build_score(pos, shapeUs, buildSurvive, buildCap, buildVersion, buildKeep,
+                                     buildKeepNear, buildStarve, buildStarveAt, buildOwnKeep,
+                                     buildEscape, buildKnightSafe)
                   * buildUnit;
+            // Desperado guard (SmotherBuildDesperado, off by default). 239 of
+            // the 265 stalemates we gave in 122,000 games (grid69-74) ended
+            // with us taking a queen the defender had just promoted: its king
+            // was boxed, so the queen checked until we took it. Construction
+            // counts the queen at 1/8 and rewards every kept piece, so taking
+            // it scored about even. Trigger: the defender's king has no square
+            // and a queen off its ring is its only piece that can move (71% of
+            // those stalemates, 1.1% of knight smothers). With any free queen
+            // (grid81) it cut stalemates 12 -> 3 but knight smothers 2.60 ->
+            // 2.02 per 100. Needs SmotherBuildStalemate: in the trigger
+            // position taking the queen is stalemate, which the quiescence
+            // search cannot see (grid82: alone, stalemates 13 -> 30).
+            if (buildDesperado)
+            {
+                const Color    them = ~shapeUs;
+                const Square   ksq  = pos.square<KING>(them);
+                const Bitboard ring = Attacks::attacks_bb(KING, ksq);
+                if (pos.pieces(them, QUEEN) & ~ring)
+                {
+                    const Bitboard occ   = pos.pieces() ^ square_bb(ksq);
+                    Bitboard       to    = ring & ~pos.pieces(them);
+                    bool           moves = false;
+                    while (to && !moves)
+                        moves = !(pos.attackers_to(pop_lsb(to), occ) & pos.pieces(shapeUs));
+                    // Any other piece of the defender's that can move
+                    // (pseudo-legal: pins ignored, so the guard errs off).
+                    const Bitboard pawns = pos.pieces(them, PAWN);
+                    moves = moves || (pawn_single_push_bb(them, pawns) & ~pos.pieces())
+                         || ((them == WHITE ? pawn_attacks_bb<WHITE>(pawns)
+                                            : pawn_attacks_bb<BLACK>(pawns))
+                             & pos.pieces(shapeUs));
+                    for (PieceType pt : {KNIGHT, BISHOP, ROOK})
+                        for (Bitboard b = pos.pieces(them, pt); b && !moves;)
+                            moves =
+                              Attacks::attacks_bb(pt, pop_lsb(b), pos.pieces()) & ~pos.pieces(them);
+                    // Never below the floor: the guard must not make a line
+                    // that gives back material look better.
+                    if (!moves)
+                        u = std::max(u - buildDesperado * buildUnit, std::min(u, buildFloor + 1));
+                }
+            }
             u = std::min(u, VALUE_TB_WIN_IN_MAX_PLY - 1);
             v = pos.side_to_move() == shapeUs ? u : -u;
         }
