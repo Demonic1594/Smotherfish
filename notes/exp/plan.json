@@ -1,0 +1,89 @@
+{
+ "exp": "grid82b",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e2000_B",
+   "elo": 2000,
+   "games": 4000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e2000_N40",
+   "elo": 2000,
+   "games": 4000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=40"
+   ]
+  },
+  {
+   "name": "e2000_N100",
+   "elo": 2000,
+   "games": 4000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=100"
+   ]
+  },
+  {
+   "name": "e2500_B",
+   "elo": 2500,
+   "games": 2000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e2500_N40",
+   "elo": 2500,
+   "games": 2000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=40"
+   ]
+  },
+  {
+   "name": "e2500_N100",
+   "elo": 2500,
+   "games": 2000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=100"
+   ]
+  }
+ ],
+ "shard": [
+  [
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79
+  ],
+  340
+ ],
+ "max_parallel": 20
+}
