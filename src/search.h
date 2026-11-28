@@ -417,6 +417,10 @@ class Worker {
     // Construction mode (SmotherBuildStalemate): score a stalemated defender
     // as a draw in the static evaluation (the quiescence search cannot see it).
     bool buildStalemate = false;
+    // Construction mode (SmotherBuildDesperado): construction points lost while
+    // the defender's king has no square and a queen off the ring is its only
+    // piece that can move.
+    int  buildDesperado = 0;
     bool seekSmother = false;  // won mode: only smothered mates score as mate
     bool seekClassic = false;
     // Construction mode (SmotherBuild): above buildFloor the evaluation stops
