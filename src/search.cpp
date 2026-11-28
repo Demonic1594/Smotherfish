@@ -36,6 +36,7 @@
 #include <thread>
 #include <utility>
 
+#include "attacks.h"
 #include "bitboard.h"
 #include "evaluate.h"
 #include "history.h"
@@ -140,7 +141,7 @@ const std::array<int, MAX_MOVES> reductions = [] {
 int correction_value(const Worker& w, const Position& pos, const Stack* const ss) {
     const auto  m      = (ss - 1)->currentMove;
     const auto& shared = w.sharedHistory;
-    const int   pcv    = shared.pawn_correction_entry(pos).pawn;
+    const int   pcv    = shared.pawn_correction_entry(pos).pawn[bool(pos.pieces(QUEEN))];
     const int   micv   = shared.minor_piece_correction_entry(pos).minor;
     const int   wnpcv  = shared.nonpawn_correction_entry<WHITE>(pos).nonPawnWhite;
     const int   bnpcv  = shared.nonpawn_correction_entry<BLACK>(pos).nonPawnBlack;
@@ -170,7 +171,7 @@ void update_correction_history(const Position& pos,
     constexpr int nonPawnWeight = 186;
     auto&         shared        = workerThread.sharedHistory;
 
-    shared.pawn_correction_entry(pos).pawn << bonus;
+    shared.pawn_correction_entry(pos).pawn[bool(pos.pieces(QUEEN))] << bonus;
     shared.minor_piece_correction_entry(pos).minor << bonus * 150 / 128;
     shared.nonpawn_correction_entry<WHITE>(pos).nonPawnWhite << bonus * nonPawnWeight / 128;
     shared.nonpawn_correction_entry<BLACK>(pos).nonPawnBlack << bonus * nonPawnWeight / 128;
@@ -207,7 +208,7 @@ void update_all_stats(const Position& pos,
 bool is_shuffling(Move move, Stack* const ss, const Position& pos) {
     if (pos.capture_stage(move) || pos.rule50_count() < 10)
         return false;
-    if (pos.plies_from_null() < 6 || ss->ply < 20)
+    if (pos.rep_window() < 6 || ss->ply < 20)
         return false;
     return move.from_sq() == (ss - 2)->currentMove.to_sq()
         && (ss - 2)->currentMove.from_sq() == (ss - 4)->currentMove.to_sq();
@@ -226,11 +227,21 @@ Skill make_skill(const OptionsMap& options) {
         // direct low-end rates (human8): 90 per mille ~1400, 110 ~1255, 130
         // ~1020; 72 ~1490. The limiter at 1455 played ~2420 (Maia-3's top
         // levels are compressed, so the scale ends there).
-        constexpr int map[][3] = {{1020, 1320, 130}, {1255, 1320, 110}, {1400, 1320, 90},
-                                  {1490, 1320, 72},  {1580, 1320, 40},  {1700, 1320, 20},
-                                  {1735, 1320, 10},  {1780, 1320, 5},   {1815, 1320, 2},
-                                  {1880, 1320, 0},   {2420, 1455, 0}};
-        constexpr int n = int(std::size(map));
+        constexpr int map16[][3] = {{1020, 1320, 130}, {1255, 1320, 110}, {1400, 1320, 90},
+                                    {1490, 1320, 72},  {1580, 1320, 40},  {1700, 1320, 20},
+                                    {1735, 1320, 10},  {1780, 1320, 5},   {1815, 1320, 2},
+                                    {1880, 1320, 0},   {2200, 1400, 0},   {2420, 1455, 0}};
+        // HumanEloRefit (experimental, off by default): the map refitted for
+        // the engine merged with upstream 88337401, whose UCI_Elo limiter
+        // plays weaker (grid75/75b/76: 1320 with no blunders 1715 on the
+        // Maia-3 scale vs 1961 for 1.6). Each rating gets the setting that
+        // plays like 1.6's did; the blunder-driven low end is unchanged.
+        constexpr int mapRefit[][3] = {{1020, 1320, 130}, {1255, 1320, 110}, {1400, 1320, 90},
+                                       {1490, 1320, 72},  {1580, 1320, 22},  {1700, 1320, 4},
+                                       {1735, 1325, 0},   {1780, 1342, 0},   {1815, 1355, 0},
+                                       {1880, 1387, 0},   {2200, 1425, 0},   {2420, 1455, 0}};
+        const auto&   map           = options["HumanEloRefit"] ? mapRefit : map16;
+        constexpr int n             = int(std::size(map16));
         const int     r = std::clamp(h, map[0][0], map[n - 1][0]);
         int           i = 0;
         while (i < n - 2 && r > map[i + 1][0])
@@ -306,7 +317,7 @@ void Search::Worker::start_smother_prover() {
     {
         if (rootPos.game_ply() == mgr.smotherExpectPly && rootPos.key() != mgr.smotherExpectKey)
         {
-            mgr.smotherEscapeLeft = 0;
+            mgr.smotherEscapeLeft = int(options["SmotherEscapeMoves"]);
             sync_cout << "info string smother escape: the defender left the proven line"
                       << sync_endl;
         }
@@ -422,6 +433,15 @@ void Search::Worker::start_smother_prover() {
     sl.robust     = false;
     sl.zugzwang    = int(options["SmotherProverZugzwang"]);
     sl.threatQuiet = bool(options["SmotherProverThreatQuiet"]);
+    // SmotherRepeatOnce: 1 = right after an escape (the escape window of
+    // SmotherEscapeMoves), 2 = always: a smother line may pass through a
+    // position seen once before in the game. Construction mode shuffles,
+    // and after an escape the natural re-smother often goes back through
+    // positions of the escaped line.
+    {
+        const int rep = int(options["SmotherRepeatOnce"]);
+        sl.gameRepeat = rep == 2 || (rep == 1 && mgr.smotherEscapeLeft > 0);
+    }
     if (mgr.smotherCrush)
     {
         sl.maxMoves   = std::max(sl.maxMoves, int(options["SmotherCrushMoves"]));
@@ -468,7 +488,7 @@ void Search::Worker::start_smother_prover() {
             --mgr.smotherEscapeLeft;
             const TimePoint left =
               limits.time[rootPos.side_to_move()] - 2 * TimePoint(int(options["Move Overhead"]));
-            budget      = std::max(budget, left * 20 / 100);
+            budget      = std::max(budget, left * int(options["SmotherEscapePercent"]) / 100);
             sl.maxNodes = 0;
         }
         if (budget < 1)
@@ -1020,6 +1040,7 @@ bool Search::Worker::iterative_deepening() {
                                       std::string(options["SmotherBuildModel"]));
             Smother::set_build_net(int(options["SmotherBuildNetScale"]));
             buildEscape    = int(options["SmotherBuildEscape"]);
+            buildStalemate  = bool(options["SmotherBuildStalemate"]);
             buildKnightSafe = 0;
             shapeWeight    = 0;
         }
@@ -1414,36 +1435,27 @@ bool Search::Worker::iterative_deepening() {
 }
 
 void Search::Worker::do_move(
-  Position& pos, const Move move, const bool givesCheck, const bool capture, Stack* const ss) {
+  Position& pos, const Move move, const bool givesCheck, const bool capture, Stack& ss) {
     // prefetch_key() does not model castling, en passant or promotion exactly.
     // The correction-history prefetches also approximate castling and promotion.
     // For these rare moves the prefetches land on unused lines.
     prefetch(tt.get_cluster(pos.prefetch_key(move)));
 
-    if (ss != nullptr)
-    {
-        const Piece  pc = pos.moved_piece(move);
-        const Square to = move.to_sq();
+    const Piece  pc = pos.moved_piece(move);
+    const Square to = move.to_sq();
 
-        prefetch(&(*(ss - 1)->continuationCorrectionHistory)[pc][to]);
-        prefetch(&(*(ss - 3)->continuationCorrectionHistory)[pc][to]);
-        prefetch(&(*(ss - 5)->continuationCorrectionHistory)[pc][to]);
-    }
+    prefetch(&(*(&ss - 1)->continuationCorrectionHistory)[pc][to]);
+    prefetch(&(*(&ss - 3)->continuationCorrectionHistory)[pc][to]);
+    prefetch(&(*(&ss - 5)->continuationCorrectionHistory)[pc][to]);
 
     ++nodes;
 
     Dirties& dirties = accumulatorStack.push(pos);
     pos.do_move(move, givesCheck, dirties, &sharedHistory);
 
-    if (ss != nullptr)
-    {
-        auto& dirtyPiece = dirties.dirtyPiece;
-        ss->currentMove  = move;
-        ss->continuationHistory =
-          &continuationHistory[ss->inCheck][capture][dirtyPiece.pc][move.to_sq()];
-        ss->continuationCorrectionHistory =
-          &continuationCorrectionHistory[dirtyPiece.pc][move.to_sq()];
-    }
+    ss.currentMove                   = move;
+    ss.continuationHistory           = &continuationHistory[ss.inCheck][capture][pc][to];
+    ss.continuationCorrectionHistory = &continuationCorrectionHistory[pc][to];
 }
 
 void Search::Worker::do_null_move(Position& pos, Stack* const ss) {
@@ -1876,7 +1888,7 @@ Value Search::Worker::search(
             capture = pos.capture_stage(move);
             assert(capture);
 
-            do_move(pos, move, pos.gives_check(move), capture, ss);
+            do_move(pos, move, pos.gives_check(move), capture, *ss);
             // Perform a preliminary qsearch to verify that the move holds
             value = -qsearch<NonPV>(pos, ss + 1, -probCutBeta, -probCutBeta + 1);
 
@@ -2111,7 +2123,7 @@ moves_loop:  // When in check, search starts here
         u64 nodeCount = rootNode ? u64(nodes) : 0;
 
         // Step 17. Make the move
-        do_move(pos, move, givesCheck, capture, ss);
+        do_move(pos, move, givesCheck, capture, *ss);
 
         // Add extension to new depth
         newDepth += extension;
@@ -2358,7 +2370,7 @@ moves_loop:  // When in check, search starts here
             (capture ? capturesSearched : quietsSearched).push_back(move);
     }
 
-    // Step 23. Check for mate and stalemate, otherwise update bestmove/countermove stats
+    // Step 23. Check for mate and stalemate, otherwise update best move and history stats
 
     assert(moveCount || !ss->inCheck || excludedMove || !MoveList<ALL>(pos).size());
 
@@ -2382,7 +2394,7 @@ moves_loop:  // When in check, search starts here
             ttMoveHistory << (bestMove == ttData.move ? 918 : -747);
     }
 
-    // Bonus for prior quiet countermove that caused the fail low
+    // Bonus for the prior quiet move that caused the fail low
     else if (!priorCapture && prevSq != SQ_NONE)
     {
         int bonusScale = -241;
@@ -2407,7 +2419,7 @@ moves_loop:  // When in check, search starts here
             sharedHistory.pawn_entry(pos)[pos.piece_on(prevSq)][prevSq] << scaledBonus * 324 / 8192;
     }
 
-    // Bonus for prior capture countermove that caused the fail low
+    // Bonus for the prior capture that caused the fail low
     else if (prevSq != SQ_NONE)
     {
         assert(priorCapture);
@@ -2592,8 +2604,7 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
         if (!is_loss(bestValue))
         {
             // Futility pruning and moveCount pruning
-            if (!givesCheck && move.to_sq() != prevSq && !is_loss(futilityBase)
-                && move.type_of() != PROMOTION)
+            if (!givesCheck && move.to_sq() != prevSq && !is_loss(futilityBase))
             {
                 if (moveCount > 2)
                     continue;
@@ -2626,7 +2637,7 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
         }
 
         // Step 7. Make and search the move
-        do_move(pos, move, givesCheck, capture, ss);
+        do_move(pos, move, givesCheck, capture, *ss);
 
         value = -qsearch<nodeType>(pos, ss + 1, -beta, -alpha);
         undo_move(pos, move);
@@ -2728,6 +2739,26 @@ Value Search::Worker::mated_value(const Position& pos, int ply) const {
 }
 
 Value Search::Worker::evaluate(const Position& pos) {
+    // Construction mode (SmotherBuildStalemate, off by default): a defender
+    // to move, not in check, whose king has no move and who has no legal move
+    // at all is stalemated. The quiescence search does not detect stalemate,
+    // and the build score rewards a king with no free square most of all, so
+    // "we take the defender's last free piece and it cannot move" scored as a
+    // perfect box. 77 of 96 draws in 38,600 games (grid69/70) were such
+    // stalemates by us, at a median of +20 material.
+    if (buildSmother && buildStalemate && pos.side_to_move() != shapeUs && !pos.checkers())
+    {
+        const Color    them      = pos.side_to_move();
+        const Square   ksq       = pos.square<KING>(them);
+        const Bitboard occ       = pos.pieces() ^ square_bb(ksq);
+        bool           kingMoves = false;
+        Bitboard       to        = Attacks::attacks_bb(KING, ksq) & ~pos.pieces(them);
+        while (to && !kingMoves)
+            kingMoves = !(pos.attackers_to(pop_lsb(to), occ) & pos.pieces(~them));
+        if (!kingMoves && MoveList<ALL>(pos).size() == 0)
+            return VALUE_DRAW;
+    }
+
     Value v = Eval::evaluate(network[numaAccessToken], pos, accumulatorStack, refreshTable);
 
     // Won mode: a small, capped bonus for positions that favour a smothered
