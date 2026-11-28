@@ -4,6 +4,405 @@
  "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
  "experiments": [
   {
+   "id": "grid85",
+   "date": "2026-11-28",
+   "title": "Defender queens at full value in construction",
+   "question": "Count a defender queen off its king's ring at full value in construction mode (not 1/8), so the pawn is stopped before it promotes.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2000",
+    "e2500"
+   ],
+   "arms": [
+    {
+     "label": "B",
+     "cells": [
+      {
+       "k": 212,
+       "n": 6000
+      },
+      {
+       "k": 27,
+       "n": 1000
+      },
+      {
+       "k": 112,
+       "n": 6000,
+       "losses": 1
+      },
+      {
+       "k": 41,
+       "n": 3000
+      }
+     ]
+    },
+    {
+     "label": "Queen full",
+     "cells": [
+      {
+       "k": 194,
+       "n": 6000
+      },
+      {
+       "k": 24,
+       "n": 1000
+      },
+      {
+       "k": 100,
+       "n": 6000
+      },
+      {
+       "k": 25,
+       "n": 3000
+      }
+     ]
+    },
+    {
+     "label": "Queen full + stalemate check",
+     "cells": [
+      {
+       "k": 166,
+       "n": 6000
+      },
+      {
+       "k": 31,
+       "n": 1000
+      },
+      {
+       "k": 108,
+       "n": 6000
+      },
+      {
+       "k": 38,
+       "n": 3000
+      }
+     ]
+    }
+   ],
+   "verdict": "No: stalemates 23 (B) vs 36 (queen full) and 22 (with the stalemate check), knight smothers 2.45 vs 2.14 and 2.14 per 100 pooled.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid84",
+   "date": "2026-11-28",
+   "title": "Desperado guard capped at the floor",
+   "question": "The desperado guard with the stalemate check, never pushing a construction score below the floor (so giving material back never looks better).",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2000",
+    "e2500"
+   ],
+   "arms": [
+    {
+     "label": "B",
+     "cells": [
+      {
+       "k": 199,
+       "n": 6000
+      },
+      {
+       "k": 29,
+       "n": 1000
+      },
+      {
+       "k": 111,
+       "n": 6000
+      },
+      {
+       "k": 36,
+       "n": 3000
+      }
+     ]
+    },
+    {
+     "label": "Guard 100",
+     "cells": [
+      {
+       "k": 176,
+       "n": 6000
+      },
+      {
+       "k": 32,
+       "n": 1000
+      },
+      {
+       "k": 98,
+       "n": 6000
+      },
+      {
+       "k": 51,
+       "n": 3000
+      }
+     ]
+    },
+    {
+     "label": "Guard 300",
+     "cells": [
+      {
+       "k": 193,
+       "n": 6000
+      },
+      {
+       "k": 27,
+       "n": 1000
+      },
+      {
+       "k": 116,
+       "n": 6000
+      },
+      {
+       "k": 34,
+       "n": 3000
+      }
+     ]
+    }
+   ],
+   "verdict": "Smothers kept (2.34 / 2.23 / 2.31 per 100 pooled), no losses, but stalemates fell only from 35 to 32 and 24 (z -1.4).",
+   "outcome": "no"
+  },
+  {
+   "id": "grid83",
+   "date": "2026-11-28",
+   "title": "Desperado guard with the stalemate check",
+   "question": "The narrow desperado guard together with SmotherBuildStalemate, which lets the evaluation see the stalemate the guard was pushing into.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2000",
+    "e2500"
+   ],
+   "arms": [
+    {
+     "label": "B",
+     "cells": [
+      {
+       "k": 139,
+       "n": 4000
+      },
+      {
+       "k": 36,
+       "n": 1000
+      },
+      {
+       "k": 69,
+       "n": 4000
+      },
+      {
+       "k": 22,
+       "n": 2000
+      }
+     ]
+    },
+    {
+     "label": "Guard 40",
+     "cells": [
+      {
+       "k": 112,
+       "n": 4000
+      },
+      {
+       "k": 31,
+       "n": 1000
+      },
+      {
+       "k": 82,
+       "n": 4000
+      },
+      {
+       "k": 22,
+       "n": 2000
+      }
+     ]
+    },
+    {
+     "label": "Guard 100",
+     "cells": [
+      {
+       "k": 137,
+       "n": 4000
+      },
+      {
+       "k": 29,
+       "n": 1000
+      },
+      {
+       "k": 67,
+       "n": 4000
+      },
+      {
+       "k": 23,
+       "n": 2000,
+       "losses": 1
+      }
+     ]
+    }
+   ],
+   "verdict": "Guard 100 halved the draws (stalemates 22 to 12, z -1.7) at no significant smother cost (2.42 vs 2.33 per 100), with one loss at 0.2 s left. Not conclusive; see grid84.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid82",
+   "date": "2026-11-28",
+   "title": "Narrow desperado guard",
+   "question": "Only when the free queen is the defender's only piece that can move (71% of the stalemates, 1.1% of knight smothers).",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2000",
+    "e2500"
+   ],
+   "arms": [
+    {
+     "label": "B",
+     "cells": [
+      {
+       "k": 138,
+       "n": 4000
+      },
+      {
+       "k": 34,
+       "n": 1000
+      },
+      {
+       "k": 74,
+       "n": 4000
+      },
+      {
+       "k": 20,
+       "n": 2000
+      }
+     ]
+    },
+    {
+     "label": "Guard 40",
+     "cells": [
+      {
+       "k": 109,
+       "n": 4000
+      },
+      {
+       "k": 32,
+       "n": 1000
+      },
+      {
+       "k": 82,
+       "n": 4000
+      },
+      {
+       "k": 20,
+       "n": 2000
+      }
+     ]
+    },
+    {
+     "label": "Guard 100",
+     "cells": [
+      {
+       "k": 109,
+       "n": 4000,
+       "losses": 1
+      },
+      {
+       "k": 33,
+       "n": 1000
+      },
+      {
+       "k": 79,
+       "n": 4000
+      },
+      {
+       "k": 26,
+       "n": 2000
+      }
+     ]
+    }
+   ],
+   "verdict": "Worse: stalemates 13 to 22 and 30. There, taking the queen is stalemate, which the quiescence search scores as a big win, so the guard pushed the engine into it.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid81",
+   "date": "2026-11-28",
+   "title": "Desperado guard (stalemates)",
+   "question": "239 of 265 stalemates we gave ended with us taking a queen the defender had just promoted next to its boxed king. Penalise a boxed king with a defender queen off its ring.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2000",
+    "e2500"
+   ],
+   "arms": [
+    {
+     "label": "B",
+     "cells": [
+      {
+       "k": 163,
+       "n": 5000
+      },
+      {
+       "k": 41,
+       "n": 1500
+      },
+      {
+       "k": 39,
+       "n": 2000
+      },
+      {
+       "k": 30,
+       "n": 2000
+      }
+     ]
+    },
+    {
+     "label": "Guard 20",
+     "cells": [
+      {
+       "k": 131,
+       "n": 5000
+      },
+      {
+       "k": 53,
+       "n": 1500
+      },
+      {
+       "k": 26,
+       "n": 2000
+      },
+      {
+       "k": 23,
+       "n": 2000
+      }
+     ]
+    },
+    {
+     "label": "Guard 40",
+     "cells": [
+      {
+       "k": 122,
+       "n": 5000
+      },
+      {
+       "k": 44,
+       "n": 1500
+      },
+      {
+       "k": 31,
+       "n": 2000,
+       "losses": 1
+      },
+      {
+       "k": 15,
+       "n": 2000
+      }
+     ]
+    }
+   ],
+   "verdict": "Stalemates 12 to 8 and 3, but knight smothers 2.60 to 2.22 and 2.02 per 100 (z -2.8). Rejected.",
+   "outcome": "no"
+  },
+  {
    "id": "grid74",
    "date": "2026-11-27",
    "title": "Once-repeated positions on smother lines (merged engine)",
@@ -1242,7 +1641,8 @@
   "One-move traps against the real opponent (Stockfish 1500) were available in 1 of 240 stalled positions.",
   "The engine's expected defender reply matched the real reply 81% of the time in construction mode.",
   "The opening barely matters: across 600 opening and colour combinations (25,308 games), an opening's knight-smother rate in one half of the games hardly predicts the other half (r = 0.05).",
-  "HumanElo on 1.7: refitted and measured against 1.6 on the same openings at 1580, 1700, 1735, 1880, 2200 and 2400 (600 games per point against Maia-3); every rating plays as it did in 1.6, within the noise."
+  "HumanElo on 1.7: refitted and measured against 1.6 on the same openings at 1580, 1700, 1735, 1880, 2200 and 2400 (600 games per point against Maia-3); every rating plays as it did in 1.6, within the noise.",
+  "Stalemates: 239 of the 265 stalemates we gave in 122,000 games ended with us taking a queen the defender had just promoted next to its boxed king. Five fixes (grid81-85, about 180,000 games) removed at most a third of them, or cost knight smothers; they happen in about 0.2% of games."
  ],
  "release": {
   "version": "1.7",
