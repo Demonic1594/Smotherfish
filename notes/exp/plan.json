@@ -1,0 +1,94 @@
+{
+ "exp": "grid85",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 6000,
+   "seed": 115000,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e1500_QF",
+   "elo": 1500,
+   "games": 6000,
+   "seed": 115000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildQueenFull=true"
+   ]
+  },
+  {
+   "name": "e1500_QFS",
+   "elo": 1500,
+   "games": 6000,
+   "seed": 115000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildQueenFull=true",
+    "SmotherBuildStalemate=true"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 115000,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_QF",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 115000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildQueenFull=true"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_QFS",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 115000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildQueenFull=true",
+    "SmotherBuildStalemate=true"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  [
+   320,
+   321,
+   322,
+   323,
+   324,
+   325,
+   326,
+   327,
+   328,
+   329,
+   330,
+   331,
+   332,
+   333,
+   334,
+   335,
+   336,
+   337,
+   338,
+   339
+  ],
+  340
+ ],
+ "max_parallel": 20
+}
