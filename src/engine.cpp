@@ -279,6 +279,11 @@ Engine::Engine(std::optional<std::filesystem::path> path) :
     // Stalemate-aware construction (experimental, off by default): a
     // stalemated defender counts as a draw in the evaluation (see search.cpp).
     options.add("SmotherBuildStalemate", Option(false));
+    // Desperado guard (experimental, off by default): construction points
+    // lost while the defender's king has no square and a queen off the king's
+    // ring is its only piece that can move, free to check until we take it
+    // (see search.cpp).
+    options.add("SmotherBuildDesperado", Option(0, 0, 1000));
     // Prover repetition rule (experimental, off by default): 1 = after an
     // escape, 2 = always, a smother line may pass through a position seen
     // once before in the game (a third occurrence still fails).
