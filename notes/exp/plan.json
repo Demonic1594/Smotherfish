@@ -1,0 +1,93 @@
+{
+ "exp": "grid84b",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e2000_B",
+   "elo": 2000,
+   "games": 6000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e2000_C100",
+   "elo": 2000,
+   "games": 6000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=100",
+    "SmotherBuildStalemate=true"
+   ]
+  },
+  {
+   "name": "e2000_C300",
+   "elo": 2000,
+   "games": 6000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=300",
+    "SmotherBuildStalemate=true"
+   ]
+  },
+  {
+   "name": "e2500_B",
+   "elo": 2500,
+   "games": 3000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e2500_C100",
+   "elo": 2500,
+   "games": 3000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=100",
+    "SmotherBuildStalemate=true"
+   ]
+  },
+  {
+   "name": "e2500_C300",
+   "elo": 2500,
+   "games": 3000,
+   "seed": 114000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=300",
+    "SmotherBuildStalemate=true"
+   ]
+  }
+ ],
+ "shard": [
+  [
+   300,
+   301,
+   302,
+   303,
+   304,
+   305,
+   306,
+   307,
+   308,
+   309,
+   310,
+   311,
+   312,
+   313,
+   314,
+   315,
+   316,
+   317,
+   318,
+   319
+  ],
+  340
+ ],
+ "max_parallel": 20
+}
