@@ -4,6 +4,290 @@
  "baseline_note": "B = development settings: SmotherClassic true, SmotherBuildKnightCheck 16, SmotherCrushQuiet 3, SmotherCrushMoves 16.",
  "experiments": [
   {
+   "id": "grid74",
+   "date": "2026-11-27",
+   "title": "Once-repeated positions on smother lines (merged engine)",
+   "question": "The prover rejected smother lines through any position seen before in the game. Allow a once-seen position always (R2), or only after an escape with the escape budget (R1E). On the engine merged with upstream 88337401, with grid72's openings.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2500",
+    "e2600"
+   ],
+   "arms": [
+    {
+     "label": "merged, defaults",
+     "cells": [
+      {
+       "k": 131,
+       "n": 3520
+      },
+      {
+       "k": 60,
+       "n": 2000
+      },
+      {
+       "k": 19,
+       "n": 1200
+      },
+      {
+       "k": 5,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "R2",
+     "cells": [
+      {
+       "k": 113,
+       "n": 3520
+      },
+      {
+       "k": 71,
+       "n": 2000
+      },
+      {
+       "k": 14,
+       "n": 1200
+      },
+      {
+       "k": 8,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "R1E",
+     "cells": [
+      {
+       "k": 109,
+       "n": 4000
+      },
+      {
+       "k": 51,
+       "n": 1520
+      },
+      {
+       "k": 19,
+       "n": 1200
+      },
+      {
+       "k": 3,
+       "n": 400
+      }
+     ]
+    }
+   ],
+   "verdict": "No gain: 2.95 (R2) and 2.66 (R1E) vs 3.12 per 100 pooled; the extra proofs are escaped more. The merged engine itself matches 1.6 on the same openings (3.12 vs 3.19 per 100, no losses).",
+   "outcome": "no"
+  },
+  {
+   "id": "grid73",
+   "date": "2026-11-27",
+   "title": "Escape budget, confirmation",
+   "question": "grid71's E3 (3 moves at 20% of the clock after an escape) on fresh seeds, with more games at Stockfish 2000-2600.",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2000",
+    "e2500",
+    "e2600"
+   ],
+   "arms": [
+    {
+     "label": "1.6 defaults",
+     "cells": [
+      {
+       "k": 140,
+       "n": 4000
+      },
+      {
+       "k": 64,
+       "n": 2000
+      },
+      {
+       "k": 46,
+       "n": 2000
+      },
+      {
+       "k": 52,
+       "n": 3000
+      },
+      {
+       "k": 13,
+       "n": 1000
+      }
+     ]
+    },
+    {
+     "label": "E3",
+     "cells": [
+      {
+       "k": 147,
+       "n": 4000
+      },
+      {
+       "k": 65,
+       "n": 2000
+      },
+      {
+       "k": 44,
+       "n": 2000
+      },
+      {
+       "k": 40,
+       "n": 3000
+      },
+      {
+       "k": 12,
+       "n": 1000
+      }
+     ]
+    }
+   ],
+   "verdict": "Not confirmed: 2.69 vs 2.75 per 100 pooled at 5+0.05, and 1.33 vs 1.73 against Stockfish 2500. With grid71, 2.79 vs 2.71 over 19,600 games per arm (z +0.5). The escape budget stays off.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid72",
+   "date": "2026-11-27",
+   "title": "Stalemate-aware construction",
+   "question": "77 of 96 draws in 38,600 games were stalemates by us at about +20. Score a stalemated defender as a draw in construction mode's evaluation (the quiescence search cannot see stalemate).",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2500",
+    "e2600"
+   ],
+   "arms": [
+    {
+     "label": "1.6 defaults",
+     "cells": [
+      {
+       "k": 146,
+       "n": 4000
+      },
+      {
+       "k": 72,
+       "n": 2000
+      },
+      {
+       "k": 12,
+       "n": 1200
+      },
+      {
+       "k": 2,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "ST",
+     "cells": [
+      {
+       "k": 133,
+       "n": 4000
+      },
+      {
+       "k": 72,
+       "n": 2000
+      },
+      {
+       "k": 13,
+       "n": 1200
+      },
+      {
+       "k": 4,
+       "n": 400
+      }
+     ]
+    }
+   ],
+   "verdict": "No effect: stalemates 14 vs 16, knight smothers 3.03 vs 3.19 per 100 pooled. The stalemates are swindles set up beyond the horizon (a loose defender piece checks until we must take it), not a blind spot of the quiescence search.",
+   "outcome": "no"
+  },
+  {
+   "id": "grid71",
+   "date": "2026-11-27",
+   "title": "Escape budget",
+   "question": "After the defender escapes a proven smother, the prover gets a large share of the clock for our next 3 moves (20% or 40% each).",
+   "opponents": [
+    "e1500",
+    "m1500",
+    "e2500",
+    "e2600"
+   ],
+   "arms": [
+    {
+     "label": "1.6 defaults",
+     "cells": [
+      {
+       "k": 127,
+       "n": 4000
+      },
+      {
+       "k": 74,
+       "n": 2000
+      },
+      {
+       "k": 11,
+       "n": 1200
+      },
+      {
+       "k": 4,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "E3",
+     "cells": [
+      {
+       "k": 138,
+       "n": 4000
+      },
+      {
+       "k": 66,
+       "n": 2000
+      },
+      {
+       "k": 23,
+       "n": 1200
+      },
+      {
+       "k": 12,
+       "n": 400
+      }
+     ]
+    },
+    {
+     "label": "E3P40",
+     "cells": [
+      {
+       "k": 142,
+       "n": 4000,
+       "losses": 1
+      },
+      {
+       "k": 66,
+       "n": 2000
+      },
+      {
+       "k": 15,
+       "n": 1200
+      },
+      {
+       "k": 8,
+       "n": 400
+      }
+     ]
+    }
+   ],
+   "verdict": "No gain: 3.15 and 3.10 vs 2.94 per 100 pooled at 5+0.05. Its strong-opponent cells (z ~2) did not replicate in grid73.",
+   "outcome": "no"
+  },
+  {
    "id": "grid70",
    "date": "2026-11-27",
    "title": "Knight supply: keep our knights",
@@ -911,6 +1195,16 @@
   }
  ],
  "strength": [
+  {
+   "date": "2026-11-27",
+   "title": "Upstream Stockfish 88337401 merged into 1.6 (new net nn-684d0e60e71d) vs 1.6",
+   "games": 76000,
+   "elo": 1.7,
+   "lo": 1.1,
+   "hi": 2.3,
+   "tc": "10+0.1",
+   "verdict": "Stronger: H1 for [0, 3] (LLR 5.43). Pentanomial [18, 2082, 33446, 2423, 31]."
+  },
   {
    "date": "2026-11-26",
    "title": "1.6 settings vs 1.5.1 (final check)",
