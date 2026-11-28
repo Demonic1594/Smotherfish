@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-28T13:58:44Z",
- "games_per_hour": 41956,
+ "generated": "2026-11-28T14:02:05Z",
+ "games_per_hour": 41454,
  "jobs_running": 0,
  "active_games": 0,
  "accounts": [
@@ -19043,6 +19043,10 @@
   },
   {
    "t": "2026-11-28T13:58:44Z",
+   "games": 966060
+  },
+  {
+   "t": "2026-11-28T14:02:05Z",
    "games": 966060
   }
  ]
