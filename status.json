@@ -1,21 +1,21 @@
 {
- "generated": "2026-11-28T10:20:43Z",
- "games_per_hour": 17536,
- "jobs_running": 1,
- "active_games": 16000,
+ "generated": "2026-11-28T10:22:16Z",
+ "games_per_hour": 17819,
+ "jobs_running": 0,
+ "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 20,
-   "running_runs": 1,
-   "jobs": 1,
+   "running_runs": 0,
+   "jobs": 0,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
-    "status": "in_progress",
-    "conclusion": null,
-    "updated": "2026-11-28T10:17:28Z"
+    "status": "completed",
+    "conclusion": "success",
+    "updated": "2026-11-28T10:22:04Z"
    }
   },
   {
@@ -23,7 +23,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -37,7 +37,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -65,7 +65,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -79,7 +79,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -93,7 +93,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -107,7 +107,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -135,7 +135,7 @@
    "share": 140,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 7000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -163,7 +163,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -177,7 +177,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -205,7 +205,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid83b",
@@ -216,6 +216,186 @@
   }
  ],
  "tests": [
+  {
+   "id": "grid83b",
+   "plan_sha": "e328b40fb3c54e8d3678b896dc1ff08aebfe2d9a",
+   "parts": [
+    "grid83b"
+   ],
+   "created": "2026-11-28T10:21:59Z",
+   "tc": [
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "e2000",
+     "name": "Stockfish 2000"
+    },
+    {
+     "key": "e2500",
+     "name": "Stockfish 2500"
+    }
+   ],
+   "planned": 18000,
+   "delivered": 18000,
+   "state": "finished",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "e2000": {
+       "games": 4000,
+       "w": 3986,
+       "d": 14,
+       "l": 0,
+       "knight": 69,
+       "full": 71,
+       "planned": 4000
+      },
+      "e2500": {
+       "games": 2000,
+       "w": 1993,
+       "d": 7,
+       "l": 0,
+       "knight": 22,
+       "full": 24,
+       "planned": 2000
+      }
+     }
+    },
+    {
+     "arm": "NS40",
+     "opts": [
+      "SmotherBuildDesperado=40",
+      "SmotherBuildStalemate=true"
+     ],
+     "cells": {
+      "e2000": {
+       "games": 4000,
+       "w": 3989,
+       "d": 11,
+       "l": 0,
+       "knight": 82,
+       "full": 89,
+       "planned": 4000,
+       "dknight": 0.32,
+       "z": 1.06
+      },
+      "e2500": {
+       "games": 2000,
+       "w": 1991,
+       "d": 9,
+       "l": 0,
+       "knight": 22,
+       "full": 24,
+       "planned": 2000,
+       "dknight": 0.0,
+       "z": 0.0
+      }
+     }
+    },
+    {
+     "arm": "NS100",
+     "opts": [
+      "SmotherBuildDesperado=100",
+      "SmotherBuildStalemate=true"
+     ],
+     "cells": {
+      "e2000": {
+       "games": 4000,
+       "w": 3990,
+       "d": 10,
+       "l": 0,
+       "knight": 67,
+       "full": 76,
+       "planned": 4000,
+       "dknight": -0.05,
+       "z": -0.17
+      },
+      "e2500": {
+       "games": 2000,
+       "w": 1997,
+       "d": 2,
+       "l": 1,
+       "knight": 23,
+       "full": 26,
+       "planned": 2000,
+       "dknight": 0.05,
+       "z": 0.15
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "701ef3",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "7a213a",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "87fb66",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "8e9ce5",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "97884e",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "a8e399",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "acf111",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "af5be9",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "d32e35",
+     "expected": 7000,
+     "delivered": 7000,
+     "copied": true
+    },
+    {
+     "id": "f0afe4",
+     "expected": 1000,
+     "delivered": 1000,
+     "copied": true
+    },
+    {
+     "id": "own",
+     "expected": 2000,
+     "delivered": 2000,
+     "copied": true
+    }
+   ]
+  },
   {
    "id": "grid83",
    "plan_sha": "958663f0baaac77976d700690e1ff3f5367ff99e",
@@ -392,186 +572,6 @@
      "id": "own",
      "expected": 1000,
      "delivered": 1000,
-     "copied": true
-    }
-   ]
-  },
-  {
-   "id": "grid83b",
-   "plan_sha": "110efbe5cdf3208db6d90c3ab6b20e01b8e22633",
-   "parts": [
-    "grid83b"
-   ],
-   "created": "2026-11-28T10:05:19Z",
-   "tc": [
-    "5+0.05"
-   ],
-   "opponents": [
-    {
-     "key": "e2000",
-     "name": "Stockfish 2000"
-    },
-    {
-     "key": "e2500",
-     "name": "Stockfish 2500"
-    }
-   ],
-   "planned": 18000,
-   "delivered": 16000,
-   "state": "running",
-   "arms": [
-    {
-     "arm": "B",
-     "opts": [],
-     "cells": {
-      "e2000": {
-       "games": 3000,
-       "w": 2993,
-       "d": 7,
-       "l": 0,
-       "knight": 47,
-       "full": 49,
-       "planned": 4000
-      },
-      "e2500": {
-       "games": 2000,
-       "w": 1993,
-       "d": 7,
-       "l": 0,
-       "knight": 22,
-       "full": 24,
-       "planned": 2000
-      }
-     }
-    },
-    {
-     "arm": "NS40",
-     "opts": [
-      "SmotherBuildDesperado=40",
-      "SmotherBuildStalemate=true"
-     ],
-     "cells": {
-      "e2000": {
-       "games": 4000,
-       "w": 3989,
-       "d": 11,
-       "l": 0,
-       "knight": 82,
-       "full": 89,
-       "planned": 4000,
-       "dknight": 0.48,
-       "z": 1.5
-      },
-      "e2500": {
-       "games": 1000,
-       "w": 996,
-       "d": 4,
-       "l": 0,
-       "knight": 11,
-       "full": 13,
-       "planned": 2000,
-       "dknight": 0.0,
-       "z": 0.0
-      }
-     }
-    },
-    {
-     "arm": "NS100",
-     "opts": [
-      "SmotherBuildDesperado=100",
-      "SmotherBuildStalemate=true"
-     ],
-     "cells": {
-      "e2000": {
-       "games": 4000,
-       "w": 3990,
-       "d": 10,
-       "l": 0,
-       "knight": 67,
-       "full": 76,
-       "planned": 4000,
-       "dknight": 0.11,
-       "z": 0.35
-      },
-      "e2500": {
-       "games": 2000,
-       "w": 1997,
-       "d": 2,
-       "l": 1,
-       "knight": 23,
-       "full": 26,
-       "planned": 2000,
-       "dknight": 0.05,
-       "z": 0.15
-      }
-     }
-    }
-   ],
-   "accounts": [
-    {
-     "id": "701ef3",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "7a213a",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "87fb66",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "8e9ce5",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "97884e",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "a8e399",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "acf111",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "af5be9",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "d32e35",
-     "expected": 7000,
-     "delivered": 7000,
-     "copied": true
-    },
-    {
-     "id": "f0afe4",
-     "expected": 1000,
-     "delivered": 1000,
-     "copied": true
-    },
-    {
-     "id": "own",
-     "expected": 2000,
-     "delivered": 0,
      "copied": true
     }
    ]
@@ -18302,6 +18302,10 @@
   {
    "t": "2026-11-28T10:20:43Z",
    "games": 868060
+  },
+  {
+   "t": "2026-11-28T10:22:16Z",
+   "games": 870060
   }
  ]
 }
