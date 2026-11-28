@@ -1,21 +1,21 @@
 {
- "generated": "2026-11-28T10:22:16Z",
- "games_per_hour": 17819,
- "jobs_running": 0,
+ "generated": "2026-11-28T10:25:45Z",
+ "games_per_hour": 17632,
+ "jobs_running": 1,
  "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 20,
-   "running_runs": 0,
-   "jobs": 0,
+   "running_runs": 1,
+   "jobs": 1,
    "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
-    "exp": "grid83b",
-    "status": "completed",
-    "conclusion": "success",
-    "updated": "2026-11-28T10:22:04Z"
+    "exp": "grid84",
+    "status": "in_progress",
+    "conclusion": null,
+    "updated": "2026-11-28T10:25:42Z"
    }
   },
   {
@@ -216,6 +216,178 @@
   }
  ],
  "tests": [
+  {
+   "id": "grid84",
+   "plan_sha": "b6329243d9f3ab562b55e75c7f36ee73ad19ede1",
+   "parts": [
+    "grid84"
+   ],
+   "created": "2026-11-28T10:25:28Z",
+   "tc": [
+    "5+0.05"
+   ],
+   "opponents": [
+    {
+     "key": "e1500",
+     "name": "Stockfish 1500"
+    },
+    {
+     "key": "m1500",
+     "name": "Maia-3 1500"
+    }
+   ],
+   "planned": 21000,
+   "delivered": 0,
+   "state": "running",
+   "arms": [
+    {
+     "arm": "B",
+     "opts": [],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 6000
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1000
+      }
+     }
+    },
+    {
+     "arm": "C100",
+     "opts": [
+      "SmotherBuildDesperado=100",
+      "SmotherBuildStalemate=true"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 6000
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1000
+      }
+     }
+    },
+    {
+     "arm": "C300",
+     "opts": [
+      "SmotherBuildDesperado=300",
+      "SmotherBuildStalemate=true"
+     ],
+     "cells": {
+      "e1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 6000
+      },
+      "m1500": {
+       "games": 0,
+       "w": 0,
+       "d": 0,
+       "l": 0,
+       "knight": 0,
+       "full": 0,
+       "planned": 1000
+      }
+     }
+    }
+   ],
+   "accounts": [
+    {
+     "id": "701ef3",
+     "expected": 2000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "7a213a",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "87fb66",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "8e9ce5",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "97884e",
+     "expected": 2000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "a8e399",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "acf111",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "af5be9",
+     "expected": 2000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "d32e35",
+     "expected": 7000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "f0afe4",
+     "expected": 1000,
+     "delivered": 0,
+     "copied": true
+    },
+    {
+     "id": "own",
+     "expected": 2000,
+     "delivered": 0,
+     "copied": true
+    }
+   ]
+  },
   {
    "id": "grid83b",
    "plan_sha": "e328b40fb3c54e8d3678b896dc1ff08aebfe2d9a",
@@ -18305,6 +18477,10 @@
   },
   {
    "t": "2026-11-28T10:22:16Z",
+   "games": 870060
+  },
+  {
+   "t": "2026-11-28T10:25:45Z",
    "games": 870060
   }
  ]
