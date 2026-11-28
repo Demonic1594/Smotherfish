@@ -1032,6 +1032,7 @@ bool Search::Worker::iterative_deepening() {
             Smother::set_build_net(int(options["SmotherBuildNetScale"]));
             buildEscape    = int(options["SmotherBuildEscape"]);
             buildStalemate  = bool(options["SmotherBuildStalemate"]);
+            buildDesperado  = int(options["SmotherBuildDesperado"]);
             buildKnightSafe = 0;
             shapeWeight    = 0;
         }
@@ -2781,6 +2782,30 @@ Value Search::Worker::evaluate(const Position& pos) {
             u = buildFloor + (u - buildFloor) / buildMatDiv
               + Smother::build_score(pos, shapeUs, buildSurvive, buildCap, buildVersion, buildKeep, buildKeepNear, buildStarve, buildStarveAt, buildOwnKeep, buildEscape, buildKnightSafe)
                   * buildUnit;
+            // Desperado guard (SmotherBuildDesperado, off by default). 239 of
+            // the 265 stalemates we gave in 122,000 games (grid69-74) ended
+            // with us taking a queen the defender had just promoted: its king
+            // was boxed, so the queen checked until we took it. Construction
+            // counts the queen at 1/8 and rewards every kept piece, so taking
+            // it scored about even. A boxed king with a queen off its ring
+            // came before 74% of those stalemates but only 7.7% of knight
+            // smothers.
+            if (buildDesperado)
+            {
+                const Color    them = ~shapeUs;
+                const Square   ksq  = pos.square<KING>(them);
+                const Bitboard ring = Attacks::attacks_bb(KING, ksq);
+                if (pos.pieces(them, QUEEN) & ~ring)
+                {
+                    const Bitboard occ  = pos.pieces() ^ square_bb(ksq);
+                    Bitboard       to   = ring & ~pos.pieces(them);
+                    bool           free = false;
+                    while (to && !free)
+                        free = !(pos.attackers_to(pop_lsb(to), occ) & pos.pieces(shapeUs));
+                    if (!free)
+                        u -= buildDesperado * buildUnit;
+                }
+            }
             u = std::min(u, VALUE_TB_WIN_IN_MAX_PLY - 1);
             v = pos.side_to_move() == shapeUs ? u : -u;
         }
