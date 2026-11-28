@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-28T09:38:03Z",
- "games_per_hour": 6653,
+ "generated": "2026-11-28T09:38:57Z",
+ "games_per_hour": 6632,
  "jobs_running": 0,
- "active_games": 19500,
+ "active_games": 0,
  "accounts": [
   {
    "id": "main",
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -23,7 +23,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 2000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -35,9 +35,9 @@
   {
    "id": "97884e",
    "share": 20,
-   "running_runs": 1,
+   "running_runs": 0,
    "jobs": 0,
-   "active_games": 1500,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -65,7 +65,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -79,7 +79,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -93,7 +93,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -107,7 +107,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -135,7 +135,7 @@
    "share": 140,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 7000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -163,7 +163,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -177,7 +177,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -205,7 +205,7 @@
    "share": 20,
    "running_runs": 0,
    "jobs": 0,
-   "active_games": 1000,
+   "active_games": 0,
    "last": {
     "workflow": "Smother experiment",
     "exp": "grid81b",
@@ -238,7 +238,7 @@
    ],
    "planned": 19500,
    "delivered": 19500,
-   "state": "running",
+   "state": "finished",
    "arms": [
     {
      "arm": "B",
@@ -17553,6 +17553,10 @@
   },
   {
    "t": "2026-11-28T09:38:03Z",
+   "games": 804060
+  },
+  {
+   "t": "2026-11-28T09:38:57Z",
    "games": 804060
   }
  ]
