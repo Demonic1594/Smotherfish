@@ -1,0 +1,92 @@
+{
+ "exp": "grid82",
+ "tc": "5+0.05",
+ "chunk": 50,
+ "runs": [
+  {
+   "name": "e1500_B",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": []
+  },
+  {
+   "name": "e1500_N40",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=40"
+   ]
+  },
+  {
+   "name": "e1500_N100",
+   "elo": 1500,
+   "games": 4000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=100"
+   ]
+  },
+  {
+   "name": "m1500_B",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_N40",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=40"
+   ],
+   "opponent": "maia3-1500"
+  },
+  {
+   "name": "m1500_N100",
+   "elo": 1500,
+   "games": 1000,
+   "seed": 112000,
+   "chunk": 50,
+   "opts": [
+    "SmotherBuildDesperado=100"
+   ],
+   "opponent": "maia3-1500"
+  }
+ ],
+ "shard": [
+  [
+   320,
+   321,
+   322,
+   323,
+   324,
+   325,
+   326,
+   327,
+   328,
+   329,
+   330,
+   331,
+   332,
+   333,
+   334,
+   335,
+   336,
+   337,
+   338,
+   339
+  ],
+  340
+ ],
+ "max_parallel": 20
+}
